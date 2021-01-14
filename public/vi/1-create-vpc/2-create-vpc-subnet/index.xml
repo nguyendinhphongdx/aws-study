@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo VPC Subnet on Thiết lập VPC</title>
+    <link>/vi/1-create-vpc/2-create-vpc-subnet/</link>
+    <description>Recent content in Tạo VPC Subnet on Thiết lập VPC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
+    
+	<atom:link href="/vi/1-create-vpc/2-create-vpc-subnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
