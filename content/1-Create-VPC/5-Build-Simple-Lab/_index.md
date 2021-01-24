@@ -187,7 +187,7 @@ Then we got a Public IP Address:`3.101.0.64`
 * In the left navigation pane, choose **NAT Gateways**.
 * Choose **Create NAT Gateway**.
   * **Subnet**: `PUBSUB2-MAIN-ASG`
-  * **Elastic IP Allocation ID**: `13.52.136.34`
+  * **Elastic IP Allocation ID**: `3.101.0.64`
 * Choose **Add Tag** 
 	* **Key**: `Name`
 	* **Value**: `NAT-MAIN-ASG`

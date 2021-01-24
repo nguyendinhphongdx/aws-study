@@ -187,7 +187,7 @@ Tại thời điểm này, PRI-LINUX vẫn chưa có khả năng kết nối ra 
 * Trên thanh điều hướng bên trái, chọn **NAT Gateways**.
 * Chọn **Create NAT Gateway**.
   * **Subnet**: `PUBSUB2-MAIN-ASG`
-  * **Elastic IP Allocation ID**: `13.52.136.34`
+  * **Elastic IP Allocation ID**: `3.101.0.64`
 * Chọn **Add Tag** 
 	* **Key**: `Name`
 	* **Value**: `NAT-MAIN-ASG`
