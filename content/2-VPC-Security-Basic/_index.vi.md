@@ -8,6 +8,6 @@ pre = "<b>2. </b>"
 
 #### Nội dung
 
-* [Cấu hình NACL & SG](1-configure-nacl-and-sg)
+* [NACL & SG](1-configure-nacl-and-sg)
 * [Cấu hình VPC Flow Logs](2-configure-vpc-flow-logs)
 * [Cấu hình Site-to-Site VPN](3-setup-site-to-site-vpn)

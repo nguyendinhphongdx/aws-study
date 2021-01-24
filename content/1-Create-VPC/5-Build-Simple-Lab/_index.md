@@ -1,7 +1,7 @@
 +++
 title = "Build Simple Lab"
 date = 2020
-weight = 5
+weight = 10
 chapter = false
 pre = "<b>1.5. </b>"
 +++
