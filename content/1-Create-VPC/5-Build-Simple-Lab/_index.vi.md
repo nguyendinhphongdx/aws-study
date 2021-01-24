@@ -202,7 +202,7 @@ Tại thời điểm này, PRI-LINUX vẫn chưa có khả năng kết nối ra 
   * **Target**: `NAT-MAIN-ASG`
   * Chọn **Save Route**
 * Tiếp tục bấm vào **Action**, sau đó **Edit Subnet Association**
-* Bấm **PUBSUB1-MAIN-ASG** và **PRISUB-MAIN-ASG**, rồi bấm  **Save**
+* Bấm **PRISUB-MAIN-ASG**, rồi bấm  **Save**
 
 #### Bước 13. Test ping tới internet từ PRI-LINUX
 

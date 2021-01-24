@@ -202,7 +202,7 @@ Then we got a Public IP Address:`3.101.0.64`
   * **Target**: `NAT-MAIN-ASG`
   * Choose **Save Route**
 * Continute to click on **Action**, then **Edit Subnet Association**
-* Select **PUBSUB1-MAIN-ASG** and **PRISUB-MAIN-ASG**, then click on **Save**
+* Select **PRISUB-MAIN-ASG**, then click on **Save**
 
 #### Step 13. Test ping to the internet from PRI-LINUX
 
