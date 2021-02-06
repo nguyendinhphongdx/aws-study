@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Amazon VPC Setup"
+title = "Restrict User Permissions with IAM Permission Boundary"
 weight = 1
 languageName = "English"
 
@@ -35,7 +35,7 @@ url = "https://www.facebook.com/groups/660548818043427/"
 weight = 20
 
 [Languages.vi]
-title = "Thiết lập VPC"
+title = "Giới hạn quyền của User với IAM Permission Boundary"
 weight = 2
 languageName = "Tiếng Việt"
 
@@ -50,4 +50,3 @@ name = "<i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB"
 identifier = "AWS Study Group FB"
 url = "https://www.facebook.com/groups/660548818043427/"
 weight = 20
-

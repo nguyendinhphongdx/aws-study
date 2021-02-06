@@ -7,5 +7,5 @@ chapter = false
 
 #### Nội dung
 
-1. [Khởi tạo VPC](1-create-vpc)
-2. [Bảo mật VPC Cơ bản](2-vpc-security-basic)
+1. [Khởi tạo VPC](1-create-vpc/)
+2. [Bảo mật VPC Cơ bản](2-vpc-security-basic/)
