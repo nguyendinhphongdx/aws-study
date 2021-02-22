@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Build Simple Lab on Amazon VPC Setup</title>
+    <title>Build Simple Lab on Restrict User Permissions with IAM Permission Boundary</title>
     <link>/1-create-vpc/5-build-simple-lab/</link>
-    <description>Recent content in Build Simple Lab on Amazon VPC Setup</description>
+    <description>Recent content in Build Simple Lab on Restrict User Permissions with IAM Permission Boundary</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
     

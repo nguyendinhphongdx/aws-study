@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Configure VPC Flow Logs :: Amazon VPC Setup</title>
+    <title>Configure VPC Flow Logs :: Restrict User Permissions with IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1611464005" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1611464005" rel="stylesheet">
-    <link href="/css/hybrid.css?1611464005" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1611464005" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1611464005" rel="stylesheet">
-    <link href="/css/auto-complete.css?1611464005" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1611464005" rel="stylesheet">
-    <link href="/css/theme.css?1611464005" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1611464005" rel="stylesheet">
+    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
+    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
+    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
+    <link href="/css/theme.css?1613990621" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1611464005" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1611464005"></script>
+    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1611464005"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611464005"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611464005"></script>
+<script type="text/javascript" src="/js/search.js?1613990621"></script>
 
     
   </div>
@@ -297,12 +297,80 @@
         
         ">
       <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/">
-          <b>2.1. </b>Configure NACL &amp; SG
+          <b>2.1.2. </b>Configure NACL &amp; SG
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/">
+          <b>2.1.1. </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/">
+          <b>2.1.2. </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -331,6 +399,74 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/" title="Publish to CW Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/">
+          <b>2.2.1. </b>Publish to CW Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/" title="Publish to S3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/">
+          <b>2.2.2. </b>Publish to S3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -359,6 +495,102 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/" title="Deploy Infrastructure" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/">
+          <b>2.3.1. </b>Deploy Infrastructure
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/" title="Setup Site to Site VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/">
+          <b>2.3.2. </b>Setup Site to Site VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/" title="Testing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/">
+          <b>2.3.3. </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -552,124 +784,17 @@
 <ul>
 <li><a href="#1-publishing-flow-logs-to-cloudwatch-logs">1. Publishing flow logs to CloudWatch Logs</a></li>
 <li><a href="#2-publishing-flow-logs-to-amazon-s3">2. Publishing flow logs to Amazon S3</a></li>
-<li><a href="#3-viewing-flow-logs">3. Viewing flow logs</a></li>
 </ul>
 <h4 id="1-publishing-flow-logs-to-cloudwatch-logs">1. Publishing flow logs to CloudWatch Logs</h4>
 <p>When publishing to CloudWatch Logs, flow log data is published to a log group, and each network interface has a unique log stream in the log group. Log streams contain flow log records. You can create multiple flow logs that publish data to the same log group. If the same network interface is present in one or more flow logs in the same log group, it has one combined log stream. If you&rsquo;ve specified that one flow log should capture rejected traffic, and the other flow log should capture accepted traffic, then the combined log stream captures all traffic.</p>
-<p><strong>Create an IAM role for flow logs</strong></p>
-<ul>
-<li>Open the IAM console at <a href="https://console.aws.amazon.com/iam/">https://console.aws.amazon.com/iam/</a></li>
-<li>In the navigation pane, choose <strong>Roles, Create role</strong>.</li>
-<li>Choose <strong>EC2</strong> as the service to use this role. For <strong>Use case</strong>, choose <strong>EC2</strong>. Choose <strong>Next: Permissions</strong>.</li>
-<li>On the <strong>Attach permissions policies</strong> page, choose <strong>Next: Tags</strong> and optionally add tags. Choose <strong>Next: Review</strong>.</li>
-<li>Enter a name for your role (for example, Flow-Logs-Role) and optionally provide a description. Choose <strong>Create role</strong>.</li>
-<li>Select the name of your role. For <strong>Permissions</strong>, choose <strong>Add inline policy, JSON</strong>.</li>
-<li>Copy the below policy and paste it in the window. Choose Review policy.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-  <span style="color:#f92672">&#34;Statement&#34;</span>: [
-    {
-      <span style="color:#f92672">&#34;Action&#34;</span>: [
-        <span style="color:#e6db74">&#34;logs:CreateLogGroup&#34;</span>,
-        <span style="color:#e6db74">&#34;logs:CreateLogStream&#34;</span>,
-        <span style="color:#e6db74">&#34;logs:PutLogEvents&#34;</span>,
-        <span style="color:#e6db74">&#34;logs:DescribeLogGroups&#34;</span>,
-        <span style="color:#e6db74">&#34;logs:DescribeLogStreams&#34;</span>
-      ],
-      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
-    }
-  ]
-}   
-</code></pre></div><ul>
-<li>Enter a name for your policy, and choose <strong>Create policy</strong>.</li>
-<li>Select the name of your role. For <strong>Trust relationships</strong>, choose <strong>Edit trust relationship</strong>. In the existing policy document, change the service from <code>ec2.amazonaws.com</code> to <code>vpc-flow-logs.amazonaws.com</code>. Choose <strong>Update Trust Policy</strong>.</li>
-<li>On the <strong>Summary</strong> page, note the ARN for your role. You need this ARN when you create your flow log.</li>
-</ul>
-<p><strong>Creating a flow log that publishes to CloudWatch Logs</strong></p>
-<ul>
-<li>Open the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a></li>
-<li>In the navigation pane, choose <strong>Network Interfaces</strong> or <strong>Your VPCs</strong> or <strong>Subnets</strong>.</li>
-<li>Select one or more network interfaces and choose <strong>Actions, Create flow log</strong>.</li>
-<li>For <strong>Filter</strong>, specify the type of IP traffic data to log. Choose <strong>All</strong> to log accepted and rejected traffic, <strong>Rejected</strong> to record only rejected traffic, or <strong>Accepted</strong> to record only accepted traffic.</li>
-<li>For <strong>Maximum aggregation interval</strong>, choose the maximum period of time during which a flow is captured and aggregated into one flow log record.</li>
-<li>For <strong>Destination</strong>, choose <strong>Send to CloudWatch Logs</strong>.</li>
-<li>For <strong>Destination log group</strong>, enter the name of a log group in CloudWatch Logs to which the flow logs are to be published. If you specify the name of a log group that does not exist, AWS will create the log group for you.</li>
-<li>For <strong>IAM role</strong>, specify the name of the role that has permissions to publish logs to CloudWatch Logs.</li>
-<li>For <strong>Format</strong>, specify the format for the flow log record.
-<ul>
-<li>To use the default flow log record format, choose <strong>AWS default format</strong>.</li>
-<li>To create a custom format, choose <strong>Custom format</strong>. For <strong>Log format</strong>, choose the fields to include in the flow log record.</li>
-</ul>
-</li>
-<li>(Optional) Choose <strong>Add Tag</strong> to apply tags to the flow log.</li>
-<li>Choose <strong>Create</strong></li>
-</ul>
+<blockquote>
+<p><a href="1-publish-cw-logs/"><strong>Publishing flow logs to CloudWatch Logs</strong></a></p>
+</blockquote>
 <h4 id="2-publishing-flow-logs-to-amazon-s3">2. Publishing flow logs to Amazon S3</h4>
 <p>When publishing to Amazon S3, flow log data is published to an existing Amazon S3 bucket that you specify. Flow log records for all of the monitored network interfaces are published to a series of log file objects that are stored in the bucket. If the flow log captures data for a VPC, the flow log publishes flow log records for all of the network interfaces in the selected VPC.</p>
-<p><strong>IAM policy for IAM principals</strong></p>
-<p>An IAM principal in your account, such as an IAM user, must have sufficient permissions to publish flow logs to the Amazon S3 bucket. This includes permissions to work with specific logs: actions to create and publish the flow logs. The IAM policy must include the following permissions.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-  <span style="color:#f92672">&#34;Statement&#34;</span>: [
-    {
-      <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-      <span style="color:#f92672">&#34;Action&#34;</span>: [
-        <span style="color:#e6db74">&#34;logs:CreateLogDelivery&#34;</span>,
-        <span style="color:#e6db74">&#34;logs:DeleteLogDelivery&#34;</span>
-        ],
-      <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
-    }
-  ]
-}
-</code></pre></div><p><strong>Amazon S3 bucket permissions</strong></p>
-<p>By default, Amazon S3 buckets and the objects they contain are private. Only the bucket owner can access the bucket and the objects stored in it. However, the bucket owner can grant access to other resources and users by writing an access policy.<br>
-If the user creating the flow log owns the bucket, AWS automatically attach the following policy to the bucket to give the flow log permission to publish logs to it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
-    <span style="color:#f92672">&#34;Statement&#34;</span>: [
-        {
-            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;AWSLogDeliveryWrite&#34;</span>,
-            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-            <span style="color:#f92672">&#34;Principal&#34;</span>: {<span style="color:#f92672">&#34;Service&#34;</span>: <span style="color:#e6db74">&#34;delivery.logs.amazonaws.com&#34;</span>},
-            <span style="color:#f92672">&#34;Action&#34;</span>: <span style="color:#e6db74">&#34;s3:PutObject&#34;</span>,
-            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:s3:::bucket_name/optional_folder/AWSLogs/account_id/*&#34;</span>,
-            <span style="color:#f92672">&#34;Condition&#34;</span>: {<span style="color:#f92672">&#34;StringEquals&#34;</span>: {<span style="color:#f92672">&#34;s3:x-amz-acl&#34;</span>: <span style="color:#e6db74">&#34;bucket-owner-full-control&#34;</span>}}
-        },
-        {
-            <span style="color:#f92672">&#34;Sid&#34;</span>: <span style="color:#e6db74">&#34;AWSLogDeliveryAclCheck&#34;</span>,
-            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
-            <span style="color:#f92672">&#34;Principal&#34;</span>: {<span style="color:#f92672">&#34;Service&#34;</span>: <span style="color:#e6db74">&#34;delivery.logs.amazonaws.com&#34;</span>},
-            <span style="color:#f92672">&#34;Action&#34;</span>: <span style="color:#e6db74">&#34;s3:GetBucketAcl&#34;</span>,
-            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:s3:::bucket_name&#34;</span>
-        }
-    ]
-}
-</code></pre></div><p><strong>Creating a flow log that publishes to Amazon S3</strong></p>
-<ul>
-<li>Open the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a></li>
-<li>In the navigation pane, choose <strong>Network Interfaces</strong> or <strong>Your VPCs</strong> or <strong>Subnets</strong>.</li>
-<li>Select one or more network interfaces and choose <strong>Actions, Create flow log</strong>.</li>
-<li>For <strong>Filter</strong>, specify the type of IP traffic data to log. Choose <strong>All</strong> to log accepted and rejected traffic, <strong>Rejected</strong> to record only rejected traffic, or <strong>Accepted</strong> to record only accepted traffic.</li>
-<li>For <strong>Maximum aggregation interval</strong>, choose the maximum period of time during which a flow is captured and aggregated into one flow log record.</li>
-<li>For <strong>Destination</strong>, choose <strong>Send to an Amazon S3 bucket</strong>.</li>
-<li>For <strong>S3 bucket ARN</strong>, specify the Amazon Resource Name (ARN) of an existing Amazon S3 bucket. You can include a subfolder in the bucket ARN. The bucket cannot use AWSLogs as a subfolder name, as this is a reserved term.</li>
-<li>For <strong>Format</strong>, specify the format for the flow log record.
-<ul>
-<li>To use the default flow log record format, choose <strong>AWS default format</strong>.</li>
-<li>To create a custom format, choose <strong>Custom format</strong>. For <strong>Log format</strong>, choose the fields to include in the flow log record.</li>
-</ul>
-</li>
-<li>(Optional) Choose <strong>Add Tag</strong> to apply tags to the flow log.</li>
-<li>Choose <strong>Create</strong></li>
-</ul>
-<h4 id="3-viewing-flow-logs">3. Viewing flow logs</h4>
-<ul>
-<li>Open the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a></li>
-<li>In the navigation pane, choose <strong>Network Interfaces</strong> or <strong>Your VPCs</strong> or <strong>Subnets</strong>.</li>
-<li>Select a network interface, and choose <strong>Flow Logs</strong>. Information about the flow logs is displayed on the tab. The <strong>Destination type</strong> column indicates the destination to which the flow logs are published.</li>
-</ul>
+<blockquote>
+<p><a href="2-publish-s3/"><strong>Publishing flow logs to Amazon S3</strong></a></p>
+</blockquote>
 
 
 
@@ -835,8 +960,42 @@ If the user creating the flow log owns the bucket, AWS automatically attach the 
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -852,6 +1011,24 @@ If the user creating the flow log owns the bucket, AWS automatically attach the 
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -863,8 +1040,39 @@ If the user creating the flow log owns the bucket, AWS automatically attach the 
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -873,6 +1081,41 @@ If the user creating the flow log owns the bucket, AWS automatically attach the 
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -889,10 +1132,10 @@ If the user creating the flow log owns the bucket, AWS automatically attach the 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-vpc-security-basic/1-configure-nacl-and-sg/" title="Configure NACL &amp; SG"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/" title="Network ACLs"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-vpc-security-basic/3-setup-site-to-site-vpn/" title="Setup Site to Site VPN" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/" title="Publish to CW Logs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -902,19 +1145,19 @@ If the user creating the flow log owns the bucket, AWS automatically attach the 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1611464005"></script>
-    <script src="/js/perfect-scrollbar.min.js?1611464005"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1611464005"></script>
-    <script src="/js/jquery.sticky.js?1611464005"></script>
-    <script src="/js/featherlight.min.js?1611464005"></script>
-    <script src="/js/highlight.pack.js?1611464005"></script>
+    <script src="/js/clipboard.min.js?1613990621"></script>
+    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
+    <script src="/js/jquery.sticky.js?1613990621"></script>
+    <script src="/js/featherlight.min.js?1613990621"></script>
+    <script src="/js/highlight.pack.js?1613990621"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1611464005"></script>
-    <script src="/js/learn.js?1611464005"></script>
-    <script src="/js/hugo-learn.js?1611464005"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
+    <script src="/js/learn.js?1613990621"></script>
+    <script src="/js/hugo-learn.js?1613990621"></script>
 
-    <link href="/mermaid/mermaid.css?1611464005" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1611464005"></script>
+    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1613990621"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

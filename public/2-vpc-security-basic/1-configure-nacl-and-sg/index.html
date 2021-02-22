@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Configure NACL &amp; SG :: Amazon VPC Setup</title>
+    <title>Configure NACL &amp; SG :: Restrict User Permissions with IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1611464005" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1611464005" rel="stylesheet">
-    <link href="/css/hybrid.css?1611464005" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1611464005" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1611464005" rel="stylesheet">
-    <link href="/css/auto-complete.css?1611464005" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1611464005" rel="stylesheet">
-    <link href="/css/theme.css?1611464005" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1611464005" rel="stylesheet">
+    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
+    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
+    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
+    <link href="/css/theme.css?1613990621" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1611464005" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1611464005"></script>
+    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1611464005"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611464005"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611464005"></script>
+<script type="text/javascript" src="/js/search.js?1613990621"></script>
 
     
   </div>
@@ -297,12 +297,80 @@
         
         ">
       <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/">
-          <b>2.1. </b>Configure NACL &amp; SG
+          <b>2.1.2. </b>Configure NACL &amp; SG
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/">
+          <b>2.1.1. </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/">
+          <b>2.1.2. </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -331,6 +399,74 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/" title="Publish to CW Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/">
+          <b>2.2.1. </b>Publish to CW Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/" title="Publish to S3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/">
+          <b>2.2.2. </b>Publish to S3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -359,6 +495,102 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/" title="Deploy Infrastructure" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/">
+          <b>2.3.1. </b>Deploy Infrastructure
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/" title="Setup Site to Site VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/">
+          <b>2.3.2. </b>Setup Site to Site VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/" title="Testing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/">
+          <b>2.3.3. </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -515,15 +747,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -547,100 +771,16 @@
 
 
 
-	<p><strong>Contents:</strong></p>
-<ul>
-<li><a href="#security-groups-for-your-vpc">Security groups for your VPC</a></li>
-<li><a href="#network-acls-for-your-vpc">Network ACLs for your VPC</a></li>
-</ul>
-<h4 id="security-groups-for-your-vpc">Security groups for your VPC</h4>
-<p>A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. When you launch an instance in a VPC, you can assign up to 5 security groups to the instance.</p>
+	<p>A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. When you launch an instance in a VPC, you can assign up to 5 security groups to the instance.</p>
 
 <div class="notices note" ><p>Security groups act at the Instance level, not the Subnet level. Therefore, each instance in a subnet in your VPC can be assigned to a different set of security groups.</p>
 </div>
 
-<p><strong>Security group basics</strong></p>
-<p>There are some basic characteristics of Security groups for your VPC:</p>
-<ul>
-<li>You can specify allow rules, but not deny rules.</li>
-<li>You can specify separate rules for inbound and outbound traffic.</li>
-<li>When you create a security group, it has no inbound rules. Therefore, no inbound traffic originating from another host to your instance is allowed until you add inbound rules to the security group.</li>
-<li>By default, a security group includes an outbound rule that allows all outbound traffic. You can remove the rule and add outbound rules that allow specific outbound traffic only. If your security group has no outbound rules, no outbound traffic originating from your instance is allowed.</li>
-<li>Security groups are stateful — if you send a request from your instance, the response traffic for that request is allowed to flow in regardless of inbound security group rules. Responses to allowed inbound traffic are allowed to flow out, regardless of outbound rules.</li>
-<li>Instances associated with a security group can&rsquo;t talk to each other unless you add rules allowing the traffic (exception: the default security group has these rules by default).</li>
-<li>Security groups are associated with network interfaces. After you launch an instance, you can change the security groups that are associated with the instance, which changes the security groups associated with the primary network interface (eth0).</li>
-</ul>
-<p><strong>Security group rules</strong></p>
-<p>A rule applies either to inbound traffic (ingress) or outbound traffic (egress. You can grant access to a specific CIDR range, or to another security group in your VPC or in a peer VPC (requires a VPC peering connection).</p>
-<p>There are few basic parts of a security group rule in a VPC:</p>
-<ul>
-<li>(Inbound rules only) The source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR block, or a single IPv4 or IPv6 address.</li>
-<li>(Outbound rules only) The destination for the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR block, a single IPv4 or IPv6 address, or a prefix list ID (a service is identified by a prefix list—the name and ID of a service for a Region).</li>
-<li>Any protocol that has a standard protocol number. If you specify ICMP as the protocol, you can specify any or all of the ICMP types and codes.</li>
-</ul>
-<p><strong>Create a security group</strong></p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Security Groups</strong>.</li>
-<li>Choose <strong>Create Security Group</strong>.</li>
-<li>Enter a name for the security group (for example, <code>my-security-group</code>) and provide a description. Select the ID of your VPC from the <strong>VPC</strong> menu and choose <strong>Yes, Create</strong>.</li>
-</ul>
-<p><strong>Adding a rules</strong></p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Security Groups</strong>.</li>
-<li>Select the security group to update.</li>
-<li>Choose <strong>Actions, Edit inbound rules</strong> or <strong>Actions, Edit outbound rules</strong>.</li>
-<li>For <strong>Type</strong>, select the traffic type, and then fill in the required information.</li>
-<li>You can also allow communication between all instances that are associated with this security group. Create an inbound rule with the following options:
-<ul>
-<li><strong>Type</strong>: All Traffic</li>
-<li><strong>Source</strong>: Enter the ID of the security group.</li>
-</ul>
-</li>
-<li>Choose <strong>Save rules</strong>.</li>
-</ul>
-<h4 id="network-acls-for-your-vpc">Network ACLs for your VPC</h4>
 <p>A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC.</p>
-<p><strong>Network ACL basics</strong></p>
-<p>There are some basic things about network ACLs:</p>
+<p><strong>Contents:</strong></p>
 <ul>
-<li>Your VPC automatically comes with a modifiable default network ACL. By default, it allows all inbound and outbound IPv4 traffic and, if applicable, IPv6 traffic.</li>
-<li>You can create a custom network ACL and associate it with a subnet. By default, each custom network ACL denies all inbound and outbound traffic until you add rules.</li>
-<li>Each subnet in your VPC must be associated with a network ACL. If you don&rsquo;t explicitly associate a subnet with a network ACL, the subnet is automatically associated with the default network ACL.</li>
-<li>You can associate a network ACL with multiple subnets. However, a subnet can be associated with only one network ACL at a time. When you associate a network ACL with a subnet, the previous association is removed.</li>
-<li>A network ACL contains a numbered list of rules. AWS evaluate the rules in order, starting with the lowest numbered rule, to determine whether traffic is allowed in or out of any subnet associated with the network ACL. The highest number that you can use for a rule is 32766.</li>
-<li>A network ACL has separate inbound and outbound rules, and each rule can either allow or deny traffic.</li>
-<li>Network ACLs are stateless, which means that responses to allowed inbound traffic are subject to the rules for outbound traffic (and vice versa).</li>
-</ul>
-<p><strong>Network ACL rules</strong></p>
-<p>You can add or remove rules from the default network ACL, or create additional network ACLs for your VPC. When you add or remove rules from a network ACL, the changes are automatically applied to the subnets that it&rsquo;s associated with.</p>
-<p>There are some parts of a network ACL rule:</p>
-<ul>
-<li><strong>Rule number</strong>. Rules are evaluated starting with the lowest numbered rule. As soon as a rule matches traffic, it&rsquo;s applied regardless of any higher-numbered rule that might contradict it.</li>
-<li><strong>Type</strong>. The type of traffic; for example, SSH. You can also specify all traffic or a custom range.</li>
-<li><strong>Protocol</strong>. You can specify any protocol that has a standard protocol number.</li>
-<li><strong>Port range</strong>. The listening port or port range for the traffic. For example, 80 for HTTP traffic.</li>
-<li><strong>Source</strong>. [Inbound rules only] The source of the traffic (CIDR range).</li>
-<li><strong>Destination</strong>. [Outbound rules only] The destination for the traffic (CIDR range).</li>
-<li><strong>Allow/Deny</strong>. Whether to allow or deny the specified traffic.</li>
-</ul>
-<p><strong>Creating a network ACL</strong></p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Network ACLs</strong>.</li>
-<li>Choose <strong>Create Network ACL</strong>.</li>
-<li>In the <strong>Create Network ACL</strong> dialog box, optionally name your network ACL, and select the ID of your VPC from the VPC list. Then choose <strong>Yes, Create</strong>.</li>
-</ul>
-<p><strong>Add rules to a network ACL</strong></p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Network ACLs</strong>.</li>
-<li>In the details pane, choose either the <strong>Inbound Rules</strong> or <strong>Outbound Rules</strong> tab, depending on the type of rule that you need to add, and then choose <strong>Edit</strong>.</li>
-<li>In <strong>Rule #</strong>, enter a rule number. The rule number must not already be in use in the network ACL. AWS process the rules in order, starting with the lowest number.</li>
-<li>Select a rule from the <strong>Type</strong> list.</li>
-<li>In the <strong>Source</strong> or <strong>Destination</strong> field, enter the CIDR range that the rule applies to.</li>
-<li>From the <strong>Allow/Deny</strong> list, select <strong>ALLOW</strong> to allow the specified traffic or <strong>DENY</strong> to deny the specified traffic.</li>
-<li>Choose <strong>Save</strong>.</li>
+<li><a href="#security-groups-for-your-vpc">Security groups for your VPC</a></li>
+<li><a href="#network-acls-for-your-vpc">Network ACLs for your VPC</a></li>
 </ul>
 
 
@@ -805,11 +945,10 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -842,6 +981,125 @@
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -861,7 +1119,7 @@
 			<a class="nav nav-prev" href="/2-vpc-security-basic/" title="VPC Security Basic"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-vpc-security-basic/2-configure-vpc-flow-logs/" title="Configure VPC Flow Logs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/" title="Security Group" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -871,19 +1129,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1611464005"></script>
-    <script src="/js/perfect-scrollbar.min.js?1611464005"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1611464005"></script>
-    <script src="/js/jquery.sticky.js?1611464005"></script>
-    <script src="/js/featherlight.min.js?1611464005"></script>
-    <script src="/js/highlight.pack.js?1611464005"></script>
+    <script src="/js/clipboard.min.js?1613990621"></script>
+    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
+    <script src="/js/jquery.sticky.js?1613990621"></script>
+    <script src="/js/featherlight.min.js?1613990621"></script>
+    <script src="/js/highlight.pack.js?1613990621"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1611464005"></script>
-    <script src="/js/learn.js?1611464005"></script>
-    <script src="/js/hugo-learn.js?1611464005"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
+    <script src="/js/learn.js?1613990621"></script>
+    <script src="/js/hugo-learn.js?1613990621"></script>
 
-    <link href="/mermaid/mermaid.css?1611464005" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1611464005"></script>
+    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1613990621"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

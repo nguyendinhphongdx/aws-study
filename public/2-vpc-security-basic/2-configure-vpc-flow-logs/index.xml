@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Configure VPC Flow Logs on Amazon VPC Setup</title>
+    <title>Configure VPC Flow Logs on Restrict User Permissions with IAM Permission Boundary</title>
     <link>/2-vpc-security-basic/2-configure-vpc-flow-logs/</link>
-    <description>Recent content in Configure VPC Flow Logs on Amazon VPC Setup</description>
+    <description>Recent content in Configure VPC Flow Logs on Restrict User Permissions with IAM Permission Boundary</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
     

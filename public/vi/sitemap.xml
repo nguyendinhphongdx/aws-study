@@ -48,36 +48,6 @@
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/"
-                />
-  </url>
-  
-  <url>
     <loc>/vi/1-create-vpc/1-vpc-introduction/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -89,6 +59,51 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/1-create-vpc/1-vpc-introduction/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/"
                 />
   </url>
   
@@ -108,6 +123,51 @@
   </url>
   
   <url>
+    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
+                />
+  </url>
+  
+  <url>
     <loc>/vi/1-create-vpc/2-create-vpc-subnet/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -119,6 +179,51 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/1-create-vpc/2-create-vpc-subnet/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
                 />
   </url>
   

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Setup Site to Site VPN :: Amazon VPC Setup</title>
+    <title>Setup Site to Site VPN :: Restrict User Permissions with IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1611464005" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1611464005" rel="stylesheet">
-    <link href="/css/hybrid.css?1611464005" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1611464005" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1611464005" rel="stylesheet">
-    <link href="/css/auto-complete.css?1611464005" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1611464005" rel="stylesheet">
-    <link href="/css/theme.css?1611464005" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1611464005" rel="stylesheet">
+    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
+    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
+    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
+    <link href="/css/theme.css?1613990621" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1611464005" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1611464005"></script>
+    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1611464005"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1611464005"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1611464005"></script>
+<script type="text/javascript" src="/js/search.js?1613990621"></script>
 
     
   </div>
@@ -297,12 +297,80 @@
         
         ">
       <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/">
-          <b>2.1. </b>Configure NACL &amp; SG
+          <b>2.1.2. </b>Configure NACL &amp; SG
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/">
+          <b>2.1.1. </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/">
+          <b>2.1.2. </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -331,6 +399,74 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/" title="Publish to CW Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/">
+          <b>2.2.1. </b>Publish to CW Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/" title="Publish to S3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/">
+          <b>2.2.2. </b>Publish to S3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -359,6 +495,102 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/" title="Deploy Infrastructure" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/">
+          <b>2.3.1. </b>Deploy Infrastructure
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/" title="Setup Site to Site VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/">
+          <b>2.3.2. </b>Setup Site to Site VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/" title="Testing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/">
+          <b>2.3.3. </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -515,15 +747,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -565,167 +789,13 @@ Following are the important points to understand about <strong>VPG</strong>, <st
 </ul>
 <p>Let’s build a lab together then we have a better understanding about VPN Site-to-site.<br>
 In this lab, assume that we have Main office and Branch office lies on 2 VPCs belonging to 2 different AZs to make network difference from 2 sites. On each VPC, we create 2 EC2 to allow SSH from outside, but not able to connect and ping each other using the Private IP address of each EC2. What we need to do is configure the VPN so that Private IP addresses can ping each other using Site-to-Site VPN.</p>
-<p><img src="/images/2-vpc/Lab-Diagram-Site-to-Site.PNG?width=80pc" alt="Lab Diagram"></p>
+<p><img src="/images/3/0.png" alt="Lab Diagram"></p>
 <p><strong>Contents:</strong></p>
 <ul>
-<li><a href="#1-configure-network">1. Configure Network</a></li>
-<li><a href="#2-initialize-ec2-on-each-vpc">2. Initialize EC2 on each VPC</a></li>
-<li><a href="#3-configure-site-to-site-vpn-at-main-office">3. Configure Site to Site VPN at Main office</a></li>
-<li><a href="#4-configure-site-to-site-vpn-at-branch-office">4. Configure Site to Site VPN at Branch office</a></li>
-<li><a href="#5-test-ping-from-pub-linux-to-pub-linux-bra-and-vice-versa">5. Test ping from Pub-Linux to Pub-Linux-Bra and vice versa</a></li>
+<li><a href="1-deploy-infra/">1. Deploy Infrastructure</a></li>
+<li><a href="2-config-vpn/">2. Configure Site to Site VPN</a></li>
+<li><a href="3-testing/">3. Testing</a></li>
 </ul>
-<h4 id="1-configure-network">1. Configure Network</h4>
-<ul>
-<li>Create 2 VPC on 2 seperate AZ
-<ul>
-<li><strong>VPC-Main-ASG</strong> with CIDR block <code>10.1.0.0/16</code></li>
-<li><strong>VPC-Bra-ASG</strong> with CIDR block <code>10.2.0.0/16</code></li>
-</ul>
-</li>
-<li>Create Public Subnets on each VPC
-<ul>
-<li><strong>Pubsub1-Main-ASG</strong> with CIDR block <code>10.1.1.0/24</code></li>
-<li><strong>Pubsub-Bra-ASG</strong> with CIDR block <code>10.2.1.0/24</code></li>
-</ul>
-</li>
-<li>Create Internet GW on each VPC
-<ul>
-<li><strong>IGW-Main-ASG</strong> attached to <strong>VPC-Main-ASG</strong></li>
-<li><strong>IGW-Bra-ASG</strong> attached to <strong>VPC-Bra-ASG</strong></li>
-</ul>
-</li>
-<li>Modify Default Route Table for each VPC
-<ul>
-<li>Names: <strong>RT-Main-ASG</strong>; Routes: <code>Local,0.0.0.0/0</code>  <strong>IGW-Main-ASG</strong></li>
-<li>Names: <strong>RT-Bra-ASG</strong>; Routes: <code>Local,0.0.0.0/0</code>  <strong>IGW-Bra-ASG</strong></li>
-</ul>
-</li>
-</ul>
-<h4 id="2-initialize-ec2-on-each-vpc">2. Initialize EC2 on each VPC</h4>
-<p>At the beginning, two EC2 Private IP addresses will not be able to ping each other.</p>
-<p><strong>Create Security Group for EC2 in Main Office</strong></p>
-<ul>
-<li>Security group: Create a new security group: <strong>SG-Pub-Main-ASG</strong></li>
-<li>Type: <strong>SSH</strong>; Source: <strong>My IP</strong></li>
-<li>Type: <strong>All TCP</strong>; Source: Custom, <code>10.2.0.0/16</code></li>
-<li>Type: <strong>All UDP</strong>; Source: Custom, <code>10.2.0.0/16</code></li>
-<li>Type: <strong>All ICMP - IPv4</strong>; Source: Custom, <code>10.2.0.0/16</code></li>
-</ul>
-<p><strong>Create Security Group for EC2 in Branch Office</strong></p>
-<ul>
-<li>Security group: Create a new security group: <strong>SG-Pub-Bra-ASG</strong></li>
-<li>Type: <strong>SSH</strong>; Source: <strong>My IP</strong></li>
-<li>Type: <strong>All TCP</strong>; Source: Custom, <code>10.1.0.0/16</code></li>
-<li>Type: <strong>All UDP</strong>; Source: Custom, <code>10.1.0.0/16</code></li>
-<li>Type: <strong>All ICMP - IPv4</strong>; Source: Custom, <code>10.1.0.0/16</code></li>
-</ul>
-<p><strong>Create EC2 in Main Office network</strong></p>
-<ul>
-<li>AMI: <strong>Amazon Linux 2</strong></li>
-<li>Instance type: <strong>t2.medium</strong></li>
-<li>Network: <strong>VPC-Main-ASG</strong></li>
-<li>Subnet: <strong>Pubsub1-Main-ASG</strong></li>
-<li>Auto-assign Public IP: <strong>Enable</strong></li>
-<li>Security group: <strong>SG-Pub-Main-ASG</strong></li>
-<li>Key pair: <strong>Create a new key pair</strong>: <code>awskey2</code></li>
-</ul>
-<p><strong>Create EC2 in Branch Office network</strong></p>
-<ul>
-<li>AMI: <strong>Amazon Linux 2</strong></li>
-<li>Instance type: <strong>t2.medium</strong></li>
-<li>Network: <strong>VPC-Bra-ASG</strong></li>
-<li>Subnet: <strong>Pubsub-Bra-ASG</strong></li>
-<li>Auto-assign Public IP: <strong>Enable</strong></li>
-<li>Security group: <strong>SG-Pub-Bra-ASG</strong></li>
-<li>Key pair: <strong>Create a new key pair</strong>: <code>awskey2</code></li>
-</ul>
-<h4 id="3-configure-site-to-site-vpn-at-main-office">3. Configure Site to Site VPN at Main office</h4>
-<p><strong>Create Virtual Private Gateway at Main Office</strong></p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Chọn <strong>Virtual Private Gateway</strong></li>
-<li>Chọn <strong>Create VPG</strong></li>
-<li>Name: <strong>VPG-MainBranch-ASG</strong></li>
-</ul>
-<p><strong>Create &amp; configure Customer Gateway at Main Office</strong></p>
-<ul>
-<li>Name: <strong>CGW-MainBranch-ASG</strong></li>
-<li>Routing: <strong>Static</strong></li>
-<li>IP Address: <strong>13.56.76.108</strong></li>
-</ul>
-<p><strong>Creat &amp; configure Site-to-Site connection at Main Office</strong></p>
-<ul>
-<li>Name: <strong>VPN-MainBranch-ASG</strong></li>
-<li>Virtual Private Gateway: <strong>VPG-MainBranch-ASG</strong></li>
-<li>Customer Gateway: Exist (<strong>CGW-MainBranch-ASG</strong>)</li>
-<li>Routing Options: <strong>Static</strong></li>
-<li>IP Prefixes: <code>10.2.0.0/16</code></li>
-</ul>
-<p>Enable propagate for Route table of VPC-Main-ASG:</p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Choose Main Office Route table: <strong>RT-Main-ASG</strong></li>
-<li>Click <strong>Route Propagation</strong>, <strong>Edit Route Propagation</strong></li>
-<li>Check <strong>Enable, Yes</strong></li>
-</ul>
-<h4 id="4-configure-site-to-site-vpn-at-branch-office">4. Configure Site to Site VPN at Branch office</h4>
-<p>On <strong>EC2-Bra-ASG</strong> do followings:</p>
-<ul>
-<li>Install OpenSwan</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">su</span>
-<span style="color:#a6e22e">yum</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">openswan</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span>
-</code></pre></div><ul>
-<li>Configure /etc/ipsec.conf</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">include</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">ipsec</span>.<span style="color:#a6e22e">d</span><span style="color:#f92672">/*</span>.<span style="color:#a6e22e">conf</span>
-</code></pre></div><ul>
-<li>Configure /etc/sysctl.conf</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">ipv4</span>.<span style="color:#a6e22e">ip_forward</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-<span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">ipv4</span>.<span style="color:#a6e22e">conf</span>.<span style="color:#a6e22e">all</span>.<span style="color:#a6e22e">accept_redirects</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-<span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">ipv4</span>.<span style="color:#a6e22e">conf</span>.<span style="color:#a6e22e">all</span>.<span style="color:#a6e22e">send_redirects</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</code></pre></div><ul>
-<li>Configure /etc/ipsec.d/aws-vpn.conf</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">conn</span> <span style="color:#a6e22e">Tunnel1</span>
-	<span style="color:#a6e22e">authby</span><span style="color:#f92672">=</span><span style="color:#a6e22e">secret</span>
-	<span style="color:#a6e22e">auto</span><span style="color:#f92672">=</span><span style="color:#a6e22e">start</span>
-	<span style="color:#a6e22e">left</span><span style="color:#f92672">=%</span><span style="color:#a6e22e">defaultroute</span>
-	<span style="color:#a6e22e">leftid</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13.56.76.108</span> 
-	<span style="color:#a6e22e">right</span><span style="color:#f92672">=</span><span style="color:#ae81ff">52.53.71.108</span>
-	<span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#a6e22e">tunnel</span>
-	<span style="color:#a6e22e">ikelifetime</span><span style="color:#f92672">=</span><span style="color:#ae81ff">8</span><span style="color:#a6e22e">h</span>
-	<span style="color:#a6e22e">keylife</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#a6e22e">h</span>
-	<span style="color:#a6e22e">phase2alg</span><span style="color:#f92672">=</span><span style="color:#a6e22e">aes128</span><span style="color:#f92672">-</span><span style="color:#a6e22e">sha1</span>;<span style="color:#a6e22e">modp1024</span>
-	<span style="color:#a6e22e">ike</span><span style="color:#f92672">=</span><span style="color:#a6e22e">aes128</span><span style="color:#f92672">-</span><span style="color:#a6e22e">sha1</span>;<span style="color:#a6e22e">modp1024</span>
-	<span style="color:#a6e22e">keyingtries</span><span style="color:#f92672">=%</span><span style="color:#a6e22e">forever</span>
-	<span style="color:#a6e22e">keyexchange</span><span style="color:#f92672">=</span><span style="color:#a6e22e">ike</span>
-	<span style="color:#a6e22e">leftsubnet</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10.2.0.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">16</span>
-	<span style="color:#a6e22e">rightsubnet</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10.1.0.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">16</span>
-	<span style="color:#a6e22e">dpddelay</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
-	<span style="color:#a6e22e">dpdtimeout</span><span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
-	<span style="color:#a6e22e">dpdaction</span><span style="color:#f92672">=</span><span style="color:#a6e22e">restart_by_peer</span>
-</code></pre></div><p><strong>Note:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">leftid: IP Public Address of Branch office.
-right: IP Public Address of AWS VPN Tunnel
-leftsubnet: CIDR from Branch site 
-rightsubnet: CIDR from Main site
-</code></pre></div><ul>
-<li>Configure /etc/ipsec.d/aws-vpn.secrets</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ae81ff">13.56.76.108</span> <span style="color:#ae81ff">52.53.71.108</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PSK</span> <span style="color:#e6db74">&#34;vYiouHnJ1Q2itTl9NCy8zSuOOWciVmz2&#34;</span>
-</code></pre></div><ul>
-<li>Restart Network service &amp; IPSEC service</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">service</span> <span style="color:#a6e22e">network</span> <span style="color:#a6e22e">restart</span> 
-<span style="color:#a6e22e">chkconfig</span> <span style="color:#a6e22e">ipsec</span> <span style="color:#a6e22e">on</span>
-<span style="color:#a6e22e">service</span> <span style="color:#a6e22e">ipsec</span> <span style="color:#a6e22e">start</span>
-<span style="color:#a6e22e">service</span> <span style="color:#a6e22e">ipsec</span> <span style="color:#a6e22e">status</span>
-</code></pre></div><p><img src="/images/2-vpc/VPN-MainBranch-ASG.png?width=90pc" alt="VPN Information"></p>
-<h4 id="5-test-ping-from-pub-linux-to-pub-linux-bra-and-vice-versa">5. Test ping from Pub-Linux to Pub-Linux-Bra and vice versa</h4>
-<p><img src="/images/2-vpc/Test-ping-PubLinux-to-PubLinuxBra.png?width=90pc" alt="Testing Ping between Subnets"></p>
-<p><img src="/images/2-vpc/Test-ping-PubLinuxBra-to-PubLinux.png?width=90pc" alt="Testing Ping between Subnets"></p>
 
 
 
@@ -891,6 +961,125 @@ rightsubnet: CIDR from Main site
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -918,7 +1107,6 @@ rightsubnet: CIDR from Main site
             
                 
                     
-                    
                 
                 
 
@@ -935,6 +1123,9 @@ rightsubnet: CIDR from Main site
                     
             
         
+                    
+            
+        
         
         
 
@@ -942,10 +1133,10 @@ rightsubnet: CIDR from Main site
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-vpc-security-basic/2-configure-vpc-flow-logs/" title="Configure VPC Flow Logs"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/" title="Publish to S3"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-vpc-security-basic/1-configure-nacl-and-sg/" title="Configure NACL &amp; SG" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/" title="Deploy Infrastructure" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -955,19 +1146,19 @@ rightsubnet: CIDR from Main site
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1611464005"></script>
-    <script src="/js/perfect-scrollbar.min.js?1611464005"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1611464005"></script>
-    <script src="/js/jquery.sticky.js?1611464005"></script>
-    <script src="/js/featherlight.min.js?1611464005"></script>
-    <script src="/js/highlight.pack.js?1611464005"></script>
+    <script src="/js/clipboard.min.js?1613990621"></script>
+    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
+    <script src="/js/jquery.sticky.js?1613990621"></script>
+    <script src="/js/featherlight.min.js?1613990621"></script>
+    <script src="/js/highlight.pack.js?1613990621"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1611464005"></script>
-    <script src="/js/learn.js?1611464005"></script>
-    <script src="/js/hugo-learn.js?1611464005"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
+    <script src="/js/learn.js?1613990621"></script>
+    <script src="/js/hugo-learn.js?1613990621"></script>
 
-    <link href="/mermaid/mermaid.css?1611464005" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1611464005"></script>
+    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1613990621"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
