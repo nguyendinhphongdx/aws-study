@@ -31,6 +31,10 @@ Through out this lab, we will build a simple VPC follow the diagram below:
 * In the navigation pane, choose **Your VPCs**, **Create VPC**.
   * **Name tag**: `VPC-MAIN-ASG`
   * **IPv4 CIDR block**: `10.1.0.0/16`
+  * 
+{{%notice warning%}}
+For Tennacy configuration we will leave the default mechanism. If we switch to ** Dedicated ** there will be some EC2 Instance type can not be created in the VPC with the ** Dedicated ** tennacy mode.
+{{%/notice%}}
 
 #### Step 2. Create a Private subnet
 
