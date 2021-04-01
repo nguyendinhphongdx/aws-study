@@ -1,5 +1,5 @@
 +++
-title = "Tạo VPC Subnet"
+title = "Giới thiệu VPC Subnet"
 date = 2020
 weight = 2
 chapter = false
@@ -16,27 +16,3 @@ Các subnet được chia thành các loại như **Public**, **Private**, hoặ
 * A **VPN-only subnet** là subnet mà có route table điều hướng lưu lượng truy cập tới VPG của Amazon VPC (sẽ thảo luận sau). 
 
 Bất kể loại mạng con nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).
-
-#### Tạo một Private subnet
-
-* Trên thanh điều hướng bên trái, chọn **Subnets**.
-* Chọn **Create Subnet**.
-  * **Name tag**, nhập tên cho subne, như là **Private subnet**.
-  * **VPC**, chọn VPC mà bạn đã tạo từ trước.
-  * **Availability Zone**, lựa chọn một Availability Zone khác với các subnet đã khai báo trong VPC.
-  * **IPv4 CIDR block**, nhập dải IPv4 khả dụng. 
-* Chọn **Yes**, **Create**
-
-#### Tạo một Public subnet
-
-* Trên thanh điều hướng bên trái, chọn **Subnets**.
-* Chọn **Create Subnet**.
-  * **Name tag**, nhập tên cho subne, như là **Public subnet**.
-  * **VPC**, chọn VPC mà bạn đã tạo từ trước.
-  * **Availability Zone**, lựa chọn một Availability Zone khác với các subnet đã khai báo trong VPC.
-  * **IPv4 CIDR block**, nhập dải IPv4 khả dụng. 
-* Chọn **Yes**, **Create**
-* Chọn Public subnet mà bạn vừa tạo, rồi bấm **Route Table**, **Edit**.
-	* Thực hiện chỉnh sửa Route table để **0.0.0.0/0** được định hướng tới the Internet gateway sau đó bấm chọn **Save**.
-	* Bấm chọn **Subnet Actions**, **Modify auto-assign IP settings**.
-	* Chọn **Enable auto-assign public IPv4 address** rồi bấm **Save, Close**.

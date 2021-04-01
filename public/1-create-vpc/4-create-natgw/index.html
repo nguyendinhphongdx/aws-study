@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create NAT Gateway :: Restrict User Permissions with IAM Permission Boundary</title>
+    <title> NAT Gateway :: Restrict User Permissions with IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
-    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
-    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
-    <link href="/css/theme.css?1613990621" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
+    <link href="/css/nucleus.css?1617256011" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1617256011" rel="stylesheet">
+    <link href="/css/hybrid.css?1617256011" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1617256011" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1617256011" rel="stylesheet">
+    <link href="/css/auto-complete.css?1617256011" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1617256011" rel="stylesheet">
+    <link href="/css/theme.css?1617256011" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1617256011" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1617256011" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
+    <script src="/js/jquery-3.3.1.min.js?1617256011"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1617256011"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1617256011"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1613990621"></script>
+<script type="text/javascript" src="/js/search.js?1617256011"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-create-vpc/2-create-vpc-subnet/" title="Create VPC Subnet" class="dd-item 
+    <li data-nav-id="/1-create-vpc/2-create-vpc-subnet/" title="VPC Subnet" class="dd-item 
         
         
         
         ">
       <a href="/1-create-vpc/2-create-vpc-subnet/">
-          <b>1.2. </b>Create VPC Subnet
+          <b>1.2. </b>VPC Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-create-vpc/3-create-internet-gw/" title="Create Internet Gateway" class="dd-item 
+    <li data-nav-id="/1-create-vpc/3-create-internet-gw/" title="Internet Gateway" class="dd-item 
         
         
         
         ">
       <a href="/1-create-vpc/3-create-internet-gw/">
-          <b>1.3. </b>Create Internet Gateway
+          <b>1.3. </b>Internet Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-create-vpc/4-create-natgw/" title="Create NAT Gateway" class="dd-item 
+    <li data-nav-id="/1-create-vpc/4-create-natgw/" title=" NAT Gateway" class="dd-item 
         
         active
         
         ">
       <a href="/1-create-vpc/4-create-natgw/">
-          <b>1.4. </b>Create NAT Gateway
+          <b>1.4. </b> NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -734,7 +734,7 @@
             
           
           
-            <a href='/'>Amazon VPC Setup</a> > <a href='/1-create-vpc/'>Create VPC</a> > Create NAT Gateway
+            <a href='/'>Amazon VPC Setup</a> > <a href='/1-create-vpc/'>Create VPC</a> >  NAT Gateway
           
         
           
@@ -747,15 +747,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -771,7 +763,7 @@
           
             <h1>
               
-              Create NAT Gateway
+               NAT Gateway
             </h1>
           
 
@@ -783,35 +775,6 @@
 AWS provides NAT instances and NAT gateways to allow instances deployed in private subnets to gain Internet access. For common use cases, we recommend that you use a NAT gateway instead of a NAT instance. The NAT gateway provides better availability and higher bandwidth, and requires less administrative effort than NAT instances.</p>
 <p>To create a NAT gateway, you must specify a subnet and an Elastic IP address. Ensure that the Elastic IP address is currently not associated with an instance or a network interface.</p>
 <p>If you are migrating from a NAT instance to a NAT gateway and you want to reuse the NAT instance&rsquo;s Elastic IP address, you must first disassociate the address from your NAT instance.</p>
-<p><strong>Contents:</strong></p>
-<ul>
-<li><a href="#create-nat-gateway">Create NAT Gateway</a></li>
-<li><a href="#add-route-to-route-table">Add route to Route Table</a></li>
-</ul>
-<h4 id="create-nat-gateway">Create NAT Gateway</h4>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>NAT Gateways</strong>, <strong>Create NAT Gateway</strong>.</li>
-<li>Specify the subnet in which to create the NAT gateway, and select the allocation ID of an Elastic IP address to associate with the NAT gateway.</li>
-<li>[Add a tag] Choose <strong>Add tag</strong> and do the following:
-<ul>
-<li>For <strong>Key</strong>, enter the key name.</li>
-<li>For <strong>Value</strong>, enter the key value.</li>
-</ul>
-</li>
-<li>Choose <strong>Create a NAT Gateway</strong>.</li>
-<li>The NAT gateway displays in the console. After a few moments, its status changes to Available, after which it&rsquo;s ready for you to use.</li>
-</ul>
-<h4 id="add-route-to-route-table">Add route to Route Table</h4>
-<p>After you&rsquo;ve created your NAT gateway, you must update your route tables for your private subnets to point internet traffic to the NAT gateway. We use the most specific route that matches the traffic to determine how to route the traffic (longest prefix match).</p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Route Tables</strong>.</li>
-<li>Select the route table associated with your private subnet and choose <strong>Routes, Edit</strong>.</li>
-<li>Choose <strong>Add another route</strong>. For <strong>Destination</strong>, enter <code>0.0.0.0/0</code>. For <strong>Target</strong>, select the ID of your NAT gateway.</li>
-<li>Choose <strong>Save</strong>.</li>
-</ul>
-<p>To ensure that your NAT gateway can access the internet, the route table associated with the subnet in which your NAT gateway resides must include a route that points internet traffic to an internet gateway.</p>
 
 
 
@@ -1146,7 +1109,7 @@ AWS provides NAT instances and NAT gateways to allow instances deployed in priva
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-create-vpc/3-create-internet-gw/" title="Create Internet Gateway"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-create-vpc/3-create-internet-gw/" title="Internet Gateway"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/1-create-vpc/5-build-simple-lab/" title="Build Simple Lab" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1159,19 +1122,19 @@ AWS provides NAT instances and NAT gateways to allow instances deployed in priva
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
-    <script src="/js/jquery.sticky.js?1613990621"></script>
-    <script src="/js/featherlight.min.js?1613990621"></script>
-    <script src="/js/highlight.pack.js?1613990621"></script>
+    <script src="/js/clipboard.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1617256011"></script>
+    <script src="/js/jquery.sticky.js?1617256011"></script>
+    <script src="/js/featherlight.min.js?1617256011"></script>
+    <script src="/js/highlight.pack.js?1617256011"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
-    <script src="/js/learn.js?1613990621"></script>
-    <script src="/js/hugo-learn.js?1613990621"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1617256011"></script>
+    <script src="/js/learn.js?1617256011"></script>
+    <script src="/js/hugo-learn.js?1617256011"></script>
 
-    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1613990621"></script>
+    <link href="/mermaid/mermaid.css?1617256011" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1617256011"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

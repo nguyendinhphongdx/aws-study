@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo Internet Gateway :: Giới hạn quyền của User với IAM Permission Boundary</title>
+    <title>Internet Gateway :: Giới hạn quyền của User với IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
-    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
-    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
-    <link href="/css/theme.css?1613990621" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
+    <link href="/css/nucleus.css?1617256011" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1617256011" rel="stylesheet">
+    <link href="/css/hybrid.css?1617256011" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1617256011" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1617256011" rel="stylesheet">
+    <link href="/css/auto-complete.css?1617256011" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1617256011" rel="stylesheet">
+    <link href="/css/theme.css?1617256011" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1617256011" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1617256011" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
+    <script src="/js/jquery-3.3.1.min.js?1617256011"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1617256011"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1617256011"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1613990621"></script>
+<script type="text/javascript" src="/js/search.js?1617256011"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/2-create-vpc-subnet/" title="Tạo VPC Subnet" class="dd-item 
+    <li data-nav-id="/vi/1-create-vpc/2-create-vpc-subnet/" title="Giới thiệu VPC Subnet" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-create-vpc/2-create-vpc-subnet/">
-          <b>1.2. </b>Tạo VPC Subnet
+          <b>1.2. </b>Giới thiệu VPC Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/3-create-internet-gw/" title="Tạo Internet Gateway" class="dd-item 
+    <li data-nav-id="/vi/1-create-vpc/3-create-internet-gw/" title="Internet Gateway" class="dd-item 
         
         active
         
         ">
       <a href="/vi/1-create-vpc/3-create-internet-gw/">
-          <b>1.3. </b>Tạo Internet Gateway
+          <b>1.3. </b>Internet Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/4-create-natgw/" title="Tạo NAT Gateway" class="dd-item 
+    <li data-nav-id="/vi/1-create-vpc/4-create-natgw/" title="NAT Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-create-vpc/4-create-natgw/">
-          <b>1.4. </b>Tạo NAT Gateway
+          <b>1.4. </b>NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -734,7 +734,7 @@
             
           
           
-            <a href='/vi/'>Thiết lập VPC</a> > <a href='/vi/1-create-vpc/'>Khởi tạo VPC</a> > Tạo Internet Gateway
+            <a href='/vi/'>Thiết lập VPC</a> > <a href='/vi/1-create-vpc/'>Khởi tạo VPC</a> > Internet Gateway
           
         
           
@@ -747,15 +747,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -771,7 +763,7 @@
           
             <h1>
               
-              Tạo Internet Gateway
+              Internet Gateway
             </h1>
           
 
@@ -781,76 +773,6 @@
 
 	<p>Internet Gateway (IGW) là một thành phần Amazon VPC giúp các tài nguyên bên trong VPC, cụ thể là EC2, có khả năng giao tiếp với Internet. IGW có khả năng co giãn mạnh theo chiều ngang, đồng thời tính dự phòng và sẵn sàng cao. Nó hoạt động như một target trong bảng Địnhtuyến của Amazon VPC, giúp lưu lượng truy cập được định tuyến ra ngoài Internet bằng cách biên dịch địa chỉ mạng của EC2 thành địa chỉ Public IP đã được gán cho nó.<br>
 Cụ thể hơn, các EC2 Instance bên trong VPC chỉ biết các địa chỉ Private IP được gán cho nó, nhưng khi có lưu lượng được gửi từ EC2 ra ngoài Internet, IGW sẽ biên dịch địa chỉ Private IP đó thành địa chỉ Public IP (hoặc địa chỉ EIP, sẽ thảo luận sau) mà gán với EC2, và duy trì mapping 1-1 cho tới khi địa chỉ Public IP bị release. Khi EC2 nhận được lưu lượng truy cập từ bên ngoài Internet, IGW sẽ thực hiện dịch địa chỉ Target (địa chỉ Public IP) thành địa chỉ Private IP của EC2 Instance và chuyển tiếp lưu lượng truy cập đến Amazon VPC.</p>
-<p>Để tạo Internet gateway ta thực hiện các bước sau đây:</p>
-<ul>
-<li><a href="#t%E1%BA%A1o-m%E1%BB%99t-subnet">Tạo một Subnet</a></li>
-<li><a href="#t%E1%BA%A1o-internet-gateway-v%C3%A0-attach-v%C3%A0o-vpc">Tạo Internet gateway và attach vào VPC</a></li>
-<li><a href="#t%E1%BA%A1o-m%E1%BB%99t-custom-route-table">Tạo một custom route table</a></li>
-<li><a href="#t%E1%BA%A1o-security-group-cho-ph%C3%A9p-truy-c%E1%BA%ADp-internet">Tạo Security group cho phép truy cập Internet</a></li>
-<li><a href="#th%C3%AAm-%C4%91%E1%BB%8Ba-ch%E1%BB%89-elastic-ip">Thêm địa chỉ Elastic IP</a></li>
-</ul>
-<h4 id="tạo-một-subnet">Tạo một Subnet</h4>
-<ul>
-<li>Truy cập trang Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Subnets</strong>.</li>
-<li>Chọn <strong>Create Subnet</strong>.</li>
-<li><strong>Name tag</strong>, nhập tên cho subne, như là <strong>Private subnet</strong>.</li>
-<li><strong>VPC</strong>, chọn VPC mà bạn đã tạo từ trước.</li>
-<li><strong>Availability Zone</strong>, lựa chọn một Availability Zone khác với các subnet đã khai báo trong VPC.</li>
-<li><strong>IPv4 CIDR block</strong>, nhập dải IPv4 khả dụng.</li>
-<li>Chọn <strong>Yes</strong>, <strong>Create</strong></li>
-</ul>
-<h4 id="tạo-internet-gateway-và-attach-vào-vpc">Tạo Internet gateway và attach vào VPC</h4>
-<p>Sau khi tạo thành công Internet gateway, attach IGW vào VPC.</p>
-<ul>
-<li>Truy cập trang Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Internet Gateways</strong>, sau đó <strong>Create internet gateway</strong>.</li>
-<li>Nhập tên Internet gateway (tùy chọn), rồi bấm <strong>Create</strong>.</li>
-<li>Lựa chọn Internet gateway mà bạn vừa tạo, sau đó bấm chọn <strong>Actions, Attach to VPC</strong>.</li>
-<li>Lựa VPC từ danh sách rồi bấm <strong>Attach</strong>.</li>
-</ul>
-<h4 id="tạo-một-custom-route-table">Tạo một custom route table</h4>
-<p>Khi một subnet được tạo ra, nó sẽ tự động được liên kết với main route table của VPC. Mặc định, main route table sẽ không chứa bản ghi điều hướng tới Internet gateway.<br>
-Bên dưới là mô tả cách tạo một custom route table với định tuyến hướng lưu lượng ra ngoài VPC phải đi qua Internet gateway, và cách để liên kết nó với một subnet.</p>
-<ul>
-<li>Truy cập Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Tại hộp thoại <strong>Create Route Table</strong>, nhập tên Route table(tùy chọn), sau đó lựa chọn VPC, rồi bấm <strong>Yes, Create</strong>.</li>
-<li>Bấm chọn the custom route table mà bạn vừa tạo. Thông tin chi tiết của Route table hiển thị bên dưới</li>
-<li>Tại <strong>Routes</strong> tab, chọn <strong>Edit, Add another route</strong>, sau đó bổ sung các route cần thiết. Chọn <strong>Save</strong>.
-<ul>
-<li>Với IPv4 traffic, điền <code>0.0.0.0/0</code> vào ô <strong>Destination</strong>, và chọn Internet gateway ID làm <strong>Target</strong>.</li>
-<li>Với IPv6 traffic, điền <code>::/0</code> vào ô <strong>Destination</strong>, và chọn Internet gateway ID làm <strong>Target</strong>.</li>
-</ul>
-</li>
-<li>Tại <strong>Subnet Associations</strong> tab, bấm <strong>Edit</strong>, chọn <strong>Associate</strong> với subnet mong muốn, rồi bấm Save.</li>
-</ul>
-<h4 id="tạo-security-group-cho-phép-truy-cập-internet">Tạo Security group cho phép truy cập Internet</h4>
-<p>VPC Security group mặc định cho phép mọi lưu lượng Ra Vào VPC. Ta có thể tạo một Security group mới và bổ sung rule cho phép lưu lượng Ra Vào Internet. Bạn có thể liên kết Security group với Instance nằm trong Public subnet.</p>
-<ul>
-<li>Truy cập Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Security Groups</strong>, rồi chọn <strong>Create Security Group</strong>.</li>
-<li>Tại hộp thoại <strong>Create Security Group</strong>, nhập Tên của Security group và điền thêm mô tả. Chọn VPC ID mong muống từ danh sách VPC, sau đó chọn <strong>Yes, Create</strong>.</li>
-<li>Chọn tên của Security group vừa tạo ở trên. Thông tin chi tiết của Route table hiển thị như bên dưới:
-<ul>
-<li>Tại <strong>Inbound Rules</strong> tab, bấm <strong>Edit</strong>.</li>
-<li>Chọn <strong>Add Rule</strong>, và điền thông tin theo nhu cầu. Ví dụ, chọn <strong>HTTP</strong> hoặc <strong>HTTPS</strong> từ <strong>Type</strong> list, rồi nhập <strong>Source</strong> với giá trị <code>0.0.0.0/0</code> cho lưu lượng IPv4, hoặc <code>::/0</code>cho lưu lượng IPv6.</li>
-<li>Bấm <strong>Save</strong> sau khi hoàn thành.</li>
-</ul>
-</li>
-<li>Truy cập Amazon EC2 console tại địa chỉ <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Instances</strong>.</li>
-<li>Lựa chọn Instance theo tên, bấm chọn <strong>Actions</strong>, rồi <strong>Networking</strong>, bấm <strong>Change Security Groups</strong>.</li>
-<li>Tại hộp thoại <strong>Change Security Groups</strong>, lựa chọn Security group mới được tạo. Rồi bấm <strong>Assign Security Groups</strong>.</li>
-</ul>
-<h4 id="thêm-địa-chỉ-elastic-ip">Thêm địa chỉ Elastic IP</h4>
-<p>Sau khi Instance đã được launch, ta thực hiện gán địa chỉ Elastic IP với Instance để cung cấp khả nwang truy cập Internet qua IPv4.</p>
-<ul>
-<li>Truy cập Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Elastic IPs</strong>.</li>
-<li>Bấm <strong>Allocate new address</strong>, <strong>Allocate</strong>.</li>
-<li>Chọn địa chỉ Elastic IP đã tạo rồi bấm <strong>Actions</strong>, sau đó bấm <strong>Associate address</strong>.</li>
-<li>Chọn <strong>Instance</strong> hoặc <strong>Network interface</strong>, rồi chọn ID của Instance hoặc Network interface. Chọn địa chỉ Private IP cần được liên kết với địa chỉ Elastic IP, rồi chọn <strong>Associate</strong>.</li>
-</ul>
 
 
 
@@ -1185,10 +1107,10 @@ Bên dưới là mô tả cách tạo một custom route table với định tuy
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/1-create-vpc/2-create-vpc-subnet/" title="Tạo VPC Subnet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/1-create-vpc/2-create-vpc-subnet/" title="Giới thiệu VPC Subnet"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-create-vpc/4-create-natgw/" title="Tạo NAT Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-create-vpc/4-create-natgw/" title="NAT Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1198,19 +1120,19 @@ Bên dưới là mô tả cách tạo một custom route table với định tuy
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
-    <script src="/js/jquery.sticky.js?1613990621"></script>
-    <script src="/js/featherlight.min.js?1613990621"></script>
-    <script src="/js/highlight.pack.js?1613990621"></script>
+    <script src="/js/clipboard.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1617256011"></script>
+    <script src="/js/jquery.sticky.js?1617256011"></script>
+    <script src="/js/featherlight.min.js?1617256011"></script>
+    <script src="/js/highlight.pack.js?1617256011"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
-    <script src="/js/learn.js?1613990621"></script>
-    <script src="/js/hugo-learn.js?1613990621"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1617256011"></script>
+    <script src="/js/learn.js?1617256011"></script>
+    <script src="/js/hugo-learn.js?1617256011"></script>
 
-    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1613990621"></script>
+    <link href="/mermaid/mermaid.css?1617256011" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1617256011"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Internet Gateway on Giới hạn quyền của User với IAM Permission Boundary</title>
+    <title>Internet Gateway on Giới hạn quyền của User với IAM Permission Boundary</title>
     <link>/vi/1-create-vpc/3-create-internet-gw/</link>
-    <description>Recent content in Tạo Internet Gateway on Giới hạn quyền của User với IAM Permission Boundary</description>
+    <description>Recent content in Internet Gateway on Giới hạn quyền của User với IAM Permission Boundary</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:40 +0700</lastBuildDate>
     

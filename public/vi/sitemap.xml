@@ -153,21 +153,6 @@
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
-                />
-  </url>
-  
-  <url>
     <loc>/vi/1-create-vpc/2-create-vpc-subnet/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -179,6 +164,21 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/1-create-vpc/2-create-vpc-subnet/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
                 />
   </url>
   
@@ -213,21 +213,6 @@
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
-                />
-  </url>
-  
-  <url>
     <loc>/vi/1-create-vpc/3-create-internet-gw/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -239,6 +224,21 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/1-create-vpc/3-create-internet-gw/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
                 />
   </url>
   

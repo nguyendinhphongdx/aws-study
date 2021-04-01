@@ -1,5 +1,5 @@
 +++
-title = "Create VPC Subnet"
+title = "VPC Subnet"
 date = 2020
 weight = 2
 chapter = false
@@ -17,26 +17,3 @@ Subnets can be classified as **Public**, **Private**, or **VPN-only**.
 
 Regardless of the type of subnet, the internal IP address range of the subnet is always private (that is, non-routable on the Internet). Default Amazon VPCs contain one public subnet in every Availability Zone within the region, with a netmask of /20.
 
-#### Create a Private subnet
-
-* In the left navigation pane, choose **Subnets**.
-* Choose **Create Subnet**.
-  * For **Name tag**, enter a name for your subnet, such as **Private subnet**.
-  * For **VPC**, choose the VPC that you created earlier.
-  * For **Availability Zone**, choose a different Availability Zone than your original subnets in the VPC.
-  * For **IPv4 CIDR block**, enter a valid CIDR block. 
-* Choose **Yes**, **Create**
-
-#### Create a Public subnet
-
-* In the left navigation pane, choose **Subnets**.
-* Choose **Create Subnet**.
-  * For **Name tag**, enter a name for your subnet, such as Public subnet.
-  * For **VPC**, choose the **VPC** that you created earlier.
-  * For **Availability Zone**, choose the same Availability Zone as the additional private subnet that you created in the previous procedure.
-  * For **IPv4 CIDR block**, enter a valid CIDR block. 
-* Choose **Yes**, **Create**.
-* Select the public subnet that you just created and choose **Route Table**, **Edit**.
-  * By default, the private route table is selected. Choose the other available route table so that the **0.0.0.0/0** destination is routed to the internet gateway (**igw-xxxxxxxx**) and choose **Save**.
-  * With your second public subnet still selected, choose **Subnet Actions**, **Modify auto-assign IP settings**.
-  * Select **Enable auto-assign public IPv4 address** and choose **Save, Close**.

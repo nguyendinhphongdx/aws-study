@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo NAT Gateway :: Giới hạn quyền của User với IAM Permission Boundary</title>
+    <title>NAT Gateway :: Giới hạn quyền của User với IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
-    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
-    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
-    <link href="/css/theme.css?1613990621" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
+    <link href="/css/nucleus.css?1617256011" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1617256011" rel="stylesheet">
+    <link href="/css/hybrid.css?1617256011" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1617256011" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1617256011" rel="stylesheet">
+    <link href="/css/auto-complete.css?1617256011" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1617256011" rel="stylesheet">
+    <link href="/css/theme.css?1617256011" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1617256011" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1617256011" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
+    <script src="/js/jquery-3.3.1.min.js?1617256011"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1617256011"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1617256011"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1613990621"></script>
+<script type="text/javascript" src="/js/search.js?1617256011"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/2-create-vpc-subnet/" title="Tạo VPC Subnet" class="dd-item 
+    <li data-nav-id="/vi/1-create-vpc/2-create-vpc-subnet/" title="Giới thiệu VPC Subnet" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-create-vpc/2-create-vpc-subnet/">
-          <b>1.2. </b>Tạo VPC Subnet
+          <b>1.2. </b>Giới thiệu VPC Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/3-create-internet-gw/" title="Tạo Internet Gateway" class="dd-item 
+    <li data-nav-id="/vi/1-create-vpc/3-create-internet-gw/" title="Internet Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-create-vpc/3-create-internet-gw/">
-          <b>1.3. </b>Tạo Internet Gateway
+          <b>1.3. </b>Internet Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/4-create-natgw/" title="Tạo NAT Gateway" class="dd-item 
+    <li data-nav-id="/vi/1-create-vpc/4-create-natgw/" title="NAT Gateway" class="dd-item 
         
         active
         
         ">
       <a href="/vi/1-create-vpc/4-create-natgw/">
-          <b>1.4. </b>Tạo NAT Gateway
+          <b>1.4. </b>NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -734,7 +734,7 @@
             
           
           
-            <a href='/vi/'>Thiết lập VPC</a> > <a href='/vi/1-create-vpc/'>Khởi tạo VPC</a> > Tạo NAT Gateway
+            <a href='/vi/'>Thiết lập VPC</a> > <a href='/vi/1-create-vpc/'>Khởi tạo VPC</a> > NAT Gateway
           
         
           
@@ -747,15 +747,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -771,7 +763,7 @@
           
             <h1>
               
-              Tạo NAT Gateway
+              NAT Gateway
             </h1>
           
 
@@ -783,34 +775,6 @@
 Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép các EC2 bên trong Private subnet có quyền được truy cập Internet, đó là NAT Instance và NAT Gateway. Với các trường hợp thông thường, thì ta nên sử dụng NAT Gateway thay cho NAT Instance. NAT Gateway đảm bảo tính sẵn sàng và băng thông cao hơn, đồng thời đòi hỏi ít nỗ lực quản trị hơn so với NAT Instance.</p>
 <p>Để tạo một một NAT gateway, ta phải chỉ định một mạng con (public) và một địa chỉ Elastic IP. Cần đảm bảo địa chỉ Elastic IP đang không được liên kết với bất cứ Instance hoặc một Network interface nào khác.</p>
 <p>Trường hợp ta muốn migrate từ NAT instance sang NAT gateway, ta có thể sử dụng lại địa chỉ Elastic IP của NAT instance. Nhưng trước hết ta cần phải tách địa chỉ IP ra khỏi NAT Instance.</p>
-<p><strong>Nội dung:</strong></p>
-<ul>
-<li><a href="#t%E1%BA%A1o-nat-gateway">Tạo NAT Gateway</a></li>
-<li><a href="#th%C3%AAm-c%C3%A1c-route-cho-b%E1%BA%A3ng-%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn">Thêm các route cho bảng định tuyến</a></li>
-</ul>
-<h4 id="tạo-nat-gateway">Tạo NAT Gateway</h4>
-<ul>
-<li>Truy cập Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>NAT Gateways</strong>, <strong>Create NAT Gateway</strong>.</li>
-<li>Chỉ rõ Public subnet đặt NAT gateway, rồi lựa chọn địa chỉ Elastic IP theo ID để liên kết với NAT gateway.</li>
-<li>Chọn <strong>Add tag</strong> và nhập giá trị:
-<ul>
-<li><strong>Key</strong>, nhập tên khóa</li>
-<li><strong>Value</strong>: nhập giá trị của khóa</li>
-</ul>
-</li>
-<li>Chọn <strong>Create a NAT Gateway</strong>.</li>
-<li>Sau đó, NAT gateway sẽ hiển thị trong bảng điều khiển. Sau một lúc, trạng thái của NAT gateway sẽ chuyển thành <strong>Available</strong> - nghĩa là thiết lập đã sẵn sàng để sử dụng.</li>
-</ul>
-<h4 id="thêm-các-route-cho-bảng-định-tuyến">Thêm các route cho bảng định tuyến</h4>
-<p>Sau khi NAT gateway đã được tạo, thực hiện cập nhật bảng định tuyến cho Private subnet để định tuyến mọi lưu lượng từ subnet này đi ra ngoài internet đều phải đi qua NAT Gateway.</p>
-<ul>
-<li>Truy cập Amazon VPC console tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Route Tables</strong>.</li>
-<li>Chọn bảng định tuyến liên kết với Private subnet rồi Chọn <strong>Routes, Edit</strong>.</li>
-<li>Chọn <strong>Add another route</strong>. Đối với <strong>Destination</strong>, nhập <code>0.0.0.0/0</code>. Đối với <strong>Target</strong>, nhập ID của NAT gateway.</li>
-<li>Chọn chọn <strong>Save</strong>.</li>
-</ul>
 
 
 
@@ -1145,7 +1109,7 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/1-create-vpc/3-create-internet-gw/" title="Tạo Internet Gateway"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/1-create-vpc/3-create-internet-gw/" title="Internet Gateway"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/1-create-vpc/5-build-simple-lab/" title="Thực hành Cơ bản" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1158,19 +1122,19 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
-    <script src="/js/jquery.sticky.js?1613990621"></script>
-    <script src="/js/featherlight.min.js?1613990621"></script>
-    <script src="/js/highlight.pack.js?1613990621"></script>
+    <script src="/js/clipboard.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1617256011"></script>
+    <script src="/js/jquery.sticky.js?1617256011"></script>
+    <script src="/js/featherlight.min.js?1617256011"></script>
+    <script src="/js/highlight.pack.js?1617256011"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
-    <script src="/js/learn.js?1613990621"></script>
-    <script src="/js/hugo-learn.js?1613990621"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1617256011"></script>
+    <script src="/js/learn.js?1617256011"></script>
+    <script src="/js/hugo-learn.js?1617256011"></script>
 
-    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1613990621"></script>
+    <link href="/mermaid/mermaid.css?1617256011" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1617256011"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

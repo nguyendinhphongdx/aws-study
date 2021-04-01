@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create Internet Gateway :: Restrict User Permissions with IAM Permission Boundary</title>
+    <title>Internet Gateway :: Restrict User Permissions with IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1613990621" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1613990621" rel="stylesheet">
-    <link href="/css/hybrid.css?1613990621" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1613990621" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1613990621" rel="stylesheet">
-    <link href="/css/auto-complete.css?1613990621" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1613990621" rel="stylesheet">
-    <link href="/css/theme.css?1613990621" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1613990621" rel="stylesheet">
+    <link href="/css/nucleus.css?1617256011" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1617256011" rel="stylesheet">
+    <link href="/css/hybrid.css?1617256011" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1617256011" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1617256011" rel="stylesheet">
+    <link href="/css/auto-complete.css?1617256011" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1617256011" rel="stylesheet">
+    <link href="/css/theme.css?1617256011" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1617256011" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1613990621" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1617256011" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1613990621"></script>
+    <script src="/js/jquery-3.3.1.min.js?1617256011"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1613990621"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1613990621"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1617256011"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1617256011"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1613990621"></script>
+<script type="text/javascript" src="/js/search.js?1617256011"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-create-vpc/2-create-vpc-subnet/" title="Create VPC Subnet" class="dd-item 
+    <li data-nav-id="/1-create-vpc/2-create-vpc-subnet/" title="VPC Subnet" class="dd-item 
         
         
         
         ">
       <a href="/1-create-vpc/2-create-vpc-subnet/">
-          <b>1.2. </b>Create VPC Subnet
+          <b>1.2. </b>VPC Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-create-vpc/3-create-internet-gw/" title="Create Internet Gateway" class="dd-item 
+    <li data-nav-id="/1-create-vpc/3-create-internet-gw/" title="Internet Gateway" class="dd-item 
         
         active
         
         ">
       <a href="/1-create-vpc/3-create-internet-gw/">
-          <b>1.3. </b>Create Internet Gateway
+          <b>1.3. </b>Internet Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-create-vpc/4-create-natgw/" title="Create NAT Gateway" class="dd-item 
+    <li data-nav-id="/1-create-vpc/4-create-natgw/" title=" NAT Gateway" class="dd-item 
         
         
         
         ">
       <a href="/1-create-vpc/4-create-natgw/">
-          <b>1.4. </b>Create NAT Gateway
+          <b>1.4. </b> NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -734,7 +734,7 @@
             
           
           
-            <a href='/'>Amazon VPC Setup</a> > <a href='/1-create-vpc/'>Create VPC</a> > Create Internet Gateway
+            <a href='/'>Amazon VPC Setup</a> > <a href='/1-create-vpc/'>Create VPC</a> > Internet Gateway
           
         
           
@@ -747,15 +747,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -771,7 +763,7 @@
           
             <h1>
               
-              Create Internet Gateway
+              Internet Gateway
             </h1>
           
 
@@ -781,74 +773,6 @@
 
 	<p>An Internet Gateway (IGW) is a horizontally scaled, redundant, and highly available Amazon VPC component that allows communication between instances in your Amazon VPC and the Internet. An IGW provides a target in your Amazon VPC route tables for Internet-routable traffic, and it performs network address translation for instances that have been assigned public IP addresses.<br>
 Amazon EC2 instances within an Amazon VPC are only aware of their private IP addresses. When traffic is sent from the instance to the Internet, the IGW translates the reply address to the instance’s public IP address (or EIP address, covered later) and maintains the one-to-one map of the instance private IP address and public IP address. When an instance receives traffic from the Internet, the IGW translates the destination address (public IP address) to the instance’s private IP address and forwards the traffic to the Amazon VPC.</p>
-<p>To add an internet gateway to your VPC, follow steps below:</p>
-<ul>
-<li><a href="#creating-a-subnet">Creating a subnet</a></li>
-<li><a href="#creating-and-attaching-an-internet-gateway">Creating and attaching an internet gateway</a></li>
-<li><a href="#creating-a-custom-route-table">Creating a custom route table</a></li>
-<li><a href="#creating-a-security-group-for-internet-access">Creating a security group for internet access</a></li>
-<li><a href="#adding-elastic-ip-addresses">Adding Elastic IP addresses</a></li>
-</ul>
-<h4 id="creating-a-subnet">Creating a subnet</h4>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Subnets</strong>, and then choose <strong>Create Subnet</strong>.</li>
-<li>In the <strong>Create Subnet</strong> dialog box, select the VPC, select the Availability Zone, and specify the IPv4 CIDR block for the subnet.</li>
-<li>(Optional, IPv6 only) For <strong>IPv6 CIDR block</strong>, choose <strong>Specify a custom IPv6 CIDR</strong>.</li>
-<li>Choose <strong>Yes, Create</strong>.</li>
-</ul>
-<h4 id="creating-and-attaching-an-internet-gateway">Creating and attaching an internet gateway</h4>
-<p>After you create an internet gateway, attach it to your VPC.</p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Internet Gateways</strong>, and then choose <strong>Create internet gateway</strong>.</li>
-<li>Optionally name your internet gateway, and then choose <strong>Create</strong>.</li>
-<li>Select the internet gateway that you just created, and then choose <strong>Actions, Attach to VPC</strong>.</li>
-<li>Select your VPC from the list, and then choose <strong>Attach</strong>.</li>
-</ul>
-<h4 id="creating-a-custom-route-table">Creating a custom route table</h4>
-<p>When you create a subnet, it automatically associate it with the main route table for the VPC. By default, the main route table doesn&rsquo;t contain a route to an internet gateway. The following procedure creates a custom route table with a route that sends traffic destined outside the VPC to the internet gateway, and then associates it with your subnet.</p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Route Tables</strong>, and then choose <strong>Create Route Table</strong>.</li>
-<li>In the <strong>Create Route Table</strong> dialog box, optionally name your route table, then select your VPC, and then choose <strong>Yes, Create</strong>.</li>
-<li>Select the custom route table that you just created. The details pane displays tabs for working with its routes, associations, and route propagation.</li>
-<li>On the <strong>Routes</strong> tab, choose <strong>Edit, Add another route</strong>, and add the following routes as necessary. Choose <strong>Save</strong> when you&rsquo;re done.
-<ul>
-<li>For IPv4 traffic, specify <code>0.0.0.0/0</code> in the <strong>Destination</strong> box, and select the internet gateway ID in the Target list.</li>
-<li>For IPv6 traffic, specify <code>::/0</code> in the <strong>Destination</strong> box, and select the internet gateway ID in the Target list.</li>
-</ul>
-</li>
-<li>On the <strong>Subnet Associations</strong> tab, choose <strong>Edit</strong>, select the <strong>Associate</strong> check box for the subnet, and then choose Save.</li>
-</ul>
-<h4 id="creating-a-security-group-for-internet-access">Creating a security group for internet access</h4>
-<p>By default, a VPC security group allows all outbound traffic. You can create a new security group and add rules that allow inbound traffic from the internet. You can then associate the security group with instances in the public subnet.</p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Security Groups</strong>, and then choose <strong>Create Security Group</strong>.</li>
-<li>In the <strong>Create Security Group</strong> dialog box, specify a name for the security group and a description. Select the ID of your VPC from the VPC list, and then choose <strong>Yes, Create</strong>.</li>
-<li>Select the security group. The details pane displays the details for the security group, plus tabs for working with its inbound rules and outbound rules.
-<ul>
-<li>On the <strong>Inbound Rules</strong> tab, choose <strong>Edit</strong>.</li>
-<li>Choose <strong>Add Rule</strong>, and complete the required information. For example, select <strong>HTTP</strong> or <strong>HTTPS</strong> from the <strong>Type</strong> list, and enter the <strong>Source</strong> as <code>0.0.0.0/0</code> for IPv4 traffic, or <code>::/0</code> for IPv6 traffic.</li>
-<li>Choose <strong>Save</strong> when you&rsquo;re done.</li>
-</ul>
-</li>
-<li>Open the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a></li>
-<li>In the navigation pane, choose <strong>Instances</strong>.</li>
-<li>Select the instance, choose <strong>Actions</strong>, then <strong>Networking</strong>, and then select <strong>Change Security Groups</strong>.</li>
-<li>In the <strong>Change Security Groups</strong> dialog box, clear the check box for the currently selected security group, and select the new one. Choose <strong>Assign Security Groups</strong>.</li>
-</ul>
-<h4 id="adding-elastic-ip-addresses">Adding Elastic IP addresses</h4>
-<p>After you&rsquo;ve launched an instance into the subnet, you must assign it an Elastic IP address if you want it to be reachable from the internet over IPv4.</p>
-<ul>
-<li>Open the Amazon VPC console at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>In the navigation pane, choose <strong>Elastic IPs</strong>.</li>
-<li>Choose <strong>Allocate new address</strong>.</li>
-<li>Choose <strong>Allocate</strong>.</li>
-<li>Select the Elastic IP address from the list, choose <strong>Actions</strong>, and then choose <strong>Associate address</strong>.</li>
-<li>Choose <strong>Instance</strong> or <strong>Network interface</strong>, and then select either the instance or network interface ID. Select the private IP address with which to associate the Elastic IP address, and then choose <strong>Associate</strong>.</li>
-</ul>
 
 
 
@@ -1183,10 +1107,10 @@ Amazon EC2 instances within an Amazon VPC are only aware of their private IP add
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-create-vpc/2-create-vpc-subnet/" title="Create VPC Subnet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-create-vpc/2-create-vpc-subnet/" title="VPC Subnet"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-create-vpc/4-create-natgw/" title="Create NAT Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-create-vpc/4-create-natgw/" title=" NAT Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1196,19 +1120,19 @@ Amazon EC2 instances within an Amazon VPC are only aware of their private IP add
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.min.js?1613990621"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1613990621"></script>
-    <script src="/js/jquery.sticky.js?1613990621"></script>
-    <script src="/js/featherlight.min.js?1613990621"></script>
-    <script src="/js/highlight.pack.js?1613990621"></script>
+    <script src="/js/clipboard.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.min.js?1617256011"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1617256011"></script>
+    <script src="/js/jquery.sticky.js?1617256011"></script>
+    <script src="/js/featherlight.min.js?1617256011"></script>
+    <script src="/js/highlight.pack.js?1617256011"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1613990621"></script>
-    <script src="/js/learn.js?1613990621"></script>
-    <script src="/js/hugo-learn.js?1613990621"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1617256011"></script>
+    <script src="/js/learn.js?1617256011"></script>
+    <script src="/js/hugo-learn.js?1617256011"></script>
 
-    <link href="/mermaid/mermaid.css?1613990621" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1613990621"></script>
+    <link href="/mermaid/mermaid.css?1617256011" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1617256011"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
