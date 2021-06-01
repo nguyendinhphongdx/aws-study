@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/vi/1-create-vpc/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-create-vpc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-create-vpc/"
-                />
-  </url>
-  
-  <url>
     <loc>/vi/</loc>
     <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
@@ -33,242 +18,107 @@
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/1-vpc-introduction/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-vpc-security-basic/1-configure-nacl-and-sg/"
+                href="/1-vpc-introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/"
+                href="/vi/1-vpc-introduction/"
                 />
   </url>
   
   <url>
-    <loc>/vi/1-create-vpc/1-vpc-introduction/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-create-vpc/3.1-vpc-subnet/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-vpc/1-vpc-introduction/"
+                href="/3-create-vpc/3.1-vpc-subnet/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-vpc/1-vpc-introduction/"
+                href="/vi/3-create-vpc/3.1-vpc-subnet/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/2-secure-feature/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/"
+                href="/2-secure-feature/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/"
+                href="/vi/2-secure-feature/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-create-vpc/3.2-internet-gateway/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/3-create-vpc/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/"
+                href="/3-create-vpc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/"
+                href="/vi/3-create-vpc/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/vi/3-create-vpc/3.3-security-group/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/3-create-vpc/3.4-create-ec2/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/vi/3-create-vpc/3.5-test-connect/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/"
+                href="/3-create-vpc/3.5-test-connect/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/"
+                href="/vi/3-create-vpc/3.5-test-connect/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-vpc-security-basic/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <loc>/vi/3-create-vpc/3.6-nat-gateway/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-vpc-security-basic/"
+                href="/3-create-vpc/3.6-nat-gateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-vpc-security-basic/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-vpc/2-create-vpc-subnet/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-create-vpc/2-create-vpc-subnet/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-create-vpc/2-create-vpc-subnet/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-vpc/3-create-internet-gw/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-create-vpc/3-create-internet-gw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-create-vpc/3-create-internet-gw/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-vpc/4-create-natgw/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-create-vpc/4-create-natgw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-create-vpc/4-create-natgw/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-vpc/5-build-simple-lab/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-create-vpc/5-build-simple-lab/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-create-vpc/5-build-simple-lab/"
+                href="/vi/3-create-vpc/3.6-nat-gateway/"
                 />
   </url>
   

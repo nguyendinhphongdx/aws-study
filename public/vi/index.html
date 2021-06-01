@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Thiết lập VPC :: Giới hạn quyền của User với IAM Permission Boundary</title>
+    <title>Cơ bản về VPC Networking trên AWS  :: Giới hạn quyền của User với IAM Permission Boundary</title>
 
     
-    <link href="/css/nucleus.css?1617273089" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1617273089" rel="stylesheet">
-    <link href="/css/hybrid.css?1617273089" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1617273089" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1617273089" rel="stylesheet">
-    <link href="/css/auto-complete.css?1617273089" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1617273089" rel="stylesheet">
-    <link href="/css/theme.css?1617273089" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1617273089" rel="stylesheet">
+    <link href="/css/nucleus.css?1622537909" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622537909" rel="stylesheet">
+    <link href="/css/hybrid.css?1622537909" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622537909" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622537909" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622537909" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622537909" rel="stylesheet">
+    <link href="/css/theme.css?1622537909" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622537909" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1617273089" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622537909" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1617273089"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622537909"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1617273089"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1617273089"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622537909"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622537909"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1617273089"></script>
+<script type="text/javascript" src="/js/search.js?1622537909"></script>
 
     
   </div>
@@ -82,13 +82,65 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/" title="Khởi tạo VPC" class="dd-item 
+    <li data-nav-id="/vi/1-vpc-introduction/" title="Giới thiệu AWS VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-vpc/">
-          <b>1. </b>Khởi tạo VPC
+      <a href="/vi/1-vpc-introduction/">
+          <b>1. </b>Giới thiệu AWS VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-secure-feature/" title="Tường lửa trong VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-secure-feature/">
+          <b>2. </b>Tường lửa trong VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-vpc/">
+          <b>3. </b>Thực hành tạo 1 VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +165,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/1-vpc-introduction/" title="Giới thiệu VPC" class="dd-item 
+    <li data-nav-id="/vi/3-create-vpc/3.1-vpc-subnet/" title="Tạo VPC và Subnet" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-vpc/1-vpc-introduction/">
-          <b>1.1. </b>Giới thiệu VPC
+      <a href="/vi/3-create-vpc/3.1-vpc-subnet/">
+          <b>3.1 </b>Tạo VPC và Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,13 +193,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/2-create-vpc-subnet/" title="Giới thiệu VPC Subnet" class="dd-item 
+    <li data-nav-id="/vi/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-vpc/2-create-vpc-subnet/">
-          <b>1.2. </b>Giới thiệu VPC Subnet
+      <a href="/vi/3-create-vpc/3.2-internet-gateway/">
+          <b>3.2 </b>Tạo IGW và Route table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +221,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/3-create-internet-gw/" title="Internet Gateway" class="dd-item 
+    <li data-nav-id="/vi/3-create-vpc/3.3-security-group/" title="Tạo Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-vpc/3-create-internet-gw/">
-          <b>1.3. </b>Internet Gateway
+      <a href="/vi/3-create-vpc/3.3-security-group/">
+          <b>3.3 </b>Tạo Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +249,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/4-create-natgw/" title="NAT Gateway" class="dd-item 
+    <li data-nav-id="/vi/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-vpc/4-create-natgw/">
-          <b>1.4. </b>NAT Gateway
+      <a href="/vi/3-create-vpc/3.4-create-ec2/">
+          <b>3.4 </b>Tạo máy chủ EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,110 +277,13 @@
  
   
     
-    <li data-nav-id="/vi/1-create-vpc/5-build-simple-lab/" title="Thực hành Cơ bản" class="dd-item 
+    <li data-nav-id="/vi/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-create-vpc/5-build-simple-lab/">
-          <b>1.5. </b>Thực hành Cơ bản
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/" title="Bảo mật VPC Cơ bản" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/">
-          <b>2. </b>Bảo mật VPC Cơ bản
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/" title="Cấu hình NACL &amp; SG" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/">
-          <b>2.1. </b>Cấu hình NACL &amp; SG
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/" title="Security Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/1-sg/">
-          <b>2.1.1. </b>Security Group
+      <a href="/vi/3-create-vpc/3.5-test-connect/">
+          <b>3.5 </b>Kiểm tra kết nối
           
             <i class="fas fa-check read-icon"></i>
           
@@ -350,247 +305,18 @@
  
   
     
-    <li data-nav-id="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/3-create-vpc/3.6-nat-gateway/" title="NAT GW" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-vpc-security-basic/1-configure-nacl-and-sg/2-nacl/">
-          <b>2.1.2. </b>Network ACLs
+      <a href="/vi/3-create-vpc/3.6-nat-gateway/">
+          <b>3.6 </b>NAT GW
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/" title="Cấu hình VPC Flow Logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/">
-          <b>2.2. </b>Cấu hình VPC Flow Logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/" title="Đẩy Flow Log lên CW Logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/1-publish-cw-logs/">
-          <b>2.2.1. </b>Đẩy Flow Log lên CW Logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/" title="Đẩy Flow Log lên S3" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/2-configure-vpc-flow-logs/2-publish-s3/">
-          <b>2.2.2. </b>Đẩy Flow Log lên S3
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/" title="Cấu hình Site-to-Site VPN" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/">
-          <b>2.3. </b>Cấu hình Site-to-Site VPN
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/" title="Triển khai hạ tầng" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/1-deploy-infra/">
-          <b>2.3.1. </b>Triển khai hạ tầng
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/" title="Cấu hình Site-to-Site VPN" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/2-config-vpn/">
-          <b>2.3.2. </b>Cấu hình Site-to-Site VPN
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/" title="Kiểm tra Hoạt động" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-vpc-security-basic/3-setup-site-to-site-vpn/3-testing/">
-          <b>2.3.3. </b>Kiểm tra Hoạt động
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -721,10 +447,14 @@
 </span>
 
  
+<h4 id="tổng-quan">Tổng quan</h4>
+<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.</p>
 <h4 id="nội-dung">Nội dung</h4>
 <ol>
-<li><a href="1-create-vpc/">Khởi tạo VPC</a></li>
-<li><a href="2-vpc-security-basic/">Bảo mật VPC Cơ bản</a></li>
+<li><a href="1-vpc-Introduction/">Giới thiệu VPC</a></li>
+<li><a href="2-secure-feature/">Tường lửa trong VPC</a></li>
+<li><a href="3-create-vpc/">Tạo VPC Cơ bản</a></li>
+<li><a href="4-vpn-sitetosite/">Tạo VPN Site to Site</a></li>
 </ol>
 	
   
@@ -767,6 +497,38 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -852,39 +614,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -897,141 +626,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1049,7 +643,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/vi/1-create-vpc/" title="Khởi tạo VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-vpc-introduction/" title="Giới thiệu AWS VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1059,19 +653,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1617273089"></script>
-    <script src="/js/perfect-scrollbar.min.js?1617273089"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1617273089"></script>
-    <script src="/js/jquery.sticky.js?1617273089"></script>
-    <script src="/js/featherlight.min.js?1617273089"></script>
-    <script src="/js/highlight.pack.js?1617273089"></script>
+    <script src="/js/clipboard.min.js?1622537909"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622537909"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622537909"></script>
+    <script src="/js/jquery.sticky.js?1622537909"></script>
+    <script src="/js/featherlight.min.js?1622537909"></script>
+    <script src="/js/highlight.pack.js?1622537909"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1617273089"></script>
-    <script src="/js/learn.js?1617273089"></script>
-    <script src="/js/hugo-learn.js?1617273089"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622537909"></script>
+    <script src="/js/learn.js?1622537909"></script>
+    <script src="/js/hugo-learn.js?1622537909"></script>
 
-    <link href="/mermaid/mermaid.css?1617273089" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1617273089"></script>
+    <link href="/mermaid/mermaid.css?1622537909" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622537909"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
