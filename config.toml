@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Restrict User Permissions with IAM Permission Boundary"
+title = "Working with Amazon VPC"
 weight = 1
 languageName = "English"
 
@@ -35,7 +35,7 @@ url = "https://www.facebook.com/groups/660548818043427/"
 weight = 20
 
 [Languages.vi]
-title = "Giới hạn quyền của User với IAM Permission Boundary"
+title = "Làm việc với Amazon VPC"
 weight = 2
 languageName = "Tiếng Việt"
 

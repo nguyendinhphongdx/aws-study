@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Security Group on Giới hạn quyền của User với IAM Permission Boundary</title>
+    <title>Tạo Security Group on Làm việc với Amazon VPC</title>
     <link>/vi/3-create-vpc/3.3-security-group/</link>
-    <description>Recent content in Tạo Security Group on Giới hạn quyền của User với IAM Permission Boundary</description>
+    <description>Recent content in Tạo Security Group on Làm việc với Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
     

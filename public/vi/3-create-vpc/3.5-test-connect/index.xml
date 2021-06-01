@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kiểm tra kết nối on Giới hạn quyền của User với IAM Permission Boundary</title>
+    <title>Kiểm tra kết nối on Làm việc với Amazon VPC</title>
     <link>/vi/3-create-vpc/3.5-test-connect/</link>
-    <description>Recent content in Kiểm tra kết nối on Giới hạn quyền của User với IAM Permission Boundary</description>
+    <description>Recent content in Kiểm tra kết nối on Làm việc với Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
     
