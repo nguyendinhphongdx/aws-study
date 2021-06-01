@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cơ bản về VPC Networking trên AWS  :: Working with Amazon VPC</title>
+    <title>Tạo IGW và Route table :: Working with Amazon VPC</title>
 
     
     <link href="/css/nucleus.css?1622538823" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/3-create-vpc/3.2-internet-gateway/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -135,7 +135,7 @@
   
     
     <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
-        
+        parent
         
         
         ">
@@ -195,7 +195,7 @@
     
     <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/3-create-vpc/3.2-internet-gateway/">
@@ -371,7 +371,7 @@
                   
                     
                     
-                      <option id="en" value="/" selected>English</option>
+                      <option id="en" value="/3-create-vpc/3.2-internet-gateway/" selected>English</option>
                     
                   
               
@@ -385,7 +385,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-create-vpc/3.2-internet-gateway/">Tiếng Việt</option>
                     
                   
               
@@ -433,33 +433,191 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/3-create-vpc/'>Thực hành tạo 1 VPC</a> > Tạo IGW và Route table
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Tạo IGW và Route table
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="làm-việc-với-amazon-vpc">Làm việc với Amazon VPC</h1>
-<h4 id="tổng-quan">Tổng quan</h4>
-<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.</p>
-<h4 id="nội-dung">Nội dung</h4>
-<ol>
-<li><a href="1-vpc-Introduction/">Giới thiệu VPC</a></li>
-<li><a href="2-secure-feature/">Tường lửa trong VPC</a></li>
-<li><a href="3-create-vpc/">Tạo VPC Cơ bản</a></li>
-</ol>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+
+	<p>Sau khi tạo VPC và các subnet, bước tiếp theo chúng ta sẽ tạo Internet Gateway , tạo và cấu hình Route table. Sau khi hoàn tất các bước bên dưới, chúng ta sẽ có kiến trúc như sau:
+<img src="/images/architecture/lab-3.2.png?width=40pc" alt="Mô hình Lab"></p>
+<h4 id="tạo-một-internet-gateway">Tạo một Internet Gateway</h4>
+<ul>
+<li>
+<p>Truy cập Amazon VPC console.</p>
+</li>
+<li>
+<p>Trên thanh điều hướng bên trái, chọn <strong>Internet Gateways</strong>, <strong>Create Internet Gateways</strong>
+<img src="/images/vpc/create-igw.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Đặt tên cho Internet Gateway là <strong>Internet Gateway</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create Internet Gateway</strong>.
+<img src="/images/vpc/create-igw2.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Click <strong>Action</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Attach to VPC</strong>.
+<img src="/images/vpc/create-igw3.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Click chọn VPC <strong>ASG</strong> , VPC ID sẽ được tự động điền.</p>
+</li>
+<li>
+<p>Click <strong>Attach Internet Gateway</strong>.
+<img src="/images/vpc/create-igw4.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+</ul>
+<h4 id="tạo-route-table-định-tuyến-đi-ra-ngoài-internet-thông-qua-internet-gateway">Tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway.</h4>
+<ul>
+<li>Truy cập Amazon VPC console.</li>
+<li>Trên thanh điều hướng bên trái, chọn <strong>Route Tables</strong>, <strong>Create Route Table</strong></li>
+</ul>
+<p><img src="/images/vpc/create-route.png?width=90pc" alt="Internet Gateway"></p>
+<ul>
+<li>
+<p>Điền tên Route Table trong phần <strong>Name tag</strong>: <code>Route table - Public</code>.</p>
+</li>
+<li>
+<p>Chọn <strong>VPC</strong> có tên <strong>ASG</strong> , VPC id sẽ được tự động điền vào.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.
+<img src="/images/vpc/create-route2.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Click <strong>Close</strong>.</p>
+</li>
+<li>
+<p>Chọn **Route table - Public **, click <strong>Action</strong> , click <strong>Edit routes</strong>.
+<img src="/images/vpc/create-route3.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Click <strong>Add route</strong>.</p>
+</li>
+<li>
+<p>Điền phần <strong>Destination</strong> CIDR : <code>0.0.0.0/0</code> đại diện cho Internet.</p>
+</li>
+<li>
+<p>Trong phần <strong>Target</strong> click chọn <strong>Internet Gateway</strong>, sau đó chọn Internet Gateway chúng ta đã tạo. Internet Gateway ID sẽ được tự động điền.</p>
+</li>
+<li>
+<p>Chọn <strong>Save routes</strong>
+<img src="/images/vpc/create-route4.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Đảm bảo <strong>Route table - Public</strong> đang được chọn.</p>
+</li>
+<li>
+<p>Click vào tab <strong>Subnet Associations</strong> bên menu bên dưới.</p>
+</li>
+<li>
+<p>Click <strong>Edit subnet associations</strong>.
+<img src="/images/vpc/create-route5.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Mở rộng cột <strong>Subnet ID</strong> bằng cách kéo thanh ngăn sang phải.</p>
+</li>
+<li>
+<p>Chọn đúng 2 subnet public chúng ta đã tạo.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.
+<img src="/images/vpc/create-route6.png?width=90pc" alt="Internet Gateway"></p>
+</li>
+<li>
+<p>Như vậy chúng ta đã tiến hành:</p>
+<ul>
+<li>Tạo Internet Gateway có tên <strong>Internet Gateway</strong>.</li>
+<li>Tạo Route table có tên <strong>Route table - Public</strong></li>
+<li>Chỉnh sửa route trong route table <strong>Route table - Public</strong>.
+<ul>
+<li>Thêm route entry Destination: 0.0.0.0/0 Target: Internet Gateway.</li>
+</ul>
+</li>
+<li>Associate <strong>Route table - Public</strong> vào 2 subnet <strong>Public subnet 1</strong> và <strong>Public subnet 2</strong>.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -526,6 +684,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -540,6 +699,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -557,6 +719,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -572,6 +735,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -644,8 +810,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/3-create-vpc/3.1-vpc-subnet/" title="Tạo VPC và Subnet"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-vpc-introduction/" title="Giới thiệu AWS VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/3-create-vpc/3.3-security-group/" title="Tạo Security Group" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -683,4 +851,3 @@
 </script>
   </body>
 </html>
-

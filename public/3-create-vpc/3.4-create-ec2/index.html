@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cơ bản về VPC Networking trên AWS  :: Working with Amazon VPC</title>
+    <title>Tạo máy chủ EC2 :: Working with Amazon VPC</title>
 
     
     <link href="/css/nucleus.css?1622538823" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/3-create-vpc/3.4-create-ec2/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -135,7 +135,7 @@
   
     
     <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
-        
+        parent
         
         
         ">
@@ -251,7 +251,7 @@
     
     <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/3-create-vpc/3.4-create-ec2/">
@@ -371,7 +371,7 @@
                   
                     
                     
-                      <option id="en" value="/" selected>English</option>
+                      <option id="en" value="/3-create-vpc/3.4-create-ec2/" selected>English</option>
                     
                   
               
@@ -385,7 +385,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-create-vpc/3.4-create-ec2/">Tiếng Việt</option>
                     
                   
               
@@ -433,33 +433,202 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/3-create-vpc/'>Thực hành tạo 1 VPC</a> > Tạo máy chủ EC2
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Tạo máy chủ EC2
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="làm-việc-với-amazon-vpc">Làm việc với Amazon VPC</h1>
-<h4 id="tổng-quan">Tổng quan</h4>
-<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.</p>
-<h4 id="nội-dung">Nội dung</h4>
+
+	<p>Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.</p>
+<p><img src="/images/architecture/lab-3.4.png?width=50pc" alt="Mô hình Lab"></p>
+<h4 id="tạo-ec2-nằm-trong-public-subnet">Tạo EC2 nằm trong Public subnet</h4>
 <ol>
-<li><a href="1-vpc-Introduction/">Giới thiệu VPC</a></li>
-<li><a href="2-secure-feature/">Tường lửa trong VPC</a></li>
-<li><a href="3-create-vpc/">Tạo VPC Cơ bản</a></li>
+<li>
+<p>Truy cập Amazon EC2 console tại địa chỉ <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</p>
+</li>
+<li>
+<p>Trên thanh điều hướng bên trái, chọn <strong>Intances</strong>, <strong>Launch Intance</strong>.
+<img src="/images/vpc/create-ec2.png?width=90pc" alt="Create EC2"></p>
+</li>
+<li>
+<p>Chọn <strong>Select</strong> để chọn Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
+<img src="/images/vpc/create-ec2-2.png?width=90pc" alt="Create EC2"></p>
+</li>
+<li>
+<p>Giữ nguyên lựa chọn <strong>General purpose t2.micro</strong>, sau đó click <strong>Next: Configure Instance Details</strong>.
+<img src="/images/vpc/create-ec2-3.png?width=90pc" alt="Create EC2"></p>
+</li>
+<li>
+<p>Tại trang <strong>Configure Instance Details</strong></p>
+</li>
 </ol>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<ul>
+<li><strong>Network</strong> chọn VPC <strong>ASG</strong>.</li>
+<li><strong>Subnet</strong> chọn subnet <strong>Public subnet 1</strong>.</li>
+<li><strong>Auto-assign Public IP</strong> kiểm tra xem có đang <strong>Enable</strong> hay không. Nếu không Enable, bạn cần kiểm tra lại phần cấu hình tự động cấp phát public IP cho subnet tại mục 3.1.</li>
+<li>Sau đó click <strong>Next: Add Storage</strong>.
+<img src="/images/vpc/create-ec2-4.png?width=90pc" alt="Create EC2"></li>
+</ul>
+<ol start="6">
+<li>Tại trang <strong>Add Storage</strong>. Giữ nguyên cấu hình mặc định và Click <strong>Next: Add Tags</strong></li>
+<li>Tại trang <strong>Add Tags</strong>, Chọn <strong>Add Tag</strong></li>
+</ol>
+<ul>
+<li><strong>Key</strong> điền <code>Name</code>.</li>
+<li><strong>Value</strong> điền <code>EC2 Public</code>.</li>
+<li>Sau đó bấm <strong>Next: Configure Security Group</strong>.
+<img src="/images/vpc/create-ec2-5.png?width=90pc" alt="Create EC2"></li>
+</ul>
+<ol start="8">
+<li>Tại trang <strong>Configure Security Group</strong></li>
+</ol>
+<ul>
+<li><strong>Assign a security group</strong> click chọn <strong>Select an existing security group</strong>.</li>
+<li><strong>Name</strong> chọn security group cho các EC2 trong public cubnet có tên <strong>Public subnet -SG</strong>.</li>
+<li>Sau đó bấm <strong>Review và Launch</strong>.
+<img src="/images/vpc/create-ec2-6.png?width=90pc" alt="Create EC2"></li>
+</ul>
+<ol start="9">
+<li>Kiểm tra lại thông tin cấu hình và Click <strong>Launch</strong>.</li>
+</ol>
+<ul>
+<li>Một prompt <strong>Choose an existing key pair or Create new key pair</strong> xuất hiện.</li>
+<li>Chọn <strong>Create a new key pair</strong>.</li>
+<li><strong>Key pair name</strong>: <strong>asg-keypair</strong>.</li>
+<li>Click <strong>Download Key Pair</strong>.</li>
+<li>Chọn đường dẫn để lưu file key pair. Bạn sẽ cần file key pair để có thể kết nối ssh tới <strong>EC2 Public</strong> instance bạn sắp tạo.</li>
+<li>Click <strong>Save</strong> để lưu file key pair.</li>
+<li>Click <strong>Launch</strong>.
+<img src="/images/vpc/create-ec2-7.png?width=90pc" alt="Create EC2"></li>
+<li>Click <strong>View Instances</strong> và chờ cho tới khi EC2 khởi tạo xong.</li>
+</ul>
+<h4 id="tạo-ec2-nằm-trong-private-subnet">Tạo EC2 nằm trong Private subnet</h4>
+<ol>
+<li>Truy cập Amazon EC2 console tại địa chỉ <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</li>
+<li>Trên thanh điều hướng bên trái, chọn <strong>Intances</strong>, <strong>Launch Intance</strong>.</li>
+<li>Chọn <strong>Select</strong> để chọn Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
+<img src="/images/vpc/create-ec2-2.png?width=90pc" alt="Create EC2"></li>
+<li>Giữ nguyên lựa chọn <strong>General purpose t2.micro</strong>, sau đó click <strong>Next: Configure Instance Details</strong>.
+<img src="/images/vpc/create-ec2-3.png?width=90pc" alt="Create EC2"></li>
+<li>Tại trang <strong>Configure Instance Details</strong></li>
+</ol>
+<ul>
+<li><strong>Network</strong> chọn VPC <strong>ASG</strong>.</li>
+<li><strong>Subnet</strong> chọn subnet <strong>Private subnet 2</strong>.</li>
+<li><strong>Auto-assign Public IP</strong> kiểm tra xem có đang <strong>Disable</strong> hay không. Nếu không Disable, bạn cần kiểm tra lại phần cấu hình tự động cấp phát public IP cho subnet tại mục 3.1.</li>
+<li>Sau đó click <strong>Next: Add Storage</strong>.
+<img src="/images/vpc/create-ec2-8.png?width=90pc" alt="Create EC2"></li>
+</ul>
+<ol start="6">
+<li>Tại trang <strong>Add Storage</strong>. Giữ nguyên cấu hình mặc định và Click <strong>Next: Add Tags</strong></li>
+<li>Tại trang <strong>Add Tags</strong>, Chọn <strong>Add Tag</strong></li>
+</ol>
+<ul>
+<li><strong>Key</strong> điền <code>Name</code>.</li>
+<li><strong>Value</strong> điền <code>EC2 Private</code>.</li>
+<li>Sau đó bấm <strong>Next: Configure Security Group</strong>.
+<img src="/images/vpc/create-ec2-9.png?width=90pc" alt="Create EC2"></li>
+</ul>
+<ol start="8">
+<li>Tại trang <strong>Configure Security Group</strong></li>
+</ol>
+<ul>
+<li><strong>Assign a security group</strong> click chọn <strong>Select an existing security group</strong>.</li>
+<li><strong>Name</strong> chọn security group cho các EC2 trong public cubnet có tên <strong>Private subnet -SG</strong>.</li>
+<li>Sau đó bấm <strong>Review và Launch</strong>.
+<img src="/images/vpc/create-ec2-10.png?width=90pc" alt="Create EC2"></li>
+</ul>
+<ol start="9">
+<li>Kiểm tra lại thông tin cấu hình và Click <strong>Launch</strong>.</li>
+</ol>
+<ul>
+<li>Một prompt <strong>Choose an existing key pair or Create new key pair</strong> xuất hiện.</li>
+<li>Chọn <strong>Choose an existing keypairr</strong>.</li>
+<li>Chọn <strong>Key pair name</strong>: <strong>asg-keypair</strong>.</li>
+<li>Click <strong>I acknowledge that I have access to the selected private key file (asg-keypair.pem), and that without this file, I won&rsquo;t be able to log into my instance.</strong> để xác nhận rằng mình có thể truy cập tới Key pair bạn đã chọn.</li>
+<li>Click <strong>Launch</strong>.
+<img src="/images/vpc/create-ec2-11.png?width=90pc" alt="Create EC2"></li>
+<li>Click <strong>View Instances</strong> và chờ cho tới khi EC2 khởi tạo xong.</li>
+</ul>
+<ol start="10">
+<li>Như vậy chúng ta đã tạo được 2 máy chủ EC2 theo mô hình kiến trúc bên dưới. Bước tiếp theo chúng ta sẽ thử truy cập vào 2 máy chủ này.</li>
+</ol>
+<p><img src="/images/architecture/lab-3.4.png?width=50pc" alt="Mô hình Lab"></p>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -526,6 +695,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -540,6 +710,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -589,6 +762,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -604,6 +778,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -644,8 +821,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/3-create-vpc/3.3-security-group/" title="Tạo Security Group"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-vpc-introduction/" title="Giới thiệu AWS VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -683,4 +862,3 @@
 </script>
   </body>
 </html>
-

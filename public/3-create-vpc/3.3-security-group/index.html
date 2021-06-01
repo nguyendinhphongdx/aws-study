@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cơ bản về VPC Networking trên AWS  :: Working with Amazon VPC</title>
+    <title>Tạo Security Group :: Working with Amazon VPC</title>
 
     
     <link href="/css/nucleus.css?1622538823" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/3-create-vpc/3.3-security-group/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -135,7 +135,7 @@
   
     
     <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
-        
+        parent
         
         
         ">
@@ -223,7 +223,7 @@
     
     <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Tạo Security Group" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/3-create-vpc/3.3-security-group/">
@@ -371,7 +371,7 @@
                   
                     
                     
-                      <option id="en" value="/" selected>English</option>
+                      <option id="en" value="/3-create-vpc/3.3-security-group/" selected>English</option>
                     
                   
               
@@ -385,7 +385,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/3-create-vpc/3.3-security-group/">Tiếng Việt</option>
                     
                   
               
@@ -433,33 +433,168 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/3-create-vpc/'>Thực hành tạo 1 VPC</a> > Tạo Security Group
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Tạo Security Group
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="làm-việc-với-amazon-vpc">Làm việc với Amazon VPC</h1>
-<h4 id="tổng-quan">Tổng quan</h4>
-<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.</p>
-<h4 id="nội-dung">Nội dung</h4>
-<ol>
-<li><a href="1-vpc-Introduction/">Giới thiệu VPC</a></li>
-<li><a href="2-secure-feature/">Tường lửa trong VPC</a></li>
-<li><a href="3-create-vpc/">Tạo VPC Cơ bản</a></li>
-</ol>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+
+	<p>Ở bước này chúng ta sẽ tạo 2 security group cho phép thực hiện ping và ssh để sử dụng cho 2 máy chủ EC2 nằm trong public subnet và private subnet.</p>
+<p><img src="/images/architecture/lab-3.2.png?width=40pc" alt="Mô hình Lab"></p>
+<h4 id="tạo-security-group-cho-máy-chủ-nằm-trong-public-subnet">Tạo Security Group cho máy chủ nằm trong Public subnet</h4>
+<ul>
+<li>
+<p>Truy cập Amazon VPC console.</p>
+</li>
+<li>
+<p>Trên thanh điều hướng bên trái, chọn <strong>Security Group</strong>, click <strong>Create Security Group</strong>.
+<img src="/images/vpc/create-sg.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Trong phần <strong>Security group name</strong> điền <strong>Public subnet - SG</strong></p>
+</li>
+<li>
+<p>Trong phần **Description ** điền <strong>Allow SSH and Ping for servers in public subnet</strong>.</p>
+</li>
+<li>
+<p>Click chọn <strong>VPC</strong>, lựa chọn VPC có tên <strong>ASG</strong>.
+<img src="/images/vpc/create-sg2.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Trong <strong>Inbound rules</strong>, click <strong>Add rule</strong>.</p>
+</li>
+<li>
+<p>Chọn <strong>Type</strong>: <code>SSH</code> và <strong>Source</strong>: <code>My IP</code>. My IP đại diện cho 1 địa chỉ public IPv4 bạn đang sử dụng.</p>
+</li>
+<li>
+<p>Click <strong>Add rule</strong> để thêm 1 rule mới.</p>
+</li>
+<li>
+<p>Chọn <strong>Type</strong>: <code>Custom ICMP v4</code> và <strong>Source</strong>: <code>Anywhere</code>. Cho phép ping từ bất kì địa chỉ IP nào.
+<img src="/images/vpc/create-sg3.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Kéo màn hình xuống dưới và Click <strong>Create Security Group</strong>.</p>
+</li>
+</ul>
+<h4 id="tạo-security-group-cho-máy-chủ-nằm-trong-private-subnet">Tạo Security Group cho máy chủ nằm trong Private subnet</h4>
+<ul>
+<li>
+<p>Truy cập Amazon VPC console.</p>
+</li>
+<li>
+<p>Trên thanh điều hướng bên trái, chọn <strong>Security Group</strong>, click <strong>Create Security Group</strong>.
+<img src="/images/vpc/create-sg4.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Trong phần <strong>Security group name</strong> điền <strong>Private subnet - SG</strong></p>
+</li>
+<li>
+<p>Trong phần <strong>Description</strong> điền <strong>Allow SSH and Ping for servers in private subnet</strong>.</p>
+</li>
+<li>
+<p>Click chọn <strong>VPC</strong>, lựa chọn VPC có tên <strong>ASG</strong>.
+<img src="/images/vpc/create-sg5.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Trong <strong>Inbound rules</strong>, click <strong>Add rule</strong>.</p>
+</li>
+<li>
+<p>Chọn <strong>Type</strong>: <code>SSH</code> và để nguyên <strong>Source</strong>: <code>Custom</code>. Click vào search box và chọn <strong>Public subnet SG</strong>.Lựa chọn này cho phép tất cả những máy chủ được gán <strong>Public subnet SG</strong> được SSH vào các máy chủ được gán <strong>Private subnet SG</strong>.
+<img src="/images/vpc/create-sg6.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Click <strong>Add rule</strong> để thêm 1 rule mới.</p>
+</li>
+<li>
+<p>Chọn <strong>Type</strong>: <code>Custom ICMP v4</code> và <strong>Source</strong>: <code>Anywhere</code>. Cho phép ping từ bất kì địa chỉ IP nào.
+<img src="/images/vpc/create-sg7.png?width=90pc" alt="Security Group"></p>
+</li>
+<li>
+<p>Kéo màn hình xuống dưới và Click <strong>Create Security Group</strong>.</p>
+</li>
+<li>
+<p>Như vậy chúng ta đã tạo được 2 Security Group cho các máy chủ nằm trong public subnet và private subnet.</p>
+</li>
+<li>
+<p>Tiếp theo chúng ta sẽ tiến hành tạo 2 máy chủ EC2.</p>
+</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -526,6 +661,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -540,6 +676,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -573,6 +712,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -588,6 +728,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -644,8 +787,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-vpc-introduction/" title="Giới thiệu AWS VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -683,4 +828,3 @@
 </script>
   </body>
 </html>
-

@@ -10,37 +10,5 @@
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Tạo IGW và Route table</title>
-      <link>/3-create-vpc/3.2-internet-gateway/_index./</link>
-      <pubDate>Thu, 01 Jan 1970 07:33:41 +0700</pubDate>
-      
-      <guid>/3-create-vpc/3.2-internet-gateway/_index./</guid>
-      <description>Sau khi tạo VPC và các subnet, bước tiếp theo chúng ta sẽ tạo Internet Gateway , tạo và cấu hình Route table. Sau khi hoàn tất các bước bên dưới, chúng ta sẽ có kiến trúc như sau: Tạo một Internet Gateway   Truy cập Amazon VPC console.
-  Trên thanh điều hướng bên trái, chọn Internet Gateways, Create Internet Gateways   Đặt tên cho Internet Gateway là Internet Gateway.</description>
-    </item>
-    
-    <item>
-      <title>Tạo Security Group</title>
-      <link>/3-create-vpc/3.3-security-group/_index./</link>
-      <pubDate>Thu, 01 Jan 1970 07:33:41 +0700</pubDate>
-      
-      <guid>/3-create-vpc/3.3-security-group/_index./</guid>
-      <description>Ở bước này chúng ta sẽ tạo 2 security group cho phép thực hiện ping và ssh để sử dụng cho 2 máy chủ EC2 nằm trong public subnet và private subnet.
-Tạo Security Group cho máy chủ nằm trong Public subnet   Truy cập Amazon VPC console.
-  Trên thanh điều hướng bên trái, chọn Security Group, click Create Security Group.   Trong phần Security group name điền Public subnet - SG</description>
-    </item>
-    
-    <item>
-      <title>Tạo máy chủ EC2</title>
-      <link>/3-create-vpc/3.4-create-ec2/_index./</link>
-      <pubDate>Thu, 01 Jan 1970 07:33:41 +0700</pubDate>
-      
-      <guid>/3-create-vpc/3.4-create-ec2/_index./</guid>
-      <description>Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.
-Tạo EC2 nằm trong Public subnet   Truy cập Amazon EC2 console tại địa chỉ https://console.aws.amazon.com/ec2/.
-  Trên thanh điều hướng bên trái, chọn Intances, Launch Intance.   Chọn Select để chọn Amazon Machine Image (AMI) Amazon Linux 2 AMI (HVM), SSD Volume Type.   Giữ nguyên lựa chọn General purpose t2.</description>
-    </item>
-    
   </channel>
 </rss>

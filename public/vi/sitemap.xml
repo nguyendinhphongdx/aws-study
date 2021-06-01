@@ -65,6 +65,16 @@
   <url>
     <loc>/vi/3-create-vpc/3.2-internet-gateway/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-create-vpc/3.2-internet-gateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-create-vpc/3.2-internet-gateway/"
+                />
   </url>
   
   <url>
@@ -85,11 +95,31 @@
   <url>
     <loc>/vi/3-create-vpc/3.3-security-group/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-create-vpc/3.3-security-group/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-create-vpc/3.3-security-group/"
+                />
   </url>
   
   <url>
     <loc>/vi/3-create-vpc/3.4-create-ec2/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-create-vpc/3.4-create-ec2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-create-vpc/3.4-create-ec2/"
+                />
   </url>
   
   <url>
