@@ -1,5 +1,5 @@
 +++
-title = "Giới thiệu AWS VPC"
+title = "Giới thiệu Amazon VPC"
 date = 2021
 weight = 1
 chapter = false
