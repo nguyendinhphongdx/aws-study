@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tao Virtual Private GW on Làm việc với Amazon VPC</title>
+    <link>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/</link>
+    <description>Recent content in Tao Virtual Private GW on Làm việc với Amazon VPC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
+    
+	<atom:link href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
