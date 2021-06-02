@@ -228,21 +228,6 @@
   </url>
   
   <url>
-    <loc>/4-vpn-sitetosite/4.3-testing/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-vpn-sitetosite/4.3-testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-vpn-sitetosite/4.3-testing/"
-                />
-  </url>
-  
-  <url>
     <loc>/3-create-vpc/3.4-create-ec2/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link

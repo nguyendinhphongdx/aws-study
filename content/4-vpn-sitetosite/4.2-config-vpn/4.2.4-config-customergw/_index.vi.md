@@ -79,6 +79,7 @@ conn Tunnel1
 	dpddelay=10
 	dpdtimeout=30
 	dpdaction=restart_by_peer
+  overlapip=yes
 
 conn Tunnel2
 	authby=secret
@@ -98,17 +99,23 @@ conn Tunnel2
 	dpddelay=10
 	dpdtimeout=30
 	dpdaction=restart_by_peer
+  overlapip=yes
 ```
  + Ấn phím ESC và tổ hợp :wq! để lưu file cấu hình.
 
 {{%notice tip%}}
-Đảm bảo bạn chỉnh sửa địa chỉ IP và lớp mạng phù hợp trước khi copy đoạn cấu hình trên nhé.
-Đối với Amazon Linux thì chúng ta sẽ bỏ dòng **auth=esp** trong file cấu hình gốc.
-leftid: IP Public Address phía Onprem. ( Ở đây chính là IP public của EC2 **Customer Gateway** trong **ASG VPN** VPC)
-right: IP Public Address phía AWS VPN Tunnel.
-leftsubnet: CIDR của Mạng phía Local (Nếu có nhiều lớp mạng, bạn có thể để là 0.0.0.0/0).
-rightsubnet: CIDR của Mạng phía Private Subnet trên AWS.
+Đảm bảo bạn chỉnh sửa địa chỉ IP và lớp mạng phù hợp trước khi copy đoạn cấu hình trên.\
+Đối với Amazon Linux thì chúng ta sẽ bỏ dòng **auth=esp** trong file cấu hình gốc.\
+Vì chúng ta chỉ có 1 public IP addres cho **Customer Gateway** nên sẽ cần thêm cấu hình **overlapip=yes** .\
 {{%/notice%}}
+
+{{%notice note%}}
+**leftid**: IP Public Address phía Onprem. ( Ở đây chính là IP public của EC2 **Customer Gateway** trong **ASG VPN** VPC) .\
+**right**: IP Public Address phía AWS VPN Tunnel. .\
+**leftsubnet**: CIDR của Mạng phía Local (Nếu có nhiều lớp mạng, bạn có thể để là 0.0.0.0/0). .\
+**rightsubnet**: CIDR của Mạng phía Private Subnet trên AWS. 
+{{%/notice%}}
+
 ![Configure VPN](/images/vpn/configure-cgw5.png?width=90pc)
 
 9. Kiểm tra bước tiếp theo trong file cấu hình chúng ta đã tải xuống.
@@ -139,4 +146,13 @@ service ipsec status
 
 ![Configure VPN](/images/vpn/configure-cgw8.png?width=90pc)
 
+{{%notice tip%}}
+Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để restart lại service network và ipsec : .\
+**sudo service network restart** .\
+**sudo service ipsec restart**
+{{%/notice%}}
 
+
+12. Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ **Customer Gateway** tới máy chủ **EC2 Private**. Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.
+
+![Configure VPN](/images/vpn/testping.png?width=90pc)

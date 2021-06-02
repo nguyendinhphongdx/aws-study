@@ -12,21 +12,21 @@
     <title>Cấu hình Customer GW  :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1622625534" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622625534" rel="stylesheet">
-    <link href="/css/hybrid.css?1622625534" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622625534" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622625534" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622625534" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622625534" rel="stylesheet">
-    <link href="/css/theme.css?1622625534" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622625534" rel="stylesheet">
+    <link href="/css/nucleus.css?1622632122" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622632122" rel="stylesheet">
+    <link href="/css/hybrid.css?1622632122" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622632122" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622632122" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622632122" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622632122" rel="stylesheet">
+    <link href="/css/theme.css?1622632122" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622632122" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622625534" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622632122" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622625534"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622632122"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622625534"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622625534"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622632122"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622632122"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622625534"></script>
+<script type="text/javascript" src="/js/search.js?1622632122"></script>
 
     
   </div>
@@ -610,34 +610,6 @@
 
             
           
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-vpn-sitetosite/4.3-testing/" title="Kiểm tra Hoạt động" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-vpn-sitetosite/4.3-testing/">
-          <b>4.3 </b>Kiểm tra Hoạt động
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -905,6 +877,7 @@ net.ipv4.conf.all.send_redirects <span style="color:#f92672">=</span> <span styl
 	dpddelay<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
 	dpdtimeout<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
 	dpdaction<span style="color:#f92672">=</span>restart_by_peer
+  overlapip<span style="color:#f92672">=</span>yes
 
 conn Tunnel2
 	authby<span style="color:#f92672">=</span>secret
@@ -924,19 +897,24 @@ conn Tunnel2
 	dpddelay<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
 	dpdtimeout<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
 	dpdaction<span style="color:#f92672">=</span>restart_by_peer
+  overlapip<span style="color:#f92672">=</span>yes
 </code></pre></div><ul>
 <li>Ấn phím ESC và tổ hợp :wq! để lưu file cấu hình.</li>
 </ul>
-<p>
-<div class="notices tip" ><p>Đảm bảo bạn chỉnh sửa địa chỉ IP và lớp mạng phù hợp trước khi copy đoạn cấu hình trên nhé.
-Đối với Amazon Linux thì chúng ta sẽ bỏ dòng <strong>auth=esp</strong> trong file cấu hình gốc.
-leftid: IP Public Address phía Onprem. ( Ở đây chính là IP public của EC2 <strong>Customer Gateway</strong> trong <strong>ASG VPN</strong> VPC)
-right: IP Public Address phía AWS VPN Tunnel.
-leftsubnet: CIDR của Mạng phía Local (Nếu có nhiều lớp mạng, bạn có thể để là 0.0.0.0/0).
-rightsubnet: CIDR của Mạng phía Private Subnet trên AWS.</p>
+
+<div class="notices tip" ><p>Đảm bảo bạn chỉnh sửa địa chỉ IP và lớp mạng phù hợp trước khi copy đoạn cấu hình trên.<br>
+Đối với Amazon Linux thì chúng ta sẽ bỏ dòng <strong>auth=esp</strong> trong file cấu hình gốc.<br>
+Vì chúng ta chỉ có 1 public IP addres cho <strong>Customer Gateway</strong> nên sẽ cần thêm cấu hình <strong>overlapip=yes</strong> .\</p>
 </div>
 
-<img src="/images/vpn/configure-cgw5.png?width=90pc" alt="Configure VPN"></p>
+
+<div class="notices note" ><p><strong>leftid</strong>: IP Public Address phía Onprem. ( Ở đây chính là IP public của EC2 <strong>Customer Gateway</strong> trong <strong>ASG VPN</strong> VPC) .<br>
+<strong>right</strong>: IP Public Address phía AWS VPN Tunnel. .<br>
+<strong>leftsubnet</strong>: CIDR của Mạng phía Local (Nếu có nhiều lớp mạng, bạn có thể để là 0.0.0.0/0). .<br>
+<strong>rightsubnet</strong>: CIDR của Mạng phía Private Subnet trên AWS.</p>
+</div>
+
+<p><img src="/images/vpn/configure-cgw5.png?width=90pc" alt="Configure VPN"></p>
 <ol start="9">
 <li>
 <p>Kiểm tra bước tiếp theo trong file cấu hình chúng ta đã tải xuống.
@@ -968,6 +946,16 @@ chkconfig ipsec on
 service ipsec start
 service ipsec status
 </code></pre></div><p><img src="/images/vpn/configure-cgw8.png?width=90pc" alt="Configure VPN"></p>
+
+<div class="notices tip" ><p>Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để restart lại service network và ipsec : .<br>
+<strong>sudo service network restart</strong> .<br>
+<strong>sudo service ipsec restart</strong></p>
+</div>
+
+<ol start="12">
+<li>Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ <strong>Customer Gateway</strong> tới máy chủ <strong>EC2 Private</strong>. Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.</li>
+</ol>
+<p><img src="/images/vpn/testping.png?width=90pc" alt="Configure VPN"></p>
 
 
 
@@ -1308,25 +1296,6 @@ service ipsec status
             
         
                     
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1342,7 +1311,7 @@ service ipsec status
 			<a class="nav nav-prev" href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Tạo kết nối VPN"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-vpn-sitetosite/4.3-testing/" title="Kiểm tra Hoạt động" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Tao Virtual Private GW" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1352,19 +1321,19 @@ service ipsec status
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622625534"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622625534"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622625534"></script>
-    <script src="/js/jquery.sticky.js?1622625534"></script>
-    <script src="/js/featherlight.min.js?1622625534"></script>
-    <script src="/js/highlight.pack.js?1622625534"></script>
+    <script src="/js/clipboard.min.js?1622632122"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622632122"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622632122"></script>
+    <script src="/js/jquery.sticky.js?1622632122"></script>
+    <script src="/js/featherlight.min.js?1622632122"></script>
+    <script src="/js/highlight.pack.js?1622632122"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622625534"></script>
-    <script src="/js/learn.js?1622625534"></script>
-    <script src="/js/hugo-learn.js?1622625534"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622632122"></script>
+    <script src="/js/learn.js?1622632122"></script>
+    <script src="/js/hugo-learn.js?1622632122"></script>
 
-    <link href="/mermaid/mermaid.css?1622625534" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622625534"></script>
+    <link href="/mermaid/mermaid.css?1622632122" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622632122"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
