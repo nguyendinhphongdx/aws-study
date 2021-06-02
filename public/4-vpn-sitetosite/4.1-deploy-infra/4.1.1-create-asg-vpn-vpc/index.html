@@ -12,21 +12,21 @@
     <title>Tạo ASG VPN VPC :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1622632121" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622632121" rel="stylesheet">
-    <link href="/css/hybrid.css?1622632121" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622632121" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622632121" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622632121" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622632121" rel="stylesheet">
-    <link href="/css/theme.css?1622632121" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622632121" rel="stylesheet">
+    <link href="/css/nucleus.css?1622640920" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622640920" rel="stylesheet">
+    <link href="/css/hybrid.css?1622640920" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622640920" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622640920" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622640920" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622640920" rel="stylesheet">
+    <link href="/css/theme.css?1622640920" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622640920" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622632121" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622640920" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622632121"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622640920"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622632121"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622632121"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622640920"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622640920"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622632121"></script>
+<script type="text/javascript" src="/js/search.js?1622640920"></script>
 
     
   </div>
@@ -430,13 +430,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo 2 EC2 Instance" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/">
-          <b>4.1.2 </b>Tạo 2 EC2 Instance
+          <b>4.1.2 </b>Tạo EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -612,6 +612,32 @@
           
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-cleanup/">
+          <b>5. </b>Dọn dẹp tài nguyên  
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -825,13 +851,6 @@
 <li>Kéo màn hình xuống dưới, click <strong>Create subnet</strong> để tiến hành tạo <strong>VPN Public</strong> với CIDR là <strong>10.11.1.0/24</strong> nằm trong Availability Zone <strong>ap-southeast-1a</strong>.</li>
 </ul>
 <ol start="5">
-<li>Làm tương tự để tạo thêm 1 subnet nữa bao gồm :</li>
-</ol>
-<ul>
-<li><strong>VPN Private</strong> với CIDR là <strong>10.11.2.0/24</strong> nằm trong Availability Zone <strong>ap-southeast-1b</strong>.
-<img src="/images/vpn/create-asgvpn3.png?width=90pc" alt="Create VPN VPC"></li>
-</ul>
-<ol start="6">
 <li>Trong giao diện quản lý subnet.</li>
 </ol>
 <ul>
@@ -839,7 +858,7 @@
 <li>Click action.</li>
 <li>Click chọn <strong>Modify auto-assign IP settings</strong>.</li>
 </ul>
-<ol start="7">
+<ol start="6">
 <li>Click <strong>Enable auto-assign public IPv4 address</strong> và Click <strong>Save</strong>.</li>
 </ol>
 <h4 id="tạo-một-internet-gateway-cho-asg-vpc-vpn">Tạo một Internet Gateway cho ASG VPC VPN</h4>
@@ -1250,6 +1269,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -1262,7 +1297,7 @@
 			<a class="nav nav-prev" href="/4-vpn-sitetosite/4.1-deploy-infra/" title="Tạo môi trường VPN"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo 2 EC2 Instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1272,19 +1307,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622632121"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622632121"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622632121"></script>
-    <script src="/js/jquery.sticky.js?1622632121"></script>
-    <script src="/js/featherlight.min.js?1622632121"></script>
-    <script src="/js/highlight.pack.js?1622632121"></script>
+    <script src="/js/clipboard.min.js?1622640920"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622640920"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622640920"></script>
+    <script src="/js/jquery.sticky.js?1622640920"></script>
+    <script src="/js/featherlight.min.js?1622640920"></script>
+    <script src="/js/highlight.pack.js?1622640920"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622632121"></script>
-    <script src="/js/learn.js?1622632121"></script>
-    <script src="/js/hugo-learn.js?1622632121"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622640920"></script>
+    <script src="/js/learn.js?1622640920"></script>
+    <script src="/js/hugo-learn.js?1622640920"></script>
 
-    <link href="/mermaid/mermaid.css?1622632121" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622632121"></script>
+    <link href="/mermaid/mermaid.css?1622640920" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622640920"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

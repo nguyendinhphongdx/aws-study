@@ -13,5 +13,5 @@ Trước khi khởi tạo và cấu hình kết nối VPN Site to Site, chúng t
 **Nội dung:**
 
 - [Tạo **ASG VPN** VPC, 2 subnet, Internet Gateway](4.1.1-create-asg-vpn-vpc/)
-- [Khởi tạo EC2 trên ASG VPN VPC]4.1.2-create-ec2/)
+- [Khởi tạo EC2 trên ASG VPN VPC](4.1.2-create-ec2/)
  

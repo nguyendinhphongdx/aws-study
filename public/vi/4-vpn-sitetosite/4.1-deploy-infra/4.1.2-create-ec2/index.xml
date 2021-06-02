@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo 2 EC2 Instance on Làm việc với Amazon VPC</title>
+    <title>Tạo EC2 Instance on Làm việc với Amazon VPC</title>
     <link>/vi/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/</link>
-    <description>Recent content in Tạo 2 EC2 Instance on Làm việc với Amazon VPC</description>
+    <description>Recent content in Tạo EC2 Instance on Làm việc với Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
     

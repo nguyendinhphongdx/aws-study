@@ -29,15 +29,11 @@ Phần cấu hình Tennacy chúng ta sẽ để ở cơ chế mặc định. N�
 ![Create VPN VPC](/images/vpn/create-asgvpn2.png?width=90pc)
   + Kéo màn hình xuống dưới, click **Create subnet** để tiến hành tạo **VPN Public** với CIDR là **10.11.1.0/24** nằm trong Availability Zone **ap-southeast-1a**.
 
-5. Làm tương tự để tạo thêm 1 subnet nữa bao gồm :
-  + **VPN Private** với CIDR là **10.11.2.0/24** nằm trong Availability Zone **ap-southeast-1b**.
-![Create VPN VPC](/images/vpn/create-asgvpn3.png?width=90pc)
-
-6. Trong giao diện quản lý subnet. 
+5. Trong giao diện quản lý subnet. 
   + Click chọn **VPN Public**.
   + Click action.
   + Click chọn **Modify auto-assign IP settings**.
-7. Click **Enable auto-assign public IPv4 address** và Click **Save**.
+6. Click **Enable auto-assign public IPv4 address** và Click **Save**.
 
 #### Tạo một Internet Gateway cho ASG VPC VPN
 

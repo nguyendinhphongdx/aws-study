@@ -15,4 +15,4 @@ pre = "<b>4.2 </b>"
 1. [Tạo Virtual Private Gateway](4.2.1-create-vgw/)
 2. [Tạo Customer Gateway](4.2.2-create-cgw/)
 3. [Tạo VPN Connection](4.2.3-create-vpn-connection/)
-4. [Cấu hình VPN Connection](4.2.4-config-customergw/)
+4. [Cấu hình Customer GW](4.2.4-config-customergw/)

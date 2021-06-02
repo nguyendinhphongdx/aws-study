@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo 2 EC2 Instance :: Working with Amazon VPC</title>
+    <title>Tạo EC2 Instance :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1622632121" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622632121" rel="stylesheet">
-    <link href="/css/hybrid.css?1622632121" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622632121" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622632121" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622632121" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622632121" rel="stylesheet">
-    <link href="/css/theme.css?1622632121" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622632121" rel="stylesheet">
+    <link href="/css/nucleus.css?1622640920" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622640920" rel="stylesheet">
+    <link href="/css/hybrid.css?1622640920" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622640920" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622640920" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622640920" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622640920" rel="stylesheet">
+    <link href="/css/theme.css?1622640920" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622640920" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622632121" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622640920" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622632121"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622640920"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622632121"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622632121"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622640920"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622640920"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622632121"></script>
+<script type="text/javascript" src="/js/search.js?1622640920"></script>
 
     
   </div>
@@ -430,13 +430,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo 2 EC2 Instance" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" class="dd-item 
         
         active
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/">
-          <b>4.1.2 </b>Tạo 2 EC2 Instance
+          <b>4.1.2 </b>Tạo EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -618,6 +618,32 @@
  
 
           
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-cleanup/">
+          <b>5. </b>Dọn dẹp tài nguyên  
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
          
     </ul>
 
@@ -750,7 +776,7 @@
             
           
           
-            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/4-vpn-sitetosite/'>Cấu hình Site-to-Site VPN</a> > <a href='/4-vpn-sitetosite/4.1-deploy-infra/'>Tạo môi trường VPN</a> > Tạo 2 EC2 Instance
+            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/4-vpn-sitetosite/'>Cấu hình Site-to-Site VPN</a> > <a href='/4-vpn-sitetosite/4.1-deploy-infra/'>Tạo môi trường VPN</a> > Tạo EC2 Instance
           
         
           
@@ -789,7 +815,7 @@
           
             <h1>
               
-              Tạo 2 EC2 Instance
+              Tạo EC2 Instance
             </h1>
           
 
@@ -797,7 +823,7 @@
 
 
 
-	<h4 id="tạo-2-ec2-để-làm-customer-gateway-và-ec2-private-2">Tạo 2 EC2 để làm Customer Gateway và EC2 Private 2</h4>
+	<h4 id="tạo-ec2-để-làm-customer-gateway">Tạo EC2 để làm Customer Gateway</h4>
 <ol>
 <li>Tạo Security Group cho <strong>Customer Gateway</strong></li>
 </ol>
@@ -828,27 +854,8 @@
 <li>Kéo màn hình xuống dưới và Click <strong>Create Security Group</strong>.</li>
 </ul>
 <ol start="4">
-<li>Tạo Security Group cho <strong>EC2 Private 2</strong></li>
-</ol>
-<ul>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Security Group</strong>, click <strong>Create Security Group</strong>.</li>
-<li>Trong phần <strong>Security group name</strong> điền <strong>VPN Private - SG</strong></li>
-<li>Trong phần <strong>Description</strong> điền <strong>Allow SSH and Ping for servers in private subnet</strong>.</li>
-<li>Click chọn <strong>VPC</strong>, lựa chọn VPC có tên <strong>ASG VPN</strong>.</li>
-</ul>
-<ol start="5">
-<li>Trong <strong>Inbound rules</strong>, click <strong>Add rule</strong>.</li>
-</ol>
-<ul>
-<li>Chọn <strong>Type</strong>: <code>SSH</code> và để nguyên <strong>Source</strong>: <code>Custom</code>. Click vào search box và chọn <strong>VPN Public - SG</strong>.Lựa chọn này cho phép tất cả những máy chủ được gán <strong>VPN Public - SG</strong> được SSH vào các máy chủ được gán <strong>VPN Private - SG</strong>.</li>
-<li>Click <strong>Add rule</strong> để thêm 1 rule mới.</li>
-<li>Chọn <strong>Type</strong>: <code>Custom ICMP v4</code> và <strong>Source</strong>: <code>Anywhere</code>. Cho phép ping từ bất kì địa chỉ IP nào.
-<img src="/images/vpn/create-sg3.png?width=90pc" alt="Create EC2"></li>
-<li>Kiểm tra cấu hình của bạn và kéo màn hình xuống dưới và Click <strong>Create Security Group</strong>.</li>
-</ul>
-<ol start="6">
 <li>
-<p>Như vậy chúng ta đã tạo được 2 Security Group cho các máy chủ nằm trong public subnet và private subnet. Tiếp theo chúng ta sẽ tiến hành tạo 2 máy chủ EC2 đóng vai trò Customer Gateway và EC2 Private 2</p>
+<p>Như vậy chúng ta đã tạo được Security Group. Tiếp theo chúng ta sẽ tiến hành tạo máy chủ EC2 đóng vai trò Customer Gateway.</p>
 </li>
 <li>
 <p>Truy cập Amazon EC2 console tại địa chỉ <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</p>
@@ -859,7 +866,7 @@
 <li>Chọn <strong>Select</strong> để chọn Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
 <img src="/images/vpc/create-ec2-2.png?width=90pc" alt="Create EC2"></li>
 </ul>
-<ol start="8">
+<ol start="6">
 <li>
 <p>Giữ nguyên lựa chọn <strong>General purpose t2.micro</strong>, sau đó click <strong>Next: Configure Instance Details</strong>.
 <img src="/images/vpc/create-ec2-3.png?width=90pc" alt="Create EC2"></p>
@@ -875,7 +882,7 @@
 <li>Sau đó click <strong>Next: Add Storage</strong>.
 <img src="/images/vpn/create-vpnec2.png?width=90pc" alt="Create EC2"></li>
 </ul>
-<ol start="10">
+<ol start="8">
 <li>Tại trang <strong>Add Storage</strong>. Giữ nguyên cấu hình mặc định và Click <strong>Next: Add Tags</strong></li>
 <li>Tại trang <strong>Add Tags</strong>, Chọn <strong>Add Tag</strong></li>
 </ol>
@@ -884,7 +891,7 @@
 <li><strong>Value</strong> điền <code>Customer Gateway</code>.</li>
 <li>Sau đó bấm <strong>Next: Configure Security Group</strong>.</li>
 </ul>
-<ol start="12">
+<ol start="10">
 <li>Tại trang <strong>Configure Security Group</strong></li>
 </ol>
 <ul>
@@ -893,7 +900,7 @@
 <li>Sau đó bấm <strong>Review và Launch</strong>.
 <img src="/images/vpn/create-vpnec21.png?width=90pc" alt="Create EC2"></li>
 </ul>
-<ol start="13">
+<ol start="11">
 <li>Kiểm tra lại thông tin cấu hình và Click <strong>Launch</strong>.</li>
 </ol>
 <ul>
@@ -905,55 +912,8 @@
 <img src="/images/vpc/create-ec2-11.png?width=90pc" alt="Create EC2"></li>
 <li>Click <strong>View Instances</strong> và chờ cho tới khi EC2 khởi tạo xong.</li>
 </ul>
-<ol start="14">
-<li>Trong giao diện console EC2 , sau khi tạo xong instance <strong>Customer Gateway</strong>. Click <strong>Launch Intance</strong>.</li>
-</ol>
-<ul>
-<li>Chọn <strong>Select</strong> để chọn Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.</li>
-<li>Giữ nguyên lựa chọn <strong>General purpose t2.micro</strong>, sau đó click <strong>Next: Configure Instance Details</strong>.</li>
-</ul>
-<ol start="15">
-<li>Tại trang <strong>Configure Instance Details</strong></li>
-</ol>
-<ul>
-<li><strong>Network</strong> chọn VPC <strong>ASG VPN</strong>.</li>
-<li><strong>Subnet</strong> chọn subnet <strong>VPN Private</strong>.</li>
-<li><strong>Auto-assign Public IP</strong> kiểm tra xem có đang <strong>Disable</strong> hay không.</li>
-<li>Sau đó click <strong>Next: Add Storage</strong>.
-<img src="/images/vpn/create-vpnec22.png?width=90pc" alt="Create EC2"></li>
-</ul>
-<ol start="16">
-<li>Tại trang <strong>Add Storage</strong>. Giữ nguyên cấu hình mặc định và Click <strong>Next: Add Tags</strong></li>
-<li>Tại trang <strong>Add Tags</strong>, Chọn <strong>Add Tag</strong></li>
-</ol>
-<ul>
-<li><strong>Key</strong> điền <code>Name</code>.</li>
-<li><strong>Value</strong> điền <code>EC2 Private 2</code>.</li>
-<li>Sau đó bấm <strong>Next: Configure Security Group</strong>.</li>
-</ul>
-<ol start="18">
-<li>Tại trang <strong>Configure Security Group</strong></li>
-</ol>
-<ul>
-<li><strong>Assign a security group</strong> click chọn <strong>Select an existing security group</strong>.</li>
-<li><strong>Name</strong> chọn security group cho các EC2 trong public cubnet có tên <strong>VPN Private - SG</strong>.</li>
-<li>Sau đó bấm <strong>Review và Launch</strong>.
-<img src="/images/vpn/create-vpnec23.png?width=90pc" alt="Create EC2"></li>
-</ul>
-<ol start="19">
-<li>Kiểm tra lại thông tin cấu hình và Click <strong>Launch</strong>.</li>
-</ol>
-<ul>
-<li>Một prompt <strong>Choose an existing key pair or Create new key pair</strong> xuất hiện.</li>
-<li>Chọn <strong>Choose an existing keypair</strong>.</li>
-<li>Chọn <strong>Key pair name</strong>: <strong>asg-keypair</strong>.</li>
-<li>Click <strong>I acknowledge that I have access to the selected private key file (asg-keypair.pem), and that without this file, I won&rsquo;t be able to log into my instance.</strong> để xác nhận rằng mình có thể truy cập tới Key pair bạn đã chọn.</li>
-<li>Click <strong>Launch</strong>.</li>
-<li>Click <strong>View Instances</strong> và chờ cho tới khi EC2 khởi tạo xong.</li>
-</ul>
-<ol start="20">
-<li>Như vậy chúng ta đã tạo được 2 máy chủ EC2 theo mô hình kiến trúc yêu cầu. Bước tiếp theo chúng ta sẽ bắt đầu khởi tạo và cấu hình kết nối VPN Site to Site.
-<img src="/images/vpn/create-vpnec24.png?width=90pc" alt="Create EC2"></li>
+<ol start="12">
+<li>Như vậy chúng ta đã tạo được máy chủ EC2 theo mô hình kiến trúc yêu cầu. Bước tiếp theo chúng ta sẽ bắt đầu khởi tạo và cấu hình kết nối VPN Site to Site.</li>
 </ol>
 
 
@@ -1298,6 +1258,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -1320,19 +1296,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622632121"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622632121"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622632121"></script>
-    <script src="/js/jquery.sticky.js?1622632121"></script>
-    <script src="/js/featherlight.min.js?1622632121"></script>
-    <script src="/js/highlight.pack.js?1622632121"></script>
+    <script src="/js/clipboard.min.js?1622640920"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622640920"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622640920"></script>
+    <script src="/js/jquery.sticky.js?1622640920"></script>
+    <script src="/js/featherlight.min.js?1622640920"></script>
+    <script src="/js/highlight.pack.js?1622640920"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622632121"></script>
-    <script src="/js/learn.js?1622632121"></script>
-    <script src="/js/hugo-learn.js?1622632121"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622640920"></script>
+    <script src="/js/learn.js?1622640920"></script>
+    <script src="/js/hugo-learn.js?1622640920"></script>
 
-    <link href="/mermaid/mermaid.css?1622632121" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622632121"></script>
+    <link href="/mermaid/mermaid.css?1622640920" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622640920"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
