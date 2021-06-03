@@ -9,8 +9,8 @@ pre = "<b>4.2.2 </b>"
 
 1. Truy cập trang **Amazon VPC console** tại địa chỉ https://console.aws.amazon.com/vpc/.
   + Kéo xuống phía dưới thanh điều hướng bên phải.
-  + Click **Virtual Private Gateway**.
-  + Click **Create Virtual Private Gateway**.
+  + Click **Customer Gateways**.
+  + Click **Create Customer Gateway**.
 ![Create CGW](/images/vpn/create-cgw.png?width=90pc)
 
 2. Tại trang **Create Customer Gateway**:

@@ -53,7 +53,7 @@
 	"title": "Tao Customer GW",
 	"tags": [],
 	"description": "",
-	"content": " Truy cập trang Amazon VPC console tại địa chỉ https://console.aws.amazon.com/vpc/.   Kéo xuống phía dưới thanh điều hướng bên phải. Click Virtual Private Gateway. Click Create Virtual Private Gateway.   Tại trang Create Customer Gateway:   Điền thông tin Name : Customer Gateway Tại mục Routing bảo đảm cấu hình đang để mặc định là static. Tại mục IP Address điền public IP address của máy chủ EC2 Customer Gateway. Click Create Customer Gateway.  Click Close.  Lưu ý: theo như mô hình kiến trúc, Customer Gateway sẽ nằm ở VPC trên môi trường onpremise. Hiện tại chúng ta đang làm là khai báo với AWS rằng chúng ta sẽ có 1 Customer Gateway với địa chỉ IP public là địa chỉ public của EC2 instance : Customer Gateway nằm trong ASG VPN VPC.\n\r"
+	"content": " Truy cập trang Amazon VPC console tại địa chỉ https://console.aws.amazon.com/vpc/.   Kéo xuống phía dưới thanh điều hướng bên phải. Click Customer Gateways. Click Create Customer Gateway.   Tại trang Create Customer Gateway:   Điền thông tin Name : Customer Gateway Tại mục Routing bảo đảm cấu hình đang để mặc định là static. Tại mục IP Address điền public IP address của máy chủ EC2 Customer Gateway. Click Create Customer Gateway.  Click Close.  Lưu ý: theo như mô hình kiến trúc, Customer Gateway sẽ nằm ở VPC trên môi trường onpremise. Hiện tại chúng ta đang làm là khai báo với AWS rằng chúng ta sẽ có 1 Customer Gateway với địa chỉ IP public là địa chỉ public của EC2 instance : Customer Gateway nằm trong ASG VPN VPC.\n\r"
 },
 {
 	"uri": "/vi/2-secure-feature/",

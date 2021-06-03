@@ -79,7 +79,7 @@ conn Tunnel1
 	dpddelay=10
 	dpdtimeout=30
 	dpdaction=restart_by_peer
-  overlapip=yes
+	overlapip=yes
 
 conn Tunnel2
 	authby=secret
@@ -99,7 +99,7 @@ conn Tunnel2
 	dpddelay=10
 	dpdtimeout=30
 	dpdaction=restart_by_peer
-  overlapip=yes
+	overlapip=yes
 ```
  + Ấn phím ESC và tổ hợp :wq! để lưu file cấu hình.
 
