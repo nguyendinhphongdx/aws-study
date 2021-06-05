@@ -18,7 +18,8 @@ pre = "<b>3.5 </b>"
 ![Connect EC2](/images/vpc/connect-ec2.png?width=90pc)
 
 3. Download putty và puttygen để kết nối ssh tới **EC2 Public**.
-  + {{%attachments title="Putty and Puttygen" pattern=".*(exe)"/%}}
+  
+{{%attachments style="orange" title="Putty and Puttygen" pattern=".*(exe)"/%}}
 
 4. Trước tiên mở puttygen bạn đã download về để thực hiện convert **asg-keypair.pem** sang **asg-keypair.ppk**.
   + Click **Load**.
@@ -67,7 +68,8 @@ pre = "<b>3.5 </b>"
 
 3. **EC2 Private** sẽ không có public IP address vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào **EC2 Private**, chúng ta sẽ thực hiện kết nối ssh từ **EC2 Public** thông qua địa chỉ private IP address của EC2 **Private**
  + Download công cụ **pscp** vào cùng thư mục chứa file **asg-keypair.ppk** để thực hiện copy file **asg-keypair.pem* từ máy của chúng ta vào **EC2 Public**.
-    * {{%attachments title="pscp tool" pattern="pscp.*(exe)"/%}}
+    
+{{%attachments style="orange" title="pscp tool" pattern="pscp.*(exe)"/%}}
 
  + Khởi chạy **Command Prompt**.Chuyển đường dẫn tới thư mục bạn vừa download **pscsp**. Chạy lệnh dưới đây để upload file **asg-keypair.pem** lên thư mục **/home/ec2-user/** của máy chủ **EC2 Public**.
  + Bạn sẽ cần thay thế thông số public IP address của EC2 Public trước khi chạy câu lệnh.
@@ -81,7 +83,7 @@ pscp -i asg-keypair.ppk asg-keypair.pem ec2-user@<EC2 PUBLIC public IP address>:
 Đảm bảo bạn copy file asg-keypair.pem lên máy chủ EC2 Public.
 {{%/notice%}}
 
-4. Cập nhật quyền cho file **asg-keypair.pem** bằng cách chạy lệnh **chmod 400 asg-keypair.pem**. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2.
+1. Cập nhật quyền cho file **asg-keypair.pem** bằng cách chạy lệnh **chmod 400 asg-keypair.pem**. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2.
 ```
 chmod 400 asg-keypair.pem
 ```
@@ -92,4 +94,4 @@ ping amazon.com
 ```
 ![Connect EC2](/images/vpc/connect-ec2-10.png?width=90pc)
 6. Bạn có thể thấy, chúng ta không thể kết nối internet từ EC2 Private. Trong bước tiếp theo chúng ta sẽ tạo NAT Gateway để cho phép máy chủ **EC2 Private** kết nối internet theo chiều từ nội bộ đi ra.
-
+Giữ nguyên kết nối tới **EC2 Private** để chúng ta có thể kiểm tra kết nối tới internet sau khi hoàn tất tạo và cáu hình NAT Gateway nhé.

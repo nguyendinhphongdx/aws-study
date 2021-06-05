@@ -604,9 +604,9 @@ Images have a similar syntax to links but include a preceding exclamation point.
 
 or
 ```markdown
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc "The Stormtroopocat")
+![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 ```
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc "The Stormtroopocat")
+![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
 Like links, Images also have a footnote style syntax
 
@@ -619,9 +619,9 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg?width=90pc  "The Dojocat"
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-    [id]: https://octodex.github.com/images/dojocat.jpg?width=90pc  "The Dojocat"
+    [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
 ### Resizing image
 
@@ -650,19 +650,19 @@ Add HTTP parameters `width` and/or `height` to the link image to resize the imag
 Add a HTTP `classes` parameter to the link image to add CSS classes. `shadow`and `border` are available but you could define other ones.
 
 ```markdown
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc?classes=shadow)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=shadow)
 ```
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc?width=40pc&classes=shadow)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&classes=shadow)
 
 ```markdown
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc?classes=border)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=border)
 ```
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc?width=40pc&classes=border)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&classes=border)
 
 ```markdown
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc?classes=border,shadow)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?classes=border,shadow)
 ```
-![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=90pc?width=40pc&classes=border,shadow)
+![stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg?width=40pc&classes=border,shadow)
 
 ### Lightbox
 

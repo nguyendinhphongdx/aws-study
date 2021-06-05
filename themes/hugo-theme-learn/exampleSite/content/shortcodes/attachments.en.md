@@ -43,7 +43,7 @@ That's all !
 
 For example:
 
-* To match a file suffix of 'jpg', use **.*jpg** (not *.jpg?width=90pc).
+* To match a file suffix of 'jpg', use **.*jpg** (not *.jpg).
 * To match file names ending in 'jpg' or 'png', use **.*(jpg|png)**
 
 ### Examples

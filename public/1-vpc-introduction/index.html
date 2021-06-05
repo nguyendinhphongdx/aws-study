@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.83.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Giới thiệu Amazon VPC :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1622709432" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622709432" rel="stylesheet">
-    <link href="/css/hybrid.css?1622709432" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622709432" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622709432" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622709432" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622709432" rel="stylesheet">
-    <link href="/css/theme.css?1622709432" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622709432" rel="stylesheet">
+    <link href="/css/nucleus.css?1622867137" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622867137" rel="stylesheet">
+    <link href="/css/hybrid.css?1622867137" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622867137" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622867137" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622867137" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622867137" rel="stylesheet">
+    <link href="/css/theme.css?1622867137" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622867137" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622709432" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622867137" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622709432"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622867137"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622709432"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622709432"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622867137"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622867137"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622709432"></script>
+<script type="text/javascript" src="/js/search.js?1622867137"></script>
 
     
   </div>
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/1-vpc-introduction/" title="Giới thiệu Amazon VPC" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -835,7 +835,7 @@
 <p>Bất kể loại mạng con nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).</p>
 <p><img src="/images/architecture/subnet.png?width=40pc" alt="Subnets"></p>
 <h4 id="route-table">Route Table</h4>
-<p>Route Table hay còn gọi là bảng định tuyến, cung cấp hướng dẫn định tuyến và được gán vào các Subnets.
+<p>Route Table hay còn gọi là bảng định tuyến, cung cấp hướng dẫn định tuyến và được gán vào các Subnets. 
 Ví dụ khi bạn tạo VPC với lớp mạng 10.10.0.0/16, cùng 2 subnet 10.10.1.0/24,10.10.2.0/24 thì mỗi subnets mặc định sẽ được gán 1 default route table.<br>
 Bên trong route table sẽ có route entry <strong>destination</strong>:10.10.0.0/16 <strong>target</strong>:local. Route entry này thể hiện các tài nguyên tạo ra trong cùng 1 VPC có thể kết nối với nhau.</p>
 <p><img src="/images/architecture/routetable.png?width=40pc" alt="Route Table"></p>
@@ -1222,19 +1222,19 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622709432"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622709432"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622709432"></script>
-    <script src="/js/jquery.sticky.js?1622709432"></script>
-    <script src="/js/featherlight.min.js?1622709432"></script>
-    <script src="/js/highlight.pack.js?1622709432"></script>
+    <script src="/js/clipboard.min.js?1622867137"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622867137"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622867137"></script>
+    <script src="/js/jquery.sticky.js?1622867137"></script>
+    <script src="/js/featherlight.min.js?1622867137"></script>
+    <script src="/js/highlight.pack.js?1622867137"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622709432"></script>
-    <script src="/js/learn.js?1622709432"></script>
-    <script src="/js/hugo-learn.js?1622709432"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622867137"></script>
+    <script src="/js/learn.js?1622867137"></script>
+    <script src="/js/hugo-learn.js?1622867137"></script>
 
-    <link href="/mermaid/mermaid.css?1622709432" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622709432"></script>
+    <link href="/mermaid/mermaid.css?1622867137" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622867137"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

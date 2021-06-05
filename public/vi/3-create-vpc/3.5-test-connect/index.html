@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.83.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Kiểm tra kết nối :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1622709432" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1622709432" rel="stylesheet">
-    <link href="/css/hybrid.css?1622709432" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1622709432" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1622709432" rel="stylesheet">
-    <link href="/css/auto-complete.css?1622709432" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1622709432" rel="stylesheet">
-    <link href="/css/theme.css?1622709432" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1622709432" rel="stylesheet">
+    <link href="/css/nucleus.css?1622867137" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1622867137" rel="stylesheet">
+    <link href="/css/hybrid.css?1622867137" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1622867137" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1622867137" rel="stylesheet">
+    <link href="/css/auto-complete.css?1622867137" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1622867137" rel="stylesheet">
+    <link href="/css/theme.css?1622867137" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1622867137" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1622709432" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1622867137" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1622709432"></script>
+    <script src="/js/jquery-3.3.1.min.js?1622867137"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1622709432"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1622709432"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1622867137"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1622867137"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1622709432"></script>
+<script type="text/javascript" src="/js/search.js?1622867137"></script>
 
     
   </div>
@@ -278,7 +278,7 @@
   
     
     <li data-nav-id="/vi/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -832,9 +832,8 @@
 <p>Download putty và puttygen để kết nối ssh tới <strong>EC2 Public</strong>.</p>
 </li>
 </ol>
-<ul>
-<li>
-<section class="attachments ">
+
+<section class="attachments orange">
 	<label>
 		<i class="fas fa-paperclip" aria-hidden="true"></i>
 		Putty and Puttygen
@@ -851,7 +850,7 @@
 					<a href="/3-create-vpc/3.5-test-connect/_index.vi.files/pscp.exe" >
 						pscp.exe
 					</a>
-					(717 ko)
+					(717 KB)
 				</li>
 			
 		
@@ -863,7 +862,7 @@
 					<a href="/3-create-vpc/3.5-test-connect/_index.vi.files/putty.exe" >
 						putty.exe
 					</a>
-					(1244 ko)
+					(1244 KB)
 				</li>
 			
 		
@@ -875,7 +874,7 @@
 					<a href="/3-create-vpc/3.5-test-connect/_index.vi.files/puttygen.exe" >
 						puttygen.exe
 					</a>
-					(784 ko)
+					(784 KB)
 				</li>
 			
 		
@@ -884,8 +883,7 @@
 	
 </section>
 
-</li>
-</ul>
+
 <ol start="4">
 <li>Trước tiên mở puttygen bạn đã download về để thực hiện convert <strong>asg-keypair.pem</strong> sang <strong>asg-keypair.ppk</strong>.</li>
 </ol>
@@ -946,11 +944,10 @@
 <li><strong>EC2 Private</strong> sẽ không có public IP address vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào <strong>EC2 Private</strong>, chúng ta sẽ thực hiện kết nối ssh từ <strong>EC2 Public</strong> thông qua địa chỉ private IP address của EC2 <strong>Private</strong></li>
 </ol>
 <ul>
-<li>
-<p>Download công cụ <strong>pscp</strong> vào cùng thư mục chứa file <strong>asg-keypair.ppk</strong> để thực hiện copy file *<em>asg-keypair.pem</em> từ máy của chúng ta vào <strong>EC2 Public</strong>.</p>
-<ul>
-<li>
-<section class="attachments ">
+<li>Download công cụ <strong>pscp</strong> vào cùng thư mục chứa file <strong>asg-keypair.ppk</strong> để thực hiện copy file *<em>asg-keypair.pem</em> từ máy của chúng ta vào <strong>EC2 Public</strong>.</li>
+</ul>
+
+<section class="attachments orange">
 	<label>
 		<i class="fas fa-paperclip" aria-hidden="true"></i>
 		pscp tool
@@ -967,7 +964,7 @@
 					<a href="/3-create-vpc/3.5-test-connect/_index.vi.files/pscp.exe" >
 						pscp.exe
 					</a>
-					(717 ko)
+					(717 KB)
 				</li>
 			
 		
@@ -986,15 +983,10 @@
 	
 </section>
 
-</li>
-</ul>
-</li>
-<li>
-<p>Khởi chạy <strong>Command Prompt</strong>.Chuyển đường dẫn tới thư mục bạn vừa download <strong>pscsp</strong>. Chạy lệnh dưới đây để upload file <strong>asg-keypair.pem</strong> lên thư mục <strong>/home/ec2-user/</strong> của máy chủ <strong>EC2 Public</strong>.</p>
-</li>
-<li>
-<p>Bạn sẽ cần thay thế thông số public IP address của EC2 Public trước khi chạy câu lệnh.</p>
-</li>
+
+<ul>
+<li>Khởi chạy <strong>Command Prompt</strong>.Chuyển đường dẫn tới thư mục bạn vừa download <strong>pscsp</strong>. Chạy lệnh dưới đây để upload file <strong>asg-keypair.pem</strong> lên thư mục <strong>/home/ec2-user/</strong> của máy chủ <strong>EC2 Public</strong>.</li>
+<li>Bạn sẽ cần thay thế thông số public IP address của EC2 Public trước khi chạy câu lệnh.</li>
 </ul>
 <pre><code>pscp -i asg-keypair.ppk asg-keypair.pem ec2-user@&lt;EC2 PUBLIC public IP address&gt;:/home/ec2-user/
 </code></pre><p><img src="/images/vpc/connect-ec2-8.png?width=60pc" alt="Connect EC2"></p>
@@ -1002,7 +994,7 @@
 <div class="notices tip" ><p>Đảm bảo bạn copy file asg-keypair.pem lên máy chủ EC2 Public.</p>
 </div>
 
-<ol start="4">
+<ol>
 <li>Cập nhật quyền cho file <strong>asg-keypair.pem</strong> bằng cách chạy lệnh <strong>chmod 400 asg-keypair.pem</strong>. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2.</li>
 </ol>
 <pre><code>chmod 400 asg-keypair.pem
@@ -1394,19 +1386,19 @@ Giữ nguyên kết nối tới <strong>EC2 Private</strong> để chúng ta có
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1622709432"></script>
-    <script src="/js/perfect-scrollbar.min.js?1622709432"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1622709432"></script>
-    <script src="/js/jquery.sticky.js?1622709432"></script>
-    <script src="/js/featherlight.min.js?1622709432"></script>
-    <script src="/js/highlight.pack.js?1622709432"></script>
+    <script src="/js/clipboard.min.js?1622867137"></script>
+    <script src="/js/perfect-scrollbar.min.js?1622867137"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1622867137"></script>
+    <script src="/js/jquery.sticky.js?1622867137"></script>
+    <script src="/js/featherlight.min.js?1622867137"></script>
+    <script src="/js/highlight.pack.js?1622867137"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1622709432"></script>
-    <script src="/js/learn.js?1622709432"></script>
-    <script src="/js/hugo-learn.js?1622709432"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1622867137"></script>
+    <script src="/js/learn.js?1622867137"></script>
+    <script src="/js/hugo-learn.js?1622867137"></script>
 
-    <link href="/mermaid/mermaid.css?1622709432" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1622709432"></script>
+    <link href="/mermaid/mermaid.css?1622867137" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1622867137"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
