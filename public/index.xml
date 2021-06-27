@@ -5,6 +5,10 @@
     <link>/</link>
     <description>Recent content in Cơ bản về VPC Networking trên AWS  on Working with Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Apr 2020 00:38:32 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Apr 2020 00:38:32 +0700</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

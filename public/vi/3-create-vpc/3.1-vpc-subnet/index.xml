@@ -5,6 +5,10 @@
     <link>/vi/3-create-vpc/3.1-vpc-subnet/</link>
     <description>Recent content in Tạo VPC và Subnet on Làm việc với Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate><atom:link href="/vi/3-create-vpc/3.1-vpc-subnet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
+    
+	<atom:link href="/vi/3-create-vpc/3.1-vpc-subnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

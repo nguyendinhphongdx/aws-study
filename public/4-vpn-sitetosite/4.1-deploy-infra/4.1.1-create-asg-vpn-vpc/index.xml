@@ -5,6 +5,10 @@
     <link>/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/</link>
     <description>Recent content in Tạo ASG VPN VPC on Working with Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate><atom:link href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
+    
+	<atom:link href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
