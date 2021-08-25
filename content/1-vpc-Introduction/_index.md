@@ -15,10 +15,10 @@ Region là khái niệm mô tả một trung tâm dữ liệu cực lớn của 
 Dịch vụ Amazon VPC được ra mắt sau dịch vụ Amazon EC2, vì vậy mà có thời điểm AWS cung cấp hai nền tảng mạng khác nhau đó là EC2-Classic và EC2-VPC. EC2-Classic là nền tảng mạng đầu tiên, trong đó tất cả Amazon EC2 được tạo ra đều nằm trong một mạng phẳng duy nhất, chia sẻ kết nối giữa các khách hàng của AWS. Cho tới tháng 12 năm 2013, AWS chỉ còn hỗ trợ EC2-VPC với VPC mặc định được tạo ra ở mỗi Region cùng một subnet mặc định với CIDR block có giá trị là 172.31.0.0/16.
 
 **Amazon VPC bao gồm các thành phần cơ bản:**
-* [Subnets](#subnets)
-* [Route tables](#route-table)
-* [Internet Gateways (IGWs)](#internet-gateway)
-* [NAT gateways](#nat-gateway)
+- [Subnets](#subnets)
+- [Route Table](#route-table)
+- [Internet Gateway](#internet-gateway)
+- [NAT Gateway](#nat-gateway)
 
 Bây giờ chúng ta sẽ cùng nhau đi qua các khái niệm cơ bản nhất của VPC nhé.
 
@@ -61,3 +61,7 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
 Trường hợp ta muốn migrate từ NAT instance sang NAT gateway, ta có thể sử dụng lại địa chỉ Elastic IP của NAT instance. Nhưng trước hết ta cần phải tách địa chỉ IP ra khỏi NAT Instance. 
 
 ![NAT Gateway](/images/architecture/natgw.png?width=70pc)
+
+{{%notice tip%}}
+NAT Gateway và NAT instance đều không hỗ trợ traffic chiều vào trực tiếp từ internet.
+{{%/notice%}}
