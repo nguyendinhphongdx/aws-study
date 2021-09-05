@@ -63,5 +63,5 @@ Trường hợp ta muốn migrate từ NAT instance sang NAT gateway, ta có th�
 ![NAT Gateway](/images/architecture/natgw.png?width=70pc)
 
 {{%notice tip%}}
-NAT Gateway và NAT instance đều không hỗ trợ traffic chiều vào trực tiếp từ internet.
+NAT Gateway và NAT instance đều không hỗ trợ traffic chiều vào trực tiếp từ internet. Traffic 
 {{%/notice%}}
