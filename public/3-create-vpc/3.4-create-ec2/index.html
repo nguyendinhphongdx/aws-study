@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo máy chủ EC2 :: Working with Amazon VPC</title>
+    <title>Create EC2 Server :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1632982536" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1632982536" rel="stylesheet">
-    <link href="/css/hybrid.css?1632982536" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1632982536" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1632982536" rel="stylesheet">
-    <link href="/css/auto-complete.css?1632982536" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1632982536" rel="stylesheet">
-    <link href="/css/theme.css?1632982536" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1632982536" rel="stylesheet">
+    <link href="/css/nucleus.css?1651625889" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651625889" rel="stylesheet">
+    <link href="/css/hybrid.css?1651625889" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651625889" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651625889" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651625889" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651625889" rel="stylesheet">
+    <link href="/css/theme.css?1651625889" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651625889" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1632982536" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651625889" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1632982536"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651625889"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1632982536"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1632982536"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651625889"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651625889"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1632982536"></script>
+<script type="text/javascript" src="/js/search.js?1651625889"></script>
 
     
   </div>
@@ -82,18 +82,142 @@
  
   
     
-    <li data-nav-id="/1-vpc-introduction/" title="Giới thiệu Amazon VPC" class="dd-item 
+    <li data-nav-id="/1-vpc-introduction/" title="Introduction of Amazon VPC" class="dd-item 
         
         
         
         ">
       <a href="/1-vpc-introduction/">
-          <b>1. </b>Giới thiệu Amazon VPC
+          <b>1. </b>Introduction of Amazon VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.1-subnets/" title="Subnets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.1-subnets/">
+          <b>1.1 </b>Subnets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.2-route-table/" title="Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.2-route-table/">
+          <b>1.2 </b>Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.3-internetgateway/">
+          <b>1.3 </b>Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.4-natgateway/" title="NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.4-natgateway/">
+          <b>1.4 </b>NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -108,18 +232,86 @@
  
   
     
-    <li data-nav-id="/2-secure-feature/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/2-secure-feature/" title="Firewall in VPC" class="dd-item 
         
         
         
         ">
       <a href="/2-secure-feature/">
-          <b>2. </b>Tường lửa trong VPC
+          <b>2. </b>Firewall in VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.1-secgroup/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.1-secgroup/">
+          <b>2.1 </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.2-nacl/">
+          <b>2.2 </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -134,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
+    <li data-nav-id="/3-create-vpc/" title="Creating a VPC" class="dd-item 
         parent
         
         
         ">
       <a href="/3-create-vpc/">
-          <b>3. </b>Thực hành tạo 1 VPC
+          <b>3. </b>Creating a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -165,13 +357,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Tạo VPC và Subnet" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Create VPC and Subnet" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.1-vpc-subnet/">
-          <b>3.1 </b>Tạo VPC và Subnet
+          <b>3.1 </b>Create VPC and Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -193,13 +385,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Create IGW and Route table" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.2-internet-gateway/">
-          <b>3.2 </b>Tạo IGW và Route table
+          <b>3.2 </b>Create IGW and Route table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -221,13 +413,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Tạo Security Group" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Create Security Group" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.3-security-group/">
-          <b>3.3 </b>Tạo Security Group
+          <b>3.3 </b>Create Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -249,13 +441,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" class="dd-item 
-        
+    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Create EC2 Server" class="dd-item 
+        parent
         active
         
         ">
       <a href="/3-create-vpc/3.4-create-ec2/">
-          <b>3.4 </b>Tạo máy chủ EC2
+          <b>3.4 </b>Create EC2 Server
           
             <i class="fas fa-check read-icon"></i>
           
@@ -277,13 +469,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Test connection" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.5-test-connect/">
-          <b>3.5 </b>Kiểm tra kết nối
+          <b>3.5 </b>Test connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -305,13 +497,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT GW" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT Gateway" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.6-nat-gateway/">
-          <b>3.6 </b>NAT GW
+          <b>3.6 </b>NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,13 +532,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/" title="Cấu hình Site-to-Site VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/" title="Configure Site-to-Site VPN" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/">
-          <b>4. </b>Cấu hình Site-to-Site VPN
+          <b>4. </b>Configure Site-to-Site VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -371,13 +563,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Tạo môi trường VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Create a VPN environment" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/">
-          <b>4.1 </b>Tạo môi trường VPN
+          <b>4.1 </b>Create a VPN environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -402,13 +594,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Tạo ASG VPN VPC" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Create ASG VPN VPC" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/">
-          <b>4.1.1 </b>Tạo ASG VPN VPC
+          <b>4.1.1 </b>Create ASG VPN VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -430,13 +622,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Create EC2 Instance" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/">
-          <b>4.1.2 </b>Tạo EC2 Instance
+          <b>4.1.2 </b>Create EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -467,13 +659,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Configure VPN connection" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/">
-          <b>4.2 </b>Cấu hình kết nối VPN
+          <b>4.2 </b>Configure VPN connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -498,13 +690,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Tao Virtual Private GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Create Virtual Private GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/">
-          <b>4.2.1 </b>Tao Virtual Private GW
+          <b>4.2.1 </b>Create Virtual Private GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -526,13 +718,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Tao Customer GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Create Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/">
-          <b>4.2.2 </b>Tao Customer GW
+          <b>4.2.2 </b>Create Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +746,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Tạo kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Create VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/">
-          <b>4.2.3 </b>Tạo kết nối VPN
+          <b>4.2.3 </b>Create VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -582,13 +774,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Cấu hình Customer GW " class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Configure Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/">
-          <b>4.2.4 </b>Cấu hình Customer GW 
+          <b>4.2.4 </b>Configure Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -626,13 +818,13 @@
  
   
     
-    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên  
+          <b>5. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -654,11 +846,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -735,7 +923,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-09-2021</font></i>
+        <i><font color=orange>03-05-2022</font></i>
     </left>
     <left>
         <br>
@@ -787,7 +975,7 @@
             
           
           
-            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/3-create-vpc/'>Thực hành tạo 1 VPC</a> > Tạo máy chủ EC2
+            <a href='/'>Working with Amazon VPC</a> > <a href='/3-create-vpc/'>Creating a VPC</a> > Create EC2 Server
           
         
           
@@ -824,7 +1012,7 @@
           
             <h1>
               
-              Tạo máy chủ EC2
+              Create EC2 Server
             </h1>
           
 
@@ -832,121 +1020,121 @@
 
 
 
-	<p>Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.</p>
-<p><img src="/images/architecture/lab-3.4.png?width=50pc" alt="Mô hình Lab"></p>
-<h4 id="tạo-ec2-nằm-trong-public-subnet">Tạo EC2 nằm trong Public subnet</h4>
+	<p>In this step we will create 2 EC2 servers ( EC2 instances ) like the architecture below.</p>
+<p><img src="/images/architecture/lab-3.4.png?width=50pc" alt="Lab Model"></p>
+<h4 id="create-ec2-in-public-subnet">Create EC2 in Public subnet</h4>
 <ol>
 <li>
-<p>Truy cập Amazon EC2 console tại địa chỉ <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</p>
+<p>Access the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</p>
 </li>
 <li>
-<p>Trên thanh điều hướng bên trái, chọn <strong>Intances</strong>, <strong>Launch Intance</strong>.
+<p>On the left navigation bar, select <strong>Intances</strong>, <strong>Launch Intance</strong>.
 <img src="/images/vpc/create-ec2.png?width=90pc" alt="Create EC2"></p>
 </li>
 <li>
-<p>Chọn <strong>Select</strong> để chọn Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
+<p>Select <strong>Select</strong> to select Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
 <img src="/images/vpc/create-ec2-2.png?width=90pc" alt="Create EC2"></p>
 </li>
 <li>
-<p>Giữ nguyên lựa chọn <strong>General purpose t2.micro</strong>, sau đó click <strong>Next: Configure Instance Details</strong>.
+<p>Leave the <strong>General purpose t2.micro</strong> selected, then click <strong>Next: Configure Instance Details</strong>.
 <img src="/images/vpc/create-ec2-3.png?width=90pc" alt="Create EC2"></p>
 </li>
 <li>
-<p>Tại trang <strong>Configure Instance Details</strong></p>
+<p>At <strong>Configure Instance Details</strong> page</p>
 </li>
 </ol>
 <ul>
-<li><strong>Network</strong> chọn VPC <strong>ASG</strong>.</li>
-<li><strong>Subnet</strong> chọn subnet <strong>Public subnet 1</strong>.</li>
-<li><strong>Auto-assign Public IP</strong> kiểm tra xem có đang <strong>Enable</strong> hay không. Nếu không Enable, bạn cần kiểm tra lại phần cấu hình tự động cấp phát public IP cho subnet tại mục 3.1.</li>
-<li>Sau đó click <strong>Next: Add Storage</strong>.
+<li><strong>Network</strong> select VPC <strong>ASG</strong>.</li>
+<li><strong>Subnet</strong> select subnet <strong>Public subnet 1</strong>.</li>
+<li><strong>Auto-assign Public IP</strong> check whether <strong>Enable</strong> or not. If not Enable, you need to check the configuration for automatically allocating public IP for the subnet in Section 3.1.</li>
+<li>Then click <strong>Next: Add Storage</strong>.
 <img src="/images/vpc/create-ec2-4.png?width=90pc" alt="Create EC2"></li>
 </ul>
 <ol start="6">
-<li>Tại trang <strong>Add Storage</strong>. Giữ nguyên cấu hình mặc định và Click <strong>Next: Add Tags</strong></li>
-<li>Tại trang <strong>Add Tags</strong>, Chọn <strong>Add Tag</strong></li>
+<li>At the <strong>Add Storage</strong> page. Keep the default configuration and Click <strong>Next: Add Tags</strong></li>
+<li>On the <strong>Add Tags</strong> page, select <strong>Add Tag</strong></li>
 </ol>
 <ul>
-<li><strong>Key</strong> điền <code>Name</code>.</li>
-<li><strong>Value</strong> điền <code>EC2 Public</code>.</li>
-<li>Sau đó bấm <strong>Next: Configure Security Group</strong>.
+<li><strong>Key</strong> enter <code>Name</code>.</li>
+<li><strong>Value</strong> enter <code>EC2 Public</code>.</li>
+<li>Then click <strong>Next: Configure Security Group</strong>.
 <img src="/images/vpc/create-ec2-5.png?width=90pc" alt="Create EC2"></li>
 </ul>
 <ol start="8">
-<li>Tại trang <strong>Configure Security Group</strong></li>
+<li>At the <strong>Configure Security Group</strong> page</li>
 </ol>
 <ul>
-<li><strong>Assign a security group</strong> click chọn <strong>Select an existing security group</strong>.</li>
-<li><strong>Name</strong> chọn security group cho các EC2 trong public cubnet có tên <strong>Public subnet -SG</strong>.</li>
-<li>Sau đó bấm <strong>Review và Launch</strong>.
+<li><strong>Assign a security group</strong> click on <strong>Select an existing security group</strong>.</li>
+<li><strong>Name</strong> selects the security group for EC2s in the public cubnet named <strong>Public subnet -SG</strong>.</li>
+<li>Then click <strong>Review and Launch</strong>.
 <img src="/images/vpc/create-ec2-6.png?width=90pc" alt="Create EC2"></li>
 </ul>
 <ol start="9">
-<li>Kiểm tra lại thông tin cấu hình và Click <strong>Launch</strong>.</li>
+<li>Check the configuration information again and Click <strong>Launch</strong>.</li>
 </ol>
 <ul>
-<li>Một prompt <strong>Choose an existing key pair or Create new key pair</strong> xuất hiện.</li>
-<li>Chọn <strong>Create a new key pair</strong>.</li>
+<li>A prompt <strong>Choose an existing key pair or Create new key pair</strong> appears.</li>
+<li>Select <strong>Create a new key pair</strong>.</li>
 <li><strong>Key pair name</strong>: <strong>asg-keypair</strong>.</li>
 <li>Click <strong>Download Key Pair</strong>.</li>
-<li>Chọn đường dẫn để lưu file key pair. Bạn sẽ cần file key pair để có thể kết nối ssh tới <strong>EC2 Public</strong> instance bạn sắp tạo.</li>
-<li>Click <strong>Save</strong> để lưu file key pair.</li>
+<li>Choose the path to save the key pair file. You will need the key pair file to be able to ssh to the <strong>EC2 Public</strong> instance you are about to create.</li>
+<li>Click <strong>Save</strong> to save the key pair file.</li>
 <li>Click <strong>Launch</strong>.
 <img src="/images/vpc/create-ec2-7.png?width=90pc" alt="Create EC2"></li>
-<li>Click <strong>View Instances</strong> và chờ cho tới khi EC2 khởi tạo xong.</li>
+<li>Click <strong>View Instances</strong> and wait until EC2 finishes initializing.</li>
 </ul>
-<h4 id="tạo-ec2-nằm-trong-private-subnet">Tạo EC2 nằm trong Private subnet</h4>
+<h4 id="create-ec2-in-private-subnet">Create EC2 in Private subnet</h4>
 <ol>
-<li>Truy cập Amazon EC2 console tại địa chỉ <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</li>
-<li>Trên thanh điều hướng bên trái, chọn <strong>Intances</strong>, <strong>Launch Intance</strong>.</li>
-<li>Chọn <strong>Select</strong> để chọn Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
+<li>Access the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</li>
+<li>On the left navigation bar, select <strong>Intances</strong>, <strong>Launch Intance</strong>.</li>
+<li>Select <strong>Select</strong> to select Amazon Machine Image (AMI) <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type</strong>.
 <img src="/images/vpc/create-ec2-2.png?width=90pc" alt="Create EC2"></li>
-<li>Giữ nguyên lựa chọn <strong>General purpose t2.micro</strong>, sau đó click <strong>Next: Configure Instance Details</strong>.
+<li>Leave the <strong>General purpose t2.micro</strong> selected, then click <strong>Next: Configure Instance Details</strong>.
 <img src="/images/vpc/create-ec2-3.png?width=90pc" alt="Create EC2"></li>
-<li>Tại trang <strong>Configure Instance Details</strong></li>
+<li>At <strong>Configure Instance Details</strong> page</li>
 </ol>
 <ul>
-<li><strong>Network</strong> chọn VPC <strong>ASG</strong>.</li>
-<li><strong>Subnet</strong> chọn subnet <strong>Private subnet 2</strong>.</li>
-<li><strong>Auto-assign Public IP</strong> kiểm tra xem có đang <strong>Disable</strong> hay không. Nếu không Disable, bạn cần kiểm tra lại phần cấu hình tự động cấp phát public IP cho subnet tại mục 3.1.</li>
-<li>Sau đó click <strong>Next: Add Storage</strong>.
+<li><strong>Network</strong> choose VPC <strong>ASG</strong>.</li>
+<li><strong>Subnet</strong> select subnet <strong>Private subnet 2</strong>.</li>
+<li><strong>Auto-assign Public IP</strong> check if it is <strong>Disable</strong> or not. If not Disable, you need to check the configuration of automatically allocating public IP for the subnet in Section 3.1.</li>
+<li>Then click <strong>Next: Add Storage</strong>.
 <img src="/images/vpc/create-ec2-8.png?width=90pc" alt="Create EC2"></li>
 </ul>
 <ol start="6">
-<li>Tại trang <strong>Add Storage</strong>. Giữ nguyên cấu hình mặc định và Click <strong>Next: Add Tags</strong></li>
-<li>Tại trang <strong>Add Tags</strong>, Chọn <strong>Add Tag</strong></li>
+<li>At the <strong>Add Storage</strong> page. Keep the default configuration and Click <strong>Next: Add Tags</strong></li>
+<li>On the <strong>Add Tags</strong> page, select <strong>Add Tag</strong></li>
 </ol>
 <ul>
-<li><strong>Key</strong> điền <code>Name</code>.</li>
-<li><strong>Value</strong> điền <code>EC2 Private</code>.</li>
-<li>Sau đó bấm <strong>Next: Configure Security Group</strong>.
+<li><strong>Key</strong> enter <code>Name</code>.</li>
+<li><strong>Value</strong> enter <code>EC2 Private</code>.</li>
+<li>Then click <strong>Next: Configure Security Group</strong>.
 <img src="/images/vpc/create-ec2-9.png?width=90pc" alt="Create EC2"></li>
 </ul>
 <ol start="8">
-<li>Tại trang <strong>Configure Security Group</strong></li>
+<li>At the <strong>Configure Security Group</strong> page</li>
 </ol>
 <ul>
-<li><strong>Assign a security group</strong> click chọn <strong>Select an existing security group</strong>.</li>
-<li><strong>Name</strong> chọn security group cho các EC2 trong public cubnet có tên <strong>Private subnet -SG</strong>.</li>
-<li>Sau đó bấm <strong>Review và Launch</strong>.
+<li><strong>Assign a security group</strong> click on <strong>Select an existing security group</strong>.</li>
+<li><strong>Name</strong> selects the security group for EC2s in the public cubnet named <strong>Private subnet -SG</strong>.</li>
+<li>Then click <strong>Review and Launch</strong>.
 <img src="/images/vpc/create-ec2-10.png?width=90pc" alt="Create EC2"></li>
 </ul>
 <ol start="9">
-<li>Kiểm tra lại thông tin cấu hình và Click <strong>Launch</strong>.</li>
+<li>Check the configuration information again and Click <strong>Launch</strong>.</li>
 </ol>
 <ul>
-<li>Một prompt <strong>Choose an existing key pair or Create new key pair</strong> xuất hiện.</li>
-<li>Chọn <strong>Choose an existing keypairr</strong>.</li>
-<li>Chọn <strong>Key pair name</strong>: <strong>asg-keypair</strong>.</li>
-<li>Click <strong>I acknowledge that I have access to the selected private key file (asg-keypair.pem), and that without this file, I won&rsquo;t be able to log into my instance.</strong> để xác nhận rằng mình có thể truy cập tới Key pair bạn đã chọn.</li>
+<li>A prompt <strong>Choose an existing key pair or Create new key pair</strong> appears.</li>
+<li>Select <strong>Choose an existing keypair</strong>.</li>
+<li>Select <strong>Key pair name</strong>: <strong>asg-keypair</strong>.</li>
+<li>Click <strong>I acknowledge that I have access to the selected private key file (asg-keypair.pem), and that without this file, I won&rsquo;t be able to log into my instance.</strong> to confirm that you have can access the Key pair you have selected.</li>
 <li>Click <strong>Launch</strong>.
 <img src="/images/vpc/create-ec2-11.png?width=90pc" alt="Create EC2"></li>
-<li>Click <strong>View Instances</strong> và chờ cho tới khi EC2 khởi tạo xong.</li>
+<li>Click <strong>View Instances</strong> and wait until EC2 finishes initializing.</li>
 </ul>
 <ol start="10">
-<li>Như vậy chúng ta đã tạo được 2 máy chủ EC2 theo mô hình kiến trúc bên dưới. Bước tiếp theo chúng ta sẽ thử truy cập vào 2 máy chủ này.</li>
+<li>So we have created 2 EC2 servers according to the architecture model below. The next step we will try to access these 2 servers.</li>
 </ol>
-<p><img src="/images/architecture/lab-3.4.png?width=50pc" alt="Mô hình Lab"></p>
+<p><img src="/images/architecture/lab-3.4.png?width=50pc" alt="Lab Model"></p>
 
 
 
@@ -995,6 +1183,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -1013,6 +1216,91 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1314,10 +1602,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-create-vpc/3.3-security-group/" title="Tạo Security Group"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-create-vpc/3.3-security-group/" title="Create Security Group"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/3-create-vpc/3.5-test-connect/" title="Test connection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1327,19 +1615,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1632982536"></script>
-    <script src="/js/jquery.sticky.js?1632982536"></script>
-    <script src="/js/featherlight.min.js?1632982536"></script>
-    <script src="/js/highlight.pack.js?1632982536"></script>
+    <script src="/js/clipboard.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651625889"></script>
+    <script src="/js/jquery.sticky.js?1651625889"></script>
+    <script src="/js/featherlight.min.js?1651625889"></script>
+    <script src="/js/highlight.pack.js?1651625889"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1632982536"></script>
-    <script src="/js/learn.js?1632982536"></script>
-    <script src="/js/hugo-learn.js?1632982536"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651625889"></script>
+    <script src="/js/learn.js?1651625889"></script>
+    <script src="/js/hugo-learn.js?1651625889"></script>
 
-    <link href="/mermaid/mermaid.css?1632982536" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1632982536"></script>
+    <link href="/mermaid/mermaid.css?1651625889" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651625889"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

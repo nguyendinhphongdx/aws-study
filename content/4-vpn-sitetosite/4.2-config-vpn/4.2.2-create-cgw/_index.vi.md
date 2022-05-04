@@ -1,6 +1,6 @@
 +++
-title = "Tao Customer GW"
-date = 2021
+title = "Tạo Customer GW"
+date = 2022
 weight = 2
 chapter = false
 pre = "<b>4.2.2 </b>"

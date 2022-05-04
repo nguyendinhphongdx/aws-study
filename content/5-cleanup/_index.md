@@ -1,43 +1,43 @@
 +++
-title = "Dọn dẹp tài nguyên  "
-date = 2021
+title = "Clean up resources"
+date = 2022
 weight = 5
 chapter = false
 pre = "<b>5. </b>"
 +++
 
-Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau 
+We will proceed to delete the resources in the following order
 
-1. Terminate các EC2 Instance.
-  + Truy cập Amazon EC2 console tại địa chỉ https://console.aws.amazon.com/ec2/.
-  + Trên thanh điều hướng bên trái, chọn **Intances**
-  + Chọn tất cả EC2 Instance liên quan tới bài lab.
+1. Terminate the EC2 Instance.
+  + Access the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+  + On the left navigation bar, select **Intances**
+  Select all EC2 Instances related to the lab.
   + Click **Actions**.
   + Click **Manage Instance State**.
-  + Chọn **Terminate**.
+  + Select **Terminate**.
   + Click **Change State**
  ![Configure VPN](/images/vpn/clean2.png?width=90pc)
 
-2. Xóa NAT Gateway và Elastic IP Address. AWS sẽ thu tiền cho các EIP lãng phí nên bạn cần kiểm tra kỹ để tránh bị trừ chi phí ngoài ý muốn.
-  + Truy cập trang **Amazon VPC console** tại địa chỉ https://console.aws.amazon.com/vpc/
-  + Trên thanh điều hướng bên trái , click **NAT Gateway**.
-  + Chọn **NAT Gateway**.
+2. Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.
+  + Visit **Amazon VPC console** page at https://console.aws.amazon.com/vpc/
+  + On the left navigation bar, click **NAT Gateway**.
+  + Select **NAT Gateway**.
   + Click **Action**.
   + Click **Delete NAT Gateway**.
-  + Gõ **delete**.
-  + Click **Delete** để xác nhận xóa **NAT Gateway**.
+  + Type **delete**.
+  + Click **Delete** to confirm deletion of **NAT Gateway**.
 ![Configure VPN](/images/vpn/clean3.png?width=90pc)
 
-3. Tiếp tục xóa Elastic IP Address.
-  + Truy cập trang **Amazon VPC console** tại địa chỉ https://console.aws.amazon.com/vpc/
-  + Trên thanh điều hướng bên trái , click **Elastic IP**.
-  + Chọn Elastic IP Address chúng ta đã tạo.
+3. Continue to delete Elastic IP Address.
+  + Visit **Amazon VPC console** page at https://console.aws.amazon.com/vpc/
+  + On the left navigation bar, click **Elastic IP**.
+  + Select the Elastic IP Address we created.
   + Click **Action**.
   + Click **Release Elastic IP Address**.
 ![Configure VPN](/images/vpn/clean4.png?width=90pc)
   + Click **Release**.
 
-4. Tiếp tục làm tương tự và xóa theo thứ tự sau nhé:
+4. Continue to do the same and delete in the following order:
  + VPN Site to Site connection.
  + Virtual Private Gateway.
  + Customer Gateway.

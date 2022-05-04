@@ -1,17 +1,16 @@
 +++
-title = "Tạo môi trường VPN"
+title = "Create a VPN environment"
 date = 2021
 weight = 1
 chapter = false
 pre = "<b>4.1 </b>"
 +++
 
-Trước khi khởi tạo và cấu hình kết nối VPN Site to Site, chúng ta cần tạo môi trường giả lập chi nhánh (**ASG VPN**) như kiến trúc bên dưới.
+Before creating and configuring the Site to Site VPN connection, we need to create a simulation branch environment (**ASG VPN**) like the architecture below.
 
-![Mô hình Lab](/images/architecture/vpn.png?width=80pc)
+![Lab Model](/images/architecture/vpn.png?width=80pc)
 
-**Nội dung:**
+**Content:**
 
-- [Tạo **ASG VPN** VPC, 2 subnet, Internet Gateway](4.1.1-create-asg-vpn-vpc/)
-- [Khởi tạo EC2 trên ASG VPN VPC](4.1.2-create-ec2/)
- 
+- [Create **ASG VPN** VPC, 2 subnets, Internet Gateway](4.1.1-create-asg-vpn-vpc/)
+- [Initiate EC2 on ASG VPN VPC](4.1.2-create-ec2/)

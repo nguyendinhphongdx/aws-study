@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cơ bản về VPC Networking trên AWS  on Working with Amazon VPC</title>
+    <title>Working with Amazon VPC</title>
     <link>/</link>
-    <description>Recent content in Cơ bản về VPC Networking trên AWS  on Working with Amazon VPC</description>
+    <description>Recent content on Working with Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Apr 2020 00:38:32 +0700</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 18 Apr 2020 00:38:32 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

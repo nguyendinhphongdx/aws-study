@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/vi/</loc>
     <lastmod>2020-04-18T00:38:32+07:00</lastmod>
@@ -15,9 +14,33 @@
                 hreflang="vi"
                 href="/vi/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/2-secure-feature/2.1-secgroup/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-secure-feature/2.1-secgroup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-secure-feature/2.1-secgroup/"
+                />
+  </url><url>
+    <loc>/vi/1-vpc-introduction/1.1-subnets/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-vpc-introduction/1.1-subnets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-vpc-introduction/1.1-subnets/"
+                />
+  </url><url>
     <loc>/vi/1-vpc-introduction/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -30,24 +53,7 @@
                 hreflang="vi"
                 href="/vi/1-vpc-introduction/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -60,9 +66,7 @@
                 hreflang="vi"
                 href="/vi/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-vpn-sitetosite/4.1-deploy-infra/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -75,9 +79,20 @@
                 hreflang="vi"
                 href="/vi/4-vpn-sitetosite/4.1-deploy-infra/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/</loc>
+    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/"
+                />
+  </url><url>
     <loc>/vi/3-create-vpc/3.1-vpc-subnet/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -90,9 +105,59 @@
                 hreflang="vi"
                 href="/vi/3-create-vpc/3.1-vpc-subnet/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/2-secure-feature/2.2-nacl/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-secure-feature/2.2-nacl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-secure-feature/2.2-nacl/"
+                />
+  </url><url>
+    <loc>/vi/1-vpc-introduction/1.2-route-table/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-vpc-introduction/1.2-route-table/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-vpc-introduction/1.2-route-table/"
+                />
+  </url><url>
+    <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/"
+                />
+  </url><url>
+    <loc>/vi/2-secure-feature/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-secure-feature/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-secure-feature/"
+                />
+  </url><url>
     <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -105,39 +170,7 @@
                 hreflang="vi"
                 href="/vi/4-vpn-sitetosite/4.2-config-vpn/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-secure-feature/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-secure-feature/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-secure-feature/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -150,9 +183,7 @@
                 hreflang="vi"
                 href="/vi/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/3-create-vpc/3.2-internet-gateway/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -165,26 +196,22 @@
                 hreflang="vi"
                 href="/vi/3-create-vpc/3.2-internet-gateway/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/3-create-vpc/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+  </url><url>
+    <loc>/vi/1-vpc-introduction/1.3-internetgateway/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-create-vpc/"
+                href="/1-vpc-introduction/1.3-internetgateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-create-vpc/"
+                href="/vi/1-vpc-introduction/1.3-internetgateway/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -195,9 +222,20 @@
                 hreflang="vi"
                 href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/3-create-vpc/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-create-vpc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-create-vpc/"
+                />
+  </url><url>
     <loc>/vi/3-create-vpc/3.3-security-group/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -210,11 +248,9 @@
                 hreflang="vi"
                 href="/vi/3-create-vpc/3.3-security-group/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -225,9 +261,33 @@
                 hreflang="vi"
                 href="/vi/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/4-vpn-sitetosite/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-vpn-sitetosite/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-vpn-sitetosite/"
+                />
+  </url><url>
+    <loc>/vi/1-vpc-introduction/1.4-natgateway/</loc>
+    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-vpc-introduction/1.4-natgateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-vpc-introduction/1.4-natgateway/"
+                />
+  </url><url>
     <loc>/vi/3-create-vpc/3.4-create-ec2/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -240,24 +300,7 @@
                 hreflang="vi"
                 href="/vi/3-create-vpc/3.4-create-ec2/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/4-vpn-sitetosite/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-vpn-sitetosite/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-vpn-sitetosite/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/5-cleanup/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -270,9 +313,7 @@
                 hreflang="vi"
                 href="/vi/5-cleanup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/3-create-vpc/3.5-test-connect/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -285,9 +326,7 @@
                 hreflang="vi"
                 href="/vi/3-create-vpc/3.5-test-connect/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/3-create-vpc/3.6-nat-gateway/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
@@ -300,9 +339,7 @@
                 hreflang="vi"
                 href="/vi/3-create-vpc/3.6-nat-gateway/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -314,9 +351,7 @@
                 hreflang="vi"
                 href="/vi/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -329,5 +364,4 @@
                 href="/vi/tags/"
                 />
   </url>
-  
 </urlset>

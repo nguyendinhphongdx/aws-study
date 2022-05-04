@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tao Virtual Private GW :: Working with Amazon VPC</title>
+    <title>Create Virtual Private GW :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1632982536" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1632982536" rel="stylesheet">
-    <link href="/css/hybrid.css?1632982536" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1632982536" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1632982536" rel="stylesheet">
-    <link href="/css/auto-complete.css?1632982536" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1632982536" rel="stylesheet">
-    <link href="/css/theme.css?1632982536" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1632982536" rel="stylesheet">
+    <link href="/css/nucleus.css?1651625889" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651625889" rel="stylesheet">
+    <link href="/css/hybrid.css?1651625889" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651625889" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651625889" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651625889" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651625889" rel="stylesheet">
+    <link href="/css/theme.css?1651625889" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651625889" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1632982536" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651625889" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1632982536"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651625889"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1632982536"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1632982536"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651625889"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651625889"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1632982536"></script>
+<script type="text/javascript" src="/js/search.js?1651625889"></script>
 
     
   </div>
@@ -82,18 +82,142 @@
  
   
     
-    <li data-nav-id="/1-vpc-introduction/" title="Giới thiệu Amazon VPC" class="dd-item 
+    <li data-nav-id="/1-vpc-introduction/" title="Introduction of Amazon VPC" class="dd-item 
         
         
         
         ">
       <a href="/1-vpc-introduction/">
-          <b>1. </b>Giới thiệu Amazon VPC
+          <b>1. </b>Introduction of Amazon VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.1-subnets/" title="Subnets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.1-subnets/">
+          <b>1.1 </b>Subnets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.2-route-table/" title="Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.2-route-table/">
+          <b>1.2 </b>Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.3-internetgateway/">
+          <b>1.3 </b>Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.4-natgateway/" title="NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.4-natgateway/">
+          <b>1.4 </b>NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -108,18 +232,86 @@
  
   
     
-    <li data-nav-id="/2-secure-feature/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/2-secure-feature/" title="Firewall in VPC" class="dd-item 
         
         
         
         ">
       <a href="/2-secure-feature/">
-          <b>2. </b>Tường lửa trong VPC
+          <b>2. </b>Firewall in VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.1-secgroup/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.1-secgroup/">
+          <b>2.1 </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.2-nacl/">
+          <b>2.2 </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -134,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
+    <li data-nav-id="/3-create-vpc/" title="Creating a VPC" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/">
-          <b>3. </b>Thực hành tạo 1 VPC
+          <b>3. </b>Creating a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -165,13 +357,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Tạo VPC và Subnet" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Create VPC and Subnet" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.1-vpc-subnet/">
-          <b>3.1 </b>Tạo VPC và Subnet
+          <b>3.1 </b>Create VPC and Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -193,13 +385,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Create IGW and Route table" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.2-internet-gateway/">
-          <b>3.2 </b>Tạo IGW và Route table
+          <b>3.2 </b>Create IGW and Route table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -221,13 +413,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Tạo Security Group" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Create Security Group" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.3-security-group/">
-          <b>3.3 </b>Tạo Security Group
+          <b>3.3 </b>Create Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -249,13 +441,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Create EC2 Server" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.4-create-ec2/">
-          <b>3.4 </b>Tạo máy chủ EC2
+          <b>3.4 </b>Create EC2 Server
           
             <i class="fas fa-check read-icon"></i>
           
@@ -277,13 +469,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Test connection" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.5-test-connect/">
-          <b>3.5 </b>Kiểm tra kết nối
+          <b>3.5 </b>Test connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -305,13 +497,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT GW" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT Gateway" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.6-nat-gateway/">
-          <b>3.6 </b>NAT GW
+          <b>3.6 </b>NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,13 +532,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/" title="Cấu hình Site-to-Site VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/" title="Configure Site-to-Site VPN" class="dd-item 
         parent
         
         
         ">
       <a href="/4-vpn-sitetosite/">
-          <b>4. </b>Cấu hình Site-to-Site VPN
+          <b>4. </b>Configure Site-to-Site VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -371,13 +563,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Tạo môi trường VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Create a VPN environment" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/">
-          <b>4.1 </b>Tạo môi trường VPN
+          <b>4.1 </b>Create a VPN environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -402,13 +594,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Tạo ASG VPN VPC" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Create ASG VPN VPC" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/">
-          <b>4.1.1 </b>Tạo ASG VPN VPC
+          <b>4.1.1 </b>Create ASG VPN VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -430,13 +622,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Create EC2 Instance" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/">
-          <b>4.1.2 </b>Tạo EC2 Instance
+          <b>4.1.2 </b>Create EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -467,13 +659,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Configure VPN connection" class="dd-item 
         parent
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/">
-          <b>4.2 </b>Cấu hình kết nối VPN
+          <b>4.2 </b>Configure VPN connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -498,13 +690,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Tao Virtual Private GW" class="dd-item 
-        
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Create Virtual Private GW" class="dd-item 
+        parent
         active
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/">
-          <b>4.2.1 </b>Tao Virtual Private GW
+          <b>4.2.1 </b>Create Virtual Private GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -526,13 +718,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Tao Customer GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Create Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/">
-          <b>4.2.2 </b>Tao Customer GW
+          <b>4.2.2 </b>Create Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +746,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Tạo kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Create VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/">
-          <b>4.2.3 </b>Tạo kết nối VPN
+          <b>4.2.3 </b>Create VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -582,13 +774,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Cấu hình Customer GW " class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Configure Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/">
-          <b>4.2.4 </b>Cấu hình Customer GW 
+          <b>4.2.4 </b>Configure Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -626,13 +818,13 @@
  
   
     
-    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên  
+          <b>5. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -654,11 +846,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -735,7 +923,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-09-2021</font></i>
+        <i><font color=orange>03-05-2022</font></i>
     </left>
     <left>
         <br>
@@ -791,7 +979,7 @@
             
           
           
-            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/4-vpn-sitetosite/'>Cấu hình Site-to-Site VPN</a> > <a href='/4-vpn-sitetosite/4.2-config-vpn/'>Cấu hình kết nối VPN</a> > Tao Virtual Private GW
+            <a href='/'>Working with Amazon VPC</a> > <a href='/4-vpn-sitetosite/'>Configure Site-to-Site VPN</a> > <a href='/4-vpn-sitetosite/4.2-config-vpn/'>Configure VPN connection</a> > Create Virtual Private GW
           
         
           
@@ -822,7 +1010,7 @@
           
             <h1>
               
-              Tao Virtual Private GW
+              Create Virtual Private GW
             </h1>
           
 
@@ -831,34 +1019,34 @@
 
 
 	<ol>
-<li>Truy cập trang <strong>Amazon VPC console</strong> tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a>.</li>
+<li>Go to the <strong>Amazon VPC console</strong> page at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a>.</li>
 </ol>
 <ul>
-<li>Kéo xuống phía dưới thanh điều hướng bên phải.</li>
+<li>Drag down the right navigation bar.</li>
 <li>Click <strong>Virtual Private Gateway</strong>.</li>
 <li>Click <strong>Create Virtual Private Gateway</strong>.
 <img src="/images/vpn/create-vgw.png?width=90pc" alt="Create VGW"></li>
 </ul>
 <ol start="2">
-<li>Tại trang <strong>Create Virtual Private Gateway</strong>:</li>
+<li>At the <strong>Create Virtual Private Gateway</strong> page:</li>
 </ol>
 <ul>
-<li>Điền thông tin <strong>Name tag:</strong> <code>VPN Gateway</code></li>
+<li>Fill in information <strong>Name tag:</strong> <code>VPN Gateway</code></li>
 <li>Click <strong>Create Virtual Private Gateway</strong>
 <img src="/images/vpn/create-vgw2.png?width=90pc" alt="Create VGW"></li>
 <li>Click <strong>Close</strong>.</li>
 </ul>
 <ol start="3">
-<li>Trong danh sách các <strong>Virtual Private Gateway</strong>, chọn vào <strong>VPN Gateway</strong> vừa tạo.</li>
+<li>In the list of <strong>Virtual Private Gateway</strong>, select the <strong>VPN Gateway</strong> just created.</li>
 </ol>
 <ul>
-<li>Chọn <strong>Actions</strong> &gt; <strong>Attach to VPC</strong>.</li>
-<li>Chọn VPC <strong>ASG</strong>.</li>
+<li>Select <strong>Actions</strong> &gt; <strong>Attach to VPC</strong>.</li>
+<li>Select VPC <strong>ASG</strong>.</li>
 <li>Click <strong>Yes, Attach</strong>.
 <img src="/images/vpn/create-vgw3.png?width=90pc" alt="Create VGW"></li>
 </ul>
 
-<div class="notices tip" ><p>Lưu ý: theo như mô hình kiến trúc, Virtual Private Gateway sẽ nằm ở VPC trên môi trường AWS. Hiện tại chúng ta đang dùng VPC <strong>ASG</strong> để đóng vai trò môi trường AWS và VPC <strong>ASG VPN</strong> để giả lập môi trường on-premise.(Trung tâm dữ liệu truyền thống )</p>
+<div class="notices tip" ><p>Note: according to the architectural model, the Virtual Private Gateway will reside in the VPC on the AWS environment. Currently, we are using VPC <strong>ASG</strong> to act as the AWS environment and VPC <strong>ASG VPN</strong> to emulate the on-premise environment. (Traditional Data Center)</p>
 </div>
 
 
@@ -909,6 +1097,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -927,6 +1130,91 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1229,10 +1517,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-vpn-sitetosite/4.2-config-vpn/" title="Cấu hình kết nối VPN"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-vpn-sitetosite/4.2-config-vpn/" title="Configure VPN connection"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Tao Customer GW" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Create Customer GW" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1242,19 +1530,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1632982536"></script>
-    <script src="/js/jquery.sticky.js?1632982536"></script>
-    <script src="/js/featherlight.min.js?1632982536"></script>
-    <script src="/js/highlight.pack.js?1632982536"></script>
+    <script src="/js/clipboard.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651625889"></script>
+    <script src="/js/jquery.sticky.js?1651625889"></script>
+    <script src="/js/featherlight.min.js?1651625889"></script>
+    <script src="/js/highlight.pack.js?1651625889"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1632982536"></script>
-    <script src="/js/learn.js?1632982536"></script>
-    <script src="/js/hugo-learn.js?1632982536"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651625889"></script>
+    <script src="/js/learn.js?1651625889"></script>
+    <script src="/js/hugo-learn.js?1651625889"></script>
 
-    <link href="/mermaid/mermaid.css?1632982536" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1632982536"></script>
+    <link href="/mermaid/mermaid.css?1651625889" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651625889"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

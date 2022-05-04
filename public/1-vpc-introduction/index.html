@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới thiệu Amazon VPC :: Working with Amazon VPC</title>
+    <title>Introduction of Amazon VPC :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1632982536" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1632982536" rel="stylesheet">
-    <link href="/css/hybrid.css?1632982536" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1632982536" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1632982536" rel="stylesheet">
-    <link href="/css/auto-complete.css?1632982536" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1632982536" rel="stylesheet">
-    <link href="/css/theme.css?1632982536" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1632982536" rel="stylesheet">
+    <link href="/css/nucleus.css?1651625889" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651625889" rel="stylesheet">
+    <link href="/css/hybrid.css?1651625889" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651625889" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651625889" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651625889" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651625889" rel="stylesheet">
+    <link href="/css/theme.css?1651625889" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651625889" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1632982536" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651625889" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1632982536"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651625889"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1632982536"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1632982536"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651625889"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651625889"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1632982536"></script>
+<script type="text/javascript" src="/js/search.js?1651625889"></script>
 
     
   </div>
@@ -82,18 +82,142 @@
  
   
     
-    <li data-nav-id="/1-vpc-introduction/" title="Giới thiệu Amazon VPC" class="dd-item 
-        
+    <li data-nav-id="/1-vpc-introduction/" title="Introduction of Amazon VPC" class="dd-item 
+        parent
         active
         
         ">
       <a href="/1-vpc-introduction/">
-          <b>1. </b>Giới thiệu Amazon VPC
+          <b>1. </b>Introduction of Amazon VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.1-subnets/" title="Subnets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.1-subnets/">
+          <b>1.1 </b>Subnets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.2-route-table/" title="Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.2-route-table/">
+          <b>1.2 </b>Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.3-internetgateway/">
+          <b>1.3 </b>Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.4-natgateway/" title="NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.4-natgateway/">
+          <b>1.4 </b>NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -108,18 +232,86 @@
  
   
     
-    <li data-nav-id="/2-secure-feature/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/2-secure-feature/" title="Firewall in VPC" class="dd-item 
         
         
         
         ">
       <a href="/2-secure-feature/">
-          <b>2. </b>Tường lửa trong VPC
+          <b>2. </b>Firewall in VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.1-secgroup/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.1-secgroup/">
+          <b>2.1 </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.2-nacl/">
+          <b>2.2 </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -134,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
+    <li data-nav-id="/3-create-vpc/" title="Creating a VPC" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/">
-          <b>3. </b>Thực hành tạo 1 VPC
+          <b>3. </b>Creating a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -165,13 +357,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Tạo VPC và Subnet" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Create VPC and Subnet" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.1-vpc-subnet/">
-          <b>3.1 </b>Tạo VPC và Subnet
+          <b>3.1 </b>Create VPC and Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -193,13 +385,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Create IGW and Route table" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.2-internet-gateway/">
-          <b>3.2 </b>Tạo IGW và Route table
+          <b>3.2 </b>Create IGW and Route table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -221,13 +413,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Tạo Security Group" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Create Security Group" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.3-security-group/">
-          <b>3.3 </b>Tạo Security Group
+          <b>3.3 </b>Create Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -249,13 +441,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Create EC2 Server" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.4-create-ec2/">
-          <b>3.4 </b>Tạo máy chủ EC2
+          <b>3.4 </b>Create EC2 Server
           
             <i class="fas fa-check read-icon"></i>
           
@@ -277,13 +469,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Test connection" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.5-test-connect/">
-          <b>3.5 </b>Kiểm tra kết nối
+          <b>3.5 </b>Test connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -305,13 +497,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT GW" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT Gateway" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.6-nat-gateway/">
-          <b>3.6 </b>NAT GW
+          <b>3.6 </b>NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,13 +532,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/" title="Cấu hình Site-to-Site VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/" title="Configure Site-to-Site VPN" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/">
-          <b>4. </b>Cấu hình Site-to-Site VPN
+          <b>4. </b>Configure Site-to-Site VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -371,13 +563,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Tạo môi trường VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Create a VPN environment" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/">
-          <b>4.1 </b>Tạo môi trường VPN
+          <b>4.1 </b>Create a VPN environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -402,13 +594,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Tạo ASG VPN VPC" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Create ASG VPN VPC" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/">
-          <b>4.1.1 </b>Tạo ASG VPN VPC
+          <b>4.1.1 </b>Create ASG VPN VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -430,13 +622,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Create EC2 Instance" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/">
-          <b>4.1.2 </b>Tạo EC2 Instance
+          <b>4.1.2 </b>Create EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -467,13 +659,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Configure VPN connection" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/">
-          <b>4.2 </b>Cấu hình kết nối VPN
+          <b>4.2 </b>Configure VPN connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -498,13 +690,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Tao Virtual Private GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Create Virtual Private GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/">
-          <b>4.2.1 </b>Tao Virtual Private GW
+          <b>4.2.1 </b>Create Virtual Private GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -526,13 +718,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Tao Customer GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Create Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/">
-          <b>4.2.2 </b>Tao Customer GW
+          <b>4.2.2 </b>Create Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +746,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Tạo kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Create VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/">
-          <b>4.2.3 </b>Tạo kết nối VPN
+          <b>4.2.3 </b>Create VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -582,13 +774,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Cấu hình Customer GW " class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Configure Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/">
-          <b>4.2.4 </b>Cấu hình Customer GW 
+          <b>4.2.4 </b>Configure Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -626,13 +818,13 @@
  
   
     
-    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên  
+          <b>5. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -654,11 +846,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -735,7 +923,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-09-2021</font></i>
+        <i><font color=orange>03-05-2022</font></i>
     </left>
     <left>
         <br>
@@ -783,7 +971,7 @@
             
           
           
-            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > Giới thiệu Amazon VPC
+            <a href='/'>Working with Amazon VPC</a> > Introduction of Amazon VPC
           
         
           
@@ -818,7 +1006,7 @@
           
             <h1>
               
-              Giới thiệu Amazon VPC
+              Introduction of Amazon VPC
             </h1>
           
 
@@ -826,48 +1014,19 @@
 
 
 
-	<p>Amazon Virtual Private Cloud (Amazon VPC) dịch theo nghĩa đen là “Đám mây Riêng tư Ảo” là một mạng ảo tùy chỉnh nằm bên trong AWS Cloud và tách biệt (hoặc cô lập) mạng Ảo của riêng bạn với toàn bộ thế giới bên ngoài. Khái niệm này tương tự như việc thiết kế và triển khai một mạng độc lập riêng biệt mà hoạt động trong một trung tâm dữ liệu on-premise, loại hình vẫn còn rất phổ biến hiện nay tại Việt Nam.</p>
-<p>Bên trong VPC tùy chỉnh đó, bạn có toàn quyền kiểm kiểm soát môi trường mạng ảo của mình, nghĩa là vừa có khả năng khởi tạo và chạy các tài nguyên AWS, vừa có thể lựa chọn phạm vi địa chỉ IP, tạo các mạng con và cấu hình các bảng định tuyến và cổng kết nối mạng. Bạn có thể sử dụng cả IPv4 và IPv6 để truy cập an toàn và dễ dàng vào tài nguyên và ứng dụng trong VPC.</p>
-<p>Region là khái niệm mô tả một trung tâm dữ liệu cực lớn của AWS đặt tại một vùng lãnh thổ nhất định. Trong một region, ta có thể tạo ra nhiều VPC và mỗi VPC được phân biệt nhau bởi những dải không gian địa chỉ IP khác nhau. Ta chỉ định phạm vi địa chỉ IPv4 bằng cách lựa chọn a Classless Inter-Domain Routing (CIDR), chẳng hạn như 10.0.0.0/16. Phạm vi địa chỉ của Amazon VPC không thể thay đổi sau khi nó đã được tạo. Phạm vi địa chỉ Amazon VPC có thể lớn bằng /16 (tức 65536 địa chỉ khả dụng) hoặc nhỏ bằng /28 (tức 16 địa chỉ khả dụng) và chúng không được phép trùng với bất kỳ mạng nào khác mà chúng sẽ được kết nối tới.</p>
-<p>Dịch vụ Amazon VPC được ra mắt sau dịch vụ Amazon EC2, vì vậy mà có thời điểm AWS cung cấp hai nền tảng mạng khác nhau đó là EC2-Classic và EC2-VPC. EC2-Classic là nền tảng mạng đầu tiên, trong đó tất cả Amazon EC2 được tạo ra đều nằm trong một mạng phẳng duy nhất, chia sẻ kết nối giữa các khách hàng của AWS. Cho tới tháng 12 năm 2013, AWS chỉ còn hỗ trợ EC2-VPC với VPC mặc định được tạo ra ở mỗi Region cùng một subnet mặc định với CIDR block có giá trị là 172.31.0.0/16.</p>
-<p><strong>Amazon VPC bao gồm các thành phần cơ bản:</strong></p>
+	<h4 id="introduction-of-amazon-vpc">Introduction of Amazon VPC</h4>
+<p>Amazon Virtual Private Cloud (Amazon VPC) is a “Virtual Private Cloud” which is a custom virtual network located inside the AWS Cloud and isolated from the entire outside world. The concept is similar to designing and implementing a separate standalone network environment in an on-premise data center, which is still very popular today in many countries of the world.</p>
+<p>Inside that custom VPC, you have full control over your virtual network environment, meaning both the ability to initialize and run AWS resources and the ability to select IP address ranges, create networks subnets and configure routing tables and network gateways. You can use both IPv4 and IPv6 for secure and easy access to resources and applications in the VPC.</p>
+<p>Region is a concept that describes many extremely large clusters of AWS data centers located in a certain territory. Within a region, you can create multiple VPCs, and each VPC is distinguished by different ranges of IP address spaces. You specify the IPv4 address range by selecting a Classless Inter-Domain Routing (CIDR), such as 10.0.0.0/16. The Amazon VPC address range cannot be changed once it has been created. Amazon VPC address ranges can be as large as /16 (ie 65536 available addresses) or as small as /28 (ie 16 available addresses) and they must not overlap with any other networks to which they will be connected. connect to.</p>
+<p>The Amazon VPC service was launched after the Amazon EC2 service, so at some point, AWS offered two different networking platforms, EC2-Classic and EC2-VPC. EC2-Classic is the first networking platform where all Amazon EC2 is created in a single flat network, sharing connectivity among AWS customers. As of December 2013, AWS only supports EC2-VPC with default VPC created in each Region and a default subnet with a CIDR block of 172.31.0.0/16.</p>
+<h4 id="content">Content</h4>
 <ul>
-<li><a href="#subnets">Subnets</a></li>
-<li><a href="#route-table">Route Table</a></li>
-<li><a href="#internet-gateway">Internet Gateway</a></li>
-<li><a href="#nat-gateway">NAT Gateway</a></li>
+<li><a href="./1.1-subnets/">Subnets</a></li>
+<li><a href="./1.2-route-table/">Route Table</a></li>
+<li><a href="./1.3-internetgateway/">Internet Gateway</a></li>
+<li><a href="./1.4-natgateway/">NAT Gateway</a></li>
 </ul>
-<p>Bây giờ chúng ta sẽ cùng nhau đi qua các khái niệm cơ bản nhất của VPC nhé.</p>
-<h4 id="subnets">Subnets</h4>
-<p>Subnet là một phân đoạn của dải địa chỉ IP mà bạn sử dụng khi khởi tạo Amazon VPC, cung cấp trực tiếp dải mạng hoạt động cho các tài nguyên AWS có thể chạy bên trong nó như Amazon EC2, Amazon RDS (CSDL Quan hệ Amazon),&hellip; Các subnet cũng được xác định thông qua CIDR block (ví dụ: 10.0.1.0/24 và 192.168.0.0/24) và bắt buộc các CIDR của subnet phải nằm trong CIDR của VPC. Subnet nhỏ nhất có thể tạo được là /28 (16 địa chỉ IP). AWS lưu trữ 4 địa chỉ IP đầu tiên và 1 địa chỉ IP cuối cùng của mỗi subnet cho các mục đích kết nối mạng nội bộ. Ví dụ: subnet  /28 có 16 địa chỉ IP khả dụng, nhưng loại bỏ 5 reserved IP cho AWS, như vậy còn lại 11 địa chỉ IP có thể sử dụng cho các tài nguyên hoạt động bên trong subnet này.</p>
-<p>Availability Zone hay được viết tắt thành AZ là một trung tâm dữ liệu con, nằm bên trong Region và được xác định dựa treo vị trí địa lý. Bên trong AZ có thể có một hoặc nhiều subnet, nhưng một subnet chỉ có thể nằm trong duy nhất một AZ mà không thể mở rộng sang AZ khác.</p>
-<p>Các subnet được chia thành các loại như <strong>Public</strong>, <strong>Private</strong>, hoặc <strong>VPN-only</strong>.</p>
-<ul>
-<li><strong>Public subnet</strong> là subnet có route table (sẽ thảo luận sau) điều hướng lưu lượng truy cập bên trong subnet đi tới VPC IGW (cũng sẽ thảo luận sau)</li>
-<li><strong>Private subnet</strong> thì ngược lại với Public subnet, nó không có route table điều hướng lưu lượng truy cập tới VPC IGW.</li>
-<li><strong>VPN-only subnet</strong> là subnet mà có route table điều hướng lưu lượng truy cập tới VPG của Amazon VPC (sẽ thảo luận sau).</li>
-</ul>
-<p>Bất kể loại mạng con nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).</p>
-<p><img src="/images/architecture/subnet.png?width=40pc" alt="Subnets"></p>
-<h4 id="route-table">Route Table</h4>
-<p>Route Table hay còn gọi là bảng định tuyến, cung cấp hướng dẫn định tuyến và được gán vào các Subnets. 
-Ví dụ khi bạn tạo VPC với lớp mạng 10.10.0.0/16, cùng 2 subnet 10.10.1.0/24,10.10.2.0/24 thì mỗi subnets mặc định sẽ được gán 1 default route table.<br>
-Bên trong route table sẽ có route entry <strong>destination</strong>:10.10.0.0/16 <strong>target</strong>:local. Route entry này thể hiện các tài nguyên tạo ra trong cùng 1 VPC có thể kết nối với nhau.</p>
-<p><img src="/images/architecture/routetable.png?width=40pc" alt="Route Table"></p>
-<h4 id="internet-gateway">Internet Gateway</h4>
-<p>Internet Gateway (IGW) là một thành phần Amazon VPC giúp các tài nguyên bên trong VPC, cụ thể là EC2, có khả năng giao tiếp với Internet. IGW có khả năng co giãn mạnh theo chiều ngang, đồng thời tính dự phòng và sẵn sàng cao. Nó hoạt động như một target trong bảng định tuyến của Amazon VPC, giúp lưu lượng truy cập được định tuyến ra ngoài Internet bằng cách biên dịch địa chỉ mạng của EC2 thành địa chỉ Public IP đã được gán cho nó.<br>
-Cụ thể hơn, các EC2 Instance bên trong VPC chỉ biết các địa chỉ Private IP được gán cho nó, nhưng khi có lưu lượng được gửi từ EC2 ra ngoài Internet, IGW sẽ biên dịch địa chỉ Private IP đó thành địa chỉ Public IP (hoặc địa chỉ EIP, sẽ thảo luận sau) mà gán với EC2, và duy trì mapping 1-1 cho tới khi địa chỉ Public IP bị release. Khi EC2 nhận được lưu lượng truy cập từ bên ngoài Internet, IGW sẽ thực hiện dịch địa chỉ Target (địa chỉ Public IP) thành địa chỉ Private IP của EC2 Instance và chuyển tiếp lưu lượng truy cập đến Amazon VPC.</p>
-<p><img src="/images/architecture/igw.png?width=55pc" alt="Internet Gateway"></p>
-<h4 id="nat-gateway">NAT Gateway</h4>
-<p>Mặc định, mọi EC2 chạy bên trong Private subnet thì sẽ không có khả năng giao tiếp với Internet thông qua IGW. Từ đó vấn đề phát sinh khi EC2 đó cần truy cập ra ngoài Internet để áp dụng các bản cập nhật bảo mật, tải xuống các bản vá hoặc cập nhật phần mềm ứng dụng.<br>
-Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép các EC2 bên trong Private subnet có quyền được truy cập Internet, đó là NAT Instance và NAT Gateway. Với các trường hợp thông thường, thì ta nên sử dụng NAT Gateway thay cho NAT Instance. NAT Gateway đảm bảo tính sẵn sàng và băng thông cao hơn, đồng thời đòi hỏi ít nỗ lực quản trị hơn so với NAT Instance.</p>
-<p>Để tạo một một NAT gateway, ta phải chỉ định một mạng con (public) và một địa chỉ Elastic IP. Cần đảm bảo địa chỉ Elastic IP đang không được liên kết với bất cứ Instance hoặc một Network interface nào khác.</p>
-<p>Trường hợp ta muốn migrate từ NAT instance sang NAT gateway, ta có thể sử dụng lại địa chỉ Elastic IP của NAT instance. Nhưng trước hết ta cần phải tách địa chỉ IP ra khỏi NAT Instance.</p>
-<p><img src="/images/architecture/natgw.png?width=70pc" alt="NAT Gateway"></p>
-
-<div class="notices tip" ><p>NAT Gateway và NAT instance đều không hỗ trợ traffic chiều vào trực tiếp từ internet.</p>
-</div>
-
+<p>Now we will go through the most basic concepts of VPC in the next sections.</p>
 
 
 
@@ -914,6 +1073,24 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -925,8 +1102,21 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -935,6 +1125,75 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1228,10 +1487,10 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Cơ bản về VPC Networking trên AWS "> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/" title="Working with Amazon VPC"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-secure-feature/" title="Tường lửa trong VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-vpc-introduction/1.1-subnets/" title="Subnets" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1241,19 +1500,19 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1632982536"></script>
-    <script src="/js/jquery.sticky.js?1632982536"></script>
-    <script src="/js/featherlight.min.js?1632982536"></script>
-    <script src="/js/highlight.pack.js?1632982536"></script>
+    <script src="/js/clipboard.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651625889"></script>
+    <script src="/js/jquery.sticky.js?1651625889"></script>
+    <script src="/js/featherlight.min.js?1651625889"></script>
+    <script src="/js/highlight.pack.js?1651625889"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1632982536"></script>
-    <script src="/js/learn.js?1632982536"></script>
-    <script src="/js/hugo-learn.js?1632982536"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651625889"></script>
+    <script src="/js/learn.js?1651625889"></script>
+    <script src="/js/hugo-learn.js?1651625889"></script>
 
-    <link href="/mermaid/mermaid.css?1632982536" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1632982536"></script>
+    <link href="/mermaid/mermaid.css?1651625889" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651625889"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

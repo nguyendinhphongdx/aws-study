@@ -1,6 +1,6 @@
 +++
 title = "Cấu hình Customer GW "
-date = 2021
+date = 2022
 weight = 4
 chapter = false
 pre = "<b>4.2.4 </b>"
@@ -147,7 +147,7 @@ service ipsec status
 ![Configure VPN](/images/vpn/configure-cgw8.png?width=90pc)
 
 {{%notice tip%}}
-Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để restart lại service network và ipsec : .\
+Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để restart lại service network và IPsec : .\
 **sudo service network restart** .\
 **sudo service ipsec restart**
 {{%/notice%}}

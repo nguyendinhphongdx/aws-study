@@ -1,5 +1,5 @@
 +++
-title = "NAT GW"
+title = "NAT Gateway"
 date = 2021
 weight = 6
 chapter = false

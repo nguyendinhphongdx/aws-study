@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình Customer GW  :: Working with Amazon VPC</title>
+    <title>Configure Customer GW :: Working with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1632982536" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1632982536" rel="stylesheet">
-    <link href="/css/hybrid.css?1632982536" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1632982536" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1632982536" rel="stylesheet">
-    <link href="/css/auto-complete.css?1632982536" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1632982536" rel="stylesheet">
-    <link href="/css/theme.css?1632982536" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1632982536" rel="stylesheet">
+    <link href="/css/nucleus.css?1651625889" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1651625889" rel="stylesheet">
+    <link href="/css/hybrid.css?1651625889" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1651625889" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1651625889" rel="stylesheet">
+    <link href="/css/auto-complete.css?1651625889" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1651625889" rel="stylesheet">
+    <link href="/css/theme.css?1651625889" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1651625889" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1632982536" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1651625889" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1632982536"></script>
+    <script src="/js/jquery-3.3.1.min.js?1651625889"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1632982536"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1632982536"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1651625889"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1651625889"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1632982536"></script>
+<script type="text/javascript" src="/js/search.js?1651625889"></script>
 
     
   </div>
@@ -82,18 +82,142 @@
  
   
     
-    <li data-nav-id="/1-vpc-introduction/" title="Giới thiệu Amazon VPC" class="dd-item 
+    <li data-nav-id="/1-vpc-introduction/" title="Introduction of Amazon VPC" class="dd-item 
         
         
         
         ">
       <a href="/1-vpc-introduction/">
-          <b>1. </b>Giới thiệu Amazon VPC
+          <b>1. </b>Introduction of Amazon VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.1-subnets/" title="Subnets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.1-subnets/">
+          <b>1.1 </b>Subnets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.2-route-table/" title="Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.2-route-table/">
+          <b>1.2 </b>Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.3-internetgateway/">
+          <b>1.3 </b>Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-vpc-introduction/1.4-natgateway/" title="NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-vpc-introduction/1.4-natgateway/">
+          <b>1.4 </b>NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -108,18 +232,86 @@
  
   
     
-    <li data-nav-id="/2-secure-feature/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/2-secure-feature/" title="Firewall in VPC" class="dd-item 
         
         
         
         ">
       <a href="/2-secure-feature/">
-          <b>2. </b>Tường lửa trong VPC
+          <b>2. </b>Firewall in VPC
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.1-secgroup/" title="Security Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.1-secgroup/">
+          <b>2.1 </b>Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-secure-feature/2.2-nacl/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-secure-feature/2.2-nacl/">
+          <b>2.2 </b>Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -134,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/" title="Thực hành tạo 1 VPC" class="dd-item 
+    <li data-nav-id="/3-create-vpc/" title="Creating a VPC" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/">
-          <b>3. </b>Thực hành tạo 1 VPC
+          <b>3. </b>Creating a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -165,13 +357,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Tạo VPC và Subnet" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.1-vpc-subnet/" title="Create VPC and Subnet" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.1-vpc-subnet/">
-          <b>3.1 </b>Tạo VPC và Subnet
+          <b>3.1 </b>Create VPC and Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -193,13 +385,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Tạo IGW và Route table" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.2-internet-gateway/" title="Create IGW and Route table" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.2-internet-gateway/">
-          <b>3.2 </b>Tạo IGW và Route table
+          <b>3.2 </b>Create IGW and Route table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -221,13 +413,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Tạo Security Group" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.3-security-group/" title="Create Security Group" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.3-security-group/">
-          <b>3.3 </b>Tạo Security Group
+          <b>3.3 </b>Create Security Group
           
             <i class="fas fa-check read-icon"></i>
           
@@ -249,13 +441,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Tạo máy chủ EC2" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.4-create-ec2/" title="Create EC2 Server" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.4-create-ec2/">
-          <b>3.4 </b>Tạo máy chủ EC2
+          <b>3.4 </b>Create EC2 Server
           
             <i class="fas fa-check read-icon"></i>
           
@@ -277,13 +469,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Kiểm tra kết nối" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.5-test-connect/" title="Test connection" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.5-test-connect/">
-          <b>3.5 </b>Kiểm tra kết nối
+          <b>3.5 </b>Test connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -305,13 +497,13 @@
  
   
     
-    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT GW" class="dd-item 
+    <li data-nav-id="/3-create-vpc/3.6-nat-gateway/" title="NAT Gateway" class="dd-item 
         
         
         
         ">
       <a href="/3-create-vpc/3.6-nat-gateway/">
-          <b>3.6 </b>NAT GW
+          <b>3.6 </b>NAT Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -340,13 +532,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/" title="Cấu hình Site-to-Site VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/" title="Configure Site-to-Site VPN" class="dd-item 
         parent
         
         
         ">
       <a href="/4-vpn-sitetosite/">
-          <b>4. </b>Cấu hình Site-to-Site VPN
+          <b>4. </b>Configure Site-to-Site VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -371,13 +563,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Tạo môi trường VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/" title="Create a VPN environment" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/">
-          <b>4.1 </b>Tạo môi trường VPN
+          <b>4.1 </b>Create a VPN environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -402,13 +594,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Tạo ASG VPN VPC" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/" title="Create ASG VPN VPC" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.1-create-asg-vpn-vpc/">
-          <b>4.1.1 </b>Tạo ASG VPN VPC
+          <b>4.1.1 </b>Create ASG VPN VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -430,13 +622,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Tạo EC2 Instance" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/" title="Create EC2 Instance" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.1-deploy-infra/4.1.2-create-ec2/">
-          <b>4.1.2 </b>Tạo EC2 Instance
+          <b>4.1.2 </b>Create EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -467,13 +659,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Cấu hình kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/" title="Configure VPN connection" class="dd-item 
         parent
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/">
-          <b>4.2 </b>Cấu hình kết nối VPN
+          <b>4.2 </b>Configure VPN connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -498,13 +690,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Tao Virtual Private GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/" title="Create Virtual Private GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.1-create-vgw/">
-          <b>4.2.1 </b>Tao Virtual Private GW
+          <b>4.2.1 </b>Create Virtual Private GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -526,13 +718,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Tao Customer GW" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/" title="Create Customer GW" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.2-create-cgw/">
-          <b>4.2.2 </b>Tao Customer GW
+          <b>4.2.2 </b>Create Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -554,13 +746,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Tạo kết nối VPN" class="dd-item 
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Create VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/">
-          <b>4.2.3 </b>Tạo kết nối VPN
+          <b>4.2.3 </b>Create VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -582,13 +774,13 @@
  
   
     
-    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Cấu hình Customer GW " class="dd-item 
-        
+    <li data-nav-id="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/" title="Configure Customer GW" class="dd-item 
+        parent
         active
         
         ">
       <a href="/4-vpn-sitetosite/4.2-config-vpn/4.2.4-config-customergw/">
-          <b>4.2.4 </b>Cấu hình Customer GW 
+          <b>4.2.4 </b>Configure Customer GW
           
             <i class="fas fa-check read-icon"></i>
           
@@ -626,13 +818,13 @@
  
   
     
-    <li data-nav-id="/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/5-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên  
+          <b>5. </b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -654,11 +846,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -735,7 +923,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-09-2021</font></i>
+        <i><font color=orange>03-05-2022</font></i>
     </left>
     <left>
         <br>
@@ -791,7 +979,7 @@
             
           
           
-            <a href='/'>Cơ bản về VPC Networking trên AWS </a> > <a href='/4-vpn-sitetosite/'>Cấu hình Site-to-Site VPN</a> > <a href='/4-vpn-sitetosite/4.2-config-vpn/'>Cấu hình kết nối VPN</a> > Cấu hình Customer GW 
+            <a href='/'>Working with Amazon VPC</a> > <a href='/4-vpn-sitetosite/'>Configure Site-to-Site VPN</a> > <a href='/4-vpn-sitetosite/4.2-config-vpn/'>Configure VPN connection</a> > Configure Customer GW
           
         
           
@@ -822,7 +1010,7 @@
           
             <h1>
               
-              Cấu hình Customer GW 
+              Configure Customer GW
             </h1>
           
 
@@ -831,170 +1019,170 @@
 
 
 	<ol>
-<li>Để tải tập tin cấu hình cho VPN Connection ở phía On-premise. Bạn có thể tải Template từ phía AWS cung cấp:</li>
+<li>To download the configuration file for VPN Connection on the On-premise side. You can download the Template from AWS provided:</li>
 </ol>
 <ul>
-<li>Truy cập trang <strong>Amazon VPC console</strong> tại địa chỉ <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
-<li>Kéo thanh điều hướng bên trái xuống dưới, click <strong>Site-to-Site VPN Connection</strong>.</li>
-<li>Chọn VPN Connection đã tạo, sau đó chọn Download Configuration.
+<li>Visit <strong>Amazon VPC console</strong> page at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
+<li>Drag the left navigation bar down, click <strong>Site-to-Site VPN Connection</strong>.</li>
+<li>Select the created VPN Connection, then select Download Configuration.
 <img src="/images/vpn/create-vpn6.png?width=90pc" alt="Configure VPN"></li>
 </ul>
 <ol start="2">
-<li>Trong hộp thoại Download Configuration, lựa chọn appliance phù hợp với bạn: Trong bài thực hành này, chúng ta sẽ sử dụng OpenSwan.
+<li>In the Download Configuration dialog box, select the appliance that&rsquo;s right for you: In this exercise, we&rsquo;ll be using OpenSwan.
 <ul>
-<li><strong>Vendor:</strong>	Chọn <strong>OpenSwan</strong></li>
-<li><strong>Platform:</strong>	Chọn <strong>OpenSwan</strong></li>
-<li><strong>Software:</strong>	Chọn <strong>OpenSwan 2.6.38+</strong></li>
+<li><strong>Vendor:</strong> Select <strong>OpenSwan</strong></li>
+<li><strong>Platform:</strong> Select <strong>OpenSwan</strong></li>
+<li><strong>Software:</strong> Select <strong>OpenSwan 2.6.38+</strong></li>
 <li>Click <strong>Download</strong>.</li>
 </ul>
 </li>
 </ol>
 <p><img src="/images/vpn/create-vpn8.png?width=90pc" alt="Configure VPN"></p>
 <ul>
-<li>Lưu thông tin file câu hình vào thư mục chúng ta sử dụng lưu trữ key pair và công cụ cho bài lab.</li>
+<li>Save the image file information to the folder we use to store the key pair and tools for the lab.</li>
 </ul>
 <ol start="3">
-<li>Sau đó dựa vào cấu hình được cung cấp, bạn thay đổi các thông tin phù hợp và cấu hình cho thiết bị của mình.</li>
-<li>Kết nối ssh vào EC2 <strong>Customer Gateway</strong>.
+<li>Then, based on the configuration provided, you change the appropriate information and configuration for your device.</li>
+<li>Connect ssh to EC2 <strong>Customer Gateway</strong>.
 <img src="/images/vpn/configure-cgw.png?width=90pc" alt="Configure VPN"></li>
 </ol>
 <ul>
-<li>Cài đặt <strong>OpenSwan</strong></li>
+<li>Install <strong>OpenSwan</strong></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo su
-yum install openswan -y
-</code></pre></div><p><img src="/images/vpn/configure-cgw2.png?width=90pc" alt="Configure VPN"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo su
+</span></span><span style="display:flex;"><span>yum install openswan -y
+</span></span></code></pre></div><p><img src="/images/vpn/configure-cgw2.png?width=90pc" alt="Configure VPN"></p>
 <ol start="5">
-<li>Kiểm tra cấu hình file <strong>/etc/ipsec.conf</strong></li>
+<li>Check the configuration file <strong>/etc/ipsec.conf</strong></li>
 </ol>
 <ul>
-<li>Chạy lệnh <strong>vi /etc/ipsec.conf</strong></li>
-<li>Kiểm tra cấu hình đang như hình dưới.
+<li>Run the command <strong>vi /etc/ipsec.conf</strong></li>
+<li>Check the configuration is as shown below.
 <img src="/images/vpn/configure-cgw3.png?width=90pc" alt="Configure VPN"></li>
-<li>Ấn phím ESC và tổ hợp :q! để thoát khỏi trình chỉnh sửa <strong>vi</strong>.</li>
+<li>Press the ESC key and the combination :q! to exit the <strong>vi</strong> editor.</li>
 </ul>
 <ol start="6">
-<li>Cấu hình file <strong>/etc/sysctl.conf</strong></li>
+<li>Configuration file <strong>/etc/sysctl.conf</strong></li>
 </ol>
 <ul>
-<li>Chạy lệnh <strong>vi /etc/sysctl.conf</strong></li>
-<li>Chuyển xuống vị trí cuối cùng trong file cấu hình. Ấn phím <em>i</em> để tiến hành chỉnh sửa file.</li>
-<li>Thêm cấu đoạn sau vào cuối tập tin cấu hình.</li>
+<li>Run the command <strong>vi /etc/sysctl.conf</strong></li>
+<li>Move down to the last position in the configuration file. Press the <em>i</em> key to proceed with editing the file.
+Add the following configuration at the end of the configuration file.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">net.ipv4.ip_forward <span style="color:#f92672">=</span> 1
-net.ipv4.conf.all.accept_redirects <span style="color:#f92672">=</span> 0
-net.ipv4.conf.all.send_redirects <span style="color:#f92672">=</span> 0
-</code></pre></div><ul>
-<li>Ấn phím ESC và tổ hợp :wq! để lưu file cấu hình.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>net.ipv4.ip_forward <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>net.ipv4.conf.all.accept_redirects <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>net.ipv4.conf.all.send_redirects <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><ul>
+<li>Press the ESC key and the combination :wq! to save the configuration file.
 <img src="/images/vpn/configure-cgw4.png?width=90pc" alt="Configure VPN"></li>
 </ul>
 <ol start="7">
-<li>Sau đó để áp dụng cấu hình này, chạy lệnh:</li>
+<li>Then to apply this configuration, run the command:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sysctl -p
-</code></pre></div><ol start="8">
-<li>Tiếp theo chúng ta sẽ cấu hình file <strong>/etc/ipsec.d/aws.conf</strong></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysctl -p
+</span></span></code></pre></div><ol start="8">
+<li>Next we will configure the file <strong>/etc/ipsec.d/aws.conf</strong></li>
 </ol>
 <ul>
-<li>Chạy lệnh <strong>vi /etc/ipsec.d/aws.conf</strong></li>
-<li>Ấn phím <strong>i</strong> để tiến hành chỉnh sửa file.</li>
-<li>Thêm cấu đoạn sau vào tập tin cấu hình. Chúng ta sẽ tạo 2 Tunnel với thông tin được lấy từ file cấu hình VPN Connection bạn đã tải về và lưu chung vào thư mục chứa key pair trước đó.</li>
+<li>Run the command <strong>vi /etc/ipsec.d/aws.conf</strong></li>
+<li>Press the <strong>i</strong> key to edit the file.
+Add the following configuration to the configuration file. We will create 2 Tunnels with information taken from the VPN Connection configuration file you downloaded and saved together in the folder containing the key pair before.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conn Tunnel1
-	authby<span style="color:#f92672">=</span>secret
-	auto<span style="color:#f92672">=</span>start
-	left<span style="color:#f92672">=</span>%defaultroute
-	leftid<span style="color:#f92672">=</span>13.212.233.95
-	right<span style="color:#f92672">=</span>52.220.15.74
-	type<span style="color:#f92672">=</span>tunnel
-	ikelifetime<span style="color:#f92672">=</span>8h
-	keylife<span style="color:#f92672">=</span>1h
-	phase2alg<span style="color:#f92672">=</span>aes128-sha1;modp1024
-	ike<span style="color:#f92672">=</span>aes128-sha1;modp1024
-	keyingtries<span style="color:#f92672">=</span>%forever
-	keyexchange<span style="color:#f92672">=</span>ike
-	leftsubnet<span style="color:#f92672">=</span>10.11.0.0/16
-	rightsubnet<span style="color:#f92672">=</span>10.10.0.0/16
-	dpddelay<span style="color:#f92672">=</span>10
-	dpdtimeout<span style="color:#f92672">=</span>30
-	dpdaction<span style="color:#f92672">=</span>restart_by_peer
-	overlapip<span style="color:#f92672">=</span>yes
-
-conn Tunnel2
-	authby<span style="color:#f92672">=</span>secret
-	auto<span style="color:#f92672">=</span>start
-	left<span style="color:#f92672">=</span>%defaultroute
-	leftid<span style="color:#f92672">=</span>13.212.233.95
-	right<span style="color:#f92672">=</span>54.255.91.142
-	type<span style="color:#f92672">=</span>tunnel
-	ikelifetime<span style="color:#f92672">=</span>8h
-	keylife<span style="color:#f92672">=</span>1h
-	phase2alg<span style="color:#f92672">=</span>aes128-sha1;modp1024
-	ike<span style="color:#f92672">=</span>aes128-sha1;modp1024
-	keyingtries<span style="color:#f92672">=</span>%forever
-	keyexchange<span style="color:#f92672">=</span>ike
-	leftsubnet<span style="color:#f92672">=</span>10.11.0.0/16
-	rightsubnet<span style="color:#f92672">=</span>10.10.0.0/16
-	dpddelay<span style="color:#f92672">=</span>10
-	dpdtimeout<span style="color:#f92672">=</span>30
-	dpdaction<span style="color:#f92672">=</span>restart_by_peer
-	overlapip<span style="color:#f92672">=</span>yes
-</code></pre></div><ul>
-<li>Ấn phím ESC và tổ hợp :wq! để lưu file cấu hình.</li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conn Tunnel1
+</span></span><span style="display:flex;"><span>authby<span style="color:#f92672">=</span>secret
+</span></span><span style="display:flex;"><span>auto<span style="color:#f92672">=</span>start
+</span></span><span style="display:flex;"><span>left<span style="color:#f92672">=</span>%defaultroute
+</span></span><span style="display:flex;"><span>leftid<span style="color:#f92672">=</span>13.212.233.95
+</span></span><span style="display:flex;"><span>right<span style="color:#f92672">=</span>52.220.15.74
+</span></span><span style="display:flex;"><span>type<span style="color:#f92672">=</span>tunnel
+</span></span><span style="display:flex;"><span>ikelifetime<span style="color:#f92672">=</span>8h
+</span></span><span style="display:flex;"><span>keylife<span style="color:#f92672">=</span>1h
+</span></span><span style="display:flex;"><span>phase2alg<span style="color:#f92672">=</span>aes128-sha1;modp1024
+</span></span><span style="display:flex;"><span>ike<span style="color:#f92672">=</span>aes128-sha1;modp1024
+</span></span><span style="display:flex;"><span>keyingtries<span style="color:#f92672">=</span>%forever
+</span></span><span style="display:flex;"><span>keyexchange<span style="color:#f92672">=</span>ike
+</span></span><span style="display:flex;"><span>leftsubnet<span style="color:#f92672">=</span>10.11.0.0/16
+</span></span><span style="display:flex;"><span>rightsubnet<span style="color:#f92672">=</span>10.10.0.0/16
+</span></span><span style="display:flex;"><span>dpddelay<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>dpdtimeout<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>dpdaction<span style="color:#f92672">=</span>restart_by_peer
+</span></span><span style="display:flex;"><span>overlapip<span style="color:#f92672">=</span>yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>conn Tunnel2
+</span></span><span style="display:flex;"><span>authby<span style="color:#f92672">=</span>secret
+</span></span><span style="display:flex;"><span>auto<span style="color:#f92672">=</span>start
+</span></span><span style="display:flex;"><span>left<span style="color:#f92672">=</span>%defaultroute
+</span></span><span style="display:flex;"><span>leftid<span style="color:#f92672">=</span>13.212.233.95
+</span></span><span style="display:flex;"><span>right<span style="color:#f92672">=</span>54.255.91.142
+</span></span><span style="display:flex;"><span>type<span style="color:#f92672">=</span>tunnel
+</span></span><span style="display:flex;"><span>ikelifetime<span style="color:#f92672">=</span>8h
+</span></span><span style="display:flex;"><span>keylife<span style="color:#f92672">=</span>1h
+</span></span><span style="display:flex;"><span>phase2alg<span style="color:#f92672">=</span>aes128-sha1;modp1024
+</span></span><span style="display:flex;"><span>ike<span style="color:#f92672">=</span>aes128-sha1;modp1024
+</span></span><span style="display:flex;"><span>keyingtries<span style="color:#f92672">=</span>%forever
+</span></span><span style="display:flex;"><span>keyexchange<span style="color:#f92672">=</span>ike
+</span></span><span style="display:flex;"><span>leftsubnet<span style="color:#f92672">=</span>10.11.0.0/16
+</span></span><span style="display:flex;"><span>rightsubnet<span style="color:#f92672">=</span>10.10.0.0/16
+</span></span><span style="display:flex;"><span>dpddelay<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>dpdtimeout<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>dpdaction<span style="color:#f92672">=</span>restart_by_peer
+</span></span><span style="display:flex;"><span>overlapip<span style="color:#f92672">=</span>yes
+</span></span></code></pre></div><ul>
+<li>Press the ESC key and the combination :wq! to save the configuration file.</li>
 </ul>
 
-<div class="notices tip" ><p>Đảm bảo bạn chỉnh sửa địa chỉ IP và lớp mạng phù hợp trước khi copy đoạn cấu hình trên.<br>
-Đối với Amazon Linux thì chúng ta sẽ bỏ dòng <strong>auth=esp</strong> trong file cấu hình gốc.<br>
-Vì chúng ta chỉ có 1 public IP addres cho <strong>Customer Gateway</strong> nên sẽ cần thêm cấu hình <strong>overlapip=yes</strong> .\</p>
+<div class="notices tip" ><p>Make sure you edit the IP address and network class accordingly before copying the above configuration.<br>
+For Amazon Linux, we will remove the <strong>auth=esp</strong> line in the original configuration file.<br>
+Since we only have 1 public IP addres for <strong>Customer Gateway</strong>, we will need to configure <strong>overlapip=yes</strong> .\</p>
 </div>
 
 
-<div class="notices note" ><p><strong>leftid</strong>: IP Public Address phía Onprem. ( Ở đây chính là IP public của EC2 <strong>Customer Gateway</strong> trong <strong>ASG VPN</strong> VPC) .<br>
-<strong>right</strong>: IP Public Address phía AWS VPN Tunnel. .<br>
-<strong>leftsubnet</strong>: CIDR của Mạng phía Local (Nếu có nhiều lớp mạng, bạn có thể để là 0.0.0.0/0). .<br>
-<strong>rightsubnet</strong>: CIDR của Mạng phía Private Subnet trên AWS.</p>
+<div class="notices note" ><p><strong>leftid</strong>: IP Public Address on the Onprem side. (Here is the public IP of EC2 <strong>Customer Gateway</strong> in <strong>ASG VPN</strong> VPC) .<br>
+<strong>right</strong>: IP Public Address on AWS VPN Tunnel side. .<br>
+<strong>leftsubnet</strong>: CIDR of Local Side Network (If there are multiple network layers, you can leave it as 0.0.0.0/0). .<br>
+<strong>rightsubnet</strong>: CIDR of Private Subnet on AWS.</p>
 </div>
 
 <p><img src="/images/vpn/configure-cgw5.png?width=90pc" alt="Configure VPN"></p>
 <ol start="9">
 <li>
-<p>Kiểm tra bước tiếp theo trong file cấu hình chúng ta đã tải xuống.
+<p>Check out the next step in the configuration file we downloaded.
 <img src="/images/vpn/configure-cgw6.png?width=90pc" alt="Configure VPN"></p>
 </li>
 <li>
-<p>Tạo mới và cấu hình file <strong>etc/ipsec.d/aws.secrets</strong>
-Tạo tập tin mới với cấu hình sau để thiết lập chứng thực cho 2 Tunnel.</p>
+<p>Create and configure the file <strong>etc/ipsec.d/aws.secrets</strong>
+Create a new file with the following configuration to set up the authentication for the 2 Tunnels.</p>
 </li>
 </ol>
 <ul>
-<li>Chạy lệnh <strong>touch /etc/ipsec.d/aws.secrets</strong> để tạo tập tin.</li>
-<li>Chạy lệnh <strong>vi /etc/ipsec.d/aws.secrets</strong></li>
-<li>Ấn phím <strong>i</strong> để tiến hành chỉnh sửa file.</li>
-<li>Thêm cấu đoạn sau vào cuối tập tin cấu hình.</li>
+<li>Run the command <strong>touch /etc/ipsec.d/aws.secrets</strong> to create the file.</li>
+<li>Run the command <strong>vi /etc/ipsec.d/aws.secrets</strong></li>
+<li>Press the <strong>i</strong> key to edit the file.
+Add the following configuration at the end of the configuration file.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">13.212.233.95 52.220.15.74: PSK <span style="color:#e6db74">&#34;2ned6kIANuA8nPtYnwvQVwak_fJcmSP5&#34;</span>
-13.212.233.95 54.255.91.142: PSK <span style="color:#e6db74">&#34;jdkPQG140TeUacw3rnKlyavxnrNaAkZ7&#34;</span>
-</code></pre></div><ul>
-<li>Ấn phím ESC và tổ hợp :wq! để lưu file cấu hình.</li>
-<li>Chạy lệnh <strong>cat /etc/ipsec.d/aws.secrets</strong> để kiểm tra nội dung file cấu hình.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>13,212.233.95 52.220.15.74: PSK <span style="color:#e6db74">&#34;2ned6kIANuA8nPtYnwvQVwak_fJcmSP5&#34;</span>
+</span></span><span style="display:flex;"><span>13.212.233.95 54.255.91.142: PSK <span style="color:#e6db74">&#34;jdkPQG140TeUacw3rnKlyavxnrNaAkZ7&#34;</span>
+</span></span></code></pre></div><ul>
+<li>Press the ESC key and the combination :wq! to save the configuration file.</li>
+<li>Run the command <strong>cat /etc/ipsec.d/aws.secrets</strong> to check the configuration file content.
 <img src="/images/vpn/configure-cgw7.png?width=90pc" alt="Configure VPN"></li>
 </ul>
 <ol start="11">
-<li>Khởi động lại Network service &amp; IPSEC service</li>
+<li>Restart Network service &amp; IPSEC service</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service network restart 
-chkconfig ipsec on
-service ipsec start
-service ipsec status
-</code></pre></div><p><img src="/images/vpn/configure-cgw8.png?width=90pc" alt="Configure VPN"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>service network restart
+</span></span><span style="display:flex;"><span>chkconfig ipsec on
+</span></span><span style="display:flex;"><span>service ipsec start
+</span></span><span style="display:flex;"><span>service ipsec status
+</span></span></code></pre></div><p><img src="/images/vpn/configure-cgw8.png?width=90pc" alt="Configure VPN"></p>
 
-<div class="notices tip" ><p>Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để restart lại service network và ipsec : .<br>
+<div class="notices tip" ><p>If the status tunnel is still not running properly, after checking and updating the configuration you will need to run the command to restart the service network and IPsec : .<br>
 <strong>sudo service network restart</strong> .<br>
 <strong>sudo service ipsec restart</strong></p>
 </div>
 
 <ol start="12">
-<li>Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ <strong>Customer Gateway</strong> tới máy chủ <strong>EC2 Private</strong>. Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.</li>
+<li>After completing the configuration. Try to ping from the <strong>Customer Gateway</strong> server-side to the <strong>EC2 Private</strong> server. If the VPN configuration is successful, you will get the following results.</li>
 </ol>
 <p><img src="/images/vpn/testping.png?width=90pc" alt="Configure VPN"></p>
 
@@ -1045,6 +1233,21 @@ service ipsec status
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -1063,6 +1266,91 @@ service ipsec status
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1368,10 +1656,10 @@ service ipsec status
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Tạo kết nối VPN"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-vpn-sitetosite/4.2-config-vpn/4.2.3-create-vpn-connection/" title="Create VPN Connection"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-cleanup/" title="Dọn dẹp tài nguyên  " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/5-cleanup/" title="Clean up resources" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1381,19 +1669,19 @@ service ipsec status
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.min.js?1632982536"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1632982536"></script>
-    <script src="/js/jquery.sticky.js?1632982536"></script>
-    <script src="/js/featherlight.min.js?1632982536"></script>
-    <script src="/js/highlight.pack.js?1632982536"></script>
+    <script src="/js/clipboard.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.min.js?1651625889"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1651625889"></script>
+    <script src="/js/jquery.sticky.js?1651625889"></script>
+    <script src="/js/featherlight.min.js?1651625889"></script>
+    <script src="/js/highlight.pack.js?1651625889"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1632982536"></script>
-    <script src="/js/learn.js?1632982536"></script>
-    <script src="/js/hugo-learn.js?1632982536"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1651625889"></script>
+    <script src="/js/learn.js?1651625889"></script>
+    <script src="/js/hugo-learn.js?1651625889"></script>
 
-    <link href="/mermaid/mermaid.css?1632982536" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1632982536"></script>
+    <link href="/mermaid/mermaid.css?1651625889" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1651625889"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

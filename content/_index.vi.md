@@ -1,5 +1,5 @@
 +++
-title = "Cơ bản về VPC Networking trên AWS "
+title = "Làm việc với Amazon VPC "
 date = 2020-04-18T00:38:32+07:00
 weight = 1 
 chapter = false
@@ -11,6 +11,7 @@ chapter = false
 Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.
 
 
+![VPC](../images/serviceicon.png?featherlight=false&width=10pc)
 
 #### Nội dung
 

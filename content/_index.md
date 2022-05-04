@@ -1,21 +1,22 @@
 +++
-title = "Cơ bản về VPC Networking trên AWS "
+title = "Working with Amazon VPC"
 date = 2020-04-18T00:38:32+07:00
-weight = 1 
+weight = 1
 chapter = false
 +++
-# Làm việc với Amazon VPC
+# Work with Amazon VPC
 
-#### Tổng quan
+#### Overview
 
-Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.
+In this lab, you'll learn the basics and practice of Amazon VPC (Virtual Private Networking). Learn key concepts and features in Amazon VPC. Practice creating a basic VPC and configuring a Site to Site VPN to connect an on-premise environment to an AWS VPC environment.
 
 
+![VPC](../images/serviceicon.png?featherlight=false&width=10pc)
 
-#### Nội dung
+#### Content
 
-1. [Giới thiệu VPC](1-vpc-Introduction/)
-2. [Tường lửa trong VPC](2-secure-feature/)
-3. [Tạo VPC Cơ bản](3-create-vpc/) 
-4. [Cấu hình Site-to-Site VPN](4-vpn-sitetosite/)
-5. [Dọn dẹp tài nguyên](5-cleanup/)
+1. [Introducing VPC](1-vpc-Introduction/)
+2. [Firewall in VPC](2-secure-feature/)
+3. [Create Basic VPC](3-create-vpc/)
+4. [Site-to-Site VPN Configuration](4-vpn-sitetosite/)
+5. [Resource Cleanup](5-cleanup/)

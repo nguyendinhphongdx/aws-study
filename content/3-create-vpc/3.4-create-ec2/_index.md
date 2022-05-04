@@ -1,100 +1,95 @@
 +++
-title = "Tạo máy chủ EC2"
+title = "Create EC2 Server"
 date = 2021
 weight = 4
 chapter = false
 pre = "<b>3.4 </b>"
 +++
 
-Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.
+In this step we will create 2 EC2 servers ( EC2 instances ) like the architecture below.
 
-![Mô hình Lab](/images/architecture/lab-3.4.png?width=50pc)
+![Lab Model](/images/architecture/lab-3.4.png?width=50pc)
 
 
-#### Tạo EC2 nằm trong Public subnet
+#### Create EC2 in Public subnet
 
-1. Truy cập Amazon EC2 console tại địa chỉ https://console.aws.amazon.com/ec2/.
-2. Trên thanh điều hướng bên trái, chọn **Intances**, **Launch Intance**.
+1. Access the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+2. On the left navigation bar, select **Intances**, **Launch Intance**.
 ![Create EC2](/images/vpc/create-ec2.png?width=90pc)
 
-3. Chọn **Select** để chọn Amazon Machine Image (AMI) **Amazon Linux 2 AMI (HVM), SSD Volume Type**.
+3. Select **Select** to select Amazon Machine Image (AMI) **Amazon Linux 2 AMI (HVM), SSD Volume Type**.
 ![Create EC2](/images/vpc/create-ec2-2.png?width=90pc)
 
-4. Giữ nguyên lựa chọn **General purpose t2.micro**, sau đó click **Next: Configure Instance Details**.
+4. Leave the **General purpose t2.micro** selected, then click **Next: Configure Instance Details**.
 ![Create EC2](/images/vpc/create-ec2-3.png?width=90pc)
 
-5. Tại trang **Configure Instance Details**
-  + **Network** chọn VPC **ASG**.
-  + **Subnet** chọn subnet **Public subnet 1**.
-  + **Auto-assign Public IP** kiểm tra xem có đang **Enable** hay không. Nếu không Enable, bạn cần kiểm tra lại phần cấu hình tự động cấp phát public IP cho subnet tại mục 3.1.
-  + Sau đó click **Next: Add Storage**.
+5. At **Configure Instance Details** page
+  + **Network** select VPC **ASG**.
+  + **Subnet** select subnet **Public subnet 1**.
+  + **Auto-assign Public IP** check whether **Enable** or not. If not Enable, you need to check the configuration for automatically allocating public IP for the subnet in Section 3.1.
+  + Then click **Next: Add Storage**.
 ![Create EC2](/images/vpc/create-ec2-4.png?width=90pc)
 
-6. Tại trang **Add Storage**. Giữ nguyên cấu hình mặc định và Click **Next: Add Tags**
-7. Tại trang **Add Tags**, Chọn **Add Tag**
-  + **Key** điền `Name`.
-  + **Value** điền `EC2 Public`.
-  + Sau đó bấm **Next: Configure Security Group**.
+6. At the **Add Storage** page. Keep the default configuration and Click **Next: Add Tags**
+7. On the **Add Tags** page, select **Add Tag**
+  + **Key** enter `Name`.
+  + **Value** enter `EC2 Public`.
+  + Then click **Next: Configure Security Group**.
 ![Create EC2](/images/vpc/create-ec2-5.png?width=90pc)
 
-8. Tại trang **Configure Security Group**
-  + **Assign a security group** click chọn **Select an existing security group**.
-  + **Name** chọn security group cho các EC2 trong public cubnet có tên **Public subnet -SG**.
-  + Sau đó bấm **Review và Launch**.
+8. At the **Configure Security Group** page
+  + **Assign a security group** click on **Select an existing security group**.
+  + **Name** selects the security group for EC2s in the public cubnet named **Public subnet -SG**.
+  + Then click **Review and Launch**.
 ![Create EC2](/images/vpc/create-ec2-6.png?width=90pc)
-9. Kiểm tra lại thông tin cấu hình và Click **Launch**.
-  + Một prompt **Choose an existing key pair or Create new key pair** xuất hiện.
-  + Chọn **Create a new key pair**.
+9. Check the configuration information again and Click **Launch**.
+  + A prompt **Choose an existing key pair or Create new key pair** appears.
+  + Select **Create a new key pair**.
   + **Key pair name**: **asg-keypair**.
   + Click **Download Key Pair**.
-  + Chọn đường dẫn để lưu file key pair. Bạn sẽ cần file key pair để có thể kết nối ssh tới **EC2 Public** instance bạn sắp tạo.
-  + Click **Save** để lưu file key pair.
+  + Choose the path to save the key pair file. You will need the key pair file to be able to ssh to the **EC2 Public** instance you are about to create.
+  + Click **Save** to save the key pair file.
   + Click **Launch**.
 ![Create EC2](/images/vpc/create-ec2-7.png?width=90pc)
-  + Click **View Instances** và chờ cho tới khi EC2 khởi tạo xong.
+  + Click **View Instances** and wait until EC2 finishes initializing.
 
-#### Tạo EC2 nằm trong Private subnet
+#### Create EC2 in Private subnet
 
-1. Truy cập Amazon EC2 console tại địa chỉ https://console.aws.amazon.com/ec2/.
-2. Trên thanh điều hướng bên trái, chọn **Intances**, **Launch Intance**.
-3. Chọn **Select** để chọn Amazon Machine Image (AMI) **Amazon Linux 2 AMI (HVM), SSD Volume Type**.
+1. Access the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+2. On the left navigation bar, select **Intances**, **Launch Intance**.
+3. Select **Select** to select Amazon Machine Image (AMI) **Amazon Linux 2 AMI (HVM), SSD Volume Type**.
 ![Create EC2](/images/vpc/create-ec2-2.png?width=90pc)
-4. Giữ nguyên lựa chọn **General purpose t2.micro**, sau đó click **Next: Configure Instance Details**.
+4. Leave the **General purpose t2.micro** selected, then click **Next: Configure Instance Details**.
 ![Create EC2](/images/vpc/create-ec2-3.png?width=90pc)
-5. Tại trang **Configure Instance Details**
-  + **Network** chọn VPC **ASG**.
-  + **Subnet** chọn subnet **Private subnet 2**.
-  + **Auto-assign Public IP** kiểm tra xem có đang **Disable** hay không. Nếu không Disable, bạn cần kiểm tra lại phần cấu hình tự động cấp phát public IP cho subnet tại mục 3.1.
-  + Sau đó click **Next: Add Storage**.
+5. At **Configure Instance Details** page
+  + **Network** choose VPC **ASG**.
+  + **Subnet** select subnet **Private subnet 2**.
+  + **Auto-assign Public IP** check if it is **Disable** or not. If not Disable, you need to check the configuration of automatically allocating public IP for the subnet in Section 3.1.
+  + Then click **Next: Add Storage**.
 ![Create EC2](/images/vpc/create-ec2-8.png?width=90pc)
 
-6. Tại trang **Add Storage**. Giữ nguyên cấu hình mặc định và Click **Next: Add Tags**
-7. Tại trang **Add Tags**, Chọn **Add Tag**
-  + **Key** điền `Name`.
-  + **Value** điền `EC2 Private`.
-  + Sau đó bấm **Next: Configure Security Group**.
+6. At the **Add Storage** page. Keep the default configuration and Click **Next: Add Tags**
+7. On the **Add Tags** page, select **Add Tag**
+  + **Key** enter `Name`.
+  + **Value** enter `EC2 Private`.
+  + Then click **Next: Configure Security Group**.
 ![Create EC2](/images/vpc/create-ec2-9.png?width=90pc)
 
-8. Tại trang **Configure Security Group**
-  + **Assign a security group** click chọn **Select an existing security group**.
-  + **Name** chọn security group cho các EC2 trong public cubnet có tên **Private subnet -SG**.
-  + Sau đó bấm **Review và Launch**.
+8. At the **Configure Security Group** page
+  + **Assign a security group** click on **Select an existing security group**.
+  + **Name** selects the security group for EC2s in the public cubnet named **Private subnet -SG**.
+  + Then click **Review and Launch**.
 ![Create EC2](/images/vpc/create-ec2-10.png?width=90pc)
 
-9. Kiểm tra lại thông tin cấu hình và Click **Launch**.
-  + Một prompt **Choose an existing key pair or Create new key pair** xuất hiện.
-  + Chọn **Choose an existing keypairr**.
-  + Chọn **Key pair name**: **asg-keypair**.
-  + Click **I acknowledge that I have access to the selected private key file (asg-keypair.pem), and that without this file, I won't be able to log into my instance.** để xác nhận rằng mình có thể truy cập tới Key pair bạn đã chọn.
+9. Check the configuration information again and Click **Launch**.
+  + A prompt **Choose an existing key pair or Create new key pair** appears.
+  + Select **Choose an existing keypair**.
+  + Select **Key pair name**: **asg-keypair**.
+  + Click **I acknowledge that I have access to the selected private key file (asg-keypair.pem), and that without this file, I won't be able to log into my instance.** to confirm that you have can access the Key pair you have selected.
   + Click **Launch**.
 ![Create EC2](/images/vpc/create-ec2-11.png?width=90pc)
-  + Click **View Instances** và chờ cho tới khi EC2 khởi tạo xong.
+  + Click **View Instances** and wait until EC2 finishes initializing.
 
-10. Như vậy chúng ta đã tạo được 2 máy chủ EC2 theo mô hình kiến trúc bên dưới. Bước tiếp theo chúng ta sẽ thử truy cập vào 2 máy chủ này.
+10. So we have created 2 EC2 servers according to the architecture model below. The next step we will try to access these 2 servers.
 
-![Mô hình Lab](/images/architecture/lab-3.4.png?width=50pc)
-
-
-
-
-
+![Lab Model](/images/architecture/lab-3.4.png?width=50pc)

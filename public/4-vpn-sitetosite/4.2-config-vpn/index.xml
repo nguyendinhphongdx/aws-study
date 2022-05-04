@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cấu hình kết nối VPN on Working with Amazon VPC</title>
+    <title>Configure VPN connection on Working with Amazon VPC</title>
     <link>/4-vpn-sitetosite/4.2-config-vpn/</link>
-    <description>Recent content in Cấu hình kết nối VPN on Working with Amazon VPC</description>
+    <description>Recent content in Configure VPN connection on Working with Amazon VPC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
-    
-	<atom:link href="/4-vpn-sitetosite/4.2-config-vpn/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:42 +0700</lastBuildDate><atom:link href="/4-vpn-sitetosite/4.2-config-vpn/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

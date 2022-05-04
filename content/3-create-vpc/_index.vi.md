@@ -1,12 +1,12 @@
 +++
 title = "Thực hành tạo 1 VPC"
-date = 2021
+date = 2022
 weight = 3
 chapter = false
 pre = "<b>3. </b>"
 +++
 
-Xuyên suốt bài thực hành này, chúng ta sẽ xây dựng một mô hình theo sơ đồ bên dưới:
+Trong bài thực hành này, chúng ta sẽ xây dựng một mô hình theo sơ đồ bên dưới:
 
 ![Mô hình Lab](/images/architecture/vpc.png?width=80pc)
 
