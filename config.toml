@@ -18,14 +18,14 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Working with Amazon VPC"
+title = "Work with Amazon VPC"
 weight = 1
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
 identifier = "AWS Study Group FB"
-url = "https://www.facebook.com/groups/660548818043427/"
+url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
@@ -36,5 +36,6 @@ languageName = "Tiếng Việt"
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group"
 identifier = "AWS Study Group FB"
-url = "https://www.facebook.com/groups/660548818043427/"
+url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
+
