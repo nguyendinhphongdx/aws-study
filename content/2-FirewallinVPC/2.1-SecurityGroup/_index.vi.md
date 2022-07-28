@@ -15,7 +15,7 @@ Một số đặc điểm cơ bản của Security group:
   Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập.
 * Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. 
 Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài.
-Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khởi Instance. 
+Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. 
 * Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào.
 * Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule  mặc định cho phép toàn bộ lưu lượng được truy cập).
 * Security group được liên kết với các network interface. 
