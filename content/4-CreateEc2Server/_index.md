@@ -14,7 +14,7 @@ In this step, we will create 2 EC2 servers ( EC2 instances ) like the architectu
 
 #### Content
 
-1. [Create EC2] server(4.1-createec2/)
+1. [Create EC2 server](4.1-createec2/)
 2. [Test Connection](4.2-connectec2/)
 3. [Create NAT Gateway](4.3-natgateway/)
 4. [Using Reachability Analyzer](4.4.-createreachabilityanalyzer/)

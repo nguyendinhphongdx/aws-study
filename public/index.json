@@ -148,7 +148,7 @@
 },
 {
 	"uri": "/3-prerequiste/",
-	"title": "Preparatoration steps",
+	"title": "Preparation steps",
 	"tags": [],
 	"description": "",
 	"content": "Preparation steps In this exercise, we will build a model according to the diagram below:\nContent  Create VPC Create Subnet Create Internet Gateway Create Route Table Create Security Group  "
@@ -158,7 +158,7 @@
 	"title": "Create EC2 Server",
 	"tags": [],
 	"description": "",
-	"content": "Create EC2 server In this step, we will create 2 EC2 servers ( EC2 instances ) like the architecture below.\nContent  [Create EC2] server(4.1-createec2/) Test Connection Create NAT Gateway Using Reachability Analyzer  "
+	"content": "Create EC2 server In this step, we will create 2 EC2 servers ( EC2 instances ) like the architecture below.\nContent  Create EC2 server Test Connection Create NAT Gateway Using Reachability Analyzer  "
 },
 {
 	"uri": "/3-prerequiste/3.4-cretaeroutetable/",

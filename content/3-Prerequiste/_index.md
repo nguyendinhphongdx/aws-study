@@ -1,5 +1,5 @@
 ---
-title : "Preparatoration steps"
+title : "Preparation steps"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
