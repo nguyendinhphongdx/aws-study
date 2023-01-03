@@ -10,13 +10,13 @@ pre : " <b> 5.2.4 </b> "
 
 1. Truy cập vào **VPC**
 
-- Chọn **Site-to-Site VPN Connection**
+- Chọn **Site-to-Site VPN connections**
 - Chọn **VPN Connection** đã tạo 
-- Chọn **Download Configuration**
+- Chọn **Download configuration**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.4-vpnconfigure/0001-vpnconfigure.png?featherlight=false&width=90pc)
 
-2. Trong hộp thoại **Download Configuration**, lựa chọn **appliance** phù hợp với bạn: Trong bài thực hành này, chúng ta sẽ sử dụng **OpenSwan**.
+2. Trong hộp thoại **Download configuration**, lựa chọn **appliance** phù hợp với bạn. Trong bài thực hành này, chúng ta sẽ sử dụng **OpenSwan**.
 - **Vendor**: Chọn **OpenSwan**
 - **Platform**: Chọn **OpenSwan**
 - **Software**: Chọn **OpenSwan 2.6.38+**
@@ -88,7 +88,7 @@ vi /etc/ipsec.d/aws.conf
 - Đảm bảo bạn chỉnh sửa địa chỉ IP và lớp mạng phù hợp trước khi copy đoạn cấu hình trên.
 - Đối với **Amazon Linux** thì chúng ta sẽ bỏ dòng **auth=esp** trong file cấu hình gốc.
 - Vì chúng ta chỉ có **1 public IP addres** cho **Customer Gateway** nên sẽ cần thêm cấu hình **overlapip=yes**.
-- **leftid**: **IP Public Address phía Onprem**. ( Ở đây chính là **IP public** của **EC2 Customer Gateway trong ASG VPN VPC**) .
+- **leftid**: **IP Public Address phía On-prem**. ( Ở đây chính là **IP public** của **EC2 Customer Gateway trong ASG VPN VPC**) .
 - **right**: **IP Public Address phía AWS VPN Tunnel**. 
 - **leftsubnet**: **CIDR của Mạng phía Local** (Nếu có nhiều lớp mạng, bạn có thể để là **0.0.0.0/0**).
 - **rightsubnet**: **CIDR của Mạng phía Private Subnet trên AWS**.

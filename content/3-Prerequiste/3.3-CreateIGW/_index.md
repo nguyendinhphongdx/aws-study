@@ -10,14 +10,14 @@ pre : " <b> 3.3 </b> "
 
 1. In the **VPC** interface
 
-- Select **Internet Gateways**
+- Select **Internet gateways**
 - Select **Create internet gateway**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0001-igwandroutetable.png?featherlight=false&width=90pc)
 
 2. Make configuration
 
-- **Name tag**, enter **```Internet Gateway```**
+- **Name tag**: enter `Internet Gateway`
 - Select **Create internet gateway**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0002-igwandroutetable.png?featherlight=false&width=90pc)
@@ -39,6 +39,6 @@ pre : " <b> 3.3 </b> "
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0005-igwandroutetable.png?featherlight=false&width=90pc)
 
-6. When attach successfully **State** internet gateway will switch to **Attached**
+6. When attach successfully, **State** internet gateway will switch to **Attached**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0006-igwandroutetable.png?featherlight=false&width=90pc)

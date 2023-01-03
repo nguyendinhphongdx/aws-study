@@ -25,8 +25,8 @@ pre : " <b> 3.1 </b> "
 3. Tiến hành các bước tạo VPC
 
 - **Resource**, chọn **VPC only**
-- **Name tag**, nhập **```ASG```**
-- **IPv4 CIDR**, nhập **``10.10.0.0/16``**
+- **Name tag**, nhập `ASG`
+- **IPv4 CIDR**, nhập `10.10.0.0/16`
 
 ![Create VPC](/images/3-Prerequiste/3.1-vpcandsubnet/0003-createvpcandsubnet.png?featherlight=false&width=90pc)
 

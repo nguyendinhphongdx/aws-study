@@ -10,43 +10,42 @@ pre : " <b> 5.2.3 </b> "
 
 1. Truy cập **VPC**
 
-- Chọn **Site-to-Site VPN Connections**
-- Chọn **Create VPN Connection**
+- Chọn **Site-to-Site VPN connections**
+- Chọn **Create VPN connection**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.3-vpnconnect/0001-vpnconnect.png?featherlight=false&width=90pc)
 
-2. Trong giao diện **Create VPN Connection**
+2. Trong giao diện **Create VPN connection**
 
-- **Name tag**, nhập **```VPN Connection```**
-- **Target Gateway Type**: Chọn **Virtual Private Gateway**
-- **Virtual Private Gateway**: Chọn **VPN Gateway**
-- **Customer Gateway**: **Existing**
-- **Customer Gateway ID**: Chọn **Customer Gateway**
+- **Name tag**: nhập `VPN Connection`
+- **Target gateway type**: chọn **Virtual private gateway**
+- **Virtual private gateway**: chọn **VPN Gateway**
+- **Customer gateway**: **Existing**
+- **Customer gateway ID**: chọn **Customer Gateway**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.3-vpnconnect/0002-vpnconnect.png?featherlight=false&width=90pc)
 
 3. Tiếp tục thực hiện cấu hình
 
-- **Routing Options**: **Static**
-- **Static IP Prefixes**: **10.11.0.0/16**. Đây là giải địa chỉ IP ở môi trường Onpremise giả lập.
+- **Routing options**: **Static**
+- **Static IP prefixes**: `10.11.0.0/16`. Đây là dải địa chỉ IP ở môi trường on-premise giả lập.
 - Các cấu hình khác giữ nguyên mặc định.
 
 ![Create VPC](/images/6-VPNSitetoSite/6.3-vpnconnect/0003-vpnconnect.png?featherlight=false&width=90pc)
 
-4. Chọn **Create VPN Connection**
+4. Chọn **Create VPN connection**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.3-vpnconnect/0004-vpnconnect.png?featherlight=false&width=90pc)
 
-5. Đợi khoảng 5 phút sau, hoàn tất tạo **VPN Connection**
+5. Đợi khoảng 5 phút sau, hoàn tất tạo **VPN Connection** (trạng thái của **State** là **Available**)
 
 
 ![Create VPC](/images/6-VPNSitetoSite/6.3-vpnconnect/0005-vpnconnect.png?featherlight=false&width=90pc)
 
-6. Cấu hình **propagation** cho các **route table**
+6. Cấu hình **propagation** cho các **route table**: Trong giao diện **VPC**, chọn **Route Tables**
 
-- Trong giao diện **VPC**, chọn **Route Tables**
-- Chọn **Route table - Public**
-- Chọn **Route Propagation**
+- Chọn **Route table-Public**
+- Chọn tab **Route propagation** 
 - Chọn **Edit route propagation**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.3-vpnconnect/0006-vpnconnect.png?featherlight=false&width=90pc)

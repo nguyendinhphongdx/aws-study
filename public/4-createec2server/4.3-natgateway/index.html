@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create NAT Gateway :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1658992622" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658992622" rel="stylesheet">
-    <link href="/css/hybrid.css?1658992622" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658992622" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658992622" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658992622" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658992622" rel="stylesheet">
-    <link href="/css/theme.css?1658992622" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658992622" rel="stylesheet">
+    <link href="/css/nucleus.css?1672761245" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672761245" rel="stylesheet">
+    <link href="/css/hybrid.css?1672761245" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672761245" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672761245" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672761245" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672761245" rel="stylesheet">
+    <link href="/css/theme.css?1672761245" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672761245" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1658992622" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672761245" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1658992622"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672761245"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658992622"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658992622"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672761245"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672761245"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658992622"></script>
+<script type="text/javascript" src="/js/search.js?1672761245"></script>
 
     
   </div>
@@ -610,6 +610,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Using Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -887,6 +915,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Modify AWS VPN Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Modify AWS VPN Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1017,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>28-07-2022</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1126,7 +1182,7 @@
 <li>In the <strong>Allocate Elastic IP address</strong> interface</li>
 </ol>
 <ul>
-<li><strong>Public IPv4 address pool</strong>, select <strong>Amazon&rsquo;s pool of IPv4 addresses</strong></li>
+<li><strong>Public IPv4 address pool</strong>: select <strong>Amazon&rsquo;s pool of IPv4 addresses</strong></li>
 <li>Select <strong>Allocate</strong></li>
 </ul>
 <p><img src="/images/4-CreateEc2Server/4.3-natgateway/0002-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
@@ -1139,17 +1195,17 @@
 </ol>
 <ul>
 <li>Select <strong>NAT Gateways</strong></li>
-<li><strong>Create NAT gateway</strong></li>
+<li>Select <strong>Create NAT gateway</strong></li>
 </ul>
 <p><img src="/images/4-CreateEc2Server/4.3-natgateway/0004-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
 <ol start="5">
 <li>In <strong>NAT gateway</strong> interface</li>
 </ol>
 <ul>
-<li><strong>Name</strong>, enter <strong><code>NAT gateway</code></strong></li>
-<li><strong>Subnet</strong>, select <strong>Public subnet 2</strong></li>
-<li><strong>Connectivity type</strong>, select <strong>Public</strong></li>
-<li><strong>Elastic IP allocation ID</strong>, select <strong>Elastic IP</strong> just created.</li>
+<li><strong>Name</strong>: enter <code>NAT gateway</code></li>
+<li><strong>Subnet</strong>: select <strong>Public subnet 2</strong></li>
+<li><strong>Connectivity type</strong>: select <strong>Public</strong></li>
+<li><strong>Elastic IP allocation ID</strong>: select <strong>Elastic IP</strong> just created.</li>
 </ul>
 <p><img src="/images/4-CreateEc2Server/4.3-natgateway/0005-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
 <ol start="6">
@@ -1186,7 +1242,7 @@
 <li>In the <strong>Route table - Private</strong> interface</li>
 </ol>
 <ul>
-<li>Select <strong>Subnet Associations</strong></li>
+<li>Select <strong>Subnet Associations</strong> tab</li>
 <li>Select <strong>Edit subnet associations</strong></li>
 </ul>
 <p><img src="/images/4-CreateEc2Server/4.3-natgateway/00011-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
@@ -1194,7 +1250,7 @@
 <li>In the <strong>Edit subnet associations</strong> interface</li>
 </ol>
 <ul>
-<li>Choose 2 private subnets</li>
+<li>Choose <strong>Private subnet 1</strong> and <strong>Private subnet 2</strong></li>
 <li>Select <strong>Save associations</strong></li>
 </ul>
 <p><img src="/images/4-CreateEc2Server/4.3-natgateway/00012-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
@@ -1202,7 +1258,7 @@
 <li>In the <strong>Route table - Private</strong> interface</li>
 </ol>
 <ul>
-<li>Select <strong>Routes</strong></li>
+<li>Select <strong>Routes</strong> tab</li>
 <li>Select <strong>Edit routes</strong></li>
 </ul>
 <p><img src="/images/4-CreateEc2Server/4.3-natgateway/00013-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
@@ -1561,9 +1617,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -1571,52 +1624,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1646,6 +1653,87 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1745,7 +1833,7 @@
 			<a class="nav nav-prev" href="/4-createec2server/4.2-connectec2/" title="Test Connection"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-vpnsitetosite/" title="Configuring Site to Site VPN" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1755,19 +1843,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658992622"></script>
-    <script src="/js/jquery.sticky.js?1658992622"></script>
-    <script src="/js/featherlight.min.js?1658992622"></script>
-    <script src="/js/highlight.pack.js?1658992622"></script>
+    <script src="/js/clipboard.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672761246"></script>
+    <script src="/js/jquery.sticky.js?1672761246"></script>
+    <script src="/js/featherlight.min.js?1672761246"></script>
+    <script src="/js/highlight.pack.js?1672761246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658992622"></script>
-    <script src="/js/learn.js?1658992622"></script>
-    <script src="/js/hugo-learn.js?1658992622"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672761246"></script>
+    <script src="/js/learn.js?1672761246"></script>
+    <script src="/js/hugo-learn.js?1672761246"></script>
 
-    <link href="/mermaid/mermaid.css?1658992622" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1658992622"></script>
+    <link href="/mermaid/mermaid.css?1672761246" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672761246"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

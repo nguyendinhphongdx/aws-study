@@ -22,11 +22,11 @@ The largest sequence number that can be assigned to a rule is 32766 (equivalent 
 You can add or remove a rule from the default network ACL or create a new network ACL for the VPC. When adding or removing a rule from the network ACL, the changes are automatically applied to the subnets associated with it.
 
 Components of a network ACL rule:
-* **Rule number**. The starting rule is evaluated starting with the rule with the lowest sequence number.
+* **Rule number**:  The starting rule is evaluated starting with the rule with the lowest sequence number.
 As soon as that rule matches traffic, it will immediately be applied even if it conflicts with a higher-numbered rule in the list.
-* **Type**.traffic type, eg SSH. All traffic types or custom ranges can be specified.
-* **Protocol**. specify the protocol with the standard protocol number.
-* **Port range**. port or port range listening for traffic. For example, HTTP is 80.
-* **Source**. [Inbound rule only] Origin of traffic (value is CIDR range).
-* **Destination**. [Outbound rule only] Destination of traffic (value is CIDR range).
-* **Allow/Deny**. specify Allow or Deny traffic.
+* **Type**: traffic type, eg SSH. All traffic types or custom ranges can be specified.
+* **Protocol**:  specify the protocol with the standard protocol number.
+* **Port range**: port or port range listening for traffic. For example, HTTP is 80.
+* **Source**: [Inbound rule only] Origin of traffic (value is CIDR range).
+* **Destination**: [Outbound rule only] Destination of traffic (value is CIDR range).
+* **Allow/Deny**: specify Allow or Deny traffic.

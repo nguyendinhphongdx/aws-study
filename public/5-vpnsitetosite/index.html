@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Configuring Site to Site VPN :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1658992622" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658992622" rel="stylesheet">
-    <link href="/css/hybrid.css?1658992622" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658992622" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658992622" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658992622" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658992622" rel="stylesheet">
-    <link href="/css/theme.css?1658992622" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658992622" rel="stylesheet">
+    <link href="/css/nucleus.css?1672761245" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672761245" rel="stylesheet">
+    <link href="/css/hybrid.css?1672761245" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672761245" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672761245" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672761245" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672761245" rel="stylesheet">
+    <link href="/css/theme.css?1672761245" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672761245" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1658992622" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672761245" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1658992622"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672761245"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658992622"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658992622"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672761245"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672761245"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658992622"></script>
+<script type="text/javascript" src="/js/search.js?1672761245"></script>
 
     
   </div>
@@ -610,6 +610,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Using Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -887,6 +915,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Modify AWS VPN Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Modify AWS VPN Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1017,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>28-07-2022</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1099,7 +1155,7 @@
 
 
 	<p>We can connect the On-premise data center to Amazon VPC using a hard or soft VPN depending on the purpose and actual user needs.
-To establish a Site to Site VPN connection, we will need to create and configure a Virtual Private Gateway <strong>VPG</strong> and Customer Gateway <strong>CGW</strong>.</p>
+To establish a Site to Site VPN connection, we will need to create and configure a Virtual Private Gateway (<strong>VPG</strong>) and Customer Gateway (<strong>CGW</strong>).</p>
 <ul>
 <li>Virtual Private Gateway (<strong>VPG</strong>) is a control center that connects the virtual private network (VPN) installed on top of AWS.</li>
 <li>A Customer Gateway (<strong>CGW</strong>) is a representation of a hard or soft VPN device installed at the Client end.</li>
@@ -1107,18 +1163,18 @@ To establish a Site to Site VPN connection, we will need to create and configure
 <p><strong>VPN tunnel</strong> will be established as soon as data traffic is transferred between AWS and the customer&rsquo;s network. In that connection, you must specify the type of routing that will be used to ensure the safety and quality of data transmission.
 If the CGW on the client-side supports Border Gateway Protocol (BGP), then in the VPN connection configuration we are required to set the routing to dynamic routing.
 Otherwise, we must configure the connection routing as static routing. In the case of using static routing, you must enter the exact routes needed for the connection from the Client-side to the VPG set up at the AWS end. Also, routing for the VPC must be configured to propagate to allow resources to exchange data in and out of the VPN tunnel connection between AWS and the Customer&rsquo;s network.</p>
-<p>Amazon VPC offers many types of CGWs, and each CGW is assigned to a VPG, but 1 VPG can be associated with multiple CGWs (many-to-one design). To support this model, the CGW&rsquo;s IP address must be unique within a region.
-Amazon VPC also provides the necessary information for Network Administrators to be able to configure the CGW and establish a VPN connection to the VPG on AWS. VPN connection always includes 2 Internet Protocol Security (IPSec) tunnels to ensure high availability of the connection.
+<p>Amazon VPC offers many types of CGWs, and each CGW is assigned to a VPG, but a VPG can be associated with multiple CGWs (many-to-one design). To support this model, the CGW&rsquo;s IP address must be unique within a region.
+Amazon VPC also provides the necessary information for Network Administrators to be able to configure the CGW and establish a VPN connection to the VPG on AWS. VPN connection always includes two Internet Protocol Security (IPSec) tunnels to ensure high availability of the connection.
 Below are the important features that we need to know about <strong>VPG</strong>, <strong>CGW</strong>, and <strong>VPN</strong>:</p>
 <ul>
 <li>VPG is the terminal component of the VPN tunnel located on AWS.</li>
 <li>The CGW can be a hardware device or a software application located at the Client end in the VPN tunnel connection.</li>
 <li>You must initiate a VPN tunnel connection from CGW to VPG.</li>
 <li>VPG supports both dynamic routing (BGP) and static routing.</li>
-<li>VPN connection always has 2 tunnels to ensure high availability for connection to VPC from the Client site.</li>
+<li>VPN connection always has two tunnels to ensure high availability for connection to VPC from the Client site.</li>
 </ul>
 <p>The lab helps us learn how to set up a Site to Site VPN connection in AWS. This solution is quite popular due to the advantages of low cost and is easy to configure because AWS provides instructions for each type of device at the Customer end. The customer&rsquo;s only concern is to prepare the internet from which to create a secret secure tunnel (using IPSec) connecting to AWS through an AWS VPN tunnel.
-In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</strong> ) and Branch office ( VPC <strong>ASG VPN</strong> ) located at 2 VPCs belonging to 2 different AZs to have a difference in terms of the network. On each VPC doing EC2 creation allows external SSH but without the ability to connect and ping each other using each EC2&rsquo;s Private IP address. All we need to do is configure the VPN so that the Private IP addresses can ping each other using the Site-to-Site VPN.</p>
+In the scope of the lab, assume that we have the Main office (VPC <strong>ASG</strong>) and Branch office (VPC <strong>ASG VPN</strong>) located at two VPCs belonging to two different AZs to have a difference in terms of the network. On each VPC doing EC2 creation allows external SSH but without the ability to connect and ping each other using each EC2&rsquo;s Private IP address. All we need to do is configure the VPN so that the Private IP addresses can ping each other using the Site-to-Site VPN.</p>
 <p><img src="/images/6-VPNSitetoSite/vpn.png?featherlight=false&amp;width=90pc" alt="VPN"></p>
 <p><strong>Content:</strong></p>
 <ol>
@@ -1456,59 +1512,6 @@ In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1533,6 +1536,7 @@ In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</
             
                 
                     
+                    
                 
                 
 
@@ -1542,6 +1546,90 @@ In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1638,7 +1726,7 @@ In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-createec2server/4.3-natgateway/" title="Create NAT Gateway"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/5-vpnsitetosite/5.1-createvpnenv/" title="Create a VPN environment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1651,19 +1739,19 @@ In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658992622"></script>
-    <script src="/js/jquery.sticky.js?1658992622"></script>
-    <script src="/js/featherlight.min.js?1658992622"></script>
-    <script src="/js/highlight.pack.js?1658992622"></script>
+    <script src="/js/clipboard.min.js?1672761245"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672761245"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672761245"></script>
+    <script src="/js/jquery.sticky.js?1672761245"></script>
+    <script src="/js/featherlight.min.js?1672761245"></script>
+    <script src="/js/highlight.pack.js?1672761245"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658992622"></script>
-    <script src="/js/learn.js?1658992622"></script>
-    <script src="/js/hugo-learn.js?1658992622"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672761245"></script>
+    <script src="/js/learn.js?1672761245"></script>
+    <script src="/js/hugo-learn.js?1672761245"></script>
 
-    <link href="/mermaid/mermaid.css?1658992622" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1658992622"></script>
+    <link href="/mermaid/mermaid.css?1672761245" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672761245"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

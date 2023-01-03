@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create Subnet :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1658992622" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658992622" rel="stylesheet">
-    <link href="/css/hybrid.css?1658992622" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658992622" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658992622" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658992622" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658992622" rel="stylesheet">
-    <link href="/css/theme.css?1658992622" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658992622" rel="stylesheet">
+    <link href="/css/nucleus.css?1672761245" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672761245" rel="stylesheet">
+    <link href="/css/hybrid.css?1672761245" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672761245" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672761245" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672761245" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672761245" rel="stylesheet">
+    <link href="/css/theme.css?1672761245" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672761245" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1658992622" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672761245" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1658992622"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672761245"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658992622"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658992622"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672761245"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672761245"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658992622"></script>
+<script type="text/javascript" src="/js/search.js?1672761245"></script>
 
     
   </div>
@@ -610,6 +610,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Using Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -887,6 +915,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Modify AWS VPN Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Modify AWS VPN Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1017,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>28-07-2022</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1128,31 +1184,37 @@
 <li>Select <strong>ASG</strong> VPC</li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0007-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Implement <strong>subnet settings</strong></li>
-</ol>
 <ul>
-<li><strong>Subnet name</strong>, enter <strong><code>Public Subnet 1</code></strong></li>
-<li>Select AZ <strong>ap-southeast-1a</strong></li>
-<li><strong>IPv4 CIDR block</strong>, import <strong><code>10.10.1.0/24</code></strong> according to architecture description</li>
-<li>Select <strong>Create subnet</strong></li>
+<li>
+<p>Implement <strong>subnet settings</strong></p>
+<ul>
+<li><strong>Subnet name</strong>: enter <code>Public Subnet 1</code></li>
+<li><strong>Availability Zone</strong>: select the first AZ</li>
+<li><strong>IPv4 CIDR block</strong>, import <code>10.10.1.0/24</code> according to architecture description</li>
 </ul>
+</li>
+<li>
+<p>Select <strong>Create subnet</strong></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0008-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
+<ol start="3">
 <li>Finish creating <strong>subnet</strong></li>
 </ol>
 <p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0009-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
+<ol start="4">
 <li>Follow the same steps to create more subnets</li>
 </ol>
 <ul>
-<li><strong>Public subnet 2</strong> with <strong>CIDR</strong> of <strong>10.10.2.0/24</strong> located in <strong>Availability Zone ap-southeast-1b</strong>.</li>
-<li><strong>Private subnet 1</strong> with <strong>CIDR</strong> of <strong>10.10.3.0/24</strong> located in <strong>Availability Zone ap-southeast-1a.</strong></li>
-<li><strong>Private subnet 2</strong> with <strong>CIDR</strong> of <strong>10.10.4.0/24</strong> located in <strong>Availability Zone ap-southeast-1b</strong></li>
+<li><code>Public subnet 2</code> with <strong>CIDR</strong> of <code>10.10.2.0/24</code> located in the second Availability Zone.</li>
+<li><code>Private subnet 1</code> with <strong>CIDR</strong> of <code>10.10.3.0/24</code> located in the first Availability Zone.</li>
+<li><code>Private subnet 2</code> with <strong>CIDR</strong> of <code>10.10.4.0/24</code> located in the second Availability Zone.</li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/00010-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
-<div class="notices tip" ><p>You can see there is 2 columns <strong>Availability Zone</strong> and <strong>Availability Zone ID</strong>. To avoid EC2 resources being used <strong>unevenly</strong>, (we tend to use AZ a to run <strong>primary and AZ</strong> b to stand by for example) AWS will randomly assign * <em>Availability Zone into Availability Zone ID</em>*. We can understand that Availability Zone is a form of alias, and Availability Zone ID is the identifier. For example, in the image above, Availability Zone ap-southeast-1a is assigned the Availability Zone ID apse1-az2. In another AWS account, the Availability Zone ap-southeast-1a may have an Availability Zone ID of apse1-az1.</p>
+<div class="notices tip" ><p>You can see there is 2 columns <strong>Availability Zone</strong> and <strong>Availability Zone ID</strong>. To avoid EC2 resources being used <strong>unevenly</strong>, (we tend to use AZ a to run <strong>primary and AZ</strong> b to stand by for example) AWS will randomly assign <strong>Availability Zone into Availability Zone ID</strong>. We can understand that Availability Zone is a form of alias, and Availability Zone ID is the identifier. For example, in the image above, Availability Zone ap-southeast-1a is assigned the Availability Zone ID apse1-az2. In another AWS account, the Availability Zone ap-southeast-1a may have an Availability Zone ID of apse1-az1.</p>
 </div>
 
 <h4 id="allows-automatic-allocation-of-public-ip-addresses-for-2-public-subnets">Allows automatic allocation of public IP addresses for 2 public subnets.</h4>
@@ -1160,7 +1222,7 @@
 <div class="notices tip" ><p>Another point worth noting is that the subnets are the same, through configuring the routeing table and allocating the public IP address that we have divided into Public and Private Subnet.</p>
 </div>
 
-<ol start="6">
+<ol start="5">
 <li>In the <strong>VPC</strong> interface</li>
 </ol>
 <ul>
@@ -1170,15 +1232,17 @@
 <li>Select <strong>Edit subnet settings</strong></li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/00011-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
+<ol start="6">
 <li>In the <strong>Auto-assign IP settings</strong> section</li>
 </ol>
 <ul>
 <li>Select <strong>Enable auto-assign public IPv4 address</strong></li>
 <li>Select <strong>Save</strong></li>
-<li>Then do the same with <strong>Public subnet 2.</strong></li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/00012-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="7">
+<li>Then do the same (step 5 and step 6) with <strong>Public subnet 2.</strong></li>
+</ol>
 
 
 
@@ -1518,55 +1582,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1600,6 +1615,87 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1709,19 +1805,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658992622"></script>
-    <script src="/js/jquery.sticky.js?1658992622"></script>
-    <script src="/js/featherlight.min.js?1658992622"></script>
-    <script src="/js/highlight.pack.js?1658992622"></script>
+    <script src="/js/clipboard.min.js?1672761245"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672761245"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672761245"></script>
+    <script src="/js/jquery.sticky.js?1672761245"></script>
+    <script src="/js/featherlight.min.js?1672761245"></script>
+    <script src="/js/highlight.pack.js?1672761245"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658992622"></script>
-    <script src="/js/learn.js?1658992622"></script>
-    <script src="/js/hugo-learn.js?1658992622"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672761245"></script>
+    <script src="/js/learn.js?1672761245"></script>
+    <script src="/js/hugo-learn.js?1672761245"></script>
 
-    <link href="/mermaid/mermaid.css?1658992622" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1658992622"></script>
+    <link href="/mermaid/mermaid.css?1672761245" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672761245"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

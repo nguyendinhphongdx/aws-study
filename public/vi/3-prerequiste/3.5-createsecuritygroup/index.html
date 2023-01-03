@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Security Group :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1658992622" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658992622" rel="stylesheet">
-    <link href="/css/hybrid.css?1658992622" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658992622" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658992622" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658992622" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658992622" rel="stylesheet">
-    <link href="/css/theme.css?1658992622" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658992622" rel="stylesheet">
+    <link href="/css/nucleus.css?1672761246" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672761246" rel="stylesheet">
+    <link href="/css/hybrid.css?1672761246" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672761246" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672761246" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672761246" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672761246" rel="stylesheet">
+    <link href="/css/theme.css?1672761246" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672761246" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1658992622" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672761246" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1658992622"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672761246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658992622"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658992622"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672761246"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672761246"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658992622"></script>
+<script type="text/javascript" src="/js/search.js?1672761246"></script>
 
     
   </div>
@@ -610,6 +610,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/4.4.-createreachabilityanalyzer/" title="Sử dụng Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Sử dụng Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -887,6 +915,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Tùy chỉnh AWS VPN Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Tùy chỉnh AWS VPN Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1017,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>28-07-2022</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1084,7 +1140,7 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#tạo-security-group">Tạo Security Group</a></li>
       </ul>
     </li>
   </ul>
@@ -1112,102 +1168,110 @@
 
 
 
-	<h4 id="tạo-security-group">Tạo Security Group</h4>
+	<h3 id="tạo-security-group">Tạo Security Group</h3>
 <h4 id="tạo-security-group-cho-máy-chủ-nằm-trong-public-subnet">Tạo Security Group cho máy chủ nằm trong Public subnet</h4>
 <ol>
 <li>Trong giao diện <strong>VPC</strong></li>
 </ol>
 <ul>
-<li>Chọn <strong>Security Group</strong></li>
-<li>Chọn <strong>Cretae security group</strong></li>
+<li>Chọn <strong>Security groups</strong></li>
+<li>Chọn <strong>Create security group</strong></li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0001-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="2">
 <li>Thực hiện cấu hình <strong>Security group</strong></li>
 </ol>
 <ul>
-<li><strong>Security Group name</strong>, nhập <strong><code>Public subnet - SG</code></strong></li>
-<li><strong>Description</strong>, nhập <strong>Allow SSH and Ping for servers in private subnet.</strong></li>
-<li>Chọn <strong>ASG</strong> VPC</li>
+<li>Basic details:
+<ul>
+<li><strong>Security Group name</strong>: nhập <code>Public subnet - SG</code></li>
+<li><strong>Description</strong>: nhập <code>Allow SSH and Ping for servers in private subnet</code>.</li>
+<li><strong>VPC</strong>: chọn <strong>ASG</strong> VPC.</li>
+</ul>
+</li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0002-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Thực hiện cấu hình <strong>Inbound rules</strong></li>
-</ol>
 <ul>
 <li>
-<p>Trong <strong>Inbound rules</strong>, click <strong>Add rule</strong>.</p>
+<p>Thực hiện cấu hình <strong>Inbound rules</strong>: click <strong>Add rule</strong>.</p>
+<ul>
+<li><strong>Type</strong>: select <strong>SSH</strong></li>
+<li><strong>Source type</strong>: chọn <strong>My IP</strong>. <strong>My IP</strong> đại diện cho 1 địa chỉ public IPv4 bạn đang sử dụng (sẽ thay đổi khi bạn đổi mạng)</li>
+</ul>
 </li>
 <li>
-<p>Chọn <strong>Type</strong>: <strong>SSH</strong> và <strong>Source</strong>: <strong>My IP</strong>. <strong>My IP</strong> đại diện cho 1 địa chỉ public IPv4 bạn đang sử dụng(sẽ thay đổi khi bạn đổi mạng)</p>
-</li>
-<li>
-<p>Chọn  <strong>Add rule</strong> để thêm 1 rule mới.</p>
-</li>
-<li>
-<p>Chọn <strong>Type</strong>: <strong>All ICMP - IPv4</strong> và <strong>Source</strong>: <strong>Anywhere</strong>. Cho phép ping từ bất kì địa chỉ IP nào.</p>
+<p>Lặp lại việc click <strong>Add rule</strong> để tạo một  Inbound rule mới.</p>
+<ul>
+<li><strong>Type</strong>: chọn <strong>All ICMP - IPv4</strong></li>
+<li><strong>Source type</strong>: chọn <strong>Anywhere-IPv4</strong>. Cho phép ping từ bất kì địa chỉ IP nào.</li>
+</ul>
 </li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0003-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>Kiểm tra <strong>Outbound rules</strong> và chọn <strong>Cretae security group</strong></li>
-</ol>
+<ul>
+<li>Kiểm tra <strong>Outbound rules</strong></li>
+<li>Chọn <strong>Create security group</strong></li>
+</ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0004-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
+<ol start="3">
 <li>Hoàn thành tạo security group cho máy chủ nằm trong Public subnet</li>
 </ol>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0005-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="tạo-security-group-cho-máy-chủ-nằm-trong-private-subnet">Tạo Security Group cho máy chủ nằm trong Private subnet</h4>
-<ol start="6">
+<ol start="4">
 <li>Trong giao diện <strong>VPC</strong></li>
 </ol>
 <ul>
-<li>Chọn <strong>Security Groups</strong></li>
+<li>Chọn <strong>Security groups</strong></li>
 <li>Chọn <strong>Create security group</strong></li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0006-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
+<ol start="5">
 <li>Thực hiện cấu hình <strong>Security group</strong></li>
 </ol>
 <ul>
+<li><strong>Basic details</strong>:
+<ul>
 <li>
-<p>Trong phần <strong>Security group name</strong> điền <strong>Private subnet - SG</strong></p>
+<p>Trong <strong>Security group name</strong> field: điền <code>Private subnet - SG</code></p>
 </li>
 <li>
-<p>Trong phần <strong>Description</strong> điền <strong>Allow SSH and Ping for servers in private subnet.</strong></p>
+<p>Trong <strong>Description</strong> field: điền <code>Allow SSH and Ping for servers in private subnet</code>.</p>
 </li>
 <li>
-<p>chọn <strong>VPC</strong>, lựa chọn <strong>VPC</strong> có tên <strong>ASG</strong>.</p>
+<p><strong>VPC</strong>: chọn <strong>VPC</strong> có tên <strong>ASG</strong>.</p>
+</li>
+</ul>
 </li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0007-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
-<li>Thực hiện cấu hình <strong>Inbound rules</strong></li>
-</ol>
 <ul>
-<li>
-<p>Trong Inbound rules, chọn  Add rule.</p>
-</li>
-<li>
-<p>Chọn <strong>Type</strong>: <strong>SSH</strong> và để nguyên <strong>Source</strong>: <strong>Custom</strong>. Chọn  vào search box và chọn <strong>Public subnet SG</strong>.Lựa chọn này cho phép tất cả những máy chủ được gán <strong>Public subnet SG</strong> được <strong>SSH</strong> vào các máy chủ được gán <strong>Private subnet SG</strong>.</p>
+<li>Thực hiện cấu hình <strong>Inbound rules</strong>: chọn Add rule.
+<ul>
+<li><strong>Type</strong>: chọn <strong>SSH</strong></li>
+<li><strong>Source type</strong>: <strong>Custom</strong>.</li>
+<li><strong>Source</strong>: click vào search box và chọn <strong>Public subnet SG</strong>. Lựa chọn này cho phép tất cả những máy chủ được gán <strong>Public subnet SG</strong> được <strong>SSH</strong> vào các máy chủ được gán <strong>Private subnet SG</strong>.</li>
+</ul>
 </li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0008-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
-<li>Chọn <strong>Add rule</strong> để thêm 1 rule mới.</li>
-</ol>
 <ul>
-<li>Chọn <strong>Type</strong>: <strong>All ICMP IPv4</strong> và <strong>Source</strong>: <strong>Anywhere</strong>. Cho phép ping từ bất kì địa chỉ IP nào.</li>
+<li>Ta lại chọn <strong>Add rule</strong> để tạo một Inbound rule mới.
+<ul>
+<li><strong>Type</strong>: chọn <strong>All ICMP IPv4</strong></li>
+<li><strong>Source type</strong>: chọn <strong>Anywhere-IPv4</strong>. Cho phép ping từ bất kì địa chỉ IP nào.</li>
+</ul>
+</li>
 <li>Chọn <strong>Create security group</strong></li>
 </ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/0009-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
-<li>Như vậy chúng ta đã tạo được <strong>2 Security Group</strong> cho các máy chủ nằm trong <strong>public subnet và private subnet.</strong></li>
+<ol start="6">
+<li>Như vậy chúng ta đã tạo được hai Security Group cho các máy chủ nằm trong <strong>public subnet và private subnet.</strong></li>
 </ol>
-<ul>
-<li>Tiếp theo chúng ta sẽ tiến hành tạo 2 máy chủ EC2.</li>
-</ul>
 <p><img src="/images/3-Prerequiste/3.3-securitygroup/00010-securitygroup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
+<li>Tiếp theo chúng ta sẽ tiến hành tạo hai máy chủ EC2.</li>
+</ul>
 
 
 
@@ -1547,55 +1611,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1629,6 +1644,87 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1738,19 +1834,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658992622"></script>
-    <script src="/js/jquery.sticky.js?1658992622"></script>
-    <script src="/js/featherlight.min.js?1658992622"></script>
-    <script src="/js/highlight.pack.js?1658992622"></script>
+    <script src="/js/clipboard.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672761246"></script>
+    <script src="/js/jquery.sticky.js?1672761246"></script>
+    <script src="/js/featherlight.min.js?1672761246"></script>
+    <script src="/js/highlight.pack.js?1672761246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658992622"></script>
-    <script src="/js/learn.js?1658992622"></script>
-    <script src="/js/hugo-learn.js?1658992622"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672761246"></script>
+    <script src="/js/learn.js?1672761246"></script>
+    <script src="/js/hugo-learn.js?1672761246"></script>
 
-    <link href="/mermaid/mermaid.css?1658992622" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1658992622"></script>
+    <link href="/mermaid/mermaid.css?1672761246" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672761246"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

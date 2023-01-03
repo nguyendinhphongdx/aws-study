@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create VPC for VPN :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1658992622" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658992622" rel="stylesheet">
-    <link href="/css/hybrid.css?1658992622" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658992622" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658992622" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658992622" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658992622" rel="stylesheet">
-    <link href="/css/theme.css?1658992622" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658992622" rel="stylesheet">
+    <link href="/css/nucleus.css?1672761245" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672761245" rel="stylesheet">
+    <link href="/css/hybrid.css?1672761245" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672761245" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672761245" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672761245" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672761245" rel="stylesheet">
+    <link href="/css/theme.css?1672761245" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672761245" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1658992622" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672761245" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1658992622"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672761245"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658992622"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658992622"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672761245"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672761245"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658992622"></script>
+<script type="text/javascript" src="/js/search.js?1672761245"></script>
 
     
   </div>
@@ -610,6 +610,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Using Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -887,6 +915,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Modify AWS VPN Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Modify AWS VPN Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1017,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>28-07-2022</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1128,12 +1184,12 @@
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0001-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="2">
-<li>In the <strong>Cretae VPC</strong> interface</li>
+<li>In the <strong>Create VPC</strong> interface</li>
 </ol>
 <ul>
-<li><strong>Resource</strong>, select <strong>VPC only</strong></li>
-<li><strong>Name</strong>, enter <strong><code>ASG VPN</code></strong></li>
-<li><strong>IPv4 CIDR block</strong>, enter <strong><code>10.11.0.0/16</code></strong></li>
+<li><strong>Resource to create</strong>: select <strong>VPC only</strong></li>
+<li><strong>Name</strong>: enter <code>ASG VPN</code></li>
+<li><strong>IPv4 CIDR block</strong>: enter <code>10.11.0.0/16</code></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0002-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
@@ -1159,20 +1215,22 @@
 <li>Select <strong>ASG VPN</strong> vpc</li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0006-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
-<li>In the <strong>Subnet settings</strong> interface</li>
-</ol>
 <ul>
-<li><strong>Subnet name</strong>, enter <strong><code>VPN Public</code></strong></li>
-<li>Select <strong>Availability Zone</strong>: <strong>ap-southeast-1a</strong></li>
-<li>Select <strong>IPv4 CIDR block</strong> as <strong>10.11.1.0/24</strong> according to the architecture described</li>
+<li>In the <strong>Subnet settings</strong> interface
+<ul>
+<li><strong>Subnet name</strong>: enter <code>VPN Public</code></li>
+<li><strong>Availability Zone</strong>: select the first AZ</li>
+<li><strong>IPv4 CIDR block</strong>: input <code>10.11.1.0/24</code> according to the architecture described</li>
+</ul>
+</li>
+<li>Select <strong>Create subnet</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0007-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
+<ol start="7">
 <li>Successfully created <strong>VPN Public</strong></li>
 </ol>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0008-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
+<ol start="8">
 <li>In the <strong>VPC</strong> interface</li>
 </ol>
 <ul>
@@ -1182,19 +1240,19 @@
 <li>Select <strong>Edit subnet settings</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0009-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
+<ol start="9">
 <li>Execute <strong>Auto-assign IP settings</strong></li>
 </ol>
 <ul>
-<li>Select <strong>Enable auot-assign public IPv4 address</strong></li>
+<li>Select <strong>Enable auto-assign public IPv4 address</strong></li>
 <li>Select <strong>Save</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00010-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="11">
+<ol start="10">
 <li>IP allocation successful</li>
 </ol>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00011-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="12">
+<ol start="11">
 <li>In the <strong>VPC</strong> interface</li>
 </ol>
 <ul>
@@ -1202,15 +1260,15 @@
 <li>Select <strong>Create internet gateway</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00012-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="13">
+<ol start="12">
 <li>In the <strong>Create internet gateway</strong> interface</li>
 </ol>
 <ul>
-<li><strong>Name tag</strong>, enter <strong><code>Internet Gateway VPN</code></strong></li>
+<li><strong>Name tag</strong>: enter <code>Internet Gateway VPN</code></li>
 <li>Select <strong>Create internet gateway</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00013-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="14">
+<ol start="13">
 <li>After creating <strong>Internet Gateway VPN</strong> successfully and <strong>State</strong> is <strong>Detached</strong>. Next, we need to Attach the Internet Gateway to VPC ASG VPN.</li>
 </ol>
 <ul>
@@ -1218,18 +1276,18 @@
 <li>Select <strong>Attach to VPC</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00014-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="15">
+<ol start="14">
 <li>Select <strong>VPC ASG VPN</strong>, VPC ID will be automatically filled in.</li>
 </ol>
 <ul>
 <li>Select <strong>Attach Internet Gateway</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00015-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="16">
+<ol start="15">
 <li><strong>Attach</strong> succeeds when <strong>State</strong> is <strong>Attached</strong></li>
 </ol>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00016-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="17">
+<ol start="16">
 <li>Next we need to create a Route Table that routes out to the internet through the Internet Gateway. In the <strong>VPC</strong> interface</li>
 </ol>
 <ul>
@@ -1237,46 +1295,46 @@
 <li>Select <strong>Create route table</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00017-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="18">
+<ol start="17">
 <li>In the <strong>Create route table</strong> interface</li>
 </ol>
 <ul>
-<li><strong>Name</strong>, enter <strong><code>Route table VPN - Public</code></strong></li>
-<li>Select <strong>VPC</strong> named <strong>ASG VPN</strong> , <strong>VPC id</strong> will be automatically filled in.</li>
+<li><strong>Name</strong>: enter <code>Route table VPN - Public</code></li>
+<li><strong>VPC</strong>: select vpc named <strong>ASG VPN</strong>. <strong>VPC id</strong> will be automatically filled in.</li>
 <li>Select <strong>Create route table</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00018-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="19">
+<ol start="18">
 <li>Successfully created route table. In the <strong>Route table VPN - Public</strong> interface</li>
 </ol>
 <ul>
-<li>Select <strong>Route</strong></li>
+<li>Select <strong>Route</strong> tab</li>
 <li>Select <strong>Edit route</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00019-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="20">
+<ol start="19">
 <li>In the <strong>Edit routes</strong> interface</li>
 </ol>
 <ul>
 <li>Select <strong>Add route</strong></li>
-<li>Fill in the <strong>Destination CIDR</strong> : <strong>0.0.0.0/0</strong> representing the Internet.</li>
-<li>In the <strong>Target</strong> section select <strong>Internet Gateway</strong>, then select the <strong>Internet Gateway VPN</strong> we created. <strong>Internet Gateway ID</strong> will be automatically filled in.</li>
+<li><strong>Destination CIDR</strong> : Fill in  <code>0.0.0.0/0</code> representing the Internet.</li>
+<li><strong>Target</strong>: select <strong>Internet Gateway</strong>, then select the <strong>Internet Gateway VPN</strong> we created. <strong>Internet Gateway ID</strong> will be automatically filled in.</li>
 <li>Select <strong>Save changes</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00020-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="21">
+<ol start="20">
 <li>Complete and test the route</li>
 </ol>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00021-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="22">
+<ol start="21">
 <li>In the <strong>Route table VPN - Public</strong> interface</li>
 </ol>
 <ul>
-<li>Select <strong>Subnet associations</strong></li>
+<li>Select <strong>Subnet associations</strong> tab</li>
 <li>Select <strong>Edit subnet associations</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00022-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="23">
+<ol start="22">
 <li>In the <strong>Edit subnet associations</strong> interface</li>
 </ol>
 <ul>
@@ -1285,7 +1343,7 @@
 <li>Select <strong>Save associations</strong></li>
 </ul>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00023-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="24">
+<ol start="23">
 <li>Complete and recheck <strong>Routes</strong></li>
 </ol>
 <p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00024-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
@@ -1620,65 +1678,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1699,6 +1702,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1708,6 +1712,92 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1817,19 +1907,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658992622"></script>
-    <script src="/js/jquery.sticky.js?1658992622"></script>
-    <script src="/js/featherlight.min.js?1658992622"></script>
-    <script src="/js/highlight.pack.js?1658992622"></script>
+    <script src="/js/clipboard.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672761246"></script>
+    <script src="/js/jquery.sticky.js?1672761246"></script>
+    <script src="/js/featherlight.min.js?1672761246"></script>
+    <script src="/js/highlight.pack.js?1672761246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658992622"></script>
-    <script src="/js/learn.js?1658992622"></script>
-    <script src="/js/hugo-learn.js?1658992622"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672761246"></script>
+    <script src="/js/learn.js?1672761246"></script>
+    <script src="/js/hugo-learn.js?1672761246"></script>
 
-    <link href="/mermaid/mermaid.css?1658992622" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1658992622"></script>
+    <link href="/mermaid/mermaid.css?1672761246" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672761246"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

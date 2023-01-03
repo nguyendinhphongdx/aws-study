@@ -314,6 +314,18 @@
                 href="/1-introduce/1.4-natgateway/"
                 />
   </url><url>
+    <loc>/4-createec2server/4.4.-createreachabilityanalyzer/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-createec2server/4.4.-createreachabilityanalyzer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-createec2server/4.4.-createreachabilityanalyzer/"
+                />
+  </url><url>
     <loc>/5-vpnsitetosite/</loc>
     <xhtml:link
                 rel="alternate"
@@ -336,6 +348,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/3-prerequiste/3.5-createsecuritygroup/"
+                />
+  </url><url>
+    <loc>/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/"
                 />
   </url><url>
     <loc>/6-cleanup/</loc>

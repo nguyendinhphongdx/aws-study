@@ -28,9 +28,9 @@ pre : " <b> 4.1 </b> "
 
 4. Executing **AMI** Selection
 
-- Select **Quick Start**
-- Select **Amazon Linux 2**
-- Select **AMI**
+- Select **Quick Start** tab 
+- Select **Amazon Linux**
+- Select **Amazon Linux 2 ....Free tier eligible**
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/0004-ec2.png?featherlight=false&width=90pc)
 
@@ -38,22 +38,20 @@ pre : " <b> 4.1 </b> "
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/0005-ec2.png?featherlight=false&width=90pc)
 
-6. In the **Cretae key pair** interface
+6. In the **Create key pair** interface
 
-- **Key pair name**, enter **```aws-keypair```**
-- **Key pair type**, select **RSA**
-- **Private key file format**, select **.pem**
-
+- **Key pair name**: enter `aws-keypair`
+- **Key pair type**: select **RSA**
+- **Private key file format**: select **.pem**
+- Then select **Create key pair**
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/0007-ec2.png?featherlight=false&width=90pc)
 
-7. Configure **Network**
-
-- **VPC**, select **ASG**
-- **Subnet**, select **Public Subnet 1**
-- **Auto-assign public IP**, select **Enable**
-- **Firewall (Security Group)**, select **Select existing security group**
-- Select **Public subnet -SG**
-- Select **Launch instance**
+7. Configure **Network settings**: click **Edit**
+	- **VPC**: select **ASG**
+	- **Subnet**: select **Public Subnet 1**
+	- **Auto-assign public IP**: select **Enable**
+	- **Firewall (Security Group)**: select **Select existing security group** then select **Public subnet -SG**
+	- Finally, select **Launch instance**
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/0006-ec2.png?featherlight=false&width=90pc)
 
@@ -74,29 +72,30 @@ pre : " <b> 4.1 </b> "
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/00010-ec2.png?featherlight=false&width=90pc)
 
-11. **Name and tags**, enter **```EC2 Private```**
+11. **Name and tags**,: enter `EC2 Private`.
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/00011-ec2.png?featherlight=false&width=90pc)
 
 12. Executing **AMI** Selection
 
-- Select **Quick Start**
-- Select **Amazon Linux 2**
-- Select **AMI**
+- Select **Quick Start** tab
+- Select **Amazon Linux**
+- Select **Amazon Linux 2 ... Free tier eligible**
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/00012-ec2.png?featherlight=false&width=90pc)
 
 13. Make **instance type** selection
 
-- **Key pair name**, select **```aws-keypair```**
+- **Key pair name**: select **```aws-keypair```**
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/00013-ec2.png?featherlight=false&width=90pc)
 
-14. Configure **Network**
-
-- **VPC**, select **ASG** vpc
-- **Subnet**, select **Private subnet 2**
-- **Auto-assign public IP**, select **Disable**. If not **Disable**, you need to check the configuration **automatically allocate public IP for subnet.**
+14. Configure **Network settings**: click **Edit**
+	- **VPC**: select **ASG** vpc
+	- **Subnet**: select **Private subnet 2**
+	- **Auto-assign public IP**: select **Disable**. If not **Disable**, you need to check the configuration **automatically allocate public IP for subnet.**
+	- **Firewall (Security Group)**: select **Select existing security group** then select **Private subnet -SG**
+	- Finally, select **Launch instance**
 
 ![Create VPC](/images/4-CreateEc2Server/4.1-ec2/00014-ec2.png?featherlight=false&width=90pc)
 
@@ -108,7 +107,7 @@ pre : " <b> 4.1 </b> "
 
 16. Select **EC2 Private**
 
-- Select **Details**
+- Select **Details** tab
 - Store **Private IPv4 addresses**
 
 

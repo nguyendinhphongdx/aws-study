@@ -8,7 +8,7 @@ pre : " <b> 4. </b> "
 
 #### Create EC2 server
 
-In this step, we will create 2 EC2 servers ( EC2 instances ) like the architecture below.
+In this step, we will create two EC2 servers (EC2 instances) like the architecture below.
 
 ![Create EC2](/images/4-CreateEc2Server/lab-3.4.png?featherlight=false&width=60pc)
 

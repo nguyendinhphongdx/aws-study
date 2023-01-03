@@ -19,7 +19,7 @@ pre : " <b> 4.3 </b> "
 
 2. In the **Allocate Elastic IP address** interface
 
-- **Public IPv4 address pool**, select **Amazon's pool of IPv4 addresses**
+- **Public IPv4 address pool**: select **Amazon's pool of IPv4 addresses**
 - Select **Allocate**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0002-natgaw.png?featherlight=false&width=90pc)
@@ -31,16 +31,16 @@ pre : " <b> 4.3 </b> "
 4. Access to **VPC**
 
 - Select **NAT Gateways**
-- **Create NAT gateway**
+- Select **Create NAT gateway**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0004-natgaw.png?featherlight=false&width=90pc)
 
 5. In **NAT gateway** interface
 
-- **Name**, enter **```NAT gateway```**
-- **Subnet**, select **Public subnet 2**
-- **Connectivity type**, select **Public**
-- **Elastic IP allocation ID**, select **Elastic IP** just created.
+- **Name**: enter `NAT gateway`
+- **Subnet**: select **Public subnet 2**
+- **Connectivity type**: select **Public**
+- **Elastic IP allocation ID**: select **Elastic IP** just created.
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0005-natgaw.png?featherlight=false&width=90pc)
 
@@ -75,21 +75,21 @@ pre : " <b> 4.3 </b> "
 
 11. In the **Route table - Private** interface
 
-- Select **Subnet Associations**
+- Select **Subnet Associations** tab
 - Select **Edit subnet associations**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/00011-natgaw.png?featherlight=false&width=90pc)
 
 12. In the **Edit subnet associations** interface
 
-- Choose 2 private subnets
+- Choose **Private subnet 1** and **Private subnet 2**
 - Select **Save associations**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/00012-natgaw.png?featherlight=false&width=90pc)
 
 13. In the **Route table - Private** interface
 
-- Select **Routes**
+- Select **Routes** tab
 - Select **Edit routes**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/00013-natgaw.png?featherlight=false&width=90pc)

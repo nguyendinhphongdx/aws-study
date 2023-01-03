@@ -10,14 +10,14 @@ pre : " <b> 3.3 </b> "
 
 1. Trong giao diện **VPC**
 
-- Chọn **Internet Gateways**
+- Chọn **Internet gateways**
 - Chọn **Create internet gateway**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0001-igwandroutetable.png?featherlight=false&width=90pc)
 
 2. Thực hiện cấu hình
 
-- **Name tag**, nhập **```Internet Gateway```**
+- **Name tag**: nhập `Internet Gateway`
 - Chọn **Create internet gateway**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0002-igwandroutetable.png?featherlight=false&width=90pc)
@@ -39,7 +39,7 @@ pre : " <b> 3.3 </b> "
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0005-igwandroutetable.png?featherlight=false&width=90pc)
 
-6. Khi attach thành công **State** internet gateway sẽ chuyển sang **Attached**
+6. Khi attach thành công, **State** của internet gateway được chuyển thành **Attached**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0006-igwandroutetable.png?featherlight=false&width=90pc)
 

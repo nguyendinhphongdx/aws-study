@@ -10,14 +10,14 @@ pre : " <b> 5.2.1 </b> "
 
 1. Access to **VPC**
 
-- Select **Virtual Private Gateway**
-- Select **Create Virtual Private Gateway**
+- Select **Virtua private gateways**
+- Select **Create virtual private gateway**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.1-vpgw/0001-vpgw.png?featherlight=false&width=90pc)
 
 2. In the **Create Virtual Private Gateway** interface
 
-- **Name tag**, enter **```VPN Gateway```**
+- **Name tag**: enter `VPN Gateway`
 - Select **Amazon default ASN**
 - Select **Create virtual private gateway**
 
@@ -38,6 +38,6 @@ pre : " <b> 5.2.1 </b> "
 
 ![Create VPC](/images/6-VPNSitetoSite/6.1-vpgw/0004-vpgw.png?featherlight=false&width=90pc)
 
-5. Finish and see **State** as **Attached**
+5. The creation is complete when **State** is **Attached**.
 
 ![Create VPC](/images/6-VPNSitetoSite/6.1-vpgw/0005-vpgw.png?featherlight=false&width=90pc)

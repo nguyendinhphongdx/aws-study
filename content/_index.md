@@ -9,7 +9,7 @@ chapter : false
 
 #### Overview
 
-In this lab, you'll learn the basics and practice of Amazon VPC (Virtual Private Networking). Learn key concepts and features in Amazon VPC. Practice creating a basic VPC and configuring a Site to Site VPN to connect an on-premise environment to an AWS VPC environment.
+In this lab, you'll learn the basics and practice of Amazon VPC (Virtual Private Cloud). Learn key concepts and features in Amazon VPC. Practice creating a basic VPC and configuring a Site to Site VPN to connect an on-premise environment to an AWS VPC environment.
 
 ![VPC](../images/1-Introduce/serviceicon.png?featherlight=false&width=10pc)
 

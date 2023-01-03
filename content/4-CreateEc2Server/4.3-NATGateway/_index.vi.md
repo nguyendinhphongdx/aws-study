@@ -19,7 +19,7 @@ pre : " <b> 4.3 </b> "
 
 2. Trong giao diện **Allocate Elastic IP address**
 
-- **Public IPv4 address pool**, chọn **Amazon's pool of IPv4 addresses**
+- **Public IPv4 address pool**: chọn **Amazon's pool of IPv4 addresses**
 - Chọn **Allocate**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0002-natgaw.png?featherlight=false&width=90pc)
@@ -31,16 +31,16 @@ pre : " <b> 4.3 </b> "
 4. Truy cập vào **VPC**
 
 - Chọn **NAT Gateways**
-- **Create NAT gateway**
+- Chọn **Create NAT gateway**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0004-natgaw.png?featherlight=false&width=90pc)
 
 5. Trong giao diện **NAT gateway**
 
-- **Name**, nhập **```NAT gateway```**
-- **Subnet**, chọn **Public subnet 2**
-- **Connectivity type**, chọn **Public**
-- **Elastic IP allocation ID**, chọn **Elastic IP** vừa tạo.
+- **Name**: nhập `NAT gateway`
+- **Subnet**: chọn **Public subnet 2**
+- **Connectivity type**: chọn **Public**
+- **Elastic IP allocation ID**: chọn **Elastic IP** vừa tạo.
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0005-natgaw.png?featherlight=false&width=90pc)
 
@@ -48,11 +48,11 @@ pre : " <b> 4.3 </b> "
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0006-natgaw.png?featherlight=false&width=90pc)
 
-7. Thành công tạo **NAT gateway**
+7. Bạn đã tạo thành công **NAT gateway**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0007-natgaw.png?featherlight=false&width=90pc)
 
-#### Tạo Route table - Private và gáng vào các private subnet.
+#### Tạo Route table - Private và gán vào các private subnet.
 
 8. Trong giao diện **VPC**
 
@@ -63,9 +63,9 @@ pre : " <b> 4.3 </b> "
 
 9. Trong giao diện **Route table**
 
-- **Name**, nhập **```Route table - Private```**
-- **VPC**, chọn **ASG** vpc
-- Chọn **Cretae route table**
+- **Name**: nhập `Route table - Private`
+- **VPC**: chọn **ASG** vpc
+- Chọn **Create route table**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/0009-natgaw.png?featherlight=false&width=90pc)
 
@@ -75,21 +75,21 @@ pre : " <b> 4.3 </b> "
 
 11. Trong giao diện **Route table - Private**
 
-- Chọn **Subnet Associations**
+- Chọn tab **Subnet Associations**
 - Chọn **Edit subnet associations**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/00011-natgaw.png?featherlight=false&width=90pc)
 
 12. Trong giao diện **Edit subnet associations**
 
-- Chọn 2 private subnet
+- Chọn **Private subnet 1** và **Private subnet 2**
 - Chọn **Save associations**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/00012-natgaw.png?featherlight=false&width=90pc)
 
 13. Trong giao diện **Route table - Private**
 
-- Chọn **Routes**
+- Chọn tab **Routes**
 - Chọn **Edit routes**
 
 ![Create NAT Gateway](/images/4-CreateEc2Server/4.3-natgateway/00013-natgaw.png?featherlight=false&width=90pc)

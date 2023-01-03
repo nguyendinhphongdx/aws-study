@@ -8,7 +8,7 @@ pre : " <b> 4. </b> "
 
 #### Tạo máy chủ EC2
 
-Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.
+Ở bước này chúng ta sẽ tạo hai máy chủ EC2 (EC2 instance) như kiến trúc dưới đây.
 
 ![Create EC2](/images/4-CreateEc2Server/lab-3.4.png?featherlight=false&width=60pc)
 

@@ -10,15 +10,15 @@ pre : " <b> 5.2.2 </b> "
 
 1. Access to **VPC**
 
-- Select **Customer Gateways**
-- Select **Create Customer Gateway**
+- Select **Customer gateways**
+- Select **Create customer gateway**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.2-customgw/0001-customergw.png?featherlight=false&width=90pc)
 
-2. In the **Create Customer Gateway** interface
+2. In the **Create customer gateway** interface
 
-- **Name tag**, enter **```Customer Gateway```**
-- **IP address**, enter **public IP address** of the server **EC2 Customer Gateway**.
+- **Name tag**: enter `Customer Gateway`
+- **IP address**: enter **public IP address** of the server **EC2 Customer Gateway**.
 - Select **Create Customer Gateway**
 
 
@@ -29,5 +29,5 @@ pre : " <b> 5.2.2 </b> "
 ![Create VPC](/images/6-VPNSitetoSite/6.2-customgw/0003-customergw.png?featherlight=false&width=90pc)
 
 {{% notice tip %}}
-Note: according to the architectural model, the Customer Gateway will reside in the VPC in the on-premise environment. What we are currently doing is declaring to AWS that we will have a Customer Gateway with a public IP address that is the public address of the EC2 instance: Customer Gateway is in the ASG VPN VPC
+Note: according to the architectural model, the Customer Gateway will reside in the VPC in the on-premise environment. What we are currently doing is declaring to AWS that we will have a Customer Gateway with a public IP address that is the public address of the EC2 instance. Customer Gateway is in the ASG VPN VPC
 {{% /notice %}}

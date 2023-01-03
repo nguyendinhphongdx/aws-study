@@ -11,15 +11,15 @@ pre : " <b> 3.4 </b> "
 
 1. In the **VPC** interface
 
-- Select **Route Tables**
+- Select **Route tables**
 - Select **Create route table**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0007-igwandroutetable.png?featherlight=false&width=90pc)
 
 2. Configure **Route table**
 
-- **Name**, enter **```Route table-Public```**
-- **VPC**, select **ASG** VPC. VPC id will be automatically filled in.
+- **Name**: enter `Route table-Public`
+- **VPC**: select **ASG** VPC. VPC ID will be automatically filled in.
 - Select **Create route table**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0008-igwandroutetable.png?featherlight=false&width=90pc)
@@ -38,8 +38,8 @@ pre : " <b> 3.4 </b> "
 5. In the **Edit routes** interface
 
 - Select **Add route**
-- Fill in the **Destination CIDR** : **```0.0.0.0/0```** representing the Internet.
-- In the **Target** section select **Internet Gateway**, then select the **Internet Gateway** we created. **Internet Gateway ID** will be automatically filled in.
+- Then fill in the **Destination CIDR** : `0.0.0.0/0` representing the Internet.
+- In the **Target** section: select **Internet Gateway**, then select the **Internet Gateway** we created. **Internet Gateway ID** will be automatically filled in.
 - Select **Save changes**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00011-igwandroutetable.png?featherlight=false&width=90pc)
@@ -50,7 +50,7 @@ pre : " <b> 3.4 </b> "
 
 7. Make sure **Route table - Public** is selected.
 
-- Select **subnet associations**
+- Select **subnet associations** tab
 - Select **Edit subnet associations**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00013-igwandroutetable.png?featherlight=false&width=90pc)
@@ -58,7 +58,7 @@ pre : " <b> 3.4 </b> "
 8. In step **Edit subnet associations**
 
 - Expand the **Subnet ID** column by dragging the pane to the right.
-- Select the correct **2 public subnet** we have created.
+- Select **Public subnet 1** and **Public subnet 2** we have created.
 - Select **Save associations**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00014-igwandroutetable.png?featherlight=false&width=90pc)

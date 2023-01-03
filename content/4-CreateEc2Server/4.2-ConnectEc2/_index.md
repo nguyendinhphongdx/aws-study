@@ -5,6 +5,9 @@ weight : 2
 chapter : false
 pre : " <b> 4.2 </b> "
 ---
+<!---
+Dùng Mac nên anh không kiểm tra chính xác bước 4.2 được
+--->
 
 #### Checking connection
 

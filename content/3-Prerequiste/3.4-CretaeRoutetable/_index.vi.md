@@ -6,20 +6,20 @@ chapter : false
 pre : " <b> 3.4 </b> "
 ---
 
-#### Tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway.
+#### Tạo Route Table để định tuyến đi ra internet thông qua Internet Gateway.
 
 
 1. Trong giao diện **VPC**
 
-- Chọn **Route Tables**
+- Chọn **Route tables**
 - Chọn **Create route table**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0007-igwandroutetable.png?featherlight=false&width=90pc)
 
 2. Tiến hành cấu hình **Route table**
 
-- **Name**, nhập **```Route table-Public```**
-- **VPC**, chọn **ASG** VPC. VPC id sẽ được tự động điền vào.
+- **Name**: nhập `Route table-Public`
+- **VPC**: chọn **ASG** VPC. VPC ID sẽ được tự động điền vào.
 - Chọn **Cretae route table**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0008-igwandroutetable.png?featherlight=false&width=90pc)
@@ -38,7 +38,7 @@ pre : " <b> 3.4 </b> "
 5. Trong giao diện **Edit routes**
 
 - Chọn **Add route**
-- Điền phần **Destination CIDR** : **```0.0.0.0/0```** đại diện cho Internet.
+- Kế đến điền vào phần **Destination CIDR**: `0.0.0.0/0` đại diện cho Internet.
 - Trong phần **Target**  chọn **Internet Gateway**, sau đó chọn **Internet Gateway** chúng ta đã tạo. **Internet Gateway ID** sẽ được tự động điền.
 - Chọn **Save changes**
 
@@ -50,7 +50,7 @@ pre : " <b> 3.4 </b> "
 
 7. Đảm bảo **Route table - Public** đang được chọn.
 
-- Chọn **subnet associations**
+- Chọn tab **subnet associations**
 - Chọn **Edit subnet associations**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00013-igwandroutetable.png?featherlight=false&width=90pc)
@@ -58,7 +58,7 @@ pre : " <b> 3.4 </b> "
 8. Trong bước **Edit subnet associations**
 
 - Mở rộng cột **Subnet ID** bằng cách kéo thanh ngăn sang phải.
-- Chọn đúng **2 subnet public** chúng ta đã tạo.
+- Chọn đúng **Public subnet 1** và **Public subnet 2** chúng ta đã tạo.
 - Chọn **Save associations**
 
 ![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00014-igwandroutetable.png?featherlight=false&width=90pc)

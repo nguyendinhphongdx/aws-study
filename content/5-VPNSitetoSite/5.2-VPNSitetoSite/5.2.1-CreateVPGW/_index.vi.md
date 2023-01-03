@@ -10,14 +10,14 @@ pre : " <b> 5.2.1 </b> "
 
 1. Truy cập vào **VPC**
 
-- Chọn **Virtual Private Gateway**
-- Chọn **Create Virtual Private Gateway**
+- Chọn **Virtual private gateways**
+- Chọn **Create virtual private gateway**
 
 ![Create VPC](/images/6-VPNSitetoSite/6.1-vpgw/0001-vpgw.png?featherlight=false&width=90pc)
 
-2. Trong giao diện **Create Virtual Private Gateway**
+2. Trong giao diện **Create virtual private gateway**
 
-- **Name tag**, nhập **```VPN Gateway```**
+- **Name tag**: nhập `VPN Gateway`
 - Chọn **Amazon default ASN**
 - Chọn **Create virtual private gateway**
 
@@ -38,6 +38,6 @@ pre : " <b> 5.2.1 </b> "
 
 ![Create VPC](/images/6-VPNSitetoSite/6.1-vpgw/0004-vpgw.png?featherlight=false&width=90pc)
 
-5. Hoàn tất và xem **State** là **Attached**
+5. Khi trạng thái của **State** là **Attached** nghĩa là việc tạo Virtual private gateway đã hoàn tất.
 
 ![Create VPC](/images/6-VPNSitetoSite/6.1-vpgw/0005-vpgw.png?featherlight=false&width=90pc)

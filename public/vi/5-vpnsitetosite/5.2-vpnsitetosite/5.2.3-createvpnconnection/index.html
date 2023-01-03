@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo kết nối VPN :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1658992622" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658992622" rel="stylesheet">
-    <link href="/css/hybrid.css?1658992622" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658992622" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658992622" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658992622" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658992622" rel="stylesheet">
-    <link href="/css/theme.css?1658992622" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658992622" rel="stylesheet">
+    <link href="/css/nucleus.css?1672761246" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672761246" rel="stylesheet">
+    <link href="/css/hybrid.css?1672761246" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672761246" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672761246" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672761246" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672761246" rel="stylesheet">
+    <link href="/css/theme.css?1672761246" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672761246" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1658992622" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672761246" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1658992622"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672761246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658992622"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658992622"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672761246"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672761246"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658992622"></script>
+<script type="text/javascript" src="/js/search.js?1672761246"></script>
 
     
   </div>
@@ -610,6 +610,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/4.4.-createreachabilityanalyzer/" title="Sử dụng Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Sử dụng Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -887,6 +915,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Tùy chỉnh AWS VPN Tunnel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Tùy chỉnh AWS VPN Tunnel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1017,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>28-07-2022</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1123,45 +1179,44 @@
 <li>Truy cập <strong>VPC</strong></li>
 </ol>
 <ul>
-<li>Chọn <strong>Site-to-Site VPN Connections</strong></li>
-<li>Chọn <strong>Create VPN Connection</strong></li>
+<li>Chọn <strong>Site-to-Site VPN connections</strong></li>
+<li>Chọn <strong>Create VPN connection</strong></li>
 </ul>
 <p><img src="/images/6-VPNSitetoSite/6.3-vpnconnect/0001-vpnconnect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="2">
-<li>Trong giao diện <strong>Create VPN Connection</strong></li>
+<li>Trong giao diện <strong>Create VPN connection</strong></li>
 </ol>
 <ul>
-<li><strong>Name tag</strong>, nhập <strong><code>VPN Connection</code></strong></li>
-<li><strong>Target Gateway Type</strong>: Chọn <strong>Virtual Private Gateway</strong></li>
-<li><strong>Virtual Private Gateway</strong>: Chọn <strong>VPN Gateway</strong></li>
-<li><strong>Customer Gateway</strong>: <strong>Existing</strong></li>
-<li><strong>Customer Gateway ID</strong>: Chọn <strong>Customer Gateway</strong></li>
+<li><strong>Name tag</strong>: nhập <code>VPN Connection</code></li>
+<li><strong>Target gateway type</strong>: chọn <strong>Virtual private gateway</strong></li>
+<li><strong>Virtual private gateway</strong>: chọn <strong>VPN Gateway</strong></li>
+<li><strong>Customer gateway</strong>: <strong>Existing</strong></li>
+<li><strong>Customer gateway ID</strong>: chọn <strong>Customer Gateway</strong></li>
 </ul>
 <p><img src="/images/6-VPNSitetoSite/6.3-vpnconnect/0002-vpnconnect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
 <li>Tiếp tục thực hiện cấu hình</li>
 </ol>
 <ul>
-<li><strong>Routing Options</strong>: <strong>Static</strong></li>
-<li><strong>Static IP Prefixes</strong>: <strong>10.11.0.0/16</strong>. Đây là giải địa chỉ IP ở môi trường Onpremise giả lập.</li>
+<li><strong>Routing options</strong>: <strong>Static</strong></li>
+<li><strong>Static IP prefixes</strong>: <code>10.11.0.0/16</code>. Đây là dải địa chỉ IP ở môi trường on-premise giả lập.</li>
 <li>Các cấu hình khác giữ nguyên mặc định.</li>
 </ul>
 <p><img src="/images/6-VPNSitetoSite/6.3-vpnconnect/0003-vpnconnect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
-<li>Chọn <strong>Create VPN Connection</strong></li>
+<li>Chọn <strong>Create VPN connection</strong></li>
 </ol>
 <p><img src="/images/6-VPNSitetoSite/6.3-vpnconnect/0004-vpnconnect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
-<li>Đợi khoảng 5 phút sau, hoàn tất tạo <strong>VPN Connection</strong></li>
+<li>Đợi khoảng 5 phút sau, hoàn tất tạo <strong>VPN Connection</strong> (trạng thái của <strong>State</strong> là <strong>Available</strong>)</li>
 </ol>
 <p><img src="/images/6-VPNSitetoSite/6.3-vpnconnect/0005-vpnconnect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
-<li>Cấu hình <strong>propagation</strong> cho các <strong>route table</strong></li>
+<li>Cấu hình <strong>propagation</strong> cho các <strong>route table</strong>: Trong giao diện <strong>VPC</strong>, chọn <strong>Route Tables</strong></li>
 </ol>
 <ul>
-<li>Trong giao diện <strong>VPC</strong>, chọn <strong>Route Tables</strong></li>
-<li>Chọn <strong>Route table - Public</strong></li>
-<li>Chọn <strong>Route Propagation</strong></li>
+<li>Chọn <strong>Route table-Public</strong></li>
+<li>Chọn tab <strong>Route propagation</strong></li>
 <li>Chọn <strong>Edit route propagation</strong></li>
 </ul>
 <p><img src="/images/6-VPNSitetoSite/6.3-vpnconnect/0006-vpnconnect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
@@ -1508,59 +1563,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1609,6 +1611,75 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -1655,6 +1726,22 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1711,19 +1798,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658992622"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658992622"></script>
-    <script src="/js/jquery.sticky.js?1658992622"></script>
-    <script src="/js/featherlight.min.js?1658992622"></script>
-    <script src="/js/highlight.pack.js?1658992622"></script>
+    <script src="/js/clipboard.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672761246"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672761246"></script>
+    <script src="/js/jquery.sticky.js?1672761246"></script>
+    <script src="/js/featherlight.min.js?1672761246"></script>
+    <script src="/js/highlight.pack.js?1672761246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658992622"></script>
-    <script src="/js/learn.js?1658992622"></script>
-    <script src="/js/hugo-learn.js?1658992622"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672761246"></script>
+    <script src="/js/learn.js?1672761246"></script>
+    <script src="/js/hugo-learn.js?1672761246"></script>
 
-    <link href="/mermaid/mermaid.css?1658992622" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1658992622"></script>
+    <link href="/mermaid/mermaid.css?1672761246" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672761246"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
