@@ -12,21 +12,21 @@
     <title>Create VPC :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         parent
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1123,7 +1123,7 @@
             
           
           
-            <a href='/'>Work with Amazon VPC</a> > <a href='/3-prerequiste/'>Preparatory steps</a> > Create VPC
+            <a href='/'>Work with Amazon VPC</a> > <a href='/3-prerequiste/'>Preparatoration steps</a> > Create VPC
           
         
           
@@ -1170,42 +1170,59 @@
 
 	<h4 id="create-vpc">Create VPC</h4>
 <ol>
-<li>Access the <strong>AWS Management Console</strong> interface</li>
-</ol>
+<li>
+<p>Access the <strong>AWS Management Console</strong> interface</p>
 <ul>
 <li>Find <strong>VPC</strong></li>
 <li>Select <strong>VPC</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0001-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>In the <strong>VPC</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/1/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>In the <strong>VPC</strong> interface</p>
 <ul>
 <li>Select <strong>Yours VPC</strong></li>
 <li>Select <strong>Create VPC</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0002-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Follow the steps to create a VPC</li>
+</li>
 </ol>
+<p><img src="/images/1/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
+<li>
+<p>Follow the steps to create a VPC</p>
 <ul>
 <li><strong>Resource</strong>, select <strong>VPC only</strong></li>
-<li><strong>Name tag</strong>, enter <code>ASG</code></li>
-<li><strong>IPv4 CIDR</strong>, enter <code>10.10.0.0/16</code></li>
+<li><strong>Name tag</strong>, enter <strong><code>ASG</code></strong></li>
+<li><strong>IPv4 CIDR</strong>, enter <strong><code>10.10.0.0/16</code></strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0003-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/1/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
-<div class="notices warning" ><p>In the <strong>Tenancy</strong> configuration, we will leave the default mechanism. If we switch to Dedicated, there will be some <strong>EC2 Instance type</strong> that is not suitable and will not be created in VPC with <strong>tenancy mode</strong> as <strong>Dedicate</strong></p>
+<div class="notices warning" ><p>For the <strong>Tenancy</strong> configuration, we will leave the default mechanism. If we switch to Dedicated, there will be some <strong>EC2 Instance type</strong> that is not suitable and will not be created in VPC with <strong>tenancy mode</strong> as <strong>Dedicate</strong></p>
 </div>
 
 <ol start="4">
 <li>Select <strong>Create VPC</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0004-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/1/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
 <li>Finish creating <strong>VPC</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0005-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/1/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="6">
+<li>
+<p>View the details of the newly created VPC. Check if not <strong>Enable DNS resolution and DNS Hostname</strong></p>
+<ul>
+<li>Go to <strong>Edit VPC settings</strong></li>
+<li>Select <strong>DNS settings</strong></li>
+<li>Select and <strong>Save</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/1/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1752,7 +1769,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-prerequiste/" title="Preparatory steps"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-prerequiste/" title="Preparatoration steps"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/3-prerequiste/3.2-createsubnet/" title="Create Subnet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1765,19 +1782,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762455"></script>
-    <script src="/js/jquery.sticky.js?1672762455"></script>
-    <script src="/js/featherlight.min.js?1672762455"></script>
-    <script src="/js/highlight.pack.js?1672762455"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762455"></script>
-    <script src="/js/learn.js?1672762455"></script>
-    <script src="/js/hugo-learn.js?1672762455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762455"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

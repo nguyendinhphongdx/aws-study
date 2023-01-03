@@ -11,58 +11,61 @@ pre : " <b> 3.4 </b> "
 
 1. In the **VPC** interface
 
-- Select **Route tables**
-- Select **Create route table**
+   - Select **Route Tables**
+   - Select **Create route table**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0007-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0001.png?featherlight=false&width=90pc)
 
 2. Configure **Route table**
 
-- **Name**: enter `Route table-Public`
-- **VPC**: select **ASG** VPC. VPC ID will be automatically filled in.
-- Select **Create route table**
+   - **Name**, enter **```Route table-Public```**
+   - **VPC**, select **ASG** VPC. VPC id will be automatically filled in.
+   - Select **Create route table**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0008-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0002.png?featherlight=false&width=90pc)
 
 3. Finish creating **Route table**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0009-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0003.png?featherlight=false&width=90pc)
 
 4. Execute **Edit route**
 
-- Select **Actions**
-- Select **Edit routes**
+   - Select **Actions**
+   - Select **Edit routes**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00010-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0004.png?featherlight=false&width=90pc)
 
 5. In the **Edit routes** interface
 
-- Select **Add route**
-- Then fill in the **Destination CIDR** : `0.0.0.0/0` representing the Internet.
-- In the **Target** section: select **Internet Gateway**, then select the **Internet Gateway** we created. **Internet Gateway ID** will be automatically filled in.
-- Select **Save changes**
+   - Select **Add route**
+   - Fill in the **Destination CIDR** : **```0.0.0.0/0```** representing the Internet.
+   - In the **Target** section select **Internet Gateway**, then select the **Internet Gateway** we created. **Internet Gateway ID** will be automatically filled in.
+   - Select **Save changes**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00011-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0005.png?featherlight=false&width=90pc)
 
 6. Complete and recheck **Routes**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00012-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0006.png?featherlight=false&width=90pc)
 
 7. Make sure **Route table - Public** is selected.
 
-- Select **subnet associations** tab
-- Select **Edit subnet associations**
+   - Select **subnet associations**
+   - Select **Edit subnet associations**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00013-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0007.png?featherlight=false&width=90pc)
 
-8. In step **Edit subnet associations**
+8. In **Edit subnet associations** step
 
-- Expand the **Subnet ID** column by dragging the pane to the right.
-- Select **Public subnet 1** and **Public subnet 2** we have created.
-- Select **Save associations**
+   - Expand the **Subnet ID** column by dragging the pane to the right.
+   - Select the correct **2 public subnet** we have created.
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00014-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0008.png?featherlight=false&width=90pc)
 
-9. Complete and recheck **Subnet associations**
+9. Select **Save associations**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/00015-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/4/0009.png?featherlight=false&width=90pc)
+
+10. Complete and recheck **Subnet associations**
+
+![Create VPC](/images/4/00010.png?featherlight=false&width=90pc)

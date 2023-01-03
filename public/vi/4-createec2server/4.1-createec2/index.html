@@ -12,21 +12,21 @@
     <title>Tạo máy chủ EC2 :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,122 +1170,134 @@
 
 	<h4 id="tạo-ec2-nằm-trong-public-subnet">Tạo EC2 nằm trong Public subnet</h4>
 <ol>
-<li>Truy cập <strong>AWS Management Console</strong></li>
-</ol>
+<li>
+<p>Truy cập <strong>AWS Management Console</strong></p>
 <ul>
 <li>Tìm <strong>EC2</strong></li>
 <li>Chọn <strong>EC2</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0001-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>Trong giao diện <strong>EC2</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>Trong giao diện <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Instances</strong></li>
 <li>Chọn <strong>Launch instances</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0002-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
-<li><strong>Name and tags</strong> của instance, nhập <code>EC2 Public</code></li>
+<li><strong>Name and tags</strong> của instance, nhập <strong><code>EC2 Public</code></strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0003-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
-<li>Thực hiện chọn <strong>AMI</strong></li>
-</ol>
+<li>
+<p>Thực hiện chọn <strong>AMI</strong></p>
 <ul>
-<li>Chọn tab <strong>Quick Start</strong></li>
-<li>Chọn <strong>Amazon Linux</strong></li>
-<li>Chọn <strong>Amazon Linux 2 &hellip;.Free tier eligible</strong></li>
+<li>Chọn <strong>Quick Start</strong></li>
+<li>Chọn <strong>Amazon Linux 2</strong></li>
+<li>Chọn <strong>AMI</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0004-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
-<li>Tiến hành chọn <strong>Instance type</strong> và chọn <strong>Create new key pair</strong></li>
+<li>Thực hiện chọn <strong>Instance type</strong> và Chọn <strong>Create new key pair</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0005-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
-<li>Trong giao diện <strong>Cretae key pair</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>Cretae key pair</strong></p>
 <ul>
-<li><strong>Key pair name</strong>, nhập <code>aws-keypair</code></li>
+<li><strong>Key pair name</strong>, nhập <strong><code>aws-keypair</code></strong> (tên tùy chọn, bạn có thể đặt bất kỳ).</li>
 <li><strong>Key pair type</strong>, chọn <strong>RSA</strong></li>
 <li><strong>Private key file format</strong>, chọn <strong>.pem</strong></li>
-<li>Rồi chọn <strong>Create key pair</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0007-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
-<li>Thực hiện cấu hình <strong>Network settings</strong>, click <strong>Edit</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="7">
+<li>
+<p>Thực hiện cấu hình <strong>Network</strong></p>
 <ul>
-<li><strong>VPC</strong>: chọn <strong>ASG</strong></li>
-<li><strong>Subnet</strong>: chọn <strong>Public Subnet 1</strong></li>
-<li><strong>Auto-assign public IP</strong>: chọn <strong>Enable</strong></li>
-<li><strong>Firewall (Security Group)</strong>: chọn <strong>Select existing security group</strong> rồi chọn <strong>Public subnet -SG</strong></li>
-<li>Sau cùng, chọn <strong>Launch instance</strong></li>
+<li><strong>VPC</strong>, chọn <strong>ASG</strong></li>
+<li><strong>Subnet</strong>, chọn <strong>Public Subnet 1</strong></li>
+<li><strong>Auto-assign public IP</strong>, chọn <strong>Enable</strong></li>
+<li><strong>Firewall (Security Group)</strong>, chọn <strong>Select existing security group</strong></li>
+<li>Chọn <strong>Public subnet -SG</strong></li>
+<li>Chọn <strong>Launch instance</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0006-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="8">
 <li>Hoàn thành tạo instance</li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0008-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="9">
-<li>Đợi khoảng 5 phút, <strong>Status check</strong> sẽ được chuyển thành <strong>2/2 checks passed</strong></li>
+<li>Đợi khoảng 5 phút <strong>Status check</strong> sẽ chuyển sang <strong>2/2 checks passed</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0009-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="tạo-ec2-nằm-trong-private-subnet">Tạo EC2 nằm trong Private subnet</h4>
 <ol start="10">
-<li>Trong giao diện <strong>EC2</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Instances</strong></li>
 <li>Chọn <strong>Launch instances</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00010-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="11">
-<li><strong>Name and tags</strong>: nhập <code>EC2 Private</code></li>
+</li>
+<li>
+<p><strong>Name and tags</strong>, nhập <strong><code>EC2 Private</code></strong></p>
+</li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00011-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="12">
-<li>Thực hiện chọn <strong>AMI</strong></li>
-</ol>
+<li>
+<p>Thực hiện chọn <strong>AMI</strong></p>
 <ul>
-<li>Chọn tab <strong>Quick Start</strong></li>
-<li>Chọn <strong>Amazon Linux</strong></li>
-<li>Chọn <strong>Amazon Linux 2 &hellip; Free tier eligible</strong></li>
+<li>Chọn <strong>Quick Start</strong></li>
+<li>Chọn <strong>Amazon Linux 2</strong></li>
+<li>Chọn <strong>AMI</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00012-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="13">
-<li>Tiến hành chọn <strong>instance type</strong></li>
+<li>Thực hiện chọn <strong>instance type</strong>. <strong>Key pair name</strong>, chọn <strong><code>aws-keypair</code></strong></li>
 </ol>
-<ul>
-<li><strong>Key pair name</strong>: chọn <strong>aws-keypair</strong></li>
-</ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00013-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="14">
-<li>Thực hiện cấu hình <strong>Network settings</strong>, click <strong>Edit</strong></li>
-</ol>
+<li>
+<p>Thực hiện cấu hình <strong>Network</strong></p>
 <ul>
-<li><strong>VPC</strong>: chọn <strong>ASG</strong> vpc</li>
-<li><strong>Subnet</strong>: chọn <strong>Private subnet 2</strong></li>
-<li><strong>Auto-assign public IP</strong>, chọn <strong>Disable</strong>. Nếu không thể chọn <strong>Disable</strong>, bạn cần kiểm tra lại phần cấu hình <strong>tự động cấp phát public IP cho subnet.</strong></li>
-<li><strong>Firewall (Security Group)</strong>: chọn <strong>Select existing security group</strong> rồi chọn <strong>Private subnet -SG</strong></li>
-<li>Sau cùng, chọn <strong>Launch instance</strong></li>
+<li><strong>VPC</strong>, chọn <strong>ASG</strong> vpc</li>
+<li><strong>Subnet</strong>, chọn <strong>Private subnet 2</strong></li>
+<li><strong>Auto-assign public IP</strong>, chọn <strong>Disable</strong>. Nếu không <strong>Disable</strong>, bạn cần kiểm tra lại phần cấu hình <strong>tự động cấp phát public IP cho subnet.</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00014-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="15">
 <li>Hoàn thành tạo instance</li>
 </ol>
-<ul>
-<li>Chọn <strong>View all instance</strong></li>
-</ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00015-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<pre><code>  - Chọn **View all instance**
+</code></pre>
+<p><img src="/images/6/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="16">
-<li>Chọn <strong>EC2 Private</strong></li>
-</ol>
+<li>
+<p>Chọn <strong>EC2 Private</strong></p>
 <ul>
-<li>Chọn tab <strong>Details</strong></li>
-<li>Lưu lại thông tin <strong>Private IPv4 addresses</strong></li>
+<li>Chọn <strong>Details</strong></li>
+<li>Lưu trữ <strong>Private IPv4 addresses</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00016-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1845,19 +1857,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

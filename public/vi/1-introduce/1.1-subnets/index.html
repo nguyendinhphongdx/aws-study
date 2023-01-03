@@ -12,21 +12,21 @@
     <title>Subnets :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1169,16 +1169,15 @@
 
 
 	<h4 id="subnets">Subnets</h4>
-<p><strong>Subnet</strong> (tạm dịch: mạng con) là một phân đoạn của <strong>dải địa chỉ IP</strong> mà bạn sử dụng khi <strong>khởi tạo Amazon VPC</strong>, cung cấp trực tiếp dải mạng hoạt động cho các tài nguyên AWS có thể chạy bên trong nó như <strong>Amazon EC2, Amazon RDS (Cơ sở dữ liệu Quan hệ Amazon),&hellip;</strong></p>
-<p>Các subnet cũng được xác định thông qua <strong>CIDR block</strong> (ví dụ: <strong>10.0.1.0/24</strong> và <strong>192.168.0.0/24</strong>) và bắt buộc các <strong>CIDR của subnet</strong> phải nằm trong <strong>CIDR của VPC</strong>. <strong>Subnet nhỏ nhất</strong> có thể tạo được là <strong>/28</strong> (16 địa chỉ IP). AWS lưu trữ <strong>4 địa chỉ IP đầu tiên và 1 địa chỉ IP cuối cùng</strong> của mỗi subnet cho các mục đích kết nối mạng nội bộ. Ví dụ: subnet  /28 có 16 địa chỉ IP khả dụng, nhưng loại bỏ 5 reserved IP cho AWS, như vậy còn lại 11 địa chỉ IP có thể sử dụng cho các tài nguyên hoạt động bên trong subnet này.</p>
-<p><strong>Availability Zone</strong> (hay được viết tắt thành AZ) là <strong>một trung tâm dữ liệu con</strong>, nằm bên trong Region và được xác định dựa theo vị trí địa lý. Bên trong AZ có thể có một hoặc nhiều subnet, nhưng một subnet chỉ có thể nằm trong duy nhất một AZ mà không thể mở rộng sang AZ khác.</p>
+<p><strong>Subnet</strong> là một phân đoạn của <strong>dải địa chỉ IP</strong> mà bạn sử dụng khi <strong>khởi tạo Amazon VPC</strong>, cung cấp trực tiếp dải mạng hoạt động cho các tài nguyên AWS có thể chạy bên trong nó như <strong>Amazon EC2, Amazon RDS (CSDL Quan hệ Amazon),&hellip;</strong> Các subnet cũng được xác định thông qua <strong>CIDR block</strong> (ví dụ: <strong>10.0.1.0/24</strong> và <strong>192.168.0.0/24</strong>) và bắt buộc các <strong>CIDR của subnet</strong> phải nằm trong <strong>CIDR của VPC</strong>. <strong>Subnet nhỏ nhất</strong> có thể tạo được là <strong>/28</strong> (16 địa chỉ IP). AWS lưu trữ <strong>4 địa chỉ IP đầu tiên và 1 địa chỉ IP cuối cùng</strong> của mỗi subnet cho các mục đích kết nối mạng nội bộ. Ví dụ: subnet  /28 có 16 địa chỉ IP khả dụng, nhưng loại bỏ 5 reserved IP cho AWS, như vậy còn lại 11 địa chỉ IP có thể sử dụng cho các tài nguyên hoạt động bên trong subnet này.</p>
+<p><strong>Availability Zone</strong> hay được viết tắt thành AZ là <strong>một trung tâm dữ liệu con</strong>, nằm bên trong Region và được xác định dựa treo vị trí địa lý. Bên trong AZ có thể có một hoặc nhiều subnet, nhưng một subnet chỉ có thể nằm trong duy nhất một AZ mà không thể mở rộng sang AZ khác.</p>
 <p>Các subnet được chia thành các loại như <strong>Public</strong>, <strong>Private</strong>, hoặc <strong>VPN-only</strong>.</p>
 <ul>
 <li><strong>Public subnet</strong> là subnet có route table (sẽ thảo luận sau) điều hướng lưu lượng truy cập bên trong subnet đi tới VPC IGW (cũng sẽ thảo luận sau)</li>
 <li><strong>Private subnet</strong> thì ngược lại với Public subnet, nó không có route table điều hướng lưu lượng truy cập tới VPC IGW.</li>
 <li><strong>VPN-only subnet</strong> là subnet mà có route table điều hướng lưu lượng truy cập tới VPG của Amazon VPC (sẽ thảo luận sau).</li>
 </ul>
-<p>Bất kể loại subnet nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).</p>
+<p>Bất kể loại mạng con nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).</p>
 <p><img src="/images/1-Introduce/subnet.png?featherlight=false&amp;width=50pc" alt="Subnets"></p>
 
 
@@ -1736,19 +1735,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Tạo Route Table :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1168,71 +1168,86 @@
 
 
 
-	<h4 id="tạo-route-table-để-định-tuyến-đi-ra-internet-thông-qua-internet-gateway">Tạo Route Table để định tuyến đi ra internet thông qua Internet Gateway.</h4>
+	<h4 id="tạo-route-table-định-tuyến-đi-ra-ngoài-internet-thông-qua-internet-gateway">Tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway.</h4>
 <ol>
-<li>Trong giao diện <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
-<li>Chọn <strong>Route tables</strong></li>
+<li>Chọn <strong>Route Tables</strong></li>
 <li>Chọn <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/0007-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>Tiến hành cấu hình <strong>Route table</strong></li>
+</li>
 </ol>
+<p><img src="/images/4/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>Tiến hành cấu hình <strong>Route table</strong></p>
 <ul>
-<li><strong>Name</strong>: nhập <code>Route table-Public</code></li>
-<li><strong>VPC</strong>: chọn <strong>ASG</strong> VPC. VPC ID sẽ được tự động điền vào.</li>
+<li><strong>Name</strong>, nhập <strong><code>Route table-Public</code></strong></li>
+<li><strong>VPC</strong>, chọn <strong>ASG</strong> VPC. VPC id sẽ được tự động điền vào.</li>
 <li>Chọn <strong>Cretae route table</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/0008-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/4/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
 <li>Hoàn thành tạo <strong>Route table</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/0009-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
-<li>Thực hiện <strong>Edit route</strong></li>
-</ol>
+<li>
+<p>Thực hiện <strong>Edit route</strong></p>
 <ul>
 <li>Chọn <strong>Actions</strong></li>
 <li>Chọn <strong>Edit routes</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/00010-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>Trong giao diện <strong>Edit routes</strong></li>
+</li>
 </ol>
+<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>
+<p>Trong giao diện <strong>Edit routes</strong></p>
 <ul>
 <li>Chọn <strong>Add route</strong></li>
-<li>Kế đến điền vào phần <strong>Destination CIDR</strong>: <code>0.0.0.0/0</code> đại diện cho Internet.</li>
+<li>Điền phần <strong>Destination CIDR</strong> : <strong><code>0.0.0.0/0</code></strong> đại diện cho Internet.</li>
 <li>Trong phần <strong>Target</strong>  chọn <strong>Internet Gateway</strong>, sau đó chọn <strong>Internet Gateway</strong> chúng ta đã tạo. <strong>Internet Gateway ID</strong> sẽ được tự động điền.</li>
 <li>Chọn <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/00011-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
 <li>Hoàn thành và kiểm tra lại <strong>Routes</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/00012-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="7">
-<li>Đảm bảo <strong>Route table - Public</strong> đang được chọn.</li>
-</ol>
+<li>
+<p>Đảm bảo <strong>Route table - Public</strong> đang được chọn.</p>
 <ul>
-<li>Chọn tab <strong>subnet associations</strong></li>
+<li>Chọn <strong>subnet associations</strong></li>
 <li>Chọn <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/00013-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
-<li>Trong bước <strong>Edit subnet associations</strong></li>
+</li>
 </ol>
+<p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="8">
+<li>
+<p>Trong bước <strong>Edit subnet associations</strong></p>
 <ul>
 <li>Mở rộng cột <strong>Subnet ID</strong> bằng cách kéo thanh ngăn sang phải.</li>
-<li>Chọn đúng <strong>Public subnet 1</strong> và <strong>Public subnet 2</strong> chúng ta đã tạo.</li>
-<li>Chọn <strong>Save associations</strong></li>
+<li>Chọn đúng <strong>2 subnet public</strong> chúng ta đã tạo.</li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/00014-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/4/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="9">
+<li>Chọn <strong>Save associations</strong></li>
+</ol>
+<p><img src="/images/4/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="10">
 <li>Hoàn thành và kiểm tra lại <strong>Subnet associations</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.2-igwandroutetable/00015-igwandroutetable.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/4/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1795,19 +1810,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

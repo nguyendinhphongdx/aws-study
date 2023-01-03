@@ -12,21 +12,21 @@
     <title>Tạo VPC cho VPN :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1176,178 +1176,210 @@
 
 	<h4 id="tạo-môi-trường-vpn">Tạo môi trường VPN</h4>
 <ol>
-<li>Truy cập giao diện <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Truy cập giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Yours VPC</strong></li>
 <li>Chọn <strong>Create VPC</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0001-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>Trong giao diện <strong>Cretae VPC</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>Trong giao diện <strong>Cretae VPC</strong></p>
 <ul>
-<li><strong>Resources to create</strong>: chọn <strong>VPC only</strong></li>
-<li><strong>Name</strong>: nhập <code>ASG VPN</code></li>
-<li><strong>IPv4 CIDR block</strong>, nhập <code>10.11.0.0/16</code></li>
+<li><strong>Resource</strong>, chọn <strong>VPC only</strong></li>
+<li><strong>Name</strong>, nhập <strong><code>ASG VPN</code></strong></li>
+<li><strong>IPv4 CIDR block</strong>, nhập <strong><code>10.11.0.0/16</code></strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0002-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/9/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
 <li>Chọn <strong>Create VPC</strong></li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0003-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
 <li>Tạo VPC thành công</li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0004-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
-<li>Truy cập giao diện <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Truy cập giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Subnets</strong></li>
 <li>Chọn <strong>Create subnet</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0005-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="6">
-<li>Trong giao diện <strong>Create subnet</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="6">
+<li>
+<p>Trong giao diện <strong>Create subnet</strong></p>
 <ul>
 <li>Chọn <strong>ASG VPN</strong> vpc</li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0006-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/9/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="7">
+<li>
+<p>Trong giao diện <strong>Subnet settings</strong></p>
 <ul>
-<li>Trong giao diện <strong>Subnet settings</strong>
-<ul>
-<li><strong>Subnet name</strong>: nhập <strong><code>VPN Public</code></strong></li>
-<li><strong>Availability Zone</strong>: lựa chọn AZ đầu tiên</li>
-<li><strong>IPv4 CIDR block</strong>: nhập <code>10.11.1.0/24</code> theo kiến trúc mô tả</li>
+<li><strong>Subnet name</strong>, nhập <strong><code>VPN Public</code></strong></li>
+<li>Lựa chọn <strong>Availability Zone</strong>: <strong>ap-southeast-1a</strong></li>
+<li>Chọn <strong>IPv4 CIDR block</strong> là <strong>10.11.1.0/24</strong> theo kiến trúc mô tả</li>
 </ul>
 </li>
-<li>Chọn <strong>Create subnet</strong></li>
-</ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0007-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
+</ol>
+<p><img src="/images/9/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="8">
 <li>Tạo thành công <strong>VPN Public</strong></li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0008-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
-<li>Trong giao diện <strong>VPC</strong></li>
-</ol>
+<p><img src="/images/9/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="9">
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Subnets</strong></li>
 <li>Chọn <strong>VPN Public</strong></li>
 <li>Chọn <strong>Actions</strong></li>
 <li>Chọn <strong>Edit subnet settings</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/0009-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
-<li>Thực hiện <strong>Auto-assign IP settings</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="10">
+<li>
+<p>Thực hiện <strong>Auto-assign IP settings</strong></p>
 <ul>
-<li>Chọn <strong>Enable auto-assign public IPv4 address</strong></li>
+<li>Chọn <strong>Enable auot-assign public IPv4 address</strong></li>
 <li>Chọn <strong>Save</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00010-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
+</li>
+</ol>
+<p><img src="/images/9/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="11">
 <li>Cấp phát IP thành công</li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00011-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="11">
-<li>Trong giao diện <strong>VPC</strong></li>
-</ol>
+<p><img src="/images/9/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="12">
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Internet Gateway</strong></li>
 <li>Chọn <strong>Create internet gateway</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00012-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="12">
-<li>Trong giao diện <strong>Create internet gateway</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>
+<p>Trong giao diện <strong>Create internet gateway</strong></p>
 <ul>
-<li><strong>Name tag</strong>: nhập <code>Internet Gateway VPN</code></li>
+<li><strong>Name tag</strong>, nhập <strong><code>Internet Gateway VPN</code></strong></li>
 <li>Chọn <strong>Create internet gateway</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00013-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="13">
-<li>Sau khi tạo <strong>Internet Gateway VPN</strong> thành công và <strong>State</strong> là <strong>Detached</strong>. Tiếp theo chúng ta cần Attach Internet Gateway vào VPC ASG VPN.</li>
+</li>
 </ol>
+<p><img src="/images/9/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="14">
+<li>
+<p>Sau khi tạo <strong>Internet Gateway VPN</strong> thành công và <strong>State</strong> là <strong>Detached</strong>. Tiếp theo chúng ta cần Attach Internet Gateway vào VPC ASG VPN.</p>
 <ul>
 <li>Chọn <strong>Actions</strong></li>
 <li>Chọn <strong>Attach to VPC</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00014-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="14">
-<li>Chọn <strong>VPC ASG VPN</strong>, VPC ID sẽ được tự động điền.</li>
+</li>
 </ol>
+<p><img src="/images/9/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="15">
+<li>
+<p>Chọn <strong>VPC ASG VPN</strong>, VPC ID sẽ được tự động điền.</p>
 <ul>
 <li>Chọn <strong>Attach Internet Gateway</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00015-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="15">
+</li>
+</ol>
+<p><img src="/images/9/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="16">
 <li><strong>Attach</strong> thành công khi <strong>State</strong> là <strong>Attached</strong></li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00016-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="16">
-<li>Tiếp theo chúng ta cần tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway. Trong giao diện <strong>VPC</strong></li>
-</ol>
-<ul>
-<li>Chọn <strong>Route tables</strong></li>
-<li>Chọn <strong>Create route table</strong></li>
-</ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00017-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="17">
-<li>Trong giao diện <strong>Create route table</strong></li>
-</ol>
+<li>
+<p>Tiếp theo chúng ta cần tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway. Trong giao diện <strong>VPC</strong></p>
 <ul>
-<li><strong>Name</strong>: nhập <code>Route table VPN - Public</code></li>
-<li><strong>VPC</strong>: chọn  <strong>ASG VPN</strong>.  <strong>VPC id</strong> sẽ được tự động điền vào.</li>
+<li>Chọn <strong>Route Tables</strong></li>
 <li>Chọn <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00018-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="18">
-<li>Tạo route table thành công.
-Trong giao diện <strong>Route table VPN - Public</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="18">
+<li>
+<p>Trong giao diện <strong>Cretae route table</strong></p>
 <ul>
-<li>Chọn tab <strong>Route</strong></li>
+<li><strong>Name</strong>, nhập <strong><code>Route table VPN - Public</code></strong></li>
+<li>Chọn <strong>VPC</strong> có tên <strong>ASG VPN</strong> , <strong>VPC id</strong> sẽ được tự động điền vào.</li>
+<li>Chọn <strong>Create route table</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/9/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/00019.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="19">
+<li>
+<p>Tạo route table thành công. Trong giao diện <strong>Route table VPN - Public</strong></p>
+<ul>
+<li>Chọn <strong>Route</strong></li>
 <li>Chọn <strong>Edit route</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00019-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="19">
-<li>Trong giao diện <strong>Edit routes</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/00020.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="20">
+<li>
+<p>Trong giao diện <strong>Edit routes</strong></p>
 <ul>
 <li>Chọn <strong>Add route</strong></li>
-<li><strong>Destination CIDR</strong> : điền <code>0.0.0.0/0</code> đại diện cho Internet.</li>
-<li><strong>Target</strong>: chọn <strong>Internet Gateway</strong>, rồi chọn <strong>Internet Gateway VPN</strong> chúng ta đã tạo. <strong>Internet Gateway ID</strong> sẽ được tự động điền.</li>
+<li>Điền phần <strong>Destination CIDR</strong> : <strong>0.0.0.0/0</strong> đại diện cho Internet.</li>
+<li>Trong phần <strong>Target</strong> chọn <strong>Internet Gateway</strong>, sau đó chọn <strong>Internet Gateway VPN</strong> chúng ta đã tạo. <strong>Internet Gateway ID</strong> sẽ được tự động điền.</li>
 <li>Chọn <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00020-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="20">
-<li>Hoàn thành và kiểm tra route</li>
+</li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00021-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/00021.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/00022.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="21">
-<li>Trong giao diện <strong>Route table VPN - Public</strong></li>
-</ol>
+<li>
+<p>Hoàn thành và kiểm tra route</p>
+</li>
+<li>
+<p>Trong giao diện <strong>Route table VPN - Public</strong></p>
 <ul>
-<li>Chọn tab <strong>Subnet associations</strong></li>
+<li>Chọn <strong>Subnet associations</strong></li>
 <li>Chọn <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00022-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="22">
-<li>Trong giao diện <strong>Edit subnet associations</strong></li>
+</li>
 </ol>
+<p><img src="/images/9/00023.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="23">
+<li>
+<p>Trong giao diện <strong>Edit subnet associations</strong></p>
 <ul>
 <li>Mở rộng cột Subnet ID bằng cách kéo thanh ngăn sang phải.</li>
 <li>Chọn <strong>subnet VPN Public</strong>.</li>
 <li>Chọn <strong>Save associations</strong></li>
 </ul>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00023-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="23">
+</li>
+</ol>
+<p><img src="/images/9/00024.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="24">
 <li>Hoàn thành và kiểm tra lại <strong>Routes</strong></li>
 </ol>
-<p><img src="/images/5-CreateVPNenv/5.1-asgvpnvpc/00024-vpnvpc.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/9/00025.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1908,19 +1940,19 @@ Trong giao diện <strong>Route table VPN - Public</strong></li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

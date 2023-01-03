@@ -12,21 +12,21 @@
     <title>Tạo VPC :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,30 +1170,36 @@
 
 	<h4 id="tạo-vpc">Tạo VPC</h4>
 <ol>
-<li>Truy cập giao diện <strong>AWS Management Console</strong></li>
-</ol>
+<li>
+<p>Truy cập giao diện <strong>AWS Management Console</strong></p>
 <ul>
 <li>Tìm <strong>VPC</strong></li>
 <li>Chọn <strong>VPC</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0001-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>Trong giao diện <strong>VPC</strong></li>
+</li>
 </ol>
+<p><img src="/images/1/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Yours VPC</strong></li>
 <li>Chọn <strong>Create VPC</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0002-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Tiến hành các bước tạo VPC</li>
+</li>
 </ol>
+<p><img src="/images/1/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
+<li>
+<p>Tiến hành các bước tạo VPC</p>
 <ul>
 <li><strong>Resource</strong>, chọn <strong>VPC only</strong></li>
-<li><strong>Name tag</strong>, nhập <code>ASG</code></li>
-<li><strong>IPv4 CIDR</strong>, nhập <code>10.10.0.0/16</code></li>
+<li><strong>Name tag</strong>, nhập <strong><code>ASG</code></strong></li>
+<li><strong>IPv4 CIDR</strong>, nhập <strong><code>10.10.0.0/16</code></strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0003-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/1/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 <div class="notices warning" ><p>Phần cấu hình <strong>Tennacy</strong> chúng ta sẽ để ở cơ chế mặc định. Nếu chúng ta chuyển sang Dedicated sẽ có một số <strong>EC2 Instance type</strong> không phù hợp và sẽ không tạo được trong VPC với <strong>tennacy mode</strong> là <strong>Dedicate</strong></p>
 </div>
@@ -1201,11 +1207,22 @@
 <ol start="4">
 <li>Chọn <strong>Create VPC</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0004-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/1/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
 <li>Hoàn thành tạo <strong>VPC</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0005-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/1/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="6">
+<li>
+<p>Xem chi tiết VPC vừa tạo. Kiểm nếu chưa <strong>Enable DNS resolution and DNS Hostname</strong></p>
+<ul>
+<li>Vào <strong>Edit VPC setting</strong></li>
+<li>Chọn <strong>DNS setting</strong></li>
+<li>Chọn và <strong>Save</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/1/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1765,19 +1782,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

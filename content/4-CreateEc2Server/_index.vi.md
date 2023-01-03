@@ -8,7 +8,7 @@ pre : " <b> 4. </b> "
 
 #### Tạo máy chủ EC2
 
-Ở bước này chúng ta sẽ tạo hai máy chủ EC2 (EC2 instance) như kiến trúc dưới đây.
+Ở bước này chúng ta sẽ tạo 2 máy chủ EC2 ( EC2 instance ) như kiến trúc dưới đây.
 
 ![Create EC2](/images/4-CreateEc2Server/lab-3.4.png?featherlight=false&width=60pc)
 
@@ -17,3 +17,4 @@ pre : " <b> 4. </b> "
 1. [Tạo máy chủ EC2](4.1-createec2/)
 2. [Kiểm tra kết nối](4.2-connectec2/)
 3. [Tạo NAT Gateway](4.3-natgateway/)
+4. [Sử dụng Reachability Analyzer](4.4.-createreachabilityanalyzer/)

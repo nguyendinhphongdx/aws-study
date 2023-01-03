@@ -12,21 +12,21 @@
     <title>Clean up resources :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1166,28 +1166,38 @@
 	<h4 id="clean-up-resources">Clean up resources</h4>
 <p>We will proceed to delete the resources in the following order</p>
 <h3 id="terminate-ec2-instances">Terminate EC2 Instances.</h3>
+<ol>
+<li>Terminate EC2 instance.
 <ul>
-<li>Access the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">https://console.aws.amazon.com/ec2/</a>.</li>
-<li>On the left navigation bar, select Instances</li>
+<li>Access the Amazon EC2 console at <a href="https://console.aws.amazon.com/ec2/">EC2</a>.</li>
+<li>On the left navigation bar, select Intances</li>
 <li>Select all EC2 Instances related to the lab.</li>
-<li>Click Actions.</li>
-<li>Click Manage Instance State.</li>
-<li>Select Terminate.</li>
-<li>Click Change State</li>
+<li>Select <strong>Instance state</strong></li>
+<li>Select <strong>Terminate instance</strong></li>
 </ul>
-<p><img src="/images/7-cleanup/0001-cleanup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/16/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>Confirm terminate.</li>
+</ol>
+<p><img src="/images/16/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="remove-nat-gateway-and-elastic-ip-address">Remove NAT Gateway and Elastic IP Address</h4>
 <ul>
 <li>Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.</li>
-<li>Visit the Amazon VPC console page at <a href="https://console.aws.amazon.com/vpc/">https://console.aws.amazon.com/vpc/</a></li>
+<li>Visit the Amazon VPC console page at <a href="https://console.aws.amazon.com/vpc/">VPC</a></li>
 <li>On the left navigation bar, click NAT Gateway.</li>
 <li>Select NAT Gateway.</li>
 <li>Click Action.</li>
 <li>Click Delete NAT Gateway.</li>
+</ul>
+<p><img src="/images/16/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>Type delete.</li>
 <li>Click Delete to confirm deletion of NAT Gateway</li>
 </ul>
-<p><img src="/images/7-cleanup/0002-cleanup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="delete-delete-elastic-ip-address">Delete delete Elastic IP Address.</h4>
 <ul>
 <li>Continue to delete Elastic IP Address.</li>
@@ -1198,15 +1208,36 @@
 <li>Click Release Elastic IP Address</li>
 <li>Click Release.</li>
 </ul>
-<p><img src="/images/7-cleanup/0003-cleanup.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="continue-to-do-the-same-and-delete-in-the-following-order">Continue to do the same and delete in the following order:</h4>
 <ul>
 <li>VPN Site to Site connection.</li>
+</ul>
+<p><img src="/images/16/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>Virtual Private Gateway.</li>
+</ul>
+<p><img src="/images/16/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>Customer Gateway.</li>
+</ul>
+<p><img src="/images/16/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>VPC ASG VPN</li>
+</ul>
+<p><img src="/images/16/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>VPC ASG.</li>
 </ul>
+<p><img src="/images/16/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/16/00019.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1762,19 +1793,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

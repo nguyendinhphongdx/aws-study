@@ -12,21 +12,21 @@
     <title>Tạo Subnet :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,77 +1170,94 @@
 
 	<h4 id="tạo-subnet">Tạo subnet</h4>
 <ol>
-<li>Trong giao diện <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Subnets</strong></li>
 <li>Chọn <strong>Create subnet</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0006-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>Trong giao diện <strong>Create subnet</strong></li>
+</li>
 </ol>
+<p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>Trong giao diện <strong>Create subnet</strong></p>
 <ul>
 <li>Chọn <strong>ASG</strong> VPC</li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0007-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ul>
+</li>
+</ol>
+<p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
 <li>
 <p>Thực hiện <strong>subnet settings</strong></p>
 <ul>
-<li><strong>Subnet name</strong>: nhập <code>Public Subnet 1</code></li>
-<li><strong>Availability Zone</strong>: chọn AZ đầu tiên</li>
-<li><strong>IPv4 CIDR block</strong>, nhập <code>10.10.1.0/24</code> theo kiến trúc mô tả</li>
+<li><strong>Subnet name</strong>, nhập <strong><code>Public Subnet 1</code></strong></li>
+<li>Chọn AZ <strong>ap-southeast-1a</strong></li>
+<li><strong>IPv4 CIDR block</strong>, nhập <strong><code>10.10.1.0/24</code></strong> theo kiến trúc mô tả</li>
+<li>Chọn <strong>Create subnet</strong></li>
 </ul>
 </li>
-<li>
-<p>Chọn <strong>Create subnet</strong></p>
-</li>
-</ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0008-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
+</ol>
+<p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="4">
 <li>Hoàn thành tạo <strong>subnet</strong></li>
 </ol>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/0009-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
-<li>Thực hiện các bước tương tự tạo thêm các subnet</li>
-</ol>
+<li>
+<p>Thực hiện các bước tương tự tạo thêm các subnet</p>
 <ul>
-<li><code>Public subnet 2</code> với <strong>CIDR</strong> là <code>10.10.2.0/24</code> nằm trong AZ thứ hai.</li>
-<li><code>Private subnet 1</code> với <strong>CIDR</strong> là <code>10.10.3.0/24</code> nằm trong trong AZ đầu tiên.</li>
-<li><code>Private subnet 2</code> với <strong>CIDR</strong> là <code>10.10.4.0/24</code> nằm trong trong AZ thứ hai.</li>
+<li><strong>Public subnet 2</strong> với <strong>CIDR</strong> là <strong>10.10.2.0/24</strong> nằm trong <strong>Availability Zone ap-southeast-1b</strong>.</li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/00010-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
+<li><strong>Private subnet 1</strong> với <strong>CIDR</strong> là <strong>10.10.3.0/24</strong> nằm trong <strong>Availability Zone ap-southeast-1a.</strong></li>
+</ul>
+<p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
+<li><strong>Private subnet 2</strong> với <strong>CIDR</strong> là <strong>10.10.4.0/24</strong> nằm trong <strong>Availability Zone ap-southeast-1b</strong></li>
+</ul>
+<p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
-<div class="notices tip" ><p>Bạn có thể thấy có 2 cột là <strong>Availability Zone</strong> và <strong>Availability Zone ID</strong>. Để tránh việc tài nguyên EC2 được sử dụng <strong>không đồng đều</strong>, (chúng ta thường có xu hướng dùng AZ a để chạy <strong>primary và AZ</strong> b để stand by chẳng hạn) nên AWS sẽ gán ngẫu nhiên <strong>Availability Zone vào Availability Zone ID</strong>. Chúng ta có thể hiểu rằng Availability Zone là một dạng alias, còn Availability Zone ID mới chính là yếu tố định danh. Ví dụ ở hình trên Availability Zone ap-southeast-1a được gán Availability Zone ID là apse1-az2. Ở một AWS account khác , Availability Zone ap-southeast-1a có thể có Availability Zone ID là apse1-az1.</p>
+<div class="notices tip" ><p>Bạn có thể thấy có 2 cột là <strong>Availability Zone</strong> và <strong>Availability Zone ID</strong>. Để tránh việc tài nguyên EC2 được sử dụng <strong>không đồng đều</strong>, (chúng ta thường có xu hướng dùng AZ a để chạy <strong>primary và AZ</strong> b để stand by chẳng hạn) nên AWS sẽ gán ngẫu nhiên <strong>Availability Zone vào Availability Zone ID</strong>. Chúng ta có thể hiểu rằng Availability Zone là 1 dạng alias , còn Availability Zone ID mới chính là yếu tố định danh. Ví dụ ở hình trên Availability Zone ap-southeast-1a được gán Availability Zone ID là apse1-az2. Ở một AWS account khác , Availability Zone ap-southeast-1a có thể có Availability Zone ID là apse1-az1.</p>
 </div>
 
+<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="cho-phép-tự-động-cấp-phát-public-ip-address-cho-2-public-subnet">Cho phép tự động cấp phát public ip address cho 2 public subnet.</h4>
 
 <div class="notices tip" ><p>Một điểm đáng chú ý nữa là các subnet về cơ bản đều giống nhau, thông qua cấu hình route table và cấp phát public IP address mà chúng ta mới phân chia ra Public và Private Subnet.</p>
 </div>
 
-<ol start="5">
-<li>Trong giao diện <strong>VPC</strong></li>
-</ol>
+<ol start="6">
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Subnets</strong></li>
 <li>Chọn <strong>Public Subnet 1</strong></li>
 <li>Chọn <strong>Actions</strong></li>
 <li>Chọn <strong>Edit subnet settings</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/00011-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="6">
-<li>Trong mục <strong>Auto-assign IP settings</strong></li>
+</li>
 </ol>
+<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="7">
+<li>
+<p>Trong mục <strong>Auto-assign IP settings</strong></p>
 <ul>
 <li>Chọn <strong>Enable auto-assign publi IPv4 address</strong></li>
 <li>Chọn <strong>Save</strong></li>
 </ul>
-<p><img src="/images/3-Prerequiste/3.1-vpcandsubnet/00012-createvpcandsubnet.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
-<li>Sau đó thực hiện tương tự (bước 5 và bước 6) với  <strong>Public subnet 2.</strong></li>
+</li>
 </ol>
+<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="8">
+<li>Sau đó thực hiện tương tự với  <strong>Public subnet 2.</strong></li>
+</ol>
+<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1803,19 +1820,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

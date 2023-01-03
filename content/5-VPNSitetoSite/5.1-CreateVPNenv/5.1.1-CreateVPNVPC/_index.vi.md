@@ -10,155 +10,158 @@ pre : " <b> 5.1.1 </b> "
 
 1. Truy cập giao diện **VPC**
 
-- Chọn **Yours VPC**
-- Chọn **Create VPC**
+   - Chọn **Yours VPC**
+   - Chọn **Create VPC**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0001-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0001.png?featherlight=false&width=90pc)
 
 2. Trong giao diện **Cretae VPC**
 
-- **Resources to create**: chọn **VPC only**
-- **Name**: nhập `ASG VPN`
-- **IPv4 CIDR block**, nhập `10.11.0.0/16`
+   - **Resource**, chọn **VPC only**
+   - **Name**, nhập **```ASG VPN```**
+   - **IPv4 CIDR block**, nhập **```10.11.0.0/16```**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0002-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0002.png?featherlight=false&width=90pc)
 
 3. Chọn **Create VPC**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0003-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0003.png?featherlight=false&width=90pc)
 
 4. Tạo VPC thành công
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0004-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0004.png?featherlight=false&width=90pc)
 
 5. Truy cập giao diện **VPC**
 
-- Chọn **Subnets**
-- Chọn **Create subnet**
+   - Chọn **Subnets**
+   - Chọn **Create subnet**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0005-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0005.png?featherlight=false&width=90pc)
 
 6. Trong giao diện **Create subnet**
 
-- Chọn **ASG VPN** vpc
+   - Chọn **ASG VPN** vpc
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0006-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0006.png?featherlight=false&width=90pc)
 
-- Trong giao diện **Subnet settings**
-	- **Subnet name**: nhập **```VPN Public```**
-	- **Availability Zone**: lựa chọn AZ đầu tiên
-	- **IPv4 CIDR block**: nhập `10.11.1.0/24` theo kiến trúc mô tả
-- Chọn **Create subnet**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0007-vpnvpc.png?featherlight=false&width=90pc)
+7. Trong giao diện **Subnet settings**
 
-7. Tạo thành công **VPN Public**
+   - **Subnet name**, nhập **```VPN Public```**
+   - Lựa chọn **Availability Zone**: **ap-southeast-1a**
+   - Chọn **IPv4 CIDR block** là **10.11.1.0/24** theo kiến trúc mô tả
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0008-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/0007.png?featherlight=false&width=90pc)
 
-8. Trong giao diện **VPC**
+8. Tạo thành công **VPN Public**
 
-- Chọn **Subnets**
-- Chọn **VPN Public**
-- Chọn **Actions**
-- Chọn **Edit subnet settings**
+![Create VPC](/images/9/0008.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/0009-vpnvpc.png?featherlight=false&width=90pc)
+9. Trong giao diện **VPC**
 
-9. Thực hiện **Auto-assign IP settings**
+   - Chọn **Subnets**
+   - Chọn **VPN Public**
+   - Chọn **Actions**
+   - Chọn **Edit subnet settings**
 
-- Chọn **Enable auto-assign public IPv4 address**
-- Chọn **Save**
+![Create VPC](/images/9/0009.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00010-vpnvpc.png?featherlight=false&width=90pc)
+10. Thực hiện **Auto-assign IP settings**
 
-10. Cấp phát IP thành công
+    - Chọn **Enable auot-assign public IPv4 address**
+    - Chọn **Save**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00011-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/00010.png?featherlight=false&width=90pc)
 
-11. Trong giao diện **VPC**
+11. Cấp phát IP thành công
 
-- Chọn **Internet Gateway**
-- Chọn **Create internet gateway**
+![Create VPC](/images/9/00011.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00012-vpnvpc.png?featherlight=false&width=90pc)
+12. Trong giao diện **VPC**
 
-12. Trong giao diện **Create internet gateway**
+    - Chọn **Internet Gateway**
+    - Chọn **Create internet gateway**
 
-- **Name tag**: nhập `Internet Gateway VPN`
-- Chọn **Create internet gateway**
+![Create VPC](/images/9/00012.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00013-vpnvpc.png?featherlight=false&width=90pc)
+13. Trong giao diện **Create internet gateway**
 
-13. Sau khi tạo **Internet Gateway VPN** thành công và **State** là **Detached**. Tiếp theo chúng ta cần Attach Internet Gateway vào VPC ASG VPN.
+    - **Name tag**, nhập **```Internet Gateway VPN```**
+    - Chọn **Create internet gateway**
 
-- Chọn **Actions**
-- Chọn **Attach to VPC**
+![Create VPC](/images/9/00013.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00014-vpnvpc.png?featherlight=false&width=90pc)
+14. Sau khi tạo **Internet Gateway VPN** thành công và **State** là **Detached**. Tiếp theo chúng ta cần Attach Internet Gateway vào VPC ASG VPN.
 
-14. Chọn **VPC ASG VPN**, VPC ID sẽ được tự động điền.
+    - Chọn **Actions**
+    - Chọn **Attach to VPC**
 
-- Chọn **Attach Internet Gateway**
+![Create VPC](/images/9/00014.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00015-vpnvpc.png?featherlight=false&width=90pc)
+15. Chọn **VPC ASG VPN**, VPC ID sẽ được tự động điền.
 
-15. **Attach** thành công khi **State** là **Attached**
+    - Chọn **Attach Internet Gateway**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00016-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/00015.png?featherlight=false&width=90pc)
 
-16. Tiếp theo chúng ta cần tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway. Trong giao diện **VPC**
+16. **Attach** thành công khi **State** là **Attached**
 
-- Chọn **Route tables**
-- Chọn **Create route table**
+![Create VPC](/images/9/00016.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00017-vpnvpc.png?featherlight=false&width=90pc)
+17. Tiếp theo chúng ta cần tạo Route Table định tuyến đi ra ngoài internet thông qua Internet Gateway. Trong giao diện **VPC**
 
-17. Trong giao diện **Create route table**
+    - Chọn **Route Tables**
+    - Chọn **Create route table**
 
-- **Name**: nhập `Route table VPN - Public`
--  **VPC**: chọn  **ASG VPN**.  **VPC id** sẽ được tự động điền vào.
-- Chọn **Create route table**
+![Create VPC](/images/9/00017.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00018-vpnvpc.png?featherlight=false&width=90pc)
+18. Trong giao diện **Cretae route table**
 
-18. Tạo route table thành công. 
-Trong giao diện **Route table VPN - Public**
+    - **Name**, nhập **```Route table VPN - Public```**
+    - Chọn **VPC** có tên **ASG VPN** , **VPC id** sẽ được tự động điền vào.
+    - Chọn **Create route table**
 
-- Chọn tab **Route**
-- Chọn **Edit route**
+![Create VPC](/images/9/00018.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00019-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/00019.png?featherlight=false&width=90pc)
 
-19. Trong giao diện **Edit routes**
 
-- Chọn **Add route**
-- **Destination CIDR** : điền `0.0.0.0/0` đại diện cho Internet.
-- **Target**: chọn **Internet Gateway**, rồi chọn **Internet Gateway VPN** chúng ta đã tạo. **Internet Gateway ID** sẽ được tự động điền.
-- Chọn **Save changes**
+19. Tạo route table thành công. Trong giao diện **Route table VPN - Public**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00020-vpnvpc.png?featherlight=false&width=90pc)
+    - Chọn **Route**
+    - Chọn **Edit route**
 
-20. Hoàn thành và kiểm tra route
+![Create VPC](/images/9/00020.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00021-vpnvpc.png?featherlight=false&width=90pc)
+20. Trong giao diện **Edit routes**
 
-21. Trong giao diện **Route table VPN - Public**
+    - Chọn **Add route**
+    - Điền phần **Destination CIDR** : **0.0.0.0/0** đại diện cho Internet.
+    - Trong phần **Target** chọn **Internet Gateway**, sau đó chọn **Internet Gateway VPN** chúng ta đã tạo. **Internet Gateway ID** sẽ được tự động điền.
+    - Chọn **Save changes**
 
-- Chọn tab **Subnet associations**
-- Chọn **Edit subnet associations**
+![Create VPC](/images/9/00021.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00022-vpnvpc.png?featherlight=false&width=90pc)
+![Create VPC](/images/9/00022.png?featherlight=false&width=90pc)
 
-22. Trong giao diện **Edit subnet associations**
+21. Hoàn thành và kiểm tra route
 
-- Mở rộng cột Subnet ID bằng cách kéo thanh ngăn sang phải.
-- Chọn **subnet VPN Public**.
-- Chọn **Save associations**
+22. Trong giao diện **Route table VPN - Public**
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00023-vpnvpc.png?featherlight=false&width=90pc)
+    - Chọn **Subnet associations**
+    - Chọn **Edit subnet associations**
 
-23. Hoàn thành và kiểm tra lại **Routes**
+![Create VPC](/images/9/00023.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/5-CreateVPNenv/5.1-asgvpnvpc/00024-vpnvpc.png?featherlight=false&width=90pc)
 
+23. Trong giao diện **Edit subnet associations**
+
+    - Mở rộng cột Subnet ID bằng cách kéo thanh ngăn sang phải.
+    - Chọn **subnet VPN Public**.
+    - Chọn **Save associations**
+
+![Create VPC](/images/9/00024.png?featherlight=false&width=90pc)
+
+24.  Hoàn thành và kiểm tra lại **Routes**
+
+![Create VPC](/images/9/00025.png?featherlight=false&width=90pc)

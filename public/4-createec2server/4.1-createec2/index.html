@@ -12,21 +12,21 @@
     <title>Create EC2 Server :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1168,126 +1168,139 @@
 
 
 
-	<h4 id="create-ec2-in-public-subnet">Create EC2 in Public subnet</h4>
+	<h4 id="create-ec2-in-the-public-subnet">Create EC2 in the Public subnet</h4>
 <ol>
-<li>Access <strong>AWS Management Console</strong></li>
-</ol>
+<li>
+<p>Access <strong>AWS Management Console</strong></p>
 <ul>
 <li>Find <strong>EC2</strong></li>
 <li>Select <strong>EC2</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0001-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>In the <strong>EC2</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/6/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>In the <strong>EC2</strong> interface</p>
 <ul>
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>Launch instances</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0002-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
 <li><strong>Name and tags</strong> of the instance, enter <strong><code>EC2 Public</code></strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0003-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
-<li>Executing <strong>AMI</strong> Selection</li>
-</ol>
+<li>
+<p>Executing <strong>AMI</strong> Selection</p>
 <ul>
-<li>Select <strong>Quick Start</strong> tab</li>
-<li>Select <strong>Amazon Linux</strong></li>
-<li>Select <strong>Amazon Linux 2 &hellip;.Free tier eligible</strong></li>
-</ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0004-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>Make <strong>Instance type</strong> and Select <strong>Create new key pair</strong></li>
-</ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0005-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="6">
-<li>In the <strong>Create key pair</strong> interface</li>
-</ol>
-<ul>
-<li><strong>Key pair name</strong>: enter <code>aws-keypair</code></li>
-<li><strong>Key pair type</strong>: select <strong>RSA</strong></li>
-<li><strong>Private key file format</strong>: select <strong>.pem</strong></li>
-<li>Then select <strong>Create key pair</strong>
-<img src="/images/4-CreateEc2Server/4.1-ec2/0007-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></li>
-</ul>
-<ol start="7">
-<li>Configure <strong>Network settings</strong>: click <strong>Edit</strong>
-<ul>
-<li><strong>VPC</strong>: select <strong>ASG</strong></li>
-<li><strong>Subnet</strong>: select <strong>Public Subnet 1</strong></li>
-<li><strong>Auto-assign public IP</strong>: select <strong>Enable</strong></li>
-<li><strong>Firewall (Security Group)</strong>: select <strong>Select existing security group</strong> then select <strong>Public subnet -SG</strong></li>
-<li>Finally, select <strong>Launch instance</strong></li>
+<li>Select <strong>Quick Start</strong></li>
+<li>Select <strong>Amazon Linux 2</strong></li>
+<li>Select <strong>AMI</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0006-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>Select <strong>Instance type</strong> and Select <strong>Create new key pair</strong></li>
+</ol>
+<p><img src="/images/6/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="6">
+<li>
+<p>In the <strong>Create key pair</strong> interface</p>
+<ul>
+<li><strong>Key pair name</strong>, enter <strong><code>aws-keypair</code></strong> (optional name, you can set any).</li>
+<li><strong>Key pair type</strong>, select <strong>RSA</strong></li>
+<li><strong>Private key file format</strong>, select <strong>.pem</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/6/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="7">
+<li>
+<p>Configure <strong>Network</strong></p>
+<ul>
+<li><strong>VPC</strong>, select <strong>ASG</strong></li>
+<li><strong>Subnet</strong>, select <strong>Public Subnet 1</strong></li>
+<li><strong>Auto-assign public IP</strong>, select <strong>Enable</strong></li>
+<li><strong>Firewall (Security Group)</strong>, select <strong>Select existing security group</strong></li>
+<li>Select <strong>Public subnet -SG</strong></li>
+<li>Select <strong>Launch instance</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/6/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="8">
 <li>Complete instance creation</li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0008-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="9">
 <li>Wait about 5 minutes <strong>Status check</strong> will change to <strong>2/2 checks passed</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/0009-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<h4 id="create-ec2-in-private-subnet">Create EC2 in Private subnet</h4>
+<p><img src="/images/6/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<h4 id="create-ec2-in-a-private-subnet">Create EC2 in a Private subnet</h4>
 <ol start="10">
-<li>In the <strong>EC2</strong> interface</li>
-</ol>
+<li>
+<p>In the <strong>EC2</strong> interface</p>
 <ul>
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>Launch instances</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00010-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="11">
-<li><strong>Name and tags</strong>,: enter <code>EC2 Private</code>.</li>
+</li>
+<li>
+<p><strong>Name and tags</strong>, enter <strong><code>EC2 Private</code></strong></p>
+</li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00011-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/6/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="12">
-<li>Executing <strong>AMI</strong> Selection</li>
-</ol>
+<li>
+<p>Executing <strong>AMI</strong> Selection</p>
 <ul>
-<li>Select <strong>Quick Start</strong> tab</li>
-<li>Select <strong>Amazon Linux</strong></li>
-<li>Select <strong>Amazon Linux 2 &hellip; Free tier eligible</strong></li>
-</ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00012-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="13">
-<li>Make <strong>instance type</strong> selection</li>
-</ol>
-<ul>
-<li><strong>Key pair name</strong>: select <strong><code>aws-keypair</code></strong></li>
-</ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00013-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="14">
-<li>Configure <strong>Network settings</strong>: click <strong>Edit</strong>
-<ul>
-<li><strong>VPC</strong>: select <strong>ASG</strong> vpc</li>
-<li><strong>Subnet</strong>: select <strong>Private subnet 2</strong></li>
-<li><strong>Auto-assign public IP</strong>: select <strong>Disable</strong>. If not <strong>Disable</strong>, you need to check the configuration <strong>automatically allocate public IP for subnet.</strong></li>
-<li><strong>Firewall (Security Group)</strong>: select <strong>Select existing security group</strong> then select <strong>Private subnet -SG</strong></li>
-<li>Finally, select <strong>Launch instance</strong></li>
+<li>Select <strong>Quick Start</strong></li>
+<li>Select <strong>Amazon Linux 2</strong></li>
+<li>Select <strong>AMI</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00014-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="15">
-<li>Complete instance creation</li>
+<p><img src="/images/6/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>Make <strong>instance type</strong> selection. <strong>Key pair name</strong>, select <strong><code>aws-keypair</code></strong></li>
 </ol>
+<p><img src="/images/6/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="14">
+<li>
+<p>Configure <strong>Network</strong></p>
+<ul>
+<li><strong>VPC</strong>, select <strong>ASG</strong> vpc</li>
+<li><strong>Subnet</strong>, select <strong>Private subnet 2</strong></li>
+<li><strong>Auto-assign public IP</strong>, select <strong>Disable</strong>. If not <strong>Disable</strong>, you need to check the configuration <strong>automatically allocate public IP for the subnet.</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/6/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="15">
+<li>
+<p>Complete instance creation</p>
 <ul>
 <li>Select <strong>View all instances</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00015-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="16">
-<li>Select <strong>EC2 Private</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="16">
+<li>
+<p>Select <strong>EC2 Private</strong></p>
 <ul>
-<li>Select <strong>Details</strong> tab</li>
+<li>Select <strong>Details</strong></li>
 <li>Store <strong>Private IPv4 addresses</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.1-ec2/00016-ec2.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/6/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1847,19 +1860,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762455"></script>
-    <script src="/js/jquery.sticky.js?1672762455"></script>
-    <script src="/js/featherlight.min.js?1672762455"></script>
-    <script src="/js/highlight.pack.js?1672762455"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762455"></script>
-    <script src="/js/learn.js?1672762455"></script>
-    <script src="/js/hugo-learn.js?1672762455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762455"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

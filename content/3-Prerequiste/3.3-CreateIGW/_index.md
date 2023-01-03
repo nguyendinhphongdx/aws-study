@@ -6,39 +6,36 @@ chapter : false
 pre : " <b> 3.3 </b> "
 ---
 
-#### Create Internet Gateway
+#### Create an Internet Gateway
 
 1. In the **VPC** interface
 
-- Select **Internet gateways**
-- Select **Create internet gateway**
+   - Select **Internet Gateways**
+   - Select **Create internet gateway**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0001-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/3/0001.png?featherlight=false&width=90pc)
 
-2. Make configuration
+2. Make a configuration
 
-- **Name tag**: enter `Internet Gateway`
-- Select **Create internet gateway**
+   - **Name tag**, enter **```Internet Gateway```**
+   - Select **Create internet gateway**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0002-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/3/0002.png?featherlight=false&width=90pc)
 
 3. Finish creating **Internet Gateway**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0003-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/3/0003.png?featherlight=false&width=90pc)
+
 
 4. Implement **Attach VPC**
 
-- Select **Actions**
-- Select **Attach to VPC**
+   - Select **Actions**
+   - Select **Attach to VPC**
+   - Select **ASG**, VPC ID will be automatically filled in.
+   - Select **Attach internet gateway**
 
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0004-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/3/0004.png?featherlight=false&width=90pc)
 
-5. Select **ASG**, and VPC ID will be automatically filled in.
+5. When attach successfully **State** internet gateway will switch to **Attached**
 
-- Select **Attach internet gateway**
-
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0005-igwandroutetable.png?featherlight=false&width=90pc)
-
-6. When attach successfully, **State** internet gateway will switch to **Attached**
-
-![Create VPC](/images/3-Prerequiste/3.2-igwandroutetable/0006-igwandroutetable.png?featherlight=false&width=90pc)
+![Create VPC](/images/3/0005.png?featherlight=false&width=90pc)

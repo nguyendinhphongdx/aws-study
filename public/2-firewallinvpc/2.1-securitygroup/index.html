@@ -12,21 +12,21 @@
     <title>Security Group :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1168,7 +1168,7 @@
 
 
 
-	<h4 id="security-group-sg">Security Group (SG)</h4>
+	<h4 id="security-group">Security Group</h4>
 <p>Some basic features of Security group:</p>
 <ul>
 <li>Only Allow rules can be added, Deny rules cannot be added.</li>
@@ -1179,7 +1179,7 @@ Therefore, at the beginning Instance will not allow any traffic to enter, requir
 This rule can be edited (deleted) and added with specific Outbound rules, specifying which traffic originating from the Instance is allowed to go out.
 If the SG does not have an Outbound rule, then no traffic is allowed to leave the Instance.</li>
 <li>Security groups is a Stateful service - meaning that if traffic going into the Instance is allowed, then the traffic can also go out of the Instance, and vice versa, regardless of the Outbound rule.</li>
-<li>Instances can only communicate with each other if and only if they are associated with a Security group that allows connections, or a Security group to which the Instance is associated contains a Rule that allows traffic (except for the default Security group with default rules that allow all traffic to be accessed).</li>
+<li>Instances can only communicate with each other if and only if they are associated with a Security group that allows connections, or a Security group to which the Instance is associated contains a Rule that allows traffic (except for the default Security group. with default rules that allow all traffic to be accessed).</li>
 <li>Security groups are associated with network interfaces.
 After the Instance has been initialized, you can still change the Security group assigned to the Instance, which also changes the security group assigned to the corresponding primary network interface.</li>
 </ul>
@@ -1187,11 +1187,11 @@ After the Instance has been initialized, you can still change the Security group
 <p>Rule is generated to grant access to traffic entering or leaving the Instance. This access can be applied to a specific CIDR or to a Security group located in the same VPC or located in another VPC but with a peering connection already initiated.</p>
 <p>Basic components of Security group rule:</p>
 <ul>
-<li>(Inbound rules only) Includes the origin (source) of the traffic and the destination port or port range.
+<li>(Inbound rules only) includes the origin (source) of the traffic and the destination port or port range.
 The source can be another security group, an IPv4 or IPv6 CIDR range, or simply an IPv4 or IPv6 address.</li>
-<li>(Outbound rules only) Includes the destination of the traffic and the destination port or destination port range.
+<li>(Outbound rules only) includes the destination of the traffic and the destination port or destination port range.
 The destination can be another security group, an IPv4 or IPv6 CIDR range, or simply an IPv4 or IPv6 address, or a service that begins with a prefix (e.g. igw_xxx) in the prefix ID list (a service is identified by the prefix ID - the name and ID of the service available in the region).</li>
-<li>Every protocol has some standard protocol. Example: SSH is 22, etc.</li>
+<li>Every protocol has some standard protocol. Example: SSH is 22,..</li>
 </ul>
 
 
@@ -1752,19 +1752,19 @@ The destination can be another security group, an IPv4 or IPv6 CIDR range, or si
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762455"></script>
-    <script src="/js/jquery.sticky.js?1672762455"></script>
-    <script src="/js/featherlight.min.js?1672762455"></script>
-    <script src="/js/highlight.pack.js?1672762455"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762455"></script>
-    <script src="/js/learn.js?1672762455"></script>
-    <script src="/js/hugo-learn.js?1672762455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762455"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

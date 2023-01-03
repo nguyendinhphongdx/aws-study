@@ -10,25 +10,24 @@ pre : " <b> 5.2.2 </b> "
 
 1. Truy cập vào **VPC**
 
-- Chọn **Customer gateways**
-- Chọn **Create customer gateway**
+   - Chọn **Customer Gateways**
+   - Chọn **Create Customer Gateway**
 
-![Create VPC](/images/6-VPNSitetoSite/6.2-customgw/0001-customergw.png?featherlight=false&width=90pc)
+![Create VPC](/images/12/0001.png?featherlight=false&width=90pc)
 
-2. Trong giao diện **Create customer gateway**
+2. Trong giao diện **Create Customer Gateway**
 
-- **Name tag**: nhập `Customer Gateway`
-- **IP address**: nhập **public IP address** của máy chủ **EC2 Customer Gateway**.
-- Chọn **Create Customer Gateway**
+   - **Name tag**, nhập **```Customer Gateway```**
+   - **IP address**, nhập **public IP address** của máy chủ **EC2 Customer Gateway**.
+   - Chọn **Create Customer Gateway**
 
-
-![Create VPC](/images/6-VPNSitetoSite/6.2-customgw/0002-customergw.png?featherlight=false&width=90pc)
+![Create VPC](/images/12/0002.png?featherlight=false&width=90pc)
 
 3. Đợi khoảng 5 phút sau, hoàn tất tạo **Customer Gateway**
 
-![Create VPC](/images/6-VPNSitetoSite/6.2-customgw/0003-customergw.png?featherlight=false&width=90pc)
+![Create VPC](/images/12/0003.png?featherlight=false&width=90pc)
 
 {{% notice tip %}}
-Lưu ý: theo như mô hình kiến trúc, Customer Gateway sẽ nằm ở VPC trên môi trường on-premise. Hiện tại chúng ta đang làm là khai báo với AWS rằng chúng ta sẽ có một Customer Gateway với địa chỉ IP public là IP public của EC2 Customer Gateway instance. Customer Gateway nằm trong ASG VPN VPC
+Lưu ý: theo như mô hình kiến trúc, Customer Gateway sẽ nằm ở VPC trên môi trường onpremise. Hiện tại chúng ta đang làm là khai báo với AWS rằng chúng ta sẽ có 1 Customer Gateway với địa chỉ IP public là địa chỉ public của EC2 instance : Customer Gateway nằm trong ASG VPN VPC
 {{% /notice %}}
 

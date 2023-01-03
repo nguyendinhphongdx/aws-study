@@ -12,21 +12,21 @@
     <title>Subnets :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1169,15 +1169,12 @@
 
 
 	<h4 id="subnets">Subnets</h4>
-<p>A subnet is a segment of the IP address range that you use when you provision your Amazon VPC, which directly provides the active network range to the AWS resources that may run within it, such as Amazon EC2, Amazon RDS (Amazon Relationship Database). ),&hellip;</p>
-<p>Subnets are also identified through CIDR blocks (eg 10.0.1.0/24 and 192.168.0.0/24) and the subnet&rsquo;s CIDRs must be in the VPC&rsquo;s CIDR. The smallest subnet that can be created is /28 (16 IP addresses). AWS stores the first 4 IP addresses and the last 1 IP address of each subnet for intranet networking purposes. For example, subnet /28 has 16 available IP addresses, but removes 5 reserved IPs for AWS, leaving 11 usable IP addresses for resources operating within this subnet.</p>
+<p>A subnet is a segment of the IP address range that you use when you provision your Amazon VPC, which directly provides the active network range to the AWS resources that may run within it, such as Amazon EC2, Amazon RDS (Amazon Relationship Database). ),&hellip; Subnets are also identified through CIDR blocks (eg 10.0.1.0/24 and 192.168.0.0/24) and the subnet&rsquo;s CIDRs must be in the VPC&rsquo;s CIDR. The smallest subnet that can be created is /28 (16 IP addresses). AWS stores the first 4 IP addresses and the last 1 IP address of each subnet for intranet networking purposes. For example, subnet /28 has 16 available IP addresses, but removes 5 reserved IPs for AWS, leaving 11 usable IP addresses for resources operating within this subnet.</p>
 <p>Availability Zone or abbreviated to AZ is a one or multi data center, located within Region and identified based on geographical location. Within an AZ there can be one or more subnets, but a subnet can only reside in a single AZ and cannot extend to other AZs.</p>
-<p>Subnets are divided into categories such as <strong>Public</strong>, <strong>Private</strong>, or <strong>VPN-only</strong>.</p>
-<ul>
-<li><strong>Public subnet</strong> is a subnet with a route table (discussed later) that directs traffic within the subnet to the VPC IGW (discussed later)</li>
-<li>The <strong>Private subnet</strong> is the opposite of the Public subnet, which does not have a route table that directs traffic to the VPC IGW.</li>
-<li><strong>VPN-only subnet</strong> is a subnet that has a route table that directs traffic to Amazon VPC&rsquo;s VPG (discussed later).</li>
-</ul>
+<p>Subnets are divided into categories such as <strong>Public</strong>, <strong>Private</strong>, or <strong>VPN-only</strong>.
+<strong>Public subnet</strong> is a subnet with a route table (discussed later) that directs traffic within the subnet to the VPC IGW (discussed later)
+The <strong>Private subnet</strong> is the opposite of the Public subnet, which does not have a route table that directs traffic to the VPC IGW.
+<strong>VPN-only subnet</strong> is a subnet that has a route table that directs traffic to Amazon VPC&rsquo;s VPG (discussed later).</p>
 <p>Regardless of the type of subnet, the subnet&rsquo;s internal IP address range is always private (that is, from outside the Internet it is not possible to directly connect to addresses in this range).</p>
 <p><img src="/images/1-Introduce/subnet.png?featherlight=false&amp;width=50pc" alt="Subnets"></p>
 
@@ -1736,19 +1733,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762455"></script>
-    <script src="/js/jquery.sticky.js?1672762455"></script>
-    <script src="/js/featherlight.min.js?1672762455"></script>
-    <script src="/js/highlight.pack.js?1672762455"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762455"></script>
-    <script src="/js/learn.js?1672762455"></script>
-    <script src="/js/hugo-learn.js?1672762455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762455"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

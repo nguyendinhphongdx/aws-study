@@ -12,21 +12,21 @@
     <title>Kiểm tra kết nối :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1178,69 +1178,87 @@
 </ol>
 <p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="2">
-<li>Truy cập vào trang <strong>EC2</strong></li>
-</ol>
+<li>
+<p>Truy cập vào trang <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Instances</strong></li>
 <li>Chọn <strong>EC2 Public</strong></li>
 <li>Chọn <strong>Details</strong></li>
 <li>Xem <strong>Public IPv4 address</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0001-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Sau khi tải <strong>MobaXterm</strong>, tiến hành giải nén và mở</li>
+</li>
 </ol>
+<p><img src="/images/7/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
+<li>
+<p>Sau khi tải <strong>MobaXterm</strong>, tiến hành giải nén và mở</p>
 <ul>
 <li>Chọn <strong>Session</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0002-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>Trong giao diện <strong>Session settings</strong></li>
+</li>
 </ol>
+<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="4">
+<li>
+<p>Trong giao diện <strong>Session settings</strong></p>
 <ul>
 <li>Chọn <strong>SSH</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0003-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>Trong giao diện <strong>Session settings</strong></li>
+</li>
 </ol>
+<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>
+<p>Trong giao diện <strong>Session settings</strong></p>
 <ul>
 <li><strong>Remote host</strong>, nhập <strong><code>Public IPv4 address</code></strong></li>
 <li><strong>Specify username</strong>, nhập <strong><code>ec2-user</code></strong></li>
 <li><strong>Use private key</strong>, chọn đường dẫn của <strong>aws-keypair.pem</strong> đã tạo và tải về máy lúc tạo EC2.</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0004-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
 <li>Kết nối thành công.</li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0005-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/7/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="7">
 <li>Kiểm tra kết nối tới internet của EC2 Public, ta thực hiện lệnh:</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0006-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<h4 id="kết-nối-vào-máy-chủ-ec2-private-và-kiểm-tra-kết-nối-internet">Kết nối vào máy chủ EC2 Private và kiểm tra kết nối internet.</h4>
+</code></pre><p><img src="/images/7/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="8">
-<li>Truy cập vào <strong>EC2</strong></li>
+<li>Thực hiện ping đến <strong>EC2 private</strong></li>
 </ol>
+<pre tabindex="0"><code>ping &lt;IP Private EC2 Private&gt;
+</code></pre><p><img src="/images/7/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<h4 id="kết-nối-vào-máy-chủ-ec2-private-và-kiểm-tra-kết-nối-internet">Kết nối vào máy chủ EC2 Private và kiểm tra kết nối internet.</h4>
+<ol start="9">
+<li>
+<p>Truy cập vào <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Instances</strong></li>
 <li>Chọn <strong>EC2 Private</strong></li>
 <li>Chọn <strong>Details</strong></li>
 <li>Chọn <strong>Private IPv4 addresses</strong></li>
+<li>Sau đó kết nối SSH vào <strong>EC2 Public</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0007-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
+</li>
+</ol>
+<p><img src="/images/7/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="10">
 <li>Thực hiện lệnh ping <strong>&lt;địa chỉ IP private của EC2 Private&gt;</strong> để kiểm tra kết nối từ máy chủ <strong>EC2 Public</strong> sang máy chủ <strong>EC2 Private</strong>. Chúng ta kiểm tra kết nối giữa 2 EC2 instance bằng câu lệnh:</li>
 </ol>
 <pre tabindex="0"><code>ping 10.10.4.105 -c5
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0008-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
-<li><strong>EC2 Private</strong> sẽ không có <strong>public IP address</strong> vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào <strong>EC2 Private</strong>, chúng ta sẽ thực hiện kết nối ssh từ EC2 Public thông qua địa chỉ <strong>private IP address của EC2 Private</strong></li>
-</ol>
+</code></pre><p><img src="/images/7/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="11">
+<li>
+<p><strong>EC2 Private</strong> sẽ không có <strong>public IP address</strong> vì chúng ta không gán cho máy chủ này public IP. Để có thể ssh vào <strong>EC2 Private</strong>, chúng ta sẽ thực hiện kết nối ssh từ EC2 Public thông qua địa chỉ <strong>private IP address của EC2 Private</strong></p>
 <ul>
 <li>Download công cụ <strong>pscp</strong> vào cùng thư mục chứa file <strong>aws-keypair.ppk</strong> để thực hiện copy file <strong>aws-keypair.pem</strong> từ máy của chúng ta vào <strong>EC2 Public</strong>.</li>
 </ul>
+</li>
+</ol>
 
 <div class="notices info" ><p>Bạn tải <a href="https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe">a RSA and DSA key generation utility</a> là dạng <strong>puttygen.exe</strong></p>
 </div>
@@ -1249,63 +1267,71 @@
 <div class="notices info" ><p>Bạn tải <a href="https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe">an SCP client, i.e. command-line secure file copy</a> là <strong>dạng pscp.exe</strong></p>
 </div>
 
-<ol start="11">
-<li>Chúng ta sử dụng <strong>puttygen.exe</strong> để generation key</li>
-</ol>
+<ol start="12">
+<li>
+<p>Chúng ta sử dụng <strong>puttygen.exe</strong> để generation key</p>
 <ul>
 <li>Chọn <strong>Load</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="12">
-<li>Chọn <strong>aws-keypair.pem</strong></li>
+</li>
 </ol>
+<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>
+<p>Chọn <strong>aws-keypair.pem</strong></p>
 <ul>
 <li>Chọn <strong>OK</strong></li>
 <li>Chọn <strong>Save private key</strong> với tên <strong>aws-keypair.ppk</strong></li>
 </ul>
+</li>
+</ol>
 <p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00010-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="13">
+<ol start="14">
 <li>Hoàn thành generation key</li>
 </ol>
 <p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00011-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="14">
-<li>Khởi chạy <strong>Command Prompt</strong>. Chuyển đường dẫn tới thư mục bạn vừa download <strong>pscp</strong>. Chạy lệnh dưới đây để upload file <strong>aws-keypair.pem</strong> lên thư mục <strong>/home/ec2-user/</strong> của máy chủ EC2 Public.</li>
-</ol>
+<ol start="15">
+<li>
+<p>Khởi chạy <strong>Command Prompt</strong>. Chuyển đường dẫn tới thư mục bạn vừa download <strong>pscp</strong>. Chạy lệnh dưới đây để upload file <strong>aws-keypair.pem</strong> lên thư mục <strong>/home/ec2-user/</strong> của máy chủ EC2 Public.</p>
 <ul>
 <li>Bạn sẽ cần thay thế thông số <strong>public IP address của EC2 Public</strong> trước khi chạy câu lệnh.</li>
 </ul>
+</li>
+</ol>
 <pre tabindex="0"><code>pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@&lt;EC2 PUBLIC public IP address&gt;:/home/ec2-user/
 </code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00012-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="15">
-<li>Truy cập vào <strong>EC2</strong></li>
-</ol>
+<ol start="16">
+<li>
+<p>Truy cập vào <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Instances</strong></li>
 <li>Chọn <strong>EC2 Public</strong></li>
 <li>Chọn <strong>Details</strong></li>
 <li>Xem <strong>Public IPv4 address</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0001-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="16">
+</li>
+</ol>
+<p><img src="/images/7/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="17">
 <li>Quay trở lại giao diện kết nối EC2. Để đảm bảo bạn copy file <strong>aws-keypair.pem</strong> lên máy chủ <strong>EC2 Public</strong> ta thực hiện lệnh</li>
 </ol>
 <pre tabindex="0"><code>ls
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00014-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="17">
+</code></pre><p><img src="/images/7/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="18">
 <li>Cập nhật quyền cho file <strong>aws-keypair.pem</strong> bằng cách chạy lệnh <strong>chmod 400 aws-keypair.pem</strong>. AWS yêu cầu file key pair cần được hạn chế quyền truy cập trước khi được sử dụng để kết nối tới máy chủ EC2.</li>
 </ol>
 <pre tabindex="0"><code>chmod 400 aws-keypair.pem
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00015-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="18">
+</code></pre><p><img src="/images/7/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="19">
 <li><strong>SSH</strong> tới máy chủ <strong>EC2 Private</strong></li>
 </ol>
 <pre tabindex="0"><code>ssh -i aws-keypair.pem ec2-user@&lt;EC2 Private server&#39;s private IP address&gt;
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00016-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="19">
+</code></pre><p><img src="/images/7/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="20">
 <li>Thực hiện <strong>ping test tới amazon.com</strong>. Bạn có thể thấy, chúng ta không thể kết nối <strong>internet từ EC2 Private</strong>. Trong bước tiếp theo chúng ta sẽ tạo <strong>NAT Gateway</strong> để cho phép máy chủ <strong>EC2 Private</strong> kết nối internet theo chiều từ nội bộ đi ra. Giữ nguyên kết nối tới <strong>EC2 Private</strong> để chúng ta có thể kiểm tra kết nối tới <strong>internet</strong> sau khi hoàn tất tạo và cấu hình <strong>NAT Gateway</strong> nhé.</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00017-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/7/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1868,19 +1894,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

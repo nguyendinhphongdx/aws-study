@@ -12,21 +12,21 @@
     <title>Customer Gateway Configuration :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1176,17 +1176,19 @@
 
 	<h4 id="configure-customer-gateway">Configure Customer Gateway</h4>
 <ol>
-<li>Access to <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Access to <strong>VPC</strong></p>
 <ul>
 <li>Select <strong>Site-to-Site VPN Connection</strong></li>
-<li>Select the created <strong>VPN Connection</strong></li>
+<li>Select <strong>VPN Connection</strong> created</li>
 <li>Select <strong>Download Configuration</strong></li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0001-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>In the <strong>Download Configuration</strong> dialog, select <strong>appliance</strong> that is right for you: In this exercise, we will use <strong>OpenSwan</strong>.</li>
+</li>
 </ol>
+<p><img src="/images/13/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>In the <strong>Download Configuration</strong> dialog, choose <strong>appliance</strong> that is right for you: In this exercise, we will use <strong>OpenSwan</strong>.</p>
 <ul>
 <li><strong>Vendor</strong>: Select <strong>OpenSwan</strong></li>
 <li><strong>Platform</strong>: Select <strong>OpenSwan</strong></li>
@@ -1194,29 +1196,36 @@
 <li><strong>IKE version</strong>: Select <strong>ikev1</strong></li>
 <li>Select <strong>Download</strong>.</li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0002-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Save the image file information to the folder we use to store the key pair and lab tools.</li>
+</li>
 </ol>
+<p><img src="/images/13/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
+<li>
+<p>Save the image file information to the folder we use to store the key pair and tools for the lab.</p>
 <ul>
-<li>Then, based on the provided configuration, you change the appropriate information and configuration for your device.</li>
+<li>Then based on the provided configuration, you change the appropriate information and configuration for your device.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/13/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>Connect ssh to <strong>EC2 Customer Gateway</strong>.</li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0003-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/13/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
 <li>Install <strong>OpenSwan</strong></li>
 </ol>
 <pre tabindex="0"><code>sudo su
 yum install openswan -y
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0004-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/13/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="5">
 <li>Check the configuration file <strong>/etc/ipsec.conf</strong></li>
 </ol>
 <pre tabindex="0"><code>vi /etc/ipsec.conf
 </code></pre><ul>
-<li>Check the configuration as shown below.</li>
+<li>Check the configuration is as shown below.</li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0005-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/13/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ul>
 <li>Press the <strong>ESC</strong> key and the combination <strong>:q!</strong> to exit the <strong>vi</strong> editor.</li>
 </ul>
@@ -1224,29 +1233,30 @@ yum install openswan -y
 <li>Configuration file <strong>/etc/sysctl.conf</strong></li>
 </ol>
 <pre tabindex="0"><code>vi /etc/sysctl.conf
-</code></pre><ul>
+</code></pre><p><img src="/images/13/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ul>
 <li>Move down to the last position in the configuration file. Press the <strong>i</strong> key to proceed with editing the file.</li>
 <li>Add the following configuration at the end of the configuration file.</li>
 </ul>
 <pre tabindex="0"><code>net.ipv4.ip_forward = 1
 net.ipv4.conf.all.accept_redirects = 0
 net.ipv4.conf.all.send_redirects = 0
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0006-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/13/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="7">
 <li>Then to apply this configuration, run the command:</li>
 </ol>
 <pre tabindex="0"><code>sysctl -p
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0007-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/13/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="8">
 <li>Next we will configure the file <strong>/etc/ipsec.d/aws.conf</strong></li>
 </ol>
 <pre tabindex="0"><code>vi /etc/ipsec.d/aws.conf
 </code></pre><ul>
-<li>Press the <strong>i</strong> key to proceed with editing the file.</li>
+<li>Press <strong>i</strong> to proceed to edit the file.</li>
 <li>Add the following configuration to the configuration file. We will create <strong>2 Tunnel</strong> with information taken from the <strong>VPN Connection</strong> configuration file you downloaded and saved in the folder containing the key pair earlier.</li>
 <li>Make sure you edit the IP address and network class accordingly before copying the above configuration.</li>
 <li>For <strong>Amazon Linux</strong>, we will omit the <strong>auth=esp</strong> line in the original configuration file.</li>
-<li>Since we only have <strong>1 public IP address</strong> for <strong>Customer Gateway</strong>, we will need to configure <strong>overlapip=yes</strong>.</li>
+<li>Since we only have <strong>1 public IP addres</strong> for <strong>Customer Gateway</strong>, we will need to configure <strong>overlapip=yes</strong>.</li>
 <li><strong>leftid</strong>: <strong>IP Public Address on the Onprem side</strong>. (Here is <strong>public IP</strong> of <strong>EC2 Customer Gateway in ASG VPN VPC</strong>) .</li>
 <li><strong>right</strong>: <strong>IP Public Address on AWS VPN Tunnel</strong> side.</li>
 <li><strong>leftsubnet</strong>: <strong>CIDR of Local Side Network</strong> (If there are multiple network layers, you can leave it as <strong>0.0.0.0/0</strong>).</li>
@@ -1291,35 +1301,42 @@ conn Tunnel2
 	dpdtimeout=30
 	dpdaction=restart_by_peer
  	overlapip=yes
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0008-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/13/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ul>
 <li>Press the <strong>ESC</strong> key and the combination <strong>:wq!</strong> to save the configuration file.</li>
 </ul>
 <ol start="9">
-<li>Check out the next step in the configuration file we downloaded.</li>
+<li>Check the next step in the configuration file we downloaded.</li>
 </ol>
-<p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/00014-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/13/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="10">
-<li>Create and configure the file <strong>etc/ipsec.d/aws.secrets</strong> Create a new file with the following configuration to set up authentication for the 2 Tunnels.</li>
+<li>
+<p>Create and configure the file <strong>etc/ipsec.d/aws.secrets</strong> Create a new file with the following configuration to set up authentication for the 2 Tunnels.</p>
+<ul>
+<li>Run the command <strong>touch /etc/ipsec.d/aws.secrets</strong> to create the file.</li>
+</ul>
+</li>
 </ol>
-<p>Run the command <strong>touch /etc/ipsec.d/aws.secrets</strong> to create the file.</p>
 <pre tabindex="0"><code>touch /etc/ipsec.d/aws.secrets
-</code></pre><p>Run the command <strong>vi /etc/ipsec.d/aws.secrets</strong></p>
+</code></pre><p><img src="/images/13/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<pre><code>- Run the command **vi /etc/ipsec.d/aws.secrets**
+</code></pre>
 <pre tabindex="0"><code>vi /etc/ipsec.d/aws.secrets
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/0009-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="11">
-<li>Press the <strong>i</strong> key to edit the file.</li>
-</ol>
+</code></pre><ol start="11">
+<li>
+<p>Press the <strong>i</strong> key to edit the file.</p>
 <ul>
 <li>Add the following configuration to the end of the configuration file (this configuration is in step 5 of <strong>IPSEC Tunnel #1</strong> and <strong>IPSEC Tunnel #2</strong>)</li>
 </ul>
+</li>
+</ol>
 <pre tabindex="0"><code>13,229,235.99 52,220,214,148: PSK &#34;zkq_xvwpA5HNictmh6x6tVCKozVHxcpA&#34;
 13,229,235.99 54,179,66,207: PSK &#34;c0WdOkBj4gtJ2jaGrmeA2bZ_4ZaN50o3&#34;
-</code></pre><ul>
-<li>Press the <strong>ESC</strong> key and the combination <strong>:wq!</strong> to save the configuration file.</li>
-<li>Run the command <strong>cat /etc/ipsec.d/aws.secrets</strong> to check the content of the configuration file</li>
-</ul>
-<p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/00010-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/13/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<pre><code>- Press the **ESC** key and the combination **:wq!** to save the configuration file.
+- Run the command **cat /etc/ipsec.d/aws.secrets** to check the content of the configuration file
+</code></pre>
+<p><img src="/images/13/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="12">
 <li>Restart <strong>Network service &amp; IPSEC service</strong></li>
 </ol>
@@ -1327,22 +1344,25 @@ conn Tunnel2
 chkconfig ipsec on
 service ipsec start
 service ipsec status
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/00011-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/13/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ul>
 <li>If the status tunnel is still not running correctly, after checking and updating the configuration you will need to run the command to <strong>restart</strong> <strong>service network and IPsec</strong> :</li>
 </ul>
 <pre tabindex="0"><code>sudo service network restart
 sudo service ipsec restart
-</code></pre><ol start="13">
-<li>After completing the configuration. Try to ping from the <strong>Customer Gateway</strong> server-side to the <strong>EC2 Private</strong> server. If the VPN configuration is successful, you will get the following results.</li>
+</code></pre><p><img src="/images/13/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>After completing the configuration.Try to ping from the <strong>Customer Gateway</strong> server side to the <strong>EC2 Private</strong> server. If the VPN configuration is successful you will get the result as below.</li>
 </ol>
-<pre tabindex="0"><code>ping 10.10.4.105 -c5
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/00012-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<pre tabindex="0"><code>ping &lt;EC2 Private IP&gt; -c5
+</code></pre><p><img src="/images/13/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/13/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="14">
-<li>After completing the configuration.Try to ping from the <strong>EC2 Private</strong> server-side to the <strong>Customer Gateway</strong> server. If the VPN configuration is successful, you will get the following results.</li>
+<li>After completing the configuration.Try to ping from the <strong>EC2 Private</strong> server side to the <strong>Customer Gateway</strong> server. If the VPN configuration is successful you will get the result as below.</li>
 </ol>
-<pre tabindex="0"><code>ping 10.11.1.205 -c5
-</code></pre><p><img src="/images/6-VPNSitetoSite/6.4-vpnconfigure/00013-vpnconfigure.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<pre tabindex="0"><code>ping &lt;Customer gateway instance IP&gt; -c5
+</code></pre><p><img src="/images/13/00019.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/13/00020.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1909,19 +1929,19 @@ sudo service ipsec restart
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Create NAT Gateway :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1171,116 +1171,138 @@
 	<h4 id="create-nat-gateway">Create NAT Gateway</h4>
 <h4 id="generate-an-elastic-ip-address">Generate an Elastic IP address</h4>
 <ol>
-<li>Access <strong>EC2</strong></li>
-</ol>
+<li>
+<p>Access <strong>EC2</strong></p>
 <ul>
 <li>Select <strong>Elastic IPs</strong></li>
 <li>Select <strong>Allocate Elastic IP address</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0001-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="2">
-<li>In the <strong>Allocate Elastic IP address</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/8/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>In the <strong>Allocate Elastic IP address</strong> interface</p>
 <ul>
-<li><strong>Public IPv4 address pool</strong>: select <strong>Amazon&rsquo;s pool of IPv4 addresses</strong></li>
+<li><strong>Public IPv4 address pool</strong>, select <strong>Amazon&rsquo;s pool of IPv4 addresses</strong></li>
 <li>Select <strong>Allocate</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0002-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
-<li>We have successfully created a <strong>Public IP Address</strong>: <strong>13.213.151.199</strong></li>
+<li>We have successfully created a <strong>Public IP Address</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0003-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
-<li>Access to <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Access to <strong>VPC</strong></p>
 <ul>
 <li>Select <strong>NAT Gateways</strong></li>
-<li>Select <strong>Create NAT gateway</strong></li>
+<li><strong>Create NAT gateway</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0004-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="5">
-<li>In <strong>NAT gateway</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/8/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>
+<p>In <strong>NAT gateway</strong> interface</p>
 <ul>
-<li><strong>Name</strong>: enter <code>NAT gateway</code></li>
-<li><strong>Subnet</strong>: select <strong>Public subnet 2</strong></li>
-<li><strong>Connectivity type</strong>: select <strong>Public</strong></li>
-<li><strong>Elastic IP allocation ID</strong>: select <strong>Elastic IP</strong> just created.</li>
+<li><strong>Name</strong>, enter <strong><code>NAT gateway</code></strong></li>
+<li><strong>Subnet</strong>, select <strong>Public subnet 2</strong></li>
+<li><strong>Connectivity type</strong>, select <strong>Public</strong></li>
+<li><strong>Elastic IP allocation ID</strong>, select <strong>Elastic IP</strong> just created.</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0005-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
 <li>Select <strong>Create NAT gateway</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0006-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="7">
 <li>Successfully created <strong>NAT gateway</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0007-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <h4 id="create-route-table---private-and-assign-to-private-subnets">Create Route table - Private and assign to private subnets.</h4>
 <ol start="8">
-<li>In the <strong>VPC</strong> interface</li>
-</ol>
+<li>
+<p>In the <strong>VPC</strong> interface</p>
 <ul>
 <li>Select <strong>Route Tables</strong></li>
 <li>Select <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0008-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="9">
-<li>In the <strong>Route table</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/8/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="9">
+<li>
+<p>In the <strong>Route table</strong> interface</p>
 <ul>
 <li><strong>Name</strong>, enter <strong><code>Route table - Private</code></strong></li>
 <li><strong>VPC</strong>, select <strong>ASG</strong> vpc</li>
-<li>Select <strong>Cretae route table</strong></li>
+<li>Select <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0009-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/8/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="10">
 <li>Finish creating <strong>Route table - Private</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00010-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="11">
-<li>In the <strong>Route table - Private</strong> interface</li>
-</ol>
+<li>
+<p>In the <strong>Route table - Private</strong> interface</p>
 <ul>
-<li>Select <strong>Subnet Associations</strong> tab</li>
+<li>Select <strong>Subnet Associations</strong></li>
 <li>Select <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00011-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="12">
-<li>In the <strong>Edit subnet associations</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/8/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="12">
+<li>
+<p>In the <strong>Edit subnet associations</strong> interface</p>
 <ul>
-<li>Choose <strong>Private subnet 1</strong> and <strong>Private subnet 2</strong></li>
+<li>Choose 2 private subnets</li>
 <li>Select <strong>Save associations</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00012-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="13">
-<li>In the <strong>Route table - Private</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/8/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>
+<p>In the <strong>Route table - Private</strong> interface</p>
 <ul>
-<li>Select <strong>Routes</strong> tab</li>
+<li>Select <strong>Routes</strong></li>
 <li>Select <strong>Edit routes</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00013-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="14">
-<li>In the <strong>Edit routes</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/8/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="14">
+<li>
+<p>In the <strong>Edit routes</strong> interface</p>
 <ul>
 <li>Select <strong>Add route</strong></li>
 <li>Select <strong>Destination</strong>: <strong>0.0.0.0/0</strong></li>
 <li><strong>Target</strong>: <strong>NAT Gateway</strong></li>
 <li>Select <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00014-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/8/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="15">
 <li>Double check <strong>Routes</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00015-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="16">
 <li>Test ping amazon.com successfully from EC2 Private.</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00018-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/8/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1843,19 +1865,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762455"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762455"></script>
-    <script src="/js/jquery.sticky.js?1672762455"></script>
-    <script src="/js/featherlight.min.js?1672762455"></script>
-    <script src="/js/highlight.pack.js?1672762455"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762455"></script>
-    <script src="/js/learn.js?1672762455"></script>
-    <script src="/js/hugo-learn.js?1672762455"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762455" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762455"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

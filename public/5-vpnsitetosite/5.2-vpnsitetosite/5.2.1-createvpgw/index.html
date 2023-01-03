@@ -12,21 +12,21 @@
     <title>Create Virtual Private Gateway :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1176,42 +1176,50 @@
 
 	<h4 id="create-virtual-private-gateway">Create Virtual Private Gateway</h4>
 <ol>
-<li>Access to <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Access to <strong>VPC</strong></p>
 <ul>
-<li>Select <strong>Virtua private gateways</strong></li>
-<li>Select <strong>Create virtual private gateway</strong></li>
+<li>Select <strong>Virtual Private Gateway</strong></li>
+<li>Select <strong>Create Virtual Private Gateway</strong></li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.1-vpgw/0001-vpgw.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>In the <strong>Create Virtual Private Gateway</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/11/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>In the <strong>Create Virtual Private Gateway</strong> interface</p>
 <ul>
-<li><strong>Name tag</strong>: enter <code>VPN Gateway</code></li>
+<li><strong>Name tag</strong>, enter <strong><code>VPN Gateway</code></strong></li>
 <li>Select <strong>Amazon default ASN</strong></li>
 <li>Select <strong>Create virtual private gateway</strong></li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.1-vpgw/0002-vpgw.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>We need to implement <strong>Attach to VPC</strong></li>
+</li>
 </ol>
+<p><img src="/images/11/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
+<li>
+<p>We need to implement <strong>Attach to VPC</strong></p>
 <ul>
 <li>Select <strong>Actions</strong></li>
 <li>Select <strong>Attach to VPC</strong></li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.1-vpgw/0003-vpgw.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>In the <strong>Attach to VPC</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/11/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="4">
+<li>
+<p>In the <strong>Attach to VPC</strong> interface</p>
 <ul>
 <li>Select <strong>VPC ASG.</strong></li>
 <li>Select <strong>Attach to VPC</strong></li>
 </ul>
-<p><img src="/images/6-VPNSitetoSite/6.1-vpgw/0004-vpgw.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>The creation is complete when <strong>State</strong> is <strong>Attached</strong>.</li>
+</li>
 </ol>
-<p><img src="/images/6-VPNSitetoSite/6.1-vpgw/0005-vpgw.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/11/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>Finish and see <strong>State</strong> as <strong>Attached</strong></li>
+</ol>
+<p><img src="/images/11/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1775,19 +1783,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

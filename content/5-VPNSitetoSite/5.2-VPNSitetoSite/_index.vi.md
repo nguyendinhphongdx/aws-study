@@ -8,7 +8,7 @@ pre : " <b> 5.2 </b> "
 
 #### Cấu hình kết nối VPN
 
-Ở bước này chúng ta sẽ tiến hành tạo Virtual Private Gateway, Customer Gateway và kết nối Site to Site VPN.
+Ở bước này chúng ta sẽ tiến hành tạo Virtual Private Gateway , Customer Gateway và kết nối VPN Site to Site.
 
 ![VPN](/images/6-VPNSitetoSite/vpnconfigure.png?featherlight=false&width=90pc)
 
@@ -18,3 +18,4 @@ pre : " <b> 5.2 </b> "
 2. [Tạo Customer Gateway](5.2.2-createcustomergw/)
 3. [Tạo VPN Connection](5.2.3-createvpnconnection/)
 4. [Cấu hình Customer GW](5.2.4-configurecustomergw/)
+5. [Cấu hình VPN tunnel](5.2.5-modifyvpn/)

@@ -12,21 +12,21 @@
     <title>Test Connection :: Work with Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762455" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762455" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762455" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762455" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762455" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762455" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762455" rel="stylesheet">
-    <link href="/css/theme.css?1672762455" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762455" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764278" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764278" rel="stylesheet">
+    <link href="/css/theme.css?1672764278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764278" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762455" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764278" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762455"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762455"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762455"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764278"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762455"></script>
+<script type="text/javascript" src="/js/search.js?1672764278"></script>
 
     
   </div>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/3-prerequiste/" title="Preparatory steps" class="dd-item 
+    <li data-nav-id="/3-prerequiste/" title="Preparatoration steps" class="dd-item 
         
         
         
         ">
       <a href="/3-prerequiste/">
-           <b> 3. </b> Preparatory steps
+           <b> 3. </b> Preparatoration steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1168,9 +1168,7 @@
 
 
 
-	<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<h4 id="checking-connection">Checking connection</h4>
+	<h4 id="checking-connection">Checking connection</h4>
 
 <div class="notices note" ><p>There are many ways to connect to EC2, you can refer to <a href="https://000004.awsstudygroup.com/en/4-launchlinuxinstance/4.2-connectlinuxinstance/">connect EC2 with <strong>PuTTY</strong></a>. In the lab, we use <a href="https://mobaxterm.mobatek.net/">MobaXterm</a> to connect EC2</p>
 </div>
@@ -1180,134 +1178,160 @@
 </ol>
 <p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="2">
-<li>Go to <strong>EC2</strong> page</li>
-</ol>
+<li>
+<p>Go to the <strong>EC2</strong> page</p>
 <ul>
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>EC2 Public</strong></li>
 <li>Select <strong>Details</strong></li>
 <li>View <strong>Public IPv4 address</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0001-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>After downloading <strong>MobaXterm</strong>, extract and open</li>
+</li>
 </ol>
+<p><img src="/images/7/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="3">
+<li>
+<p>After downloading <strong>MobaXterm</strong>, extract and open</p>
 <ul>
 <li>Select <strong>Session</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0002-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>In the <strong>Session settings</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="4">
+<li>
+<p>In the <strong>Session settings</strong> interface</p>
 <ul>
 <li>Select <strong>SSH</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0003-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>In the <strong>Session settings</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>
+<p>In the <strong>Session settings</strong> interface</p>
 <ul>
 <li><strong>Remote host</strong>, enter <strong><code>Public IPv4 address</code></strong></li>
 <li><strong>Specify username</strong>, enter <strong><code>ec2-user</code></strong></li>
-<li><strong>Use private key</strong>, choose the path of <strong>aws-keypair.pem</strong> created and download it at EC2 creation.</li>
+<li><strong>Use private key</strong>, choose the path of <strong>aws-keypair.pem</strong> created and download at EC2 creation.</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0004-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
+<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
 <li>Connection successful.</li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0005-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/7/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="7">
 <li>Check the connection to the internet of EC2 Public, we execute the command:</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0006-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<h4 id="connect-to-ec2-private-server-and-check-internet-connection">Connect to EC2 Private server and check internet connection.</h4>
+</code></pre><p><img src="/images/7/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="8">
-<li>Access to <strong>EC2</strong></li>
+<li>Make a ping to <strong>EC2 private</strong></li>
 </ol>
+<pre tabindex="0"><code>ping &lt;IP Private EC2 Private&gt;
+</code></pre><p><img src="/images/7/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<h4 id="connect-to-the-ec2-private-server-and-check-the-internet-connection">Connect to the EC2 Private server and check the internet connection.</h4>
+<ol start="9">
+<li>
+<p>Access to <strong>EC2</strong></p>
 <ul>
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>EC2 Private</strong></li>
 <li>Select <strong>Details</strong></li>
 <li>Select <strong>Private IPv4 addresses</strong></li>
+<li>Then connect SSH to <strong>EC2 Public</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0007-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
+</li>
+</ol>
+<p><img src="/images/7/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="10">
 <li>Do a ping <strong>&lt;EC2 Private&rsquo;s private IP address&gt;</strong> to test the connection from the <strong>EC2 Public</strong> server to the <strong>EC2 Private</strong> server. We test the connection between two EC2 instances with the command:</li>
 </ol>
 <pre tabindex="0"><code>ping 10.10.4.105 -c5
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0008-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
-<li><strong>EC2 Private</strong> will not have a <strong>public IP address</strong> because we are not assigning this server a public IP. To be able to ssh into <strong>EC2 Private</strong>, we will make an ssh connection from EC2 Public through EC2 Private <strong>private IP address</strong></li>
-</ol>
+</code></pre><p><img src="/images/7/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="11">
+<li>
+<p><strong>EC2 Private</strong> will not have a <strong>public IP address</strong> because we are not assigning this server a public IP. To be able to ssh into <strong>EC2 Private</strong>, we will make an ssh connection from EC2 Public through EC2 Private <strong>private IP address</strong></p>
 <ul>
-<li>Download the <strong>pscp</strong> tool to the same folder containing the <strong>aws-keypair.ppk</strong> file to copy the <strong>aws-keypair.pem</strong> file from our machine to <strong>EC2 Public</strong>.</li>
+<li>Download the <strong>pscp</strong> tool to the same folder containing the <strong>aws-keypair.ppk</strong> file to copy the <strong>aws-keypair.pem</strong> file from our computer to <strong>EC2 Public</strong> .</li>
 </ul>
+</li>
+</ol>
 
-<div class="notices info" ><p>You download <a href="https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe">a RSA and DSA key generation utility</a> as <strong>puttygen.exe</strong></p>
+<div class="notices info" ><p>You download <a href="https://the.earth.li/~sgtatham/putty/latest/w64/puttygen.exe">an RSA and DSA key generation utility</a> as <strong>puttygen.exe</strong></p>
 </div>
 
 
 <div class="notices info" ><p>You download <a href="https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe">an SCP client, i.e. command-line secure file copy</a> is <strong>pscp.exe</strong></p>
 </div>
 
-<ol start="11">
-<li>We use <strong>puttygen.exe</strong> to generate key</li>
-</ol>
+<ol start="12">
+<li>
+<p>We use <strong>puttygen.exe</strong> to generate key</p>
 <ul>
 <li>Select <strong>Load</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="12">
-<li>Select <strong>aws-keypair.pem</strong></li>
+</li>
 </ol>
+<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0009-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>
+<p>Select <strong>aws-keypair.pem</strong></p>
 <ul>
 <li>Select <strong>OK</strong></li>
 <li>Select <strong>Save private key</strong> with the name <strong>aws-keypair.ppk</strong></li>
 </ul>
+</li>
+</ol>
 <p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00010-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="13">
+<ol start="14">
 <li>Complete the generation key</li>
 </ol>
 <p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00011-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="14">
-<li>Launch <strong>Command Prompt</strong>. Change the path to the folder you just downloaded <strong>pscp</strong>. Run the command below to upload the <strong>aws-keypair.pem</strong> file to the <strong>/home/ec2-user/</strong> directory of the EC2 Public server.</li>
-</ol>
+<ol start="15">
+<li>
+<p>Launch <strong>Command Prompt</strong>. Change the path to the folder you just downloaded <strong>pscp</strong>. Run the command below to upload the <strong>aws-keypair.pem</strong> file to the <strong>/home/ec2-user/</strong> directory of the EC2 Public server.</p>
 <ul>
-<li>You will need to replace the <strong>public IP address of the EC2 Public</strong> parameter before running the command.</li>
+<li>You will need to replace the <strong>public IP address of EC2 Public</strong> parameter before running the command.</li>
 </ul>
+</li>
+</ol>
 <pre tabindex="0"><code>pscp -i aws-keypair.ppk aws-keypair.pem ec2-user@&lt;EC2 PUBLIC public IP address&gt;:/home/ec2-user/
 </code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00012-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="15">
-<li>Access to <strong>EC2</strong></li>
-</ol>
+<ol start="16">
+<li>
+<p>Access to <strong>EC2</strong></p>
 <ul>
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>EC2 Public</strong></li>
 <li>Select <strong>Details</strong></li>
 <li>View <strong>Public IPv4 address</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.2-ec2connect/0001-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="16">
-<li>Return to the EC2 connection interface. To make sure you copy the <strong>aws-keypair.pem</strong> file to the <strong>EC2 Public</strong> server, we execute the command</li>
+</li>
+</ol>
+<p><img src="/images/7/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="17">
+<li>Return to the EC2 connection interface. Make sure you copy the <strong>aws-keypair.pem</strong> file to the <strong>EC2 Public</strong> server, we execute the command</li>
 </ol>
 <pre tabindex="0"><code>ls
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00014-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="17">
-<li>Update the permissions for the <strong>aws-keypair.pem</strong> file by running the <strong>chmod 400 aws-keypair.pem</strong> command. AWS requires a key pair file that needs to be restricted before it can be used to connect to the EC2 server.</li>
+</code></pre><p><img src="/images/7/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="18">
+<li>Update the permissions for the <strong>aws-keypair.pem</strong> file by running the <strong>chmod 400 aws-keypair.pem</strong> command. AWS requires the key pair file to be restricted before it can be used to connect to the EC2 server.</li>
 </ol>
 <pre tabindex="0"><code>chmod 400 aws-keypair.pem
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00015-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="18">
+</code></pre><p><img src="/images/7/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="19">
 <li><strong>SSH</strong> to <strong>EC2 Private</strong> server</li>
 </ol>
 <pre tabindex="0"><code>ssh -i aws-keypair.pem ec2-user@&lt;EC2 Private server&#39;s private IP address&gt;
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00016-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="19">
-<li>Perform <strong>ping test to amazon.com</strong>. As you can see, we are not able to connect <strong>internet from EC2 Private</strong>. In the next step, we will create <strong>NAT Gateway</strong> to allow the <strong>EC2 Private</strong> server to connect to the internet in the outbound direction. Keep the connection to <strong>EC2 Private</strong> so we can check the connection to <strong>internet</strong> after completing the creation and configuration of <strong>NAT Gateway</strong>.</li>
+</code></pre><p><img src="/images/7/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="20">
+<li>Perform <strong>ping test to amazon.com</strong>. As you can see, we cannot connect <strong>internet from EC2 Private</strong>. In the next step, we will create <strong>NAT Gateway</strong> to allow the <strong>EC2 Private</strong> server to connect to the internet in the outbound direction. Keep the connection to <strong>EC2 Private</strong> so that we can check the connection to <strong>internet</strong> after finishing creating and configuring <strong>NAT Gateway</strong>.</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00017-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/7/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1870,19 +1894,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764278"></script>
+    <script src="/js/jquery.sticky.js?1672764278"></script>
+    <script src="/js/featherlight.min.js?1672764278"></script>
+    <script src="/js/highlight.pack.js?1672764278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764278"></script>
+    <script src="/js/learn.js?1672764278"></script>
+    <script src="/js/hugo-learn.js?1672764278"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

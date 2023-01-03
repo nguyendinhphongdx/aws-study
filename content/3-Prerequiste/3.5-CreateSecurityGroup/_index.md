@@ -6,85 +6,86 @@ chapter : false
 pre : " <b> 3.5 </b> "
 ---
 
-### Create Security Group
+#### Create Security Group
 
-#### Create a Security Group for servers located in the Public subnet
+#### Create Security Group for servers located in Public subnet
 
 1. In the **VPC** interface
 
-- Select **Security groups**
-- Select **Create security group**
+   - Select **Security Group**
+   - Select **Cretae security group**
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0001-securitygroup.png?featherlight=false&width=90pc)
+![Create VPC](/images/5/0001.png?featherlight=false&width=90pc)
 
 
 2. Configure **Security group**
 
-- Basic details:
-	- **Security Group name**: enter `Public subnet - SG`
-	- **Description**: enter `Allow SSH and Ping for servers in private subnet`.
-	- **VPC**: select **ASG** VPC.
+   - **Security Group name**, enter **```Public subnet - SG```**
+   - **Description**, enter **Allow SSH and Ping for servers in private subnet.**
+   - Select **ASG** VPC
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0002-securitygroup.png?featherlight=false&width=90pc)
+![Create VPC](/images/5/0002.png?featherlight=false&width=90pc)
 
-- Configure **Inbound rules**: click **Add rule**.
+3. Configure **Inbound rules**
 
-	- **Type**: select **SSH**  
-	- **Source type**: select **My IP**. **My IP** represents a public IPv4 address you are using (will change when you change network)
-- Again, click **Add rule** to add a new Inbound rule.
-	
-	-  **Type**: select **All ICMP - IPv4**
-	- **Source type**: select **Anywhere-IPv4**. Allow ping from any IP address.
+   - In **Inbound rules**, click **Add rule**.
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0003-securitygroup.png?featherlight=false&width=90pc)
+   - Select **Type**: **SSH** and **Source**: **My IP**. **My IP** represents 1 public IPv4 address you are using (will change when you change network)
 
-- Check **Outbound rules** 
-- Select **Create security group**
+   - Select **Add rule** to add a new rule.
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0004-securitygroup.png?featherlight=false&width=90pc)
+   - Select **Type**: **All ICMP - IPv4** and **Source**: **Anywhere**. Allow ping from any IP address.
 
-3. Complete the creation of a security group for the server located in the Public subnet.
+![Create VPC](/images/5/0003.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0005-securitygroup.png?featherlight=false&width=90pc)
+4. Check **Outbound rules** and select **Cretae security group**
 
-#### Create a Security Group for servers located in Private subnet
+![Create VPC](/images/5/0004.png?featherlight=false&width=90pc)
 
-4. In the **VPC** interface
+5. Complete the creation of security group for the server located in the Public subnet
 
-- Select **Security groups**
-- Select **Create security group**
+![Create VPC](/images/5/0005.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0006-securitygroup.png?featherlight=false&width=90pc)
+#### Create a Security Group for a server located in a Private subnet
 
-5. Configure **Security group**
+6. In the **VPC** interface
 
-- **Basic details**:
-	- In the **Security group name** field: enter `Private subnet - SG`
-	
-	- In the **Description** field: enter `Allow SSH and Ping for servers in private subnet`.
-	
-	- **VPC**: select **VPC** named **ASG**.
+   - Select **Security Groups**
+   - Select **Create security group**
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0007-securitygroup.png?featherlight=false&width=90pc)
+![Create VPC](/images/5/0006.png?featherlight=false&width=90pc)
 
-- Configure **Inbound rules**: select Add rule.
-	- **Type**: select **SSH** 
-	- **Source type**: **Custom**. 
-	- **Source**: check the search box and select **Public subnet SG**. This option allows all servers assigned **Public subnet SG** to be **SSH** to the servers assigned to **Private subnet SG**.
+7. Configure **Security group**
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0008-securitygroup.png?featherlight=false&width=90pc)
+   - In the **Security group name** field enter **Private subnet - SG**
 
-- Again, select **Add rule** to add a new Inbound rule.
-	-  **Type**: select **All ICMP IPv4** 
-	- **Source type**: select **Anywhere-IPv4**. Allow ping from any IP address.
-- Select **Create security group**
+   - In the **Description** section enter **Allow SSH and Ping for servers in private subnet.**
 
-![Create VPC](/images/3-Prerequiste/3.3-securitygroup/0009-securitygroup.png?featherlight=false&width=90pc)
+   - select **VPC**, select **VPC** named **ASG**.
 
-6. So we have created two **Security Group** for servers located in **public subnet and private subnet.**
+![Create VPC](/images/5/0007.png?featherlight=false&width=90pc)
+
+8. Configure **Inbound rules**
+
+   - In Inbound rules, select Add rule.
+
+   - Select **Type**: **SSH** and leave **Source**: **Custom**. Check the search box and select **Public subnet SG**. This option allows all servers assigned **Public subnet SG** to be **SSH** to the servers assigned to **Private subnet SG**. **.
+
+![Create VPC](/images/5/0008.png?featherlight=false&width=90pc)
+
+9. Select **Add rule** to add a new rule.
+
+   - Select **Type**: **All ICMP IPv4** and **Source**: **Anywhere**. Allow ping from any IP address.
+   -
+![Create VPC](/images/5/0009.png?featherlight=false&width=90pc)
+
+10. Select **Create security group**
 
 
-	![Create VPC](/images/3-Prerequiste/3.3-securitygroup/00010-securitygroup.png?featherlight=false&width=90pc)
+![Create VPC](/images/5/00010.png?featherlight=false&width=90pc)
 
-	
-	Next, we will proceed to create two EC2 servers.
+11. So we have created **2 Security Group** for servers located in **public subnet and private subnet.**
+
+   - Next we will proceed to create 2 EC2 servers.
+
+![Create VPC](/images/5/00011.png?featherlight=false&width=90pc)

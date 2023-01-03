@@ -1,12 +1,12 @@
 ---
-title : "Preparatory steps"
+title : "Preparatoration steps"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
 pre : " <b> 3. </b> "
 ---
 
-#### Preparatory steps
+#### Preparation steps
 
 In this exercise, we will build a model according to the diagram below:
 

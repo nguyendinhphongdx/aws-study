@@ -12,21 +12,21 @@
     <title>Tạo NAT Gateway :: Làm việc với Amazon VPC</title>
 
     
-    <link href="/css/nucleus.css?1672762456" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1672762456" rel="stylesheet">
-    <link href="/css/hybrid.css?1672762456" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1672762456" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1672762456" rel="stylesheet">
-    <link href="/css/auto-complete.css?1672762456" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1672762456" rel="stylesheet">
-    <link href="/css/theme.css?1672762456" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1672762456" rel="stylesheet">
+    <link href="/css/nucleus.css?1672764279" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672764279" rel="stylesheet">
+    <link href="/css/hybrid.css?1672764279" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672764279" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672764279" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672764279" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672764279" rel="stylesheet">
+    <link href="/css/theme.css?1672764279" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672764279" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1672762456" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672764279" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1672762456"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672764279"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1672762456"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1672762456"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672764279"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672764279"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1672762456"></script>
+<script type="text/javascript" src="/js/search.js?1672764279"></script>
 
     
   </div>
@@ -1073,7 +1073,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>03-01-2023</font></i>
+        <i><font color=orange>01-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -1171,116 +1171,138 @@
 	<h4 id="tạo-nat-gateway">Tạo NAT Gateway</h4>
 <h4 id="tạo-một-địa-chỉ-elastic-ip">Tạo một địa chỉ Elastic IP</h4>
 <ol>
-<li>Truy cập <strong>EC2</strong></li>
-</ol>
+<li>
+<p>Truy cập <strong>EC2</strong></p>
 <ul>
 <li>Chọn <strong>Elastic IPs</strong></li>
 <li>Chọn <strong>Allocate Elastic IP address</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0001-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="2">
-<li>Trong giao diện <strong>Allocate Elastic IP address</strong></li>
+</li>
 </ol>
+<p><img src="/images/8/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="2">
+<li>
+<p>Trong giao diện <strong>Allocate Elastic IP address</strong></p>
 <ul>
-<li><strong>Public IPv4 address pool</strong>: chọn <strong>Amazon&rsquo;s pool of IPv4 addresses</strong></li>
+<li><strong>Public IPv4 address pool</strong>, chọn <strong>Amazon&rsquo;s pool of IPv4 addresses</strong></li>
 <li>Chọn <strong>Allocate</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0002-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="3">
-<li>Chúng ta vừa tạo thành công một địa chỉ <strong>Public IP Address</strong>: <strong>13.213.151.199</strong></li>
+<li>Chúng ta vừa tạo thành công một địa chỉ <strong>Public IP Address</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0003-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="4">
-<li>Truy cập vào <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Truy cập vào <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>NAT Gateways</strong></li>
-<li>Chọn <strong>Create NAT gateway</strong></li>
+<li><strong>Create NAT gateway</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0004-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="5">
-<li>Trong giao diện <strong>NAT gateway</strong></li>
+</li>
 </ol>
+<p><img src="/images/8/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="5">
+<li>
+<p>Trong giao diện <strong>NAT gateway</strong></p>
 <ul>
-<li><strong>Name</strong>: nhập <code>NAT gateway</code></li>
-<li><strong>Subnet</strong>: chọn <strong>Public subnet 2</strong></li>
-<li><strong>Connectivity type</strong>: chọn <strong>Public</strong></li>
-<li><strong>Elastic IP allocation ID</strong>: chọn <strong>Elastic IP</strong> vừa tạo.</li>
+<li><strong>Name</strong>, nhập <strong><code>NAT gateway</code></strong></li>
+<li><strong>Subnet</strong>, chọn <strong>Public subnet 2</strong></li>
+<li><strong>Connectivity type</strong>, chọn <strong>Public</strong></li>
+<li><strong>Elastic IP allocation ID</strong>, chọn <strong>Elastic IP</strong> vừa tạo.</li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0005-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="6">
 <li>Chọn <strong>Create NAT gateway</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0006-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="7">
-<li>Bạn đã tạo thành công <strong>NAT gateway</strong></li>
+<li>Thành công tạo <strong>NAT gateway</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0007-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<h4 id="tạo-route-table---private-và-gán-vào-các-private-subnet">Tạo Route table - Private và gán vào các private subnet.</h4>
+<p><img src="/images/8/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<h4 id="tạo-route-table---private-và-gáng-vào-các-private-subnet">Tạo Route table - Private và gáng vào các private subnet.</h4>
 <ol start="8">
-<li>Trong giao diện <strong>VPC</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>VPC</strong></p>
 <ul>
 <li>Chọn <strong>Route Tables</strong></li>
 <li>Chọn <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0008-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="9">
-<li>Trong giao diện <strong>Route table</strong></li>
+</li>
 </ol>
+<p><img src="/images/8/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="9">
+<li>
+<p>Trong giao diện <strong>Route table</strong></p>
 <ul>
-<li><strong>Name</strong>: nhập <code>Route table - Private</code></li>
-<li><strong>VPC</strong>: chọn <strong>ASG</strong> vpc</li>
-<li>Chọn <strong>Create route table</strong></li>
+<li><strong>Name</strong>, nhập <strong><code>Route table - Private</code></strong></li>
+<li><strong>VPC</strong>, chọn <strong>ASG</strong> vpc</li>
+<li>Chọn <strong>Cretae route table</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/0009-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/8/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="10">
 <li>Hoàn thành tạo <strong>Route table - Private</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00010-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="11">
-<li>Trong giao diện <strong>Route table - Private</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>Route table - Private</strong></p>
 <ul>
-<li>Chọn tab <strong>Subnet Associations</strong></li>
+<li>Chọn <strong>Subnet Associations</strong></li>
 <li>Chọn <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00011-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="12">
-<li>Trong giao diện <strong>Edit subnet associations</strong></li>
+</li>
 </ol>
+<p><img src="/images/8/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="12">
+<li>
+<p>Trong giao diện <strong>Edit subnet associations</strong></p>
 <ul>
-<li>Chọn <strong>Private subnet 1</strong> và <strong>Private subnet 2</strong></li>
+<li>Chọn 2 private subnet</li>
 <li>Chọn <strong>Save associations</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00012-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="13">
-<li>Trong giao diện <strong>Route table - Private</strong></li>
+</li>
 </ol>
+<p><img src="/images/8/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="13">
+<li>
+<p>Trong giao diện <strong>Route table - Private</strong></p>
 <ul>
-<li>Chọn tab <strong>Routes</strong></li>
+<li>Chọn <strong>Routes</strong></li>
 <li>Chọn <strong>Edit routes</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00013-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
-<ol start="14">
-<li>Trong giao diện <strong>Edit routes</strong></li>
+</li>
 </ol>
+<p><img src="/images/8/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<ol start="14">
+<li>
+<p>Trong giao diện <strong>Edit routes</strong></p>
 <ul>
 <li>Chọn <strong>Add route</strong></li>
 <li>Chọn <strong>Destination</strong>: <strong>0.0.0.0/0</strong></li>
 <li><strong>Target</strong>: <strong>NAT Gateway</strong></li>
 <li>Chọn <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00014-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+</li>
+</ol>
+<p><img src="/images/8/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img src="/images/8/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="15">
 <li>Kiểm tra lại <strong>Routes</strong></li>
 </ol>
-<p><img src="/images/4-CreateEc2Server/4.3-natgateway/00015-natgaw.png?featherlight=false&amp;width=90pc" alt="Create NAT Gateway"></p>
+<p><img src="/images/8/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ol start="16">
 <li>Kiểm tra ping amazon.com thành công từ EC2 Private.</li>
 </ol>
 <pre tabindex="0"><code>ping amazon.com -c5
-</code></pre><p><img src="/images/4-CreateEc2Server/4.2-ec2connect/00018-ec2connect.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img src="/images/8/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1843,19 +1865,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.min.js?1672762456"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1672762456"></script>
-    <script src="/js/jquery.sticky.js?1672762456"></script>
-    <script src="/js/featherlight.min.js?1672762456"></script>
-    <script src="/js/highlight.pack.js?1672762456"></script>
+    <script src="/js/clipboard.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672764279"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672764279"></script>
+    <script src="/js/jquery.sticky.js?1672764279"></script>
+    <script src="/js/featherlight.min.js?1672764279"></script>
+    <script src="/js/highlight.pack.js?1672764279"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1672762456"></script>
-    <script src="/js/learn.js?1672762456"></script>
-    <script src="/js/hugo-learn.js?1672762456"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672764279"></script>
+    <script src="/js/learn.js?1672764279"></script>
+    <script src="/js/hugo-learn.js?1672764279"></script>
 
-    <link href="/mermaid/mermaid.css?1672762456" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1672762456"></script>
+    <link href="/mermaid/mermaid.css?1672764279" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672764279"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
