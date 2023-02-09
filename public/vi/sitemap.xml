@@ -266,6 +266,18 @@
                 href="/vi/4-createec2server/4.3-natgateway/"
                 />
   </url><url>
+    <loc>/vi/2-firewallinvpc/2.3-vpc-resource-map/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-firewallinvpc/2.3-vpc-resource-map/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-firewallinvpc/2.3-vpc-resource-map/"
+                />
+  </url><url>
     <loc>/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/</loc>
     <xhtml:link
                 rel="alternate"

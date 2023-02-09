@@ -266,6 +266,18 @@
                 href="/3-prerequiste/"
                 />
   </url><url>
+    <loc>/2-firewallinvpc/2.3-vpc-resource-map/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-firewallinvpc/2.3-vpc-resource-map/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-firewallinvpc/2.3-vpc-resource-map/"
+                />
+  </url><url>
     <loc>/4-createec2server/</loc>
     <xhtml:link
                 rel="alternate"
