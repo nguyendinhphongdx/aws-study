@@ -86,18 +86,6 @@
                 href="/2-firewallinvpc/2.1-securitygroup/"
                 />
   </url><url>
-    <loc>/1-introduce/1.1-subnets/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-introduce/1.1-subnets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-introduce/1.1-subnets/"
-                />
-  </url><url>
     <loc>/</loc>
     <xhtml:link
                 rel="alternate"
@@ -108,6 +96,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/"
+                />
+  </url><url>
+    <loc>/1-introduce/1.1-subnets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-introduce/1.1-subnets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-introduce/1.1-subnets/"
                 />
   </url><url>
     <loc>/5-vpnsitetosite/5.2-vpnsitetosite/</loc>

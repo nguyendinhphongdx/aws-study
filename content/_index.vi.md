@@ -1,11 +1,11 @@
 ---
-title : "Làm việc với Amazon VPC"
+title : "Bắt đầu với Amazon VPC và AWS VPN Site to Site"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 ---
 
-# Làm việc với Amazon VPC
+# Bắt đầu với Amazon VPC và AWS VPN Site to Site
 
 #### Tổng quan
 

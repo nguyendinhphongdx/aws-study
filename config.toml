@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Start with Amazon VPC and AWS VPN Site-to-Site.."
+title = "Start with Amazon VPC and AWS VPN Site-to-Site."
 weight = 1
 languageName = "English"
 
