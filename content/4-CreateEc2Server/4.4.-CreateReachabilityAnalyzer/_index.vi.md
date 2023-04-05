@@ -8,6 +8,8 @@ pre : " <b> 4.4 </b> "
 
 #### Sử dụng Reachability Analyzer
 
+![Create VPC](/images/0000.png?featherlight=false&width=90pc)
+
 1. Truy cập vào giao diện **VPC**
 
    - Chọn **Reachability Analyzer**
