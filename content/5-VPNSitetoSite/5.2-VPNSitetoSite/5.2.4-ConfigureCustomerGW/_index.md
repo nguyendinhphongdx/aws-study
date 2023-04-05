@@ -72,6 +72,7 @@ net.ipv4.ip_forward = 1
 net.ipv4.conf.all.accept_redirects = 0
 net.ipv4.conf.all.send_redirects = 0
 ```
+- Press the **ESC** key and the combination **:wq!** to save the configuration file.
 
 ![Create VPC](/images/13/0008.png?featherlight=false&width=90pc)
 

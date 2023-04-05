@@ -14,8 +14,8 @@ Trong bài thực hành này, chúng ta sẽ xây dựng một mô hình theo s�
 
 #### Nội dung
 
-1. [Tạo VPC](3.1-createvpc)
-2. [Tạo Subnet](3.2-createsubnet)
-3. [Tạo Internet Gateway](3.3-createigw)
-4. [Tạo Route Table](3.4-cretaeroutetable)
-5. [Tạo Security Group](3.5-createsecuritygroup)
+1. [Tạo VPC](https://000003.awsstudygroup.com/vi/3-prerequiste/3.1-createvpc/)
+2. [Tạo Subnet](https://000003.awsstudygroup.com/vi/3-prerequiste/3.2-createsubnet/)
+3. [Tạo Internet Gateway](https://000003.awsstudygroup.com/vi/3-prerequiste/3.3-createigw/)
+4. [Tạo Route Table](https://000003.awsstudygroup.com/vi/3-prerequiste/3.4-cretaeroutetable/)
+5. [Tạo Security Group](https://000003.awsstudygroup.com/vi/3-prerequiste/3.5-createsecuritygroup/)

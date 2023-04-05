@@ -74,6 +74,8 @@ net.ipv4.conf.all.accept_redirects = 0
 net.ipv4.conf.all.send_redirects = 0
 ```
 
+- Ấn phím **ESC** và tổ hợp **:wq!** để lưu file cấu hình.
+
 ![Create VPC](/images/13/0008.png?featherlight=false&width=90pc)
 
 7. Sau đó để áp dụng cấu hình này, chạy lệnh:
