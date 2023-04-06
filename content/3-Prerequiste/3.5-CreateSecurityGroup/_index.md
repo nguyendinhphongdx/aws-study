@@ -21,7 +21,7 @@ pre : " <b> 3.5 </b> "
 2. Configure **Security group**
 
    - **Security Group name**, enter **```Public subnet - SG```**
-   - **Description**, enter **Allow SSH and Ping for servers in private subnet.**
+   - **Description**, enter **Allow SSH and Ping for servers in public subnet.**
    - Select **ASG** VPC
 
 ![Create VPC](/images/5/0002.png?featherlight=false&width=90pc)

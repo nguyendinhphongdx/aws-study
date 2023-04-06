@@ -21,7 +21,7 @@ pre : " <b> 3.5 </b> "
 2. Thực hiện cấu hình **Security group**
 
    - **Security Group name**, nhập **```Public subnet - SG```**
-   - **Description**, nhập **Allow SSH and Ping for servers in private subnet.**
+   - **Description**, nhập **Allow SSH and Ping for servers in public subnet.**
    - Chọn **ASG** VPC 
 
 ![Create VPC](/images/5/0002.png?featherlight=false&width=90pc)
