@@ -12,21 +12,21 @@
     <title>Create VPN Connection :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941462" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941462" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941462" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941462" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941462" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941462" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941462" rel="stylesheet">
+    <link href="/css/theme.css?1693941462" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941462" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941462" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941462"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941462"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941462"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941462"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         parent
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         parent
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1159,7 +1159,7 @@
             
           
           
-            <a href='/'>Start with Amazon VPC and AWS VPN Site-to-Site</a> > <a href='/5-vpnsitetosite/'>Configuring Site to Site VPN</a> > <a href='/5-vpnsitetosite/5.2-vpnsitetosite/'>Configuring VPN Connection</a> > Create VPN Connection
+            <a href='/'>Start with Amazon VPC and AWS VPN Site-to-Site</a> > <a href='/5-vpnsitetosite/'>Setting Up Site-to-Site VPN Connection in AWS</a> > <a href='/5-vpnsitetosite/5.2-vpnsitetosite/'>Configure VPN Connection</a> > Create VPN Connection
           
         
           
@@ -1176,11 +1176,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#create-a-vpn-connection">Create a VPN Connection</a></li>
   </ul>
 </nav>
     </div>
@@ -1206,81 +1202,73 @@
 
 
 
-	<h4 id="create-a-vpn-connection">Create a VPN connection</h4>
+	<h2 id="create-a-vpn-connection">Create a VPN Connection</h2>
 <ol>
 <li>
-<p>Access <strong>VPC</strong></p>
+<p>Access <strong>VPC</strong>:</p>
 <ul>
 <li>Select <strong>Site-to-Site VPN Connections</strong></li>
 <li>Select <strong>Create VPN Connection</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/12/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
+</li>
 <li>
-<p>In the <strong>Create VPN Connection</strong> interface</p>
+<p>In the <strong>Create VPN Connection</strong> Interface:</p>
 <ul>
-<li><strong>Name tag</strong>, enter <strong><code>VPN Connection</code></strong></li>
+<li><strong>Name Tag</strong>: Enter <strong><code>VPN Connection</code></strong></li>
 <li><strong>Target Gateway Type</strong>: Select <strong>Virtual Private Gateway</strong></li>
 <li><strong>Virtual Private Gateway</strong>: Select <strong>VPN Gateway</strong></li>
 <li><strong>Customer Gateway</strong>: <strong>Existing</strong></li>
 <li><strong>Customer Gateway ID</strong>: Select <strong>Customer Gateway</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/12/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
+</li>
 <li>
-<p>Continue to perform configuration</p>
+<p>Continue to Perform Configuration:</p>
 <ul>
 <li><strong>Routing Options</strong>: <strong>Static</strong></li>
 <li><strong>Static IP Prefixes</strong>: <strong>10.11.0.0/16</strong>. This is the IP address resolution in a simulated On-premise environment.</li>
 <li>Other configurations keep the default.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/12/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>Select <strong>Create VPN Connection</strong></li>
-</ol>
-<p><img src="/images/12/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>Wait about 5 minutes, to finish creating <strong>VPN Connection</strong></li>
-</ol>
-<p><img src="/images/12/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="6">
+</li>
 <li>
-<p>Configure <strong>propagation</strong> for <strong>route tables</strong></p>
+<p>Select <strong>Create VPN Connection</strong></p>
+<p><img src="/images/12/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Wait for about 5 minutes to finish creating the <strong>VPN Connection</strong></p>
+<p><img src="/images/12/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Configure <strong>Propagation</strong> for <strong>Route Tables</strong>:</p>
 <ul>
 <li>In the <strong>VPC</strong> interface, select <strong>Route Tables</strong></li>
 <li>Select <strong>Route table - Public</strong></li>
 <li>Select <strong>Route Propagation</strong></li>
-<li>Select <strong>Edit route propagation</strong></li>
+<li>Select <strong>Edit Route Propagation</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/12/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
+</li>
 <li>
-<p>In the <strong>Edit route propagation</strong> interface</p>
+<p>In the <strong>Edit Route Propagation</strong> Interface:</p>
 <ul>
 <li>Select <strong>Enable</strong></li>
 <li>Select <strong>Save</strong></li>
 </ul>
+<p><img src="/images/12/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Complete and Recheck: <strong>Route Propagation</strong> should have changed to <strong>Yes</strong></p>
+<p><img src="/images/12/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Similar Route Propagation for Private Subnet:</p>
+<p><img src="/images/12/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC">
+<img src="/images/12/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC">
+<img src="/images/12/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 </li>
 </ol>
-<p><img src="/images/12/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
-<li>Complete and recheck <strong>Route Propagation</strong> has changed to <strong>Yes</strong></li>
-</ol>
-<p><img src="/images/12/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
-<li>Similar Route Propagation for Private subnet.</li>
-</ol>
-<p><img src="/images/12/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<p><img src="/images/12/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<p><img src="/images/12/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
 
 
@@ -1863,19 +1851,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750136"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750136"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750136"></script>
-    <script src="/js/jquery.sticky.js?1680750136"></script>
-    <script src="/js/featherlight.min.js?1680750136"></script>
-    <script src="/js/highlight.pack.js?1680750136"></script>
+    <script src="/js/clipboard.min.js?1693941463"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941463"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941463"></script>
+    <script src="/js/jquery.sticky.js?1693941463"></script>
+    <script src="/js/featherlight.min.js?1693941463"></script>
+    <script src="/js/highlight.pack.js?1693941463"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750136"></script>
-    <script src="/js/learn.js?1680750136"></script>
-    <script src="/js/hugo-learn.js?1680750136"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941463"></script>
+    <script src="/js/learn.js?1693941463"></script>
+    <script src="/js/hugo-learn.js?1693941463"></script>
 
-    <link href="/mermaid/mermaid.css?1680750136" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750136"></script>
+    <link href="/mermaid/mermaid.css?1693941463" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941463"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

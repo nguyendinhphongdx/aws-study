@@ -12,21 +12,21 @@
     <title>Create Subnet :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941462" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941462" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941462" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941462" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941462" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941462" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941462" rel="stylesheet">
+    <link href="/css/theme.css?1693941462" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941462" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941462" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941462"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941462"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941462"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941462"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,11 +1170,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#create-subnet">Create Subnet</a></li>
+    <li><a href="#allow-automatic-allocation-of-public-ip-addresses-for-2-public-subnets">Allow Automatic Allocation of Public IP Addresses for 2 Public Subnets</a></li>
   </ul>
 </nav>
     </div>
@@ -1200,96 +1197,86 @@
 
 
 
-	<h4 id="create-subnet">Create subnet</h4>
+	<h2 id="create-subnet">Create Subnet</h2>
 <ol>
 <li>
-<p>In the <strong>VPC</strong> interface</p>
+<p>In the <strong>VPC</strong> Interface:</p>
 <ul>
 <li>Select <strong>Subnets</strong></li>
 <li>Select <strong>Create subnet</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
+</li>
 <li>
-<p>In the <strong>Create subnet</strong> interface</p>
+<p>In the <strong>Create subnet</strong> Interface:</p>
 <ul>
 <li>Select <strong>ASG</strong> VPC</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
+</li>
 <li>
-<p>Implement <strong>subnet settings</strong></p>
+<p>Implement <strong>Subnet Settings</strong>:</p>
 <ul>
-<li><strong>Subnet name</strong>, enter <strong><code>Public Subnet 1</code></strong></li>
+<li><strong>Subnet name</strong>: Enter <strong><code>Public Subnet 1</code></strong></li>
 <li>Select AZ <strong>ap-southeast-1a</strong></li>
-<li><strong>IPv4 CIDR block</strong>, import <strong><code>10.10.1.0/24</code></strong> according to architecture description</li>
+<li><strong>IPv4 CIDR block</strong>: Import <strong><code>10.10.1.0/24</code></strong> according to the architecture description</li>
 <li>Select <strong>Create subnet</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>Finish creating <strong>subnet</strong></li>
-</ol>
-<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>
-<p>Follow the same steps to create more subnets</p>
-<ul>
-<li><strong>Public subnet 2</strong> with <strong>CIDR</strong> of <strong>10.10.2.0/24</strong> located in <strong>Availability Zone ap-southeast-1b</strong>.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>Finish Creating <strong>Subnet</strong></p>
+<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Follow the same steps to create more subnets:</p>
+<ul>
+<li><strong>Public subnet 2</strong> with <strong>CIDR</strong> of <strong><code>10.10.2.0/24</code></strong> located in <strong>Availability Zone ap-southeast-1b</strong></li>
+</ul>
 <p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ul>
-<li><strong>Private subnet 1</strong> with <strong>CIDR</strong> of <strong>10.10.3.0/24</strong> located in <strong>Availability Zone ap-southeast-1a.</strong></li>
+<li><strong>Private subnet 1</strong> with <strong>CIDR</strong> of <strong><code>10.10.3.0/24</code></strong> located in <strong>Availability Zone ap-southeast-1a</strong></li>
 </ul>
 <p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <ul>
-<li><strong>Private subnet 2</strong> with <strong>CIDR</strong> of <strong>10.10.4.0/24</strong> located in <strong>Availability Zone ap-southeast-1b</strong></li>
+<li><strong>Private subnet 2</strong> with <strong>CIDR</strong> of <strong><code>10.10.4.0/24</code></strong> located in <strong>Availability Zone ap-southeast-1b</strong></li>
 </ul>
 <p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-
-<div class="notices tip" ><p>You can see there is 2 columns <strong>Availability Zone</strong> and <strong>Availability Zone ID</strong>. To avoid EC2 resources being used <strong>unevenly</strong>, (we tend to use AZ a to run <strong>primary and AZ</strong> b to stand by for example) AWS will randomly assign * <em>Availability Zone into Availability Zone ID</em>*. We can understand that Availability Zone is an alias, and Availability Zone ID is the identifier. For example, in the image above, Availability Zone ap-southeast-1a is assigned the Availability Zone ID apse1-az2. In another AWS account, the Availability Zone ap-southeast-1a may have an Availability Zone ID of apse1-az1.</p>
-</div>
-
+</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> You can see there are 2 columns: <strong>Availability Zone</strong> and <strong>Availability Zone ID</strong>. To avoid uneven usage of EC2 resources (for example, using AZ a for primary and AZ b for standby), AWS randomly assigns <strong>Availability Zone</strong> into <strong>Availability Zone ID</strong>. Availability Zone is an alias, and Availability Zone ID is the identifier. For instance, in the image above, Availability Zone ap-southeast-1a is assigned the Availability Zone ID apse1-az2. In another AWS account, Availability Zone ap-southeast-1a may have an Availability Zone ID of apse1-az1.</p>
+</blockquote>
 <p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<h4 id="allows-automatic-allocation-of-public-ip-addresses-for-2-public-subnets">Allows automatic allocation of public IP addresses for 2 public subnets.</h4>
-
-<div class="notices tip" ><p>Another point worth noting is that the subnets are the same, through configuring the routeing table and allocating a public IP address that we have just divided into Public and Private Subnet.</p>
-</div>
-
+<h2 id="allow-automatic-allocation-of-public-ip-addresses-for-2-public-subnets">Allow Automatic Allocation of Public IP Addresses for 2 Public Subnets</h2>
+<blockquote>
+<p><strong>Tip:</strong> Another important point to note is that even though the subnets are the same, configuring the routing table and allocating a public IP address allows us to distinguish between Public and Private Subnets.</p>
+</blockquote>
 <ol start="6">
 <li>
-<p>In the <strong>VPC</strong> interface</p>
+<p>In the <strong>VPC</strong> Interface:</p>
 <ul>
 <li>Select <strong>Subnets</strong></li>
 <li>Select <strong>Public Subnet 1</strong></li>
 <li>Select <strong>Actions</strong></li>
 <li>Select <strong>Edit subnet settings</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
+</li>
 <li>
-<p>Under <strong>Auto-assign IP settings</strong></p>
+<p>Under <strong>Auto-assign IP settings</strong>:</p>
 <ul>
 <li>Select <strong>Enable auto-assign public IPv4 address</strong></li>
 <li>Select <strong>Save</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
-<li>Then do the same with <strong>Public subnet 2.</strong></li>
-</ol>
+</li>
+<li>
+<p>Repeat the same process for <strong>Public subnet 2</strong>.</p>
 <p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 <p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
 
 
 
@@ -1868,19 +1855,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941463"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941463"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941463"></script>
+    <script src="/js/jquery.sticky.js?1693941463"></script>
+    <script src="/js/featherlight.min.js?1693941463"></script>
+    <script src="/js/highlight.pack.js?1693941463"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941463"></script>
+    <script src="/js/learn.js?1693941463"></script>
+    <script src="/js/hugo-learn.js?1693941463"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941463" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941463"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

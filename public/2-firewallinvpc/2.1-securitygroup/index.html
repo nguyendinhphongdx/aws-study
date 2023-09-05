@@ -12,21 +12,21 @@
     <title>Security Group :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941461" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941461" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941461" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941461" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941461" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941461" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941461" rel="stylesheet">
+    <link href="/css/theme.css?1693941461" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941461" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941461" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941461"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941461"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941461"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941461"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,9 +1170,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#security-group">Security Group</a>
       <ul>
-        <li></li>
+        <li><a href="#basic-features-of-security-group">Basic Features of Security Group</a></li>
+      </ul>
+    </li>
+    <li><a href="#security-group-rule">Security Group Rule</a>
+      <ul>
+        <li><a href="#components-of-security-group-rule">Components of Security Group Rule</a></li>
       </ul>
     </li>
   </ul>
@@ -1200,30 +1205,24 @@
 
 
 
-	<h4 id="security-group">Security Group</h4>
-<p>Some basic features of Security group:</p>
+	<h2 id="security-group">Security Group</h2>
+<h3 id="basic-features-of-security-group">Basic Features of Security Group</h3>
 <ul>
-<li>Only Allow rules can be added, Deny rules cannot be added.</li>
-<li>Separate rules for outgoing or incoming traffic can be specified.</li>
-<li>A newly created Security group has no Inbound rules available.
-Therefore, at the beginning Instance will not allow any traffic to enter, requiring us to add an Inbound rule to allow access.</li>
-<li>By default, the Security group has an Outbound rule that allows all traffic to go out of the Instance.
-This rule can be edited (deleted) and added with specific Outbound rules, specifying which traffic originating from the Instance is allowed to go out.
-If the SG does not have an Outbound rule, then no traffic is allowed to leave the Instance.</li>
-<li>Security groups is a Stateful service - meaning that if traffic going into the Instance is allowed, then the traffic can also go out of the Instance, and vice versa, regardless of the Outbound rule.</li>
-<li>Instances can only communicate with each other if and only if they are associated with a Security group that allows connections, or a Security group to which the Instance is associated contains a Rule that allows traffic (except for the default Security group. with default rules that allow all traffic to be accessed).</li>
-<li>Security groups are associated with network interfaces.
-After the Instance has been initialized, you can still change the Security group assigned to the Instance, which also changes the security group assigned to the corresponding primary network interface.</li>
+<li><strong>Allow Rules Only:</strong> Only Allow rules can be added; Deny rules cannot be added.</li>
+<li><strong>Separate Rules for Traffic:</strong> Separate rules can be specified for outgoing and incoming traffic.</li>
+<li><strong>Initial Inbound Rules:</strong> A newly created Security group starts with no Inbound rules. Initially, the instance won&rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access.</li>
+<li><strong>Default Outbound Rule:</strong> By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there&rsquo;s no Outbound rule, no traffic is allowed to exit the instance.</li>
+<li><strong>Stateful Service:</strong> Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule.</li>
+<li><strong>Instance Communication:</strong> Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic.</li>
+<li><strong>Association with Network Interfaces:</strong> Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface.</li>
 </ul>
-<h4 id="security-group-rule">Security group Rule</h4>
-<p>Rule is generated to grant access to traffic entering or leaving the Instance. This access can be applied to a specific CIDR or to a Security group located in the same VPC or located in another VPC but with a peering connection already initiated.</p>
-<p>Basic components of Security group rule:</p>
+<h2 id="security-group-rule">Security Group Rule</h2>
+<p>A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.</p>
+<h3 id="components-of-security-group-rule">Components of Security Group Rule</h3>
 <ul>
-<li>(Inbound rules only) includes the origin (source) of the traffic and the destination port or port range.
-The source can be another security group, an IPv4 or IPv6 CIDR range, or simply an IPv4 or IPv6 address.</li>
-<li>(Outbound rules only) includes the destination of the traffic and the destination port or destination port range.
-The destination can be another security group, an IPv4 or IPv6 CIDR range, or simply an IPv4 or IPv6 address, or a service that begins with a prefix (e.g. igw_xxx) in the prefix ID list (a service is identified by the prefix ID - the name and ID of the service available in the region).</li>
-<li>Every protocol has some standard protocol. Example: SSH is 22,..</li>
+<li><strong>Inbound Rules:</strong> These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address.</li>
+<li><strong>Outbound Rules:</strong> These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region).</li>
+<li><strong>Standard Protocols:</strong> Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22.</li>
 </ul>
 
 
@@ -1800,19 +1799,19 @@ The destination can be another security group, an IPv4 or IPv6 CIDR range, or si
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

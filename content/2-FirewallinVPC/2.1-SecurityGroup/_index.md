@@ -6,29 +6,24 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-#### Security Group
+## Security Group
 
-Some basic features of Security group:
+### Basic Features of Security Group
 
-* Only Allow rules can be added, Deny rules cannot be added.
-* Separate rules for outgoing or incoming traffic can be specified.
-* A newly created Security group has no Inbound rules available.
-  Therefore, at the beginning Instance will not allow any traffic to enter, requiring us to add an Inbound rule to allow access.
-* By default, the Security group has an Outbound rule that allows all traffic to go out of the Instance.
-This rule can be edited (deleted) and added with specific Outbound rules, specifying which traffic originating from the Instance is allowed to go out.
-If the SG does not have an Outbound rule, then no traffic is allowed to leave the Instance.
-* Security groups is a Stateful service - meaning that if traffic going into the Instance is allowed, then the traffic can also go out of the Instance, and vice versa, regardless of the Outbound rule.
-* Instances can only communicate with each other if and only if they are associated with a Security group that allows connections, or a Security group to which the Instance is associated contains a Rule that allows traffic (except for the default Security group. with default rules that allow all traffic to be accessed).
-* Security groups are associated with network interfaces.
-After the Instance has been initialized, you can still change the Security group assigned to the Instance, which also changes the security group assigned to the corresponding primary network interface.
+- **Allow Rules Only:** Only Allow rules can be added; Deny rules cannot be added.
+- **Separate Rules for Traffic:** Separate rules can be specified for outgoing and incoming traffic.
+- **Initial Inbound Rules:** A newly created Security group starts with no Inbound rules. Initially, the instance won't allow any traffic in, requiring the addition of an Inbound rule to enable access.
+- **Default Outbound Rule:** By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there's no Outbound rule, no traffic is allowed to exit the instance.
+- **Stateful Service:** Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule.
+- **Instance Communication:** Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic.
+- **Association with Network Interfaces:** Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface.
 
-#### Security group Rule
+## Security Group Rule
 
-Rule is generated to grant access to traffic entering or leaving the Instance. This access can be applied to a specific CIDR or to a Security group located in the same VPC or located in another VPC but with a peering connection already initiated.
+A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.
 
-Basic components of Security group rule:
-* (Inbound rules only) includes the origin (source) of the traffic and the destination port or port range.
-The source can be another security group, an IPv4 or IPv6 CIDR range, or simply an IPv4 or IPv6 address.
-* (Outbound rules only) includes the destination of the traffic and the destination port or destination port range.
-The destination can be another security group, an IPv4 or IPv6 CIDR range, or simply an IPv4 or IPv6 address, or a service that begins with a prefix (e.g. igw_xxx) in the prefix ID list (a service is identified by the prefix ID - the name and ID of the service available in the region).
-* Every protocol has some standard protocol. Example: SSH is 22,..
+### Components of Security Group Rule
+
+- **Inbound Rules:** These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address.
+- **Outbound Rules:** These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region).
+- **Standard Protocols:** Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22.

@@ -134,18 +134,6 @@
                 href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.2-createcustomergw/"
                 />
   </url><url>
-    <loc>/3-prerequiste/3.2-createsubnet/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-prerequiste/3.2-createsubnet/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-prerequiste/3.2-createsubnet/"
-                />
-  </url><url>
     <loc>/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/</loc>
     <xhtml:link
                 rel="alternate"
@@ -156,6 +144,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/"
+                />
+  </url><url>
+    <loc>/3-prerequiste/3.2-createsubnet/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-prerequiste/3.2-createsubnet/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-prerequiste/3.2-createsubnet/"
                 />
   </url><url>
     <loc>/2-firewallinvpc/</loc>
@@ -338,18 +338,6 @@
                 href="/4-createec2server/4.4.-createreachabilityanalyzer/"
                 />
   </url><url>
-    <loc>/5-vpnsitetosite/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/5-vpnsitetosite/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/5-vpnsitetosite/"
-                />
-  </url><url>
     <loc>/3-prerequiste/3.5-createsecuritygroup/</loc>
     <xhtml:link
                 rel="alternate"
@@ -372,6 +360,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/"
+                />
+  </url><url>
+    <loc>/5-vpnsitetosite/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-vpnsitetosite/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-vpnsitetosite/"
                 />
   </url><url>
     <loc>/6-cleanup/</loc>

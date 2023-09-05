@@ -12,21 +12,21 @@
     <title>Internet Gateway :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941461" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941461" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941461" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941461" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941461" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941461" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941461" rel="stylesheet">
+    <link href="/css/theme.css?1693941461" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941461" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941461" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941461"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941461"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941461"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941461"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,11 +1170,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#internet-gateway">Internet Gateway</a></li>
   </ul>
 </nav>
     </div>
@@ -1200,18 +1196,10 @@
 
 
 
-	<h4 id="internet-gateway">Internet Gateway</h4>
-<ul>
-<li>
-<p>The Internet Gateway (IGW) is an Amazon VPC component that enables resources within the VPC, specifically EC2, to communicate with the Internet. IGW has strong horizontal elasticity, and high redundancy and availability. It acts as a target in the Amazon VPC&rsquo;s routing table, helping traffic to be routed outside the Internet by translated EC2&rsquo;s network address into the Public IP address it has been assigned.</p>
-</li>
-<li>
-<p>More specifically, EC2 Instances inside the VPC only know the Private IP addresses assigned to it, but when there is traffic sent from EC2 out to the Internet, the IGW will translate that Private IP address into a Public IP address ( or EIP addresses, discussed later) that are assigned to EC2, and maintain a 1-1 mapping until the Public IP address is released.</p>
-</li>
-<li>
-<p>When EC2 receives traffic from outside the Internet, the IGW translates the Target address (Public IP address) into the EC2 Instance Private IP address and forwards the traffic to the Amazon VPC.</p>
-</li>
-</ul>
+	<h2 id="internet-gateway">Internet Gateway</h2>
+<p>The <strong>Internet Gateway (IGW)</strong> is a crucial component of Amazon VPC that facilitates communication between resources within the VPC, specifically EC2 instances, and the Internet. The IGW exhibits robust horizontal scalability, along with high levels of redundancy and availability. It operates as a designated target within the Amazon VPC&rsquo;s routing table, playing a vital role in directing traffic from EC2 instances to the external Internet. This process involves translating the network address of the EC2 instance into its corresponding Public IP address.</p>
+<p>More precisely, the EC2 instances located within the VPC are only aware of their assigned Private IP addresses. However, when there is a need to transmit traffic from these EC2 instances to the Internet, the IGW intervenes by translating the originating Private IP address into the Public IP address (or Elastic IP addresses, as discussed later) assigned to the respective EC2 instance. This translation is upheld through a one-to-one mapping, which persists until the Public IP address is released.</p>
+<p>Conversely, when the EC2 instances receive incoming traffic from the Internet, the IGW undertakes the task of translating the target address (Public IP address) into the corresponding Private IP address of the EC2 instance. Subsequently, the IGW forwards this traffic into the Amazon VPC.</p>
 <p><img src="/images/1-Introduce/igw.png?featherlight=false&amp;width=60pc" alt="Internet Gateway"></p>
 
 
@@ -1788,19 +1776,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

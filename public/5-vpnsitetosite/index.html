@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Configuring Site to Site VPN :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
+    <title>Setting Up Site-to-Site VPN Connection in AWS :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941462" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941462" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941462" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941462" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941462" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941462" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941462" rel="stylesheet">
+    <link href="/css/theme.css?1693941462" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941462" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941462" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941462"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941462"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941462"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941462"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         parent
         active
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1151,7 +1151,7 @@
             
           
           
-            <a href='/'>Start with Amazon VPC and AWS VPN Site-to-Site</a> > Configuring Site to Site VPN
+            <a href='/'>Start with Amazon VPC and AWS VPN Site-to-Site</a> > Setting Up Site-to-Site VPN Connection in AWS
           
         
           
@@ -1162,7 +1162,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-virtual-private-gateway-vpg-and-customer-gateway-cgw-setup">1. Virtual Private Gateway (VPG) and Customer Gateway (CGW) Setup</a></li>
+    <li><a href="#2-vpn-tunnel-establishment">2. VPN Tunnel Establishment</a></li>
+    <li><a href="#3-vpg-cgw-and-vpn-features">3. VPG, CGW, and VPN Features</a></li>
+    <li><a href="#4-lab-setup-and-configuration">4. Lab Setup and Configuration</a></li>
+    <li><a href="#content">Content:</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1178,7 +1186,7 @@
           
             <h1>
               
-              Configuring Site to Site VPN
+              Setting Up Site-to-Site VPN Connection in AWS
             </h1>
           
 
@@ -1186,32 +1194,53 @@
 
 
 
-	<p>We can connect the On-premise data center to Amazon VPC using a hard or soft VPN depending on the purpose and actual use needs.
-To establish a Site-to-Site VPN connection, we will need to create and configure a Virtual Private Gateway <strong>VPG</strong> and Customer Gateway <strong>CGW</strong>.</p>
+	<p>In this guide, we will discuss how to connect an On-premise data center to Amazon VPC using a hard or soft VPN, depending on the specific requirements. To establish a Site-to-Site VPN connection, the following steps need to be taken:</p>
+<h2 id="1-virtual-private-gateway-vpg-and-customer-gateway-cgw-setup">1. Virtual Private Gateway (VPG) and Customer Gateway (CGW) Setup</h2>
 <ul>
-<li>Virtual Private Gateway (<strong>VPG</strong>) is a control center connecting the virtual private network (VPN) installed on top of AWS.</li>
-<li>A Customer Gateway (<strong>CGW</strong>) is the component representing the hard or soft VPN device installed at the Client end.</li>
+<li>
+<p><strong>Virtual Private Gateway (VPG)</strong>: This serves as the control center that connects the virtual private network (VPN) within AWS.</p>
+</li>
+<li>
+<p><strong>Customer Gateway (CGW)</strong>: This component represents the hard or soft VPN device located at the Client&rsquo;s end.</p>
+</li>
 </ul>
-<p><strong>VPN tunnel</strong> will be established as soon as data traffic is transferred between AWS and the customer&rsquo;s network. In that connection, you must specify the type of routing that will be used to ensure the safety and quality of data transmission.
-If the CGW on the client side supports Border Gateway Protocol (BGP), then in the VPN connection configuration we are required to set the routing to dynamic routing.
-Otherwise, we must configure the connection routing as static routing. In the case of using static routing, you must enter the exact routes required for the connection from the Client side to the VPG set up at the AWS end. Also, routing for the VPC must be configured to propagate to allow resources to exchange data in and out of the VPN tunnel connection between AWS and the Customer&rsquo;s network.</p>
-<p>Amazon VPC offers many types of CGWs, and each CGW is assigned to a VPG, but 1 VPG can be associated with multiple CGWs (many-to-one design). To support this model, the CGW&rsquo;s IP address must be unique within a region.
-Amazon VPC also provides the necessary information for Network Administrators to be able to configure the CGW and establish a VPN connection to the VPG on AWS. VPN connection always includes 2 Internet Protocol Security (IPSec) tunnels to ensure high availability of the connection.
-Below are the important features that we need to know about <strong>VPG</strong>, <strong>CGW</strong>, and <strong>VPN</strong>:</p>
+<h2 id="2-vpn-tunnel-establishment">2. VPN Tunnel Establishment</h2>
+<p>A VPN tunnel will be initiated as soon as data traffic is exchanged between AWS and the client&rsquo;s network. It is important to specify the routing type to ensure secure and efficient data transmission:</p>
 <ul>
-<li>VPG is the terminal component of the VPN tunnel located on AWS.</li>
-<li>CGW can be a hardware device or a software application located at the Client end in the VPN tunnel connection.</li>
-<li>You must initiate a VPN tunnel connection from CGW to VPG.</li>
-<li>VPG supports both dynamic routing (BGP) and static routing.</li>
-<li>VPN connection always has 2 tunnels to ensure high availability for connection to VPC from the Client site.</li>
+<li>
+<p>If the CGW on the client side supports Border Gateway Protocol (BGP), dynamic routing should be configured for the VPN connection.</p>
+</li>
+<li>
+<p>If not, static routing must be set up. For static routing, specific routes must be entered to establish the connection from the client&rsquo;s side to the VPG at AWS. Additionally, the VPC routing must be configured to allow seamless data exchange within the VPN tunnel.</p>
+</li>
 </ul>
-<p>The lab helps us learn how to set up a Site-to-Site VPN connection in AWS. This solution is quite popular due to the advantages of low cost, and ease of configure because AWS provides instructions for each type of device at the Customer end. The customer&rsquo;s only concern is to prepare the internet from which to create a secret secure tunnel (using IPSec) connecting to AWS through the AWS VPN tunnel.
-In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</strong> ) and Branch office ( VPC <strong>ASG VPN</strong> ) located at 2 VPCs belonging to 2 different AZs to have a difference in terms of the network. On each VPC doing EC2 creation allows external SSH but without the ability to connect and ping each other using each EC2&rsquo;s Private IP address. All we need to do is configure the VPN so that the Private IP addresses can ping each other using the Site-to-Site VPN.</p>
+<h2 id="3-vpg-cgw-and-vpn-features">3. VPG, CGW, and VPN Features</h2>
+<p>Some key features of VPG, CGW, and VPN include:</p>
+<ul>
+<li>
+<p><strong>VPG</strong>: The terminal component of the VPN tunnel within AWS.</p>
+</li>
+<li>
+<p><strong>CGW</strong>: Can be either a hardware device or a software application located at the Client&rsquo;s end in the VPN tunnel.</p>
+</li>
+<li>
+<p>VPN tunnel connections are initiated from CGW to VPG.</p>
+</li>
+<li>
+<p>VPG supports both dynamic routing (BGP) and static routing.</p>
+</li>
+<li>
+<p>Each VPN connection comprises two tunnels for high availability.</p>
+</li>
+</ul>
+<h2 id="4-lab-setup-and-configuration">4. Lab Setup and Configuration</h2>
+<p>The lab provides hands-on experience in setting up a Site-to-Site VPN connection in AWS. This solution is popular due to its cost-effectiveness and ease of configuration, as AWS offers instructions for various types of client devices. The primary responsibility of the customer is to prepare the internet connection, which will establish a secure tunnel (using IPSec) connecting to AWS via the VPN tunnel.</p>
+<p>In the lab scope, there are two VPCs: the Main office (VPC <strong>ASG</strong>) and the Branch office (VPC <strong>ASG VPN</strong>), located in different Availability Zones (AZs) to ensure network diversity. While EC2 instances can be created in each VPC with external SSH access, they cannot communicate or ping each other using private IP addresses. The goal is to configure the VPN to enable private IP addresses to communicate over the Site-to-Site VPN.</p>
 <p><img src="/images/6-VPNSitetoSite/vpn.png?featherlight=false&amp;width=90pc" alt="VPN"></p>
-<p><strong>Content:</strong></p>
+<h2 id="content">Content:</h2>
 <ol>
 <li><a href="5.1-createvpnenv/">Create <strong>ASG VPN</strong> VPC and subnet</a></li>
-<li><a href="5.2-vpnsitetosite/">Configure Site to Site VPN and test connection with private IP </a></li>
+<li><a href="5.2-vpnsitetosite/">Configure Site to Site VPN and test connection with private IP</a></li>
 </ol>
 
 
@@ -1787,19 +1816,19 @@ In the scope of the lab, assume that we have the Main office ( VPC <strong>ASG</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

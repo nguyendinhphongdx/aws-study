@@ -1,63 +1,60 @@
 ---
-title : "Creating EC2 Instance"
+title : "Create EC2 as a Customer Gateway"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
 pre : " <b> 5.1.2 </b> "
 ---
+## Create EC2 as a Customer Gateway
 
-#### Create EC2 as a Customer Gateway
-
-1. Access to **VPC**
+1. **Access to VPC**
 
    - Select **Security Group**
    - Select **Create security group**
 
-![Create VPC](/images/10/0001.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0001.png?featherlight=false&width=90pc)
 
-2. In the **Create security group** interface
+2. **In the Create security group interface**
 
-   - **Security group name**, enter **```VPN Public -SG```**
-   - In the **Description** section enter **Allow IPSec, SSH, and Ping for servers in public subnet**.
-   - **VPC**, select **ASG VPN** vpc
+   - **Security group name**: Enter **`VPN Public -SG`**
+   - **Description**: Allow IPSec, SSH, and Ping for servers in the public subnet.
+   - **VPC**: Select **ASG VPN** VPC
 
-![Create VPC](/images/10/0002.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0002.png?featherlight=false&width=90pc)
 
-3. Configure **Inbound rules**
+3. **Configure Inbound rules**
 
    - Select **Add rule**
-   - Select **Type**: **SSH** and **Source**: **My IP**. My IP represents a public IPv4 address you are using.
+   - **Type**: **SSH**, **Source**: **My IP** (Your public IPv4 address).
    - Click **Add rule** to add a new rule.
-   - Select **Type**: **All ICMP IPv4** and **Source**: **Anywhere**. Allow ping from any IP address.
+   - **Type**: **All ICMP IPv4**, **Source**: **Anywhere** (Allow ping from any IP address).
    - Click **Add rule** to add a new rule.
-   - Select **Type**: **Custom UDP** , **Port:400** and **Source** : **Anywhere**.
+   - **Type**: **Custom UDP**, **Port: 400**, **Source**: **Anywhere**.
    - Click **Add rule** to add a new rule.
-   - Select **Type**: **Custom TCP** , **Port:500** and **Source** : **Anywhere**
+   - **Type**: **Custom TCP**, **Port: 500**, **Source**: **Anywhere**.
 
-![Create VPC](/images/10/0003.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0003.png?featherlight=false&width=90pc)
 
 4. Check **Outbound rules** and select **Create security group**
 
-![Create VPC](/images/10/0004.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0004.png?featherlight=false&width=90pc)
 
-5. Complete creation of **VPN Public - SG**. So we have created a Security Group. Next, we will proceed to create an EC2 server that plays the Customer Gateway role.
-   
-![Create VPC](/images/10/0005.png?featherlight=false&width=90pc)
+5. Complete the creation of **VPN Public - SG**. A Security Group has been created. Next, we will proceed to create an EC2 server that plays the Customer Gateway role.
 
-![Create VPC](/images/10/0005.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0005.png?featherlight=false&width=90pc)
 
-6. Access to **EC2**
+6. **Access to EC2**
 
    - Select **Instances**
    - Select **Launch instances**
 
-![Create VPC](/images/10/0006.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0006.png?featherlight=false&width=90pc)
 
 7. In the **Launch instances** interface
 
-   - **Name**, enter **```Customer Gateway instance```**
+   - **Name**: Enter **`Customer Gateway instance`**
 
-![Create VPC](/images/10/0007.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0007.png?featherlight=false&width=90pc)
 
 8. Executing **AMI** Selection
 
@@ -65,29 +62,29 @@ pre : " <b> 5.1.2 </b> "
    - Select **Amazon Linux**
    - Select **AMI**
 
-![Create VPC](/images/10/0008.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0008.png?featherlight=false&width=90pc)
 
-9. Select **Instance type** and select **Key pair**: **aws-keypair**(keypair created with instances)
+9. Select **Instance type** and select **Key pair**: **aws-keypair** (keypair created with instances)
 
-![Create VPC](/images/10/0009.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/0009.png?featherlight=false&width=90pc)
 
 10. Configure **Network**
 
-    - **VPC**, select **ASG VPN** vpc
-    - **Subnet**, select **VPN Public**
-    - **Auto-assign public IP**, select **Enable**
-    - **Firewall**, select **Select existing security group**
+    - **VPC**: Select **ASG VPN** VPC
+    - **Subnet**: Select **VPN Public**
+    - **Auto-assign public IP**: Select **Enable**
+    - **Firewall**: Select **Select existing security group**
     - Select **VPN Public - SG**
     - Check again and select **Launch instance**
 
-![Create VPC](/images/10/00010.png?featherlight=false&width=90pc)
+    ![Create VPC](/images/10/00010.png?featherlight=false&width=90pc)
 
-11. Finish creating **EC2 instance**
+11. Finish creating the **EC2 instance**
 
     - Select **View all instances**
 
-![Create VPC](/images/10/00011.png?featherlight=false&width=90pc)
+    ![Create VPC](/images/10/00011.png?featherlight=false&width=90pc)
 
-12. View details **Customer Gateway instance**
+12. View details of the **Customer Gateway instance**
 
-![Create VPC](/images/10/00012.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/10/00012.png?featherlight=false&width=90pc)

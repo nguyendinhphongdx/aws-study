@@ -12,21 +12,21 @@
     <title>Introduction :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941461" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941461" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941461" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941461" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941461" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941461" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941461" rel="stylesheet">
+    <link href="/css/theme.css?1693941461" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941461" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941461" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941461"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941461"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941461"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941461"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1164,11 +1164,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#introduction-to-amazon-vpc">Introduction to Amazon VPC</a></li>
+    <li><a href="#contents">Contents</a></li>
   </ul>
 </nav>
     </div>
@@ -1194,19 +1191,19 @@
 
 
 
-	<h4 id="introduction-of-amazon-vpc">Introduction of Amazon VPC</h4>
-<p>Amazon Virtual Private Cloud (Amazon VPC) is a “Virtual Private Cloud” which is a custom virtual network located inside the AWS Cloud and isolated from the entire outside world. The concept is similar to designing and implementing a separate standalone network environment in an on-premise data center, which is still very popular today in many countries of the world.</p>
-<p>Inside that custom VPC, you have full control over your virtual network environment, meaning both the ability to initialize and run AWS resources and the ability to select IP address ranges, create networks subnets and configure routing tables and network gateways. You can use both IPv4 and IPv6 for secure and easy access to resources and applications in the VPC.</p>
-<p>Region is a concept that describes many extremely large clusters of AWS data centers located in a certain territory. Within a region, you can create multiple VPCs, and each VPC is distinguished by different ranges of IP address spaces. You specify the IPv4 address range by selecting a Classless Inter-Domain Routing (CIDR), such as 10.0.0.0/16. The Amazon VPC address range cannot be changed once it has been created. Amazon VPC address ranges can be as large as /16 (ie 65536 available addresses) or as small as /28 (ie 16 available addresses) and they must not overlap with any other networks to which they will be connected. connect to.</p>
-<p>The Amazon VPC service was launched after the Amazon EC2 service, so at some point, AWS offered two different networking platforms, EC2-Classic and EC2-VPC. EC2-Classic is the first networking platform where all Amazon EC2 is created in a single flat network, sharing connectivity among AWS customers. As of December 2013, AWS only supports EC2-VPC with default VPC created in each Region and a default subnet with a CIDR block of 172.31.0.0/16.</p>
-<h4 id="content">Content</h4>
+	<h2 id="introduction-to-amazon-vpc">Introduction to Amazon VPC</h2>
+<p>Amazon Virtual Private Cloud (Amazon VPC) is a <strong>Virtual Private Cloud</strong>—a customized virtual network hosted within the AWS Cloud and isolated from the external world. This concept resembles the design and implementation of a distinct standalone network environment in an on-premise data center, a practice still widely employed across many countries.</p>
+<p>Within this dedicated VPC, users possess comprehensive control over their virtual network environment. This control encompasses the initiation and operation of AWS resources, the ability to choose IP address ranges, establish network subnets, and configure routing tables and network gateways. Secure and convenient resource and application access within the VPC is facilitated through both IPv4 and IPv6 protocols.</p>
+<p>The term &ldquo;Region&rdquo; refers to vast clusters of AWS data centers situated within specific territories. Multiple VPCs can be established within a single region, with each VPC differentiated by its unique IP address space range. The IPv4 address range is defined by selecting a Classless Inter-Domain Routing (CIDR) notation, such as 10.0.0.0/16. Once created, the Amazon VPC address range remains immutable. These ranges can span from as extensive as /16 (equivalent to 65536 available addresses) to as limited as /28 (allowing for 16 available addresses). Crucially, these ranges must not overlap with any other connected networks.</p>
+<p>The Amazon VPC service was introduced subsequent to the launch of Amazon EC2. Consequently, AWS provided two distinct networking platforms for a period: EC2-Classic and EC2-VPC. EC2-Classic established a single flat network where all Amazon EC2 instances operated, enabling shared connectivity among AWS clients. However, as of December 2013, AWS exclusively supports EC2-VPC. Each region includes a default VPC along with a default subnet featuring a CIDR block of 172.31.0.0/16.</p>
+<h2 id="contents">Contents</h2>
 <ul>
 <li><a href="1.1-subnets/">Subnets</a></li>
 <li><a href="1.2-routetable/">Route Table</a></li>
 <li><a href="1.3-internetgateway/">Internet Gateway</a></li>
 <li><a href="1.4-natgateway/">NAT Gateway</a></li>
 </ul>
-<p>Now we will go through the most basic concepts of VPC in the next sections.</p>
+<p>In the following sections, we will delve into the fundamental concepts of VPC.</p>
 
 
 
@@ -1778,19 +1775,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

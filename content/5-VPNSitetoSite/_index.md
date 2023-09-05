@@ -1,36 +1,50 @@
 ---
-title : "Configuring Site to Site VPN"
+title : "Setting Up Site-to-Site VPN Connection in AWS"
 date : "`r Sys.Date()`"
 weight : 5
 chapter : false
 pre : " <b> 5. </b> "
 ---
 
-We can connect the On-premise data center to Amazon VPC using a hard or soft VPN depending on the purpose and actual use needs.
-To establish a Site-to-Site VPN connection, we will need to create and configure a Virtual Private Gateway **VPG** and Customer Gateway **CGW**.
+In this guide, we will discuss how to connect an On-premise data center to Amazon VPC using a hard or soft VPN, depending on the specific requirements. To establish a Site-to-Site VPN connection, the following steps need to be taken:
 
-* Virtual Private Gateway (**VPG**) is a control center connecting the virtual private network (VPN) installed on top of AWS.
-* A Customer Gateway (**CGW**) is the component representing the hard or soft VPN device installed at the Client end.
+## 1. Virtual Private Gateway (VPG) and Customer Gateway (CGW) Setup
 
-**VPN tunnel** will be established as soon as data traffic is transferred between AWS and the customer's network. In that connection, you must specify the type of routing that will be used to ensure the safety and quality of data transmission.
-If the CGW on the client side supports Border Gateway Protocol (BGP), then in the VPN connection configuration we are required to set the routing to dynamic routing.
-Otherwise, we must configure the connection routing as static routing. In the case of using static routing, you must enter the exact routes required for the connection from the Client side to the VPG set up at the AWS end. Also, routing for the VPC must be configured to propagate to allow resources to exchange data in and out of the VPN tunnel connection between AWS and the Customer's network.
+- **Virtual Private Gateway (VPG)**: This serves as the control center that connects the virtual private network (VPN) within AWS.
 
-Amazon VPC offers many types of CGWs, and each CGW is assigned to a VPG, but 1 VPG can be associated with multiple CGWs (many-to-one design). To support this model, the CGW's IP address must be unique within a region.
-Amazon VPC also provides the necessary information for Network Administrators to be able to configure the CGW and establish a VPN connection to the VPG on AWS. VPN connection always includes 2 Internet Protocol Security (IPSec) tunnels to ensure high availability of the connection.
-Below are the important features that we need to know about **VPG**, **CGW**, and **VPN**:
-* VPG is the terminal component of the VPN tunnel located on AWS.
-* CGW can be a hardware device or a software application located at the Client end in the VPN tunnel connection.
-* You must initiate a VPN tunnel connection from CGW to VPG.
-* VPG supports both dynamic routing (BGP) and static routing.
-* VPN connection always has 2 tunnels to ensure high availability for connection to VPC from the Client site.
+- **Customer Gateway (CGW)**: This component represents the hard or soft VPN device located at the Client's end.
 
-The lab helps us learn how to set up a Site-to-Site VPN connection in AWS. This solution is quite popular due to the advantages of low cost, and ease of configure because AWS provides instructions for each type of device at the Customer end. The customer's only concern is to prepare the internet from which to create a secret secure tunnel (using IPSec) connecting to AWS through the AWS VPN tunnel.
-In the scope of the lab, assume that we have the Main office ( VPC **ASG** ) and Branch office ( VPC **ASG VPN** ) located at 2 VPCs belonging to 2 different AZs to have a difference in terms of the network. On each VPC doing EC2 creation allows external SSH but without the ability to connect and ping each other using each EC2's Private IP address. All we need to do is configure the VPN so that the Private IP addresses can ping each other using the Site-to-Site VPN.
+## 2. VPN Tunnel Establishment
+
+A VPN tunnel will be initiated as soon as data traffic is exchanged between AWS and the client's network. It is important to specify the routing type to ensure secure and efficient data transmission:
+
+- If the CGW on the client side supports Border Gateway Protocol (BGP), dynamic routing should be configured for the VPN connection.
+
+- If not, static routing must be set up. For static routing, specific routes must be entered to establish the connection from the client's side to the VPG at AWS. Additionally, the VPC routing must be configured to allow seamless data exchange within the VPN tunnel.
+
+## 3. VPG, CGW, and VPN Features
+
+Some key features of VPG, CGW, and VPN include:
+
+- **VPG**: The terminal component of the VPN tunnel within AWS.
+
+- **CGW**: Can be either a hardware device or a software application located at the Client's end in the VPN tunnel.
+
+- VPN tunnel connections are initiated from CGW to VPG.
+
+- VPG supports both dynamic routing (BGP) and static routing.
+
+- Each VPN connection comprises two tunnels for high availability.
+
+## 4. Lab Setup and Configuration
+
+The lab provides hands-on experience in setting up a Site-to-Site VPN connection in AWS. This solution is popular due to its cost-effectiveness and ease of configuration, as AWS offers instructions for various types of client devices. The primary responsibility of the customer is to prepare the internet connection, which will establish a secure tunnel (using IPSec) connecting to AWS via the VPN tunnel.
+
+In the lab scope, there are two VPCs: the Main office (VPC **ASG**) and the Branch office (VPC **ASG VPN**), located in different Availability Zones (AZs) to ensure network diversity. While EC2 instances can be created in each VPC with external SSH access, they cannot communicate or ping each other using private IP addresses. The goal is to configure the VPN to enable private IP addresses to communicate over the Site-to-Site VPN.
 
 ![VPN](/images/6-VPNSitetoSite/vpn.png?featherlight=false&width=90pc)
 
+## Content:
 
-**Content:**
 1. [Create **ASG VPN** VPC and subnet](5.1-createvpnenv/)
-2. [Configure Site to Site VPN and test connection with private IP ](5.2-vpnsitetosite/)
+2. [Configure Site to Site VPN and test connection with private IP](5.2-vpnsitetosite/)

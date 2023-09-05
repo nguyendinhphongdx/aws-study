@@ -12,21 +12,21 @@
     <title>Create Route Table :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941462" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941462" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941462" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941462" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941462" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941462" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941462" rel="stylesheet">
+    <link href="/css/theme.css?1693941462" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941462" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941462" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941462"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941462"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941462"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941462"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,11 +1170,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#create-route-table-for-outbound-internet-routing-via-internet-gateway">Create Route Table for Outbound Internet Routing via Internet Gateway</a></li>
   </ul>
 </nav>
     </div>
@@ -1200,84 +1196,74 @@
 
 
 
-	<h4 id="create-route-table-to-route-outbound-internet-through-internet-gateway">Create Route Table to route outbound internet through Internet Gateway.</h4>
+	<h2 id="create-route-table-for-outbound-internet-routing-via-internet-gateway">Create Route Table for Outbound Internet Routing via Internet Gateway</h2>
 <ol>
 <li>
-<p>In the <strong>VPC</strong> interface</p>
+<p>In the <strong>VPC</strong> interface:</p>
 <ul>
-<li>Select <strong>Route Tables</strong></li>
-<li>Select <strong>Create route table</strong></li>
+<li>Select <strong>Route Tables</strong>.</li>
+<li>Click on <strong>Create route table</strong>.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/4/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>
-<p>Configure <strong>Route table</strong></p>
-<ul>
-<li><strong>Name</strong>, enter <strong><code>Route table-Public</code></strong></li>
-<li><strong>VPC</strong>, select <strong>ASG</strong> VPC. VPC id will be automatically filled in.</li>
-<li>Select <strong>Create route table</strong></li>
-</ul>
 </li>
-</ol>
+<li>
+<p>Configure the <strong>Route table</strong>:</p>
+<ul>
+<li>Enter a <strong>Name</strong>: <strong><code>Route table-Public</code></strong></li>
+<li>Choose the <strong>VPC</strong>: Select <strong>ASG</strong> VPC (VPC ID will auto-fill).</li>
+<li>Click on <strong>Create route table</strong>.</li>
+</ul>
 <p><img src="/images/4/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
-<li>Finish creating <strong>Route table</strong></li>
-</ol>
+</li>
+<li>
+<p>Complete creating the <strong>Route table</strong>.</p>
 <p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>
-<p>Execute <strong>Edit route</strong></p>
-<ul>
-<li>Select <strong>Actions</strong></li>
-<li>Select <strong>Edit routes</strong></li>
-</ul>
 </li>
-</ol>
+<li>
+<p>To make route edits:</p>
+<ul>
+<li>Select <strong>Actions</strong>.</li>
+<li>Choose <strong>Edit routes</strong>.</li>
+</ul>
 <p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>
-<p>In the <strong>Edit routes</strong> interface</p>
-<ul>
-<li>Select <strong>Add route</strong></li>
-<li>Fill in the <strong>Destination CIDR</strong> : <strong><code>0.0.0.0/0</code></strong> representing the Internet.</li>
-<li>In the <strong>Target</strong> section select <strong>Internet Gateway</strong>, then select the <strong>Internet Gateway</strong> we created. <strong>Internet Gateway ID</strong> will be automatically filled in.</li>
-<li>Select <strong>Save changes</strong></li>
-</ul>
 </li>
-</ol>
+<li>
+<p>In the <strong>Edit routes</strong> interface:</p>
+<ul>
+<li>Click on <strong>Add route</strong>.</li>
+<li>Fill in the <strong>Destination CIDR</strong>: <strong><code>0.0.0.0/0</code></strong> representing the Internet.</li>
+<li>In the <strong>Target</strong> section, select <strong>Internet Gateway</strong>, then choose the created <strong>Internet Gateway</strong> (Gateway ID auto-fills).</li>
+<li>Click <strong>Save changes</strong>.</li>
+</ul>
 <p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="6">
-<li>Complete and recheck <strong>Routes</strong></li>
-</ol>
+</li>
+<li>
+<p>Review and confirm the updated <strong>Routes</strong>.</p>
 <p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
-<li>
-<p>Make sure <strong>Route table - Public</strong> is selected.</p>
-<ul>
-<li>Select <strong>subnet associations</strong></li>
-<li>Select <strong>Edit subnet associations</strong></li>
-</ul>
 </li>
-</ol>
+<li>
+<p>Ensure that <strong>Route table - Public</strong> is selected.</p>
+<ul>
+<li>Select <strong>Subnet Associations</strong>.</li>
+<li>Click on <strong>Edit subnet associations</strong>.</li>
+</ul>
 <p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
-<li>
-<p>In <strong>Edit subnet associations</strong> step</p>
-<ul>
-<li>Expand the <strong>Subnet ID</strong> column by dragging the pane to the right.</li>
-<li>Select the correct <strong>2 public subnet</strong> we have created.</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>In the <strong>Edit subnet associations</strong> step:</p>
+<ul>
+<li>Adjust the width of the <strong>Subnet ID</strong> column by dragging the pane to the right.</li>
+<li>Select the appropriate <strong>2 public subnets</strong> that were created.</li>
+</ul>
 <p><img src="/images/4/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
-<li>Select <strong>Save associations</strong></li>
-</ol>
+</li>
+<li>
+<p>Click on <strong>Save associations</strong>.</p>
 <p><img src="/images/4/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="10">
-<li>Complete and recheck <strong>Subnet associations</strong></li>
+</li>
+<li>
+<p>Review and confirm the updated <strong>Subnet associations</strong>.</p>
+</li>
 </ol>
 <p><img src="/images/4/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 
@@ -1858,19 +1844,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750136"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750136"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750136"></script>
-    <script src="/js/jquery.sticky.js?1680750136"></script>
-    <script src="/js/featherlight.min.js?1680750136"></script>
-    <script src="/js/highlight.pack.js?1680750136"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750136"></script>
-    <script src="/js/learn.js?1680750136"></script>
-    <script src="/js/hugo-learn.js?1680750136"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941463"></script>
+    <script src="/js/learn.js?1693941463"></script>
+    <script src="/js/hugo-learn.js?1693941463"></script>
 
-    <link href="/mermaid/mermaid.css?1680750136" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750136"></script>
+    <link href="/mermaid/mermaid.css?1693941463" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941463"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

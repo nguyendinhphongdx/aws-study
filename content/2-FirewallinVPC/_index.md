@@ -6,19 +6,21 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-#### Firewall in VPC
+## Firewall in VPC
 
-In this section, we will learn the basic security features in Amazon VPC such as the Security Group firewall feature and Network Access Control Lists.
-A security group acts as a virtual firewall for the EC2 Instance, helping to control network traffic. An Instance in VPC can be assigned up to 5 Security groups because SG only works at the Instance layer and not at the Subnet layer.
+In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.
 
-{{% notice note %}}
-Security groups operate at the virtual machine level, not the subnet level. However, each virtual machine in a subnet can be assigned to different security groups.
-{{% /notice %}}
+### Security Groups
 
-A network access control list (ACL) is an optional security layer for VPCs that acts as a firewall to control incoming and outgoing traffic for one or more subnets.
-You can set up network ACLs with the same rules as security groups, to add an extra layer of security to the VPC.
+A **Security Group** acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It's important to note that Security Groups operate at the Instance layer and not at the Subnet layer.
 
-#### Content
+> **Note:** Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.
 
-- [Security groups](2.1-securitygroup/)
+### Network ACLs
+
+A **Network Access Control List (ACL)** is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.
+
+### Contents
+
+- [Security Groups](2.1-securitygroup/)
 - [Network ACLs](2.2-networkacls/)

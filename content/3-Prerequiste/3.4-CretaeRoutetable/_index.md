@@ -6,66 +6,65 @@ chapter : false
 pre : " <b> 3.4 </b> "
 ---
 
-#### Create Route Table to route outbound internet through Internet Gateway.
+## Create Route Table for Outbound Internet Routing via Internet Gateway
 
+1. In the **VPC** interface:
 
-1. In the **VPC** interface
+   - Select **Route Tables**.
+   - Click on **Create route table**.
+   
+   ![Create VPC](/images/4/0001.png?featherlight=false&width=90pc)
 
-   - Select **Route Tables**
-   - Select **Create route table**
+2. Configure the **Route table**:
 
-![Create VPC](/images/4/0001.png?featherlight=false&width=90pc)
+   - Enter a **Name**: **```Route table-Public```**
+   - Choose the **VPC**: Select **ASG** VPC (VPC ID will auto-fill).
+   - Click on **Create route table**.
+   
+   ![Create VPC](/images/4/0002.png?featherlight=false&width=90pc)
 
-2. Configure **Route table**
+3. Complete creating the **Route table**.
 
-   - **Name**, enter **```Route table-Public```**
-   - **VPC**, select **ASG** VPC. VPC id will be automatically filled in.
-   - Select **Create route table**
+   ![Create VPC](/images/4/0003.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/4/0002.png?featherlight=false&width=90pc)
+4. To make route edits:
 
-3. Finish creating **Route table**
+   - Select **Actions**.
+   - Choose **Edit routes**.
+   
+   ![Create VPC](/images/4/0004.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/4/0003.png?featherlight=false&width=90pc)
+5. In the **Edit routes** interface:
 
-4. Execute **Edit route**
+   - Click on **Add route**.
+   - Fill in the **Destination CIDR**: **```0.0.0.0/0```** representing the Internet.
+   - In the **Target** section, select **Internet Gateway**, then choose the created **Internet Gateway** (Gateway ID auto-fills).
+   - Click **Save changes**.
+   
+   ![Create VPC](/images/4/0005.png?featherlight=false&width=90pc)
 
-   - Select **Actions**
-   - Select **Edit routes**
+6. Review and confirm the updated **Routes**.
 
-![Create VPC](/images/4/0004.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4/0006.png?featherlight=false&width=90pc)
 
-5. In the **Edit routes** interface
+7. Ensure that **Route table - Public** is selected.
 
-   - Select **Add route**
-   - Fill in the **Destination CIDR** : **```0.0.0.0/0```** representing the Internet.
-   - In the **Target** section select **Internet Gateway**, then select the **Internet Gateway** we created. **Internet Gateway ID** will be automatically filled in.
-   - Select **Save changes**
+   - Select **Subnet Associations**.
+   - Click on **Edit subnet associations**.
+   
+   ![Create VPC](/images/4/0007.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/4/0005.png?featherlight=false&width=90pc)
+8. In the **Edit subnet associations** step:
 
-6. Complete and recheck **Routes**
+   - Adjust the width of the **Subnet ID** column by dragging the pane to the right.
+   - Select the appropriate **2 public subnets** that were created.
+   
+   ![Create VPC](/images/4/0008.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/4/0006.png?featherlight=false&width=90pc)
+9. Click on **Save associations**.
 
-7. Make sure **Route table - Public** is selected.
+   ![Create VPC](/images/4/0009.png?featherlight=false&width=90pc)
 
-   - Select **subnet associations**
-   - Select **Edit subnet associations**
+10. Review and confirm the updated **Subnet associations**.
 
-![Create VPC](/images/4/0007.png?featherlight=false&width=90pc)
-
-8. In **Edit subnet associations** step
-
-   - Expand the **Subnet ID** column by dragging the pane to the right.
-   - Select the correct **2 public subnet** we have created.
-
-![Create VPC](/images/4/0008.png?featherlight=false&width=90pc)
-
-9. Select **Save associations**
-
-![Create VPC](/images/4/0009.png?featherlight=false&width=90pc)
-
-10. Complete and recheck **Subnet associations**
-
-![Create VPC](/images/4/00010.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4/00010.png?featherlight=false&width=90pc)

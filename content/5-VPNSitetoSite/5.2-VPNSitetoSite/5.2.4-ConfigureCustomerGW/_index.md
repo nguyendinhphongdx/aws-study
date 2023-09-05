@@ -6,34 +6,32 @@ chapter : false
 pre : " <b> 5.2.4 </b> "
 ---
 
-#### Configure Customer Gateway
+# Configure Customer Gateway
 
-1. Access to **VPC**
-
-   - Select **Site-to-Site VPN Connection**
-   - Select **VPN Connection** created
-   - Select **Download Configuration**
+1. Access to VPC
+- Select **Site-to-Site VPN Connection**
+- Select **VPN Connection** created
+- Select **Download Configuration**
 
 ![Create VPC](/images/13/0001.png?featherlight=false&width=90pc)
 
-2. In the **Download Configuration** dialog, choose **appliance** that is right for you: In this exercise, we will use **OpenSwan**.
+2. Download Configuration
+In the **Download Configuration** dialog, choose the appropriate **appliance**, e.g., **OpenSwan**.
 
-   - **Vendor**: Select **OpenSwan**
-   - **Platform**: Select **OpenSwan**
-   - **Software**: Select **OpenSwan 2.6.38+**
-   - **IKE version**: Select **ikev1**
-   - Select **Download**.
+- **Vendor**: Select **OpenSwan**
+- **Platform**: Select **OpenSwan**
+- **Software**: Select **OpenSwan 2.6.38+**
+- **IKE version**: Select **ikev1**
+- Select **Download**.
 
 ![Create VPC](/images/13/0002.png?featherlight=false&width=90pc)
 
-3. Save the image file information to the folder we use to store the key pair and tools for the lab.
-
-   - Then based on the provided configuration, you change the appropriate information and configuration for your device.
+3. Save the image file information to the folder used for storing the key pair and lab tools. Modify the configuration based on your device.
 
 ![Create VPC](/images/13/0003.png?featherlight=false&width=90pc)
 
-   - Connect ssh to **EC2 Customer Gateway**.
-  
+Connect SSH to **EC2 Customer Gateway**.
+
 ![Create VPC](/images/13/0004.png?featherlight=false&width=90pc)
 
 4. Install **OpenSwan**

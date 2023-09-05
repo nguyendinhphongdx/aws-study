@@ -6,52 +6,56 @@ chapter : false
 pre : " <b> 4.2 </b> "
 ---
 
-#### Checking connection
+## Checking Connection
 
+> ℹ️ **Note:** There are several ways to connect to EC2 instances. You can follow the instructions to [connect to EC2 using PuTTY](https://000004.awsstudygroup.com/en/4-launchlinuxinstance/4.2-connectlinuxinstance/). In this lab, we will use [MobaXterm](https://mobaxterm.mobatek.net/) to establish the connection.
 
-{{% notice note %}}
-There are many ways to connect to EC2, you can refer to [connect EC2 with **PuTTY**](https://000004.awsstudygroup.com/en/4-launchlinuxinstance/4.2-connectlinuxinstance/). In the lab, we use [MobaXterm](https://mobaxterm.mobatek.net/) to connect EC2
-{{% /notice %}}
+1. **Download MobaXterm**
 
-1. Download [MobaXterm](https://mobaxterm.mobatek.net/download.html)
+   ![Download MobaXterm](https://mobaxterm.mobatek.net/download.html)
 
-![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&width=90pc)
+   ![Create VPC](/images/4-CreateEc2Server/4.2-ec2connect/00019-ec2connect.png?featherlight=false&width=90pc)
 
-2. Go to the **EC2** page
+2. **Access the EC2 Page**
 
-   - Select **Instances**
-   - Select **EC2 Public**
-   - Select **Details**
-   - View **Public IPv4 address**
+   - Go to the **EC2** page.
+   - Select **Instances**.
+   - Choose the **EC2 Public** instance.
+   - Select **Details**.
+   - Locate the **Public IPv4 address**.
 
+   ![Create VPC](/images/7/0001.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/7/0001.png?featherlight=false&width=90pc)
+3. **Using MobaXterm**
 
-3. After downloading **MobaXterm**, extract and open
+   - After downloading MobaXterm, extract and open it.
+   - Select **Session**.
 
-   - Select **Session**
+   ![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
+4. **Configuring Session Settings**
 
-4. In the **Session settings** interface
+   - In the **Session settings** interface, choose **SSH**.
 
-   - Select **SSH**
+   ![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
+5. **Session Settings Continued**
 
-5. In the **Session settings** interface
+   - In the **Session settings** interface:
+     - Enter the **Remote host** (Public IPv4 address).
+     - Specify the **username** as `ec2-user`.
+     - Choose the **Use private key** option and provide the path to the `aws-keypair.pem` file created and downloaded during EC2 instance creation.
 
-   - **Remote host**, enter **```Public IPv4 address```**
-   - **Specify username**, enter **```ec2-user```**
-   - **Use private key**, choose the path of **aws-keypair.pem** created and download at EC2 creation.
+   ![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/7/0002.png?featherlight=false&width=90pc)
+6. **Successful Connection**
 
-6. Connection successful.
+   ![Create VPC](/images/7/0003.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/7/0003.png?featherlight=false&width=90pc)
+7. **Testing Internet Connection of EC2 Public**
 
-7. Check the connection to the internet of EC2 Public, we execute the command:
+   Execute the following command to test the internet connection of the EC2 Public instance
+
 
 ```
 ping amazon.com -c5
@@ -69,8 +73,7 @@ ping <IP Private EC2 Private>
 
 
 
-
-#### Connect to the EC2 Private server and check the internet connection.
+## Connect to the EC2 Private Server and Check Internet Connection
 
 9. Access to **EC2**
 
@@ -82,7 +85,8 @@ ping <IP Private EC2 Private>
 
 ![Create VPC](/images/7/0003.png?featherlight=false&width=90pc)
 
-10. Do a ping **<EC2 Private's private IP address>** to test the connection from the **EC2 Public** server to the **EC2 Private** server. We test the connection between two EC2 instances with the command:
+10. Perform a ping test to the EC2 Private's private IP address to test the connection from the EC2 Public server to the EC2 Private server. Use the following command:
+
 
 ```
 ping 10.10.4.105 -c5

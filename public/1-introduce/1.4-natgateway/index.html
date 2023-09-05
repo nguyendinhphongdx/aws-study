@@ -12,21 +12,21 @@
     <title>NAT Gateway :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941461" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941461" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941461" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941461" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941461" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941461" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941461" rel="stylesheet">
+    <link href="/css/theme.css?1693941461" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941461" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941461" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941461"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941461"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941461"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941461"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,11 +1170,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#nat-gateway">NAT Gateway</a></li>
   </ul>
 </nav>
     </div>
@@ -1200,24 +1196,23 @@
 
 
 
-	<h4 id="nat-gateway">NAT Gateway</h4>
+	<h2 id="nat-gateway">NAT Gateway</h2>
 <ul>
 <li>
-<p>By default, any EC2 running inside a Private subnet will not be able to communicate with the Internet through the IGW. From there the problem arises when that EC2 needs to go outside of the Internet to apply security updates, download patches, or update application software.
-Understanding that need, AWS provides 2 methods that allow EC2s inside Private subnet to have access to the Internet, namely NAT Instance and NAT Gateway. For common cases, we should use NAT Gateway instead of NAT Instance. NAT Gateway ensures higher availability and bandwidth and requires less administrative effort than NAT Instance.</p>
+<p>By default, any EC2 running inside a Private subnet will not be able to communicate with the Internet through the IGW. This situation becomes problematic when the EC2 needs to access the Internet for security updates, patch downloads, or application software updates.</p>
+<p>Recognizing this need, AWS offers two methods for granting EC2s in a Private subnet access to the Internet: <strong>NAT Instance</strong> and <strong>NAT Gateway</strong>. In most scenarios, it is advisable to opt for NAT Gateway over NAT Instance due to its enhanced availability, bandwidth, and reduced administrative overhead.</p>
 </li>
 <li>
-<p>To create a NAT gateway, you must specify a subnet (public) and an Elastic IP address. Make sure the Elastic IP address is not associated with any other Instance or Network interface.</p>
+<p>To set up a NAT gateway, you are required to specify a public subnet and an Elastic IP address. Ensure that the chosen Elastic IP address is not associated with any other instances or network interfaces.</p>
 </li>
 <li>
-<p>In case we want to migrate from a NAT instance to a NAT gateway, we can reuse the Elastic IP address of the NAT instance. But first, we need to separate the IP address from the NAT Instance.</p>
+<p>In situations where transitioning from a NAT instance to a NAT gateway is desired, it is possible to reuse the Elastic IP address assigned to the NAT instance. However, prior to doing so, it is essential to disassociate the IP address from the NAT Instance.</p>
 </li>
 </ul>
 <p><img src="/images/1-Introduce/natgw.png?featherlight=false&amp;width=70pc" alt="NAT Gateway"></p>
-
-<div class="notices tip" ><p>Neither the NAT Gateway nor the NAT instance supports direct inbound traffic from the internet.</p>
-</div>
-
+<blockquote>
+<p><strong>Tip:</strong> Neither the NAT Gateway nor the NAT instance supports direct inbound traffic from the internet.</p>
+</blockquote>
 
 
 
@@ -1793,19 +1788,19 @@ Understanding that need, AWS provides 2 methods that allow EC2s inside Private s
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

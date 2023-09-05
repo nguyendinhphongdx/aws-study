@@ -6,12 +6,12 @@ chapter : false
 pre : " <b> 1.3 </b> "
 ---
 
-#### Internet Gateway
+## Internet Gateway
 
-- The Internet Gateway (IGW) is an Amazon VPC component that enables resources within the VPC, specifically EC2, to communicate with the Internet. IGW has strong horizontal elasticity, and high redundancy and availability. It acts as a target in the Amazon VPC's routing table, helping traffic to be routed outside the Internet by translated EC2's network address into the Public IP address it has been assigned.
+The **Internet Gateway (IGW)** is a crucial component of Amazon VPC that facilitates communication between resources within the VPC, specifically EC2 instances, and the Internet. The IGW exhibits robust horizontal scalability, along with high levels of redundancy and availability. It operates as a designated target within the Amazon VPC's routing table, playing a vital role in directing traffic from EC2 instances to the external Internet. This process involves translating the network address of the EC2 instance into its corresponding Public IP address.
 
-- More specifically, EC2 Instances inside the VPC only know the Private IP addresses assigned to it, but when there is traffic sent from EC2 out to the Internet, the IGW will translate that Private IP address into a Public IP address ( or EIP addresses, discussed later) that are assigned to EC2, and maintain a 1-1 mapping until the Public IP address is released. 
+More precisely, the EC2 instances located within the VPC are only aware of their assigned Private IP addresses. However, when there is a need to transmit traffic from these EC2 instances to the Internet, the IGW intervenes by translating the originating Private IP address into the Public IP address (or Elastic IP addresses, as discussed later) assigned to the respective EC2 instance. This translation is upheld through a one-to-one mapping, which persists until the Public IP address is released.
 
-- When EC2 receives traffic from outside the Internet, the IGW translates the Target address (Public IP address) into the EC2 Instance Private IP address and forwards the traffic to the Amazon VPC.
+Conversely, when the EC2 instances receive incoming traffic from the Internet, the IGW undertakes the task of translating the target address (Public IP address) into the corresponding Private IP address of the EC2 instance. Subsequently, the IGW forwards this traffic into the Amazon VPC.
 
 ![Internet Gateway](/images/1-Introduce/igw.png?featherlight=false&width=60pc)

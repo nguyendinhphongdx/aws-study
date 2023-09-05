@@ -12,21 +12,21 @@
     <title>Create Security Group :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941462" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941462" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941462" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941462" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941462" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941462" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941462" rel="stylesheet">
+    <link href="/css/theme.css?1693941462" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941462" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941462" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941462"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941462"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941462"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941462"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,9 +1170,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#create-security-groups">Create Security Groups</a>
       <ul>
-        <li></li>
+        <li><a href="#create-security-group-for-servers-in-public-subnet">Create Security Group for Servers in Public Subnet</a></li>
+        <li><a href="#create-a-security-group-for-a-server-in-a-private-subnet">Create a Security Group for a Server in a Private Subnet</a></li>
       </ul>
     </li>
   </ul>
@@ -1200,131 +1201,91 @@
 
 
 
-	<h4 id="create-security-group">Create Security Group</h4>
-<h4 id="create-security-group-for-servers-located-in-public-subnet">Create Security Group for servers located in Public subnet</h4>
+	<h2 id="create-security-groups">Create Security Groups</h2>
+<h3 id="create-security-group-for-servers-in-public-subnet">Create Security Group for Servers in Public Subnet</h3>
 <ol>
 <li>
-<p>In the <strong>VPC</strong> interface</p>
+<p>In the <strong>VPC</strong> interface:</p>
 <ul>
 <li>Select <strong>Security Group</strong></li>
-<li>Select <strong>Cretae security group</strong></li>
+<li>Select <strong>Create security group</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/5/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="2">
-<li>
-<p>Configure <strong>Security group</strong></p>
-<ul>
-<li><strong>Security Group name</strong>, enter <strong><code>Public subnet - SG</code></strong></li>
-<li><strong>Description</strong>, enter <strong>Allow SSH and Ping for servers in public subnet.</strong></li>
-<li>Select <strong>ASG</strong> VPC</li>
-</ul>
 </li>
-</ol>
+<li>
+<p>Configure the <strong>Security Group</strong>:</p>
+<ul>
+<li><strong>Security Group name</strong>: Enter <strong>Public subnet - SG</strong></li>
+<li><strong>Description</strong>: Enter <strong>Allow SSH and Ping for servers in the public subnet.</strong></li>
+<li>Select the <strong>ASG</strong> VPC</li>
+</ul>
 <p><img src="/images/5/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="3">
+</li>
 <li>
-<p>Configure <strong>Inbound rules</strong></p>
+<p>Configure <strong>Inbound rules</strong>:</p>
 <ul>
-<li>
-<p>In <strong>Inbound rules</strong>, click <strong>Add rule</strong>.</p>
-</li>
-<li>
-<p>Select <strong>Type</strong>: <strong>SSH</strong> and <strong>Source</strong>: <strong>My IP</strong>. <strong>My IP</strong> represents 1 public IPv4 address you are using (will change when you change network)</p>
-</li>
-<li>
-<p>Select <strong>Add rule</strong> to add a new rule.</p>
-</li>
-<li>
-<p>Select <strong>Type</strong>: <strong>All ICMP - IPv4</strong> and <strong>Source</strong>: <strong>Anywhere</strong>. Allow ping from any IP address.</p>
-</li>
+<li>In <strong>Inbound rules</strong>, click <strong>Add rule</strong>.</li>
+<li>Select <strong>Type</strong>: <strong>SSH</strong> and <strong>Source</strong>: <strong>My IP</strong>. (Use your public IPv4 address)</li>
+<li>Select <strong>Add rule</strong> to add a new rule.</li>
+<li>Select <strong>Type</strong>: <strong>All ICMP - IPv4</strong> and <strong>Source</strong>: <strong>Anywhere</strong>. Allow ping from any IP address.</li>
 </ul>
+<p><img src="/images/5/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Check <strong>Outbound rules</strong> and select <strong>Create security group</strong></p>
+<p><img src="/images/5/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+<li>
+<p>Complete the creation of the security group for the server located in the public subnet</p>
+<p><img src="/images/5/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 </li>
 </ol>
-<p><img src="/images/5/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="4">
-<li>Check <strong>Outbound rules</strong> and select <strong>Cretae security group</strong></li>
-</ol>
-<p><img src="/images/5/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="5">
-<li>Complete the creation of security group for the server located in the Public subnet</li>
-</ol>
-<p><img src="/images/5/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<h4 id="create-a-security-group-for-a-server-located-in-a-private-subnet">Create a Security Group for a server located in a Private subnet</h4>
+<h3 id="create-a-security-group-for-a-server-in-a-private-subnet">Create a Security Group for a Server in a Private Subnet</h3>
 <ol start="6">
 <li>
-<p>In the <strong>VPC</strong> interface</p>
+<p>In the <strong>VPC</strong> interface:</p>
 <ul>
 <li>Select <strong>Security Groups</strong></li>
 <li>Select <strong>Create security group</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/5/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="7">
+</li>
 <li>
-<p>Configure <strong>Security group</strong></p>
+<p>Configure the <strong>Security Group</strong>:</p>
 <ul>
-<li>
-<p>In the <strong>Security group name</strong> field enter <strong>Private subnet - SG</strong></p>
-</li>
-<li>
-<p>In the <strong>Description</strong> section enter <strong>Allow SSH and Ping for servers in private subnet.</strong></p>
-</li>
-<li>
-<p>select <strong>VPC</strong>, select <strong>VPC</strong> named <strong>ASG</strong>.</p>
-</li>
+<li>In the <strong>Security group name</strong> field, enter <strong>Private subnet - SG</strong></li>
+<li>In the <strong>Description</strong> section, enter <strong>Allow SSH and Ping for servers in the private subnet.</strong></li>
+<li>Select the <strong>VPC</strong> named <strong>ASG</strong></li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/5/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="8">
+</li>
 <li>
-<p>Configure <strong>Inbound rules</strong></p>
+<p>Configure <strong>Inbound rules</strong>:</p>
 <ul>
-<li>
-<p>In Inbound rules, select Add rule.</p>
-</li>
-<li>
-<p>Select <strong>Type</strong>: <strong>SSH</strong> and leave <strong>Source</strong>: <strong>Custom</strong>. Check the search box and select <strong>Public subnet SG</strong>. This option allows all servers assigned <strong>Public subnet SG</strong> to be <strong>SSH</strong> to the servers assigned to <strong>Private subnet SG</strong>. **.</p>
-</li>
+<li>In <strong>Inbound rules</strong>, select <strong>Add rule</strong>.</li>
+<li>Select <strong>Type</strong>: <strong>SSH</strong> and leave <strong>Source</strong>: <strong>Custom</strong>. Search and select <strong>Public subnet SG</strong> to allow SSH from servers in the public subnet.</li>
 </ul>
-</li>
-</ol>
 <p><img src="/images/5/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="9">
-<li>
-<p>Select <strong>Add rule</strong> to add a new rule.</p>
-<ul>
-<li>
-<table>
-<thead>
-<tr>
-<th>Select <strong>Type</strong>: <strong>All ICMP IPv4</strong> and <strong>Source</strong>: <strong>Anywhere</strong>. Allow ping from any IP address.</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="/images/5/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></td>
-</tr>
-</tbody>
-</table>
 </li>
+<li>
+<p>Select <strong>Add rule</strong> to add a new rule:</p>
+<ul>
+<li>Select <strong>Type</strong>: <strong>All ICMP IPv4</strong> and <strong>Source</strong>: <strong>Anywhere</strong>. Allow ping from any IP address.</li>
 </ul>
+<p><img src="/images/5/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
 </li>
 <li>
 <p>Select <strong>Create security group</strong></p>
-</li>
-</ol>
 <p><img src="/images/5/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<ol start="11">
-<li>So we have created <strong>2 Security Group</strong> for servers located in <strong>public subnet and private subnet.</strong></li>
-</ol>
+</li>
+<li>
+<p>Two <strong>Security Groups</strong> have been created for servers located in the public and private subnets:</p>
 <ul>
-<li>Next we will proceed to create 2 EC2 servers.</li>
+<li>Next, we will proceed to create two EC2 servers.</li>
 </ul>
 <p><img src="/images/5/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</li>
+</ol>
 
 
 
@@ -1903,19 +1864,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

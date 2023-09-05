@@ -12,21 +12,21 @@
     <title>Network ACLs :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1680750135" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680750135" rel="stylesheet">
-    <link href="/css/hybrid.css?1680750135" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680750135" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680750135" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680750135" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680750135" rel="stylesheet">
-    <link href="/css/theme.css?1680750135" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680750135" rel="stylesheet">
+    <link href="/css/nucleus.css?1693941461" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1693941461" rel="stylesheet">
+    <link href="/css/hybrid.css?1693941461" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1693941461" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1693941461" rel="stylesheet">
+    <link href="/css/auto-complete.css?1693941461" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1693941461" rel="stylesheet">
+    <link href="/css/theme.css?1693941461" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1693941461" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680750135" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1693941461" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680750135"></script>
+    <script src="/js/jquery-3.3.1.min.js?1693941461"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680750135"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680750135"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1693941461"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1693941461"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680750135"></script>
+<script type="text/javascript" src="/js/search.js?1693941461"></script>
 
     
   </div>
@@ -682,13 +682,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/" title="Configuring Site to Site VPN" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/">
-           <b> 5. </b> Configuring Site to Site VPN
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -772,13 +772,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Creating EC2 Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
-           <b> 5.1.2 </b> Creating EC2 Instance
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -809,13 +809,13 @@
  
   
     
-    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configuring VPN Connection" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
       <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
-           <b> 5.2 </b> Configuring VPN Connection
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1105,7 +1105,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-04-2023</font></i>
+        <i><font color=orange>06-09-2023</font></i>
     </left>
     <left>
         <br>
@@ -1170,11 +1170,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#network-acls">Network ACLs</a></li>
+    <li><a href="#network-acl-rules">Network ACL Rules</a></li>
   </ul>
 </nav>
     </div>
@@ -1200,29 +1197,27 @@
 
 
 
-	<h4 id="network-acls">Network ACLs</h4>
+	<h2 id="network-acls">Network ACLs</h2>
 <ul>
-<li>VPC after initialization will have a default network ACL available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic that may go in or out of the VPC.</li>
-<li>Can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic, until we add an access permission rule.</li>
-<li>Each subnet in the VPC must be associated with a network ACL. If the subnet is not associated with a specific network ACL, the subnet is automatically associated with the default network ACL.</li>
-<li>A network ACL can be associated with multiple subnets. However, a subnet can only be associated with one network ACL at a time. When a new network ACL is associated with a subnet, the previous association is deleted.</li>
-<li>A network ACL contains a list of differently numbered rules. AWS evaluates rules based on their assigned sequence number, starting with the lowest numbered rule, to determine if traffic is allowed in or out of any subnets associated with the network ACLs. .
-The largest sequence number that can be assigned to a rule is 32766 (equivalent to the maximum number of rules for a network ACL is 32766).</li>
-<li>The Network ACL has separate entry and exit permission rules and the rule can be to allow or deny traffic.</li>
-<li>Network ACL is a Stateless service, which means that responses to traffic that are allowed in must follow the rules for outbound traffic (and vice versa).</li>
+<li><strong>Default Network ACL:</strong> After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC.</li>
+<li><strong>Custom Network ACL:</strong> You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added.</li>
+<li><strong>Subnet Association:</strong> Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL.</li>
+<li><strong>Multiple Subnets:</strong> A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association.</li>
+<li><strong>Rule Sequencing:</strong> Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766.</li>
+<li><strong>Allow/Deny Traffic:</strong> Network ACLs contain both inbound and outbound rules for allowing or denying traffic.</li>
+<li><strong>Stateless Service:</strong> Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa.</li>
 </ul>
-<h4 id="network-acl-rules">Network ACL rules</h4>
-<p>You can add or remove a rule from the default network ACL or create a new network ACL for the VPC. When adding or removing a rule from the network ACL, the changes are automatically applied to the subnets associated with it.</p>
+<h2 id="network-acl-rules">Network ACL Rules</h2>
+<p>You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL&rsquo;s rules automatically apply to its associated subnets.</p>
 <p>Components of a network ACL rule:</p>
 <ul>
-<li><strong>Rule number</strong>. The starting rule is evaluated starting with the rule with the lowest sequence number.
-As soon as that rule matches traffic, it will immediately be applied even if it conflicts with a higher-numbered rule in the list.</li>
-<li><strong>Type</strong>.traffic type, eg SSH. All traffic types or custom ranges can be specified.</li>
-<li><strong>Protocol</strong>. specify the protocol with the standard protocol number.</li>
-<li><strong>Port range</strong>. port or port range listening for traffic. For example, HTTP is 80.</li>
-<li><strong>Source</strong>. [Inbound rule only] Origin of traffic (value is CIDR range).</li>
-<li><strong>Destination</strong>. [Outbound rule only] Destination of traffic (value is CIDR range).</li>
-<li><strong>Allow/Deny</strong>. specify Allow or Deny traffic.</li>
+<li><strong>Rule Number:</strong> Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it&rsquo;s immediately applied even if it conflicts with higher-numbered rules.</li>
+<li><strong>Type:</strong> Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges.</li>
+<li><strong>Protocol:</strong> Specify the protocol using standard protocol numbers.</li>
+<li><strong>Port Range:</strong> Define the port or port range for traffic (e.g., HTTP is 80).</li>
+<li><strong>Source:</strong> [Inbound Rule] Defines the traffic origin (CIDR range).</li>
+<li><strong>Destination:</strong> [Outbound Rule] Specifies the traffic destination (CIDR range).</li>
+<li><strong>Allow/Deny:</strong> Choose to Allow or Deny the specified traffic.</li>
 </ul>
 
 
@@ -1802,19 +1797,19 @@ As soon as that rule matches traffic, it will immediately be applied even if it 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680750135"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680750135"></script>
-    <script src="/js/jquery.sticky.js?1680750135"></script>
-    <script src="/js/featherlight.min.js?1680750135"></script>
-    <script src="/js/highlight.pack.js?1680750135"></script>
+    <script src="/js/clipboard.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.min.js?1693941462"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1693941462"></script>
+    <script src="/js/jquery.sticky.js?1693941462"></script>
+    <script src="/js/featherlight.min.js?1693941462"></script>
+    <script src="/js/highlight.pack.js?1693941462"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680750135"></script>
-    <script src="/js/learn.js?1680750135"></script>
-    <script src="/js/hugo-learn.js?1680750135"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1693941462"></script>
+    <script src="/js/learn.js?1693941462"></script>
+    <script src="/js/hugo-learn.js?1693941462"></script>
 
-    <link href="/mermaid/mermaid.css?1680750135" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680750135"></script>
+    <link href="/mermaid/mermaid.css?1693941462" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1693941462"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
