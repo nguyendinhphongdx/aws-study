@@ -1,5 +1,5 @@
 ---
-title : "Tạo máy chủ EC2"
+title : "Tạo máy chủ EC2 "
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false
@@ -18,3 +18,4 @@ pre : " <b> 4. </b> "
 2. [Kiểm tra kết nối](4.2-connectec2/)
 3. [Tạo NAT Gateway](4.3-natgateway/)
 4. [Sử dụng Reachability Analyzer](4.4.-createreachabilityanalyzer/)
+5. [Tạo EC2 Instance Connect Endpoint](4.5-EICEndpoint/)

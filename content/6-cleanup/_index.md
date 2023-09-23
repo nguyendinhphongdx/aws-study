@@ -54,6 +54,12 @@ We will proceed to delete the resources in the following order:
    ![Release Elastic IP](/images/16/0006.png?featherlight=false&width=90pc)
    ![Release Elastic IP](/images/16/0007.png?featherlight=false&width=90pc)
 
+#### Delete the EC2 Instance connection endpoint
+- Access to Endpoint transactions
+- Select Action, select Delete VPC endpoints
+- Enter delete
+![Create VPC](/images/16/00020.png?featherlight=false&width=90pc)
+
 ### Delete in the following order:
 
 - VPN Site to Site connection.

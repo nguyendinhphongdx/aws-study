@@ -278,6 +278,18 @@
                 href="/2-firewallinvpc/2.3-vpc-resource-map/"
                 />
   </url><url>
+    <loc>/4-createec2server/4.5-eicendpoint/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-createec2server/4.5-eicendpoint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-createec2server/4.5-eicendpoint/"
+                />
+  </url><url>
     <loc>/4-createec2server/</loc>
     <xhtml:link
                 rel="alternate"

@@ -23,7 +23,7 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 
 ![Create VPC](/images/16/0002.png?featherlight=false&width=90pc)
 
-#### Xóa NAT Gateway và Elastic IP Address
+#### Xóa NAT Gateway, Elastic IP Address 
 
 - Xóa NAT Gateway và Elastic IP Address. AWS sẽ thu tiền cho các EIP lãng phí nên bạn cần kiểm tra kỹ để tránh bị trừ chi phí ngoài ý muốn.
 - Truy cập trang Amazon VPC console tại địa chỉ [VPC](https://console.aws.amazon.com/vpc/)
@@ -53,6 +53,12 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 ![Create VPC](/images/16/0006.png?featherlight=false&width=90pc)
 
 ![Create VPC](/images/16/0007.png?featherlight=false&width=90pc)
+
+#### Xóa EC2 Instance concect endpoint
+- Truy cập vào giao dịch Endpoint
+- Chọn Action, chọn Delete VPC endpoints
+- Nhập delete
+![Create VPC](/images/16/00020.png?featherlight=false&width=90pc)
 
 #### Tiếp tục làm tương tự và xóa theo thứ tự sau nhé:
 - VPN Site to Site connection.
