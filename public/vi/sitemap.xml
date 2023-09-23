@@ -314,18 +314,6 @@
                 href="/vi/4-createec2server/4.4.-createreachabilityanalyzer/"
                 />
   </url><url>
-    <loc>/vi/4-createec2server/4.5-eicendpoint/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-createec2server/4.5-eicendpoint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-createec2server/4.5-eicendpoint/"
-                />
-  </url><url>
     <loc>/vi/4-createec2server/</loc>
     <xhtml:link
                 rel="alternate"
@@ -360,6 +348,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/5-vpnsitetosite/"
+                />
+  </url><url>
+    <loc>/vi/4-createec2server/4.5-eicendpoint/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-createec2server/4.5-eicendpoint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-createec2server/4.5-eicendpoint/"
                 />
   </url><url>
     <loc>/vi/3-prerequiste/3.5-createsecuritygroup/</loc>
