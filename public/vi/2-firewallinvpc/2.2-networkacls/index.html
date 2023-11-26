@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.120.4">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Network ACLs :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1700212477" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1700212477" rel="stylesheet">
-    <link href="/css/hybrid.css?1700212477" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1700212477" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1700212477" rel="stylesheet">
-    <link href="/css/auto-complete.css?1700212477" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1700212477" rel="stylesheet">
-    <link href="/css/theme.css?1700212477" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1700212477" rel="stylesheet">
+    <link href="/css/nucleus.css?1701009824" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1701009824" rel="stylesheet">
+    <link href="/css/hybrid.css?1701009824" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1701009824" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1701009824" rel="stylesheet">
+    <link href="/css/auto-complete.css?1701009824" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1701009824" rel="stylesheet">
+    <link href="/css/theme.css?1701009824" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1701009824" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1700212477" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1701009824" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1700212477"></script>
+    <script src="/js/jquery-3.3.1.min.js?1701009824"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1700212477"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1700212477"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1701009824"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1701009824"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1700212477"></script>
+<script type="text/javascript" src="/js/search.js?1701009824"></script>
 
     
   </div>
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/vi/2-firewallinvpc/2.2-networkacls/" title="Network ACLs" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -1133,7 +1133,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-10-2023</font></i>
+        <i><font color=orange>26-11-2023</font></i>
     </left>
     <left>
         <br>
@@ -1234,7 +1234,7 @@
 <li>Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập.</li>
 <li>Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định.</li>
 <li>Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa.</li>
-<li>Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không. 
+<li>Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không.
 Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766).</li>
 <li>Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng.</li>
 <li>Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại).</li>
@@ -1243,7 +1243,7 @@ Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương
 <p>Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.</p>
 <p>Các thành phần của một network ACL rule:</p>
 <ul>
-<li><strong>Rule number</strong>. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất. 
+<li><strong>Rule number</strong>. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất.
 Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách.</li>
 <li><strong>Type</strong>.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh.</li>
 <li><strong>Protocol</strong>.  chỉ định giao thức cùng số giao thức chuẩn.</li>
@@ -1846,19 +1846,19 @@ Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập t�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1700212477"></script>
-    <script src="/js/perfect-scrollbar.min.js?1700212477"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1700212477"></script>
-    <script src="/js/jquery.sticky.js?1700212477"></script>
-    <script src="/js/featherlight.min.js?1700212477"></script>
-    <script src="/js/highlight.pack.js?1700212477"></script>
+    <script src="/js/clipboard.min.js?1701009824"></script>
+    <script src="/js/perfect-scrollbar.min.js?1701009824"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1701009824"></script>
+    <script src="/js/jquery.sticky.js?1701009824"></script>
+    <script src="/js/featherlight.min.js?1701009824"></script>
+    <script src="/js/highlight.pack.js?1701009824"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1700212477"></script>
-    <script src="/js/learn.js?1700212477"></script>
-    <script src="/js/hugo-learn.js?1700212477"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1701009824"></script>
+    <script src="/js/learn.js?1701009824"></script>
+    <script src="/js/hugo-learn.js?1701009824"></script>
 
-    <link href="/mermaid/mermaid.css?1700212477" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1700212477"></script>
+    <link href="/mermaid/mermaid.css?1701009824" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1701009824"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

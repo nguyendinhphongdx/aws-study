@@ -4,6 +4,8 @@
     <title>Tạo EC2 Instance Connect Endpoint (Optional) on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
     <link>/vi/4-createec2server/4.5-eicendpoint/</link>
     <description>Recent content in Tạo EC2 Instance Connect Endpoint (Optional) on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-createec2server/4.5-eicendpoint/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/4-createec2server/4.5-eicendpoint/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -4,6 +4,8 @@
     <title>Tạo NAT Gateway on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
     <link>/vi/4-createec2server/4.3-natgateway/</link>
     <description>Recent content in Tạo NAT Gateway on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-createec2server/4.3-natgateway/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/4-createec2server/4.3-natgateway/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

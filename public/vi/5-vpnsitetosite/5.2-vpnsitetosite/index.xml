@@ -4,6 +4,8 @@
     <title>Cấu hình kết nối VPN on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
     <link>/vi/5-vpnsitetosite/5.2-vpnsitetosite/</link>
     <description>Recent content in Cấu hình kết nối VPN on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
