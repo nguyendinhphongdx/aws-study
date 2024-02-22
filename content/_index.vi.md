@@ -22,3 +22,4 @@ Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và th�
 4. [Tạo EC2 Server](4-createec2server/)
 5. [Cấu hình Site-to-Site VPN](5-vpnsitetosite/)
 6. [Dọn dẹp tài nguyên](6-cleanup/)
+

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Cấu hình Customer Gateway :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1701009824" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701009824" rel="stylesheet">
-    <link href="/css/hybrid.css?1701009824" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701009824" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701009824" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701009824" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701009824" rel="stylesheet">
-    <link href="/css/theme.css?1701009824" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701009824" rel="stylesheet">
+    <link href="/css/nucleus.css?1708568886" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1708568886" rel="stylesheet">
+    <link href="/css/hybrid.css?1708568886" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1708568886" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1708568886" rel="stylesheet">
+    <link href="/css/auto-complete.css?1708568886" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1708568886" rel="stylesheet">
+    <link href="/css/theme.css?1708568886" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1708568886" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701009824" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1708568886" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701009824"></script>
+    <script src="/js/jquery-3.3.1.min.js?1708568886"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701009824"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701009824"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1708568886"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1708568886"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701009824"></script>
+<script type="text/javascript" src="/js/search.js?1708568886"></script>
 
     
   </div>
@@ -1081,7 +1081,7 @@
                   
                     
                     
-                      <option id="en" value="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/">English</option>
+                      <option id="en" value="//localhost:1313/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/">English</option>
                     
                   
               
@@ -1095,7 +1095,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1245,7 +1245,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/13/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/0001.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Trong hộp thoại <strong>Download Configuration</strong>, lựa chọn <strong>appliance</strong> phù hợp với bạn: Trong bài thực hành này, chúng ta sẽ sử dụng <strong>OpenSwan</strong>.</p>
@@ -1258,7 +1258,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/13/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/0002.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>Lưu thông tin file câu hình vào thư mục chúng ta sử dụng lưu trữ key pair và công cụ cho bài lab.</p>
@@ -1267,17 +1267,17 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/13/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/0003.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Kết nối ssh vào <strong>EC2 Customer Gateway</strong>.</li>
 </ul>
-<p><img src="/images/13/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/0004.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Cài đặt <strong>OpenSwan</strong></li>
 </ol>
 <pre tabindex="0"><code>sudo su
 yum install openswan -y
-</code></pre><p><img src="/images/13/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/0005.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Kiểm tra cấu hình file <strong>/etc/ipsec.conf</strong></li>
 </ol>
@@ -1285,7 +1285,7 @@ yum install openswan -y
 </code></pre><ul>
 <li>Kiểm tra cấu hình đang như hình dưới.</li>
 </ul>
-<p><img src="/images/13/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/0006.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Ấn phím <strong>ESC</strong> và tổ hợp <strong>:q!</strong> để thoát khỏi trình chỉnh sửa <strong>vi</strong>.</li>
 </ul>
@@ -1293,7 +1293,7 @@ yum install openswan -y
 <li>Cấu hình file <strong>/etc/sysctl.conf</strong></li>
 </ol>
 <pre tabindex="0"><code>vi /etc/sysctl.conf
-</code></pre><p><img src="/images/13/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/0007.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chuyển xuống vị trí cuối cùng trong file cấu hình. Ấn phím <strong>i</strong> để tiến hành chỉnh sửa file.</li>
 <li>Thêm cấu đoạn sau vào cuối tập tin cấu hình.</li>
@@ -1304,12 +1304,12 @@ net.ipv4.conf.all.send_redirects = 0
 </code></pre><ul>
 <li>Ấn phím <strong>ESC</strong> và tổ hợp <strong>:wq!</strong> để lưu file cấu hình.</li>
 </ul>
-<p><img src="/images/13/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/0008.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Sau đó để áp dụng cấu hình này, chạy lệnh:</li>
 </ol>
 <pre tabindex="0"><code>sysctl -p
-</code></pre><p><img src="/images/13/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/0009.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Tiếp theo chúng ta sẽ cấu hình file <strong>/etc/ipsec.d/aws.conf</strong></li>
 </ol>
@@ -1364,14 +1364,14 @@ conn Tunnel2
 	dpdtimeout=30
 	dpdaction=restart_by_peer
  	overlapip=yes
-</code></pre><p><img src="/images/13/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00010.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Ấn phím <strong>ESC</strong> và tổ hợp <strong>:wq!</strong> để lưu file cấu hình.</li>
 </ul>
 <ol start="9">
 <li>Kiểm tra bước tiếp theo trong file cấu hình chúng ta đã tải xuống.</li>
 </ol>
-<p><img src="/images/13/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/00011.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>
 <p>Tạo mới và cấu hình file <strong>etc/ipsec.d/aws.secrets</strong> Tạo tập tin mới với cấu hình sau để thiết lập chứng thực cho 2 Tunnel.</p>
@@ -1381,7 +1381,7 @@ conn Tunnel2
 </li>
 </ol>
 <pre tabindex="0"><code>touch /etc/ipsec.d/aws.secrets
-</code></pre><p><img src="/images/13/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00012.png?featherlight=false&width=90pc"></p>
 <pre><code>- Chạy lệnh **vi /etc/ipsec.d/aws.secrets**
 </code></pre>
 <pre tabindex="0"><code>vi /etc/ipsec.d/aws.secrets
@@ -1392,11 +1392,11 @@ conn Tunnel2
 </code></pre>
 <pre tabindex="0"><code>13.229.235.99 52.220.214.148: PSK &#34;zkq_xvwpA5HNictmh6x6tVCKozVHxcpA&#34;
 13.229.235.99 54.179.66.207: PSK &#34;c0WdOkBj4gtJ2jaGrmeA2bZ_4ZaN50o3&#34;
-</code></pre><p><img src="/images/13/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00013.png?featherlight=false&width=90pc"></p>
 <pre><code>- Ấn phím **ESC** và tổ hợp **:wq!** để lưu file cấu hình.
 - Chạy lệnh **cat /etc/ipsec.d/aws.secrets** để kiểm tra nội dung file cấu hình
 </code></pre>
-<p><img src="/images/13/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/13/00014.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>Khởi động lại <strong>Network service &amp; IPSEC service</strong></li>
 </ol>
@@ -1404,25 +1404,25 @@ conn Tunnel2
 chkconfig ipsec on
 service ipsec start
 service ipsec status
-</code></pre><p><img src="/images/13/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00015.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để <strong>restart</strong> lại <strong>service network và IPsec</strong> :</li>
 </ul>
 <pre tabindex="0"><code>sudo service network restart
 sudo service ipsec restart
-</code></pre><p><img src="/images/13/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00016.png?featherlight=false&width=90pc"></p>
 <ol start="13">
 <li>Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ <strong>Customer Gateway</strong> tới máy chủ <strong>EC2 Private</strong>. Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.</li>
 </ol>
 <pre tabindex="0"><code>ping &lt;EC2 Private IP&gt; -c5
-</code></pre><p><img src="/images/13/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<p><img src="/images/13/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00017.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create VPC" src="/images/13/00018.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ <strong>EC2 Private</strong> tới máy chủ <strong>Customer Gateway</strong> . Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.</li>
 </ol>
 <pre tabindex="0"><code>ping &lt;Customer gateway instance IP&gt; -c5
-</code></pre><p><img src="/images/13/00019.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<p><img src="/images/13/00020.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/13/00019.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create VPC" src="/images/13/00020.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -2021,19 +2021,19 @@ sudo service ipsec restart
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701009824"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701009824"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701009824"></script>
-    <script src="/js/jquery.sticky.js?1701009824"></script>
-    <script src="/js/featherlight.min.js?1701009824"></script>
-    <script src="/js/highlight.pack.js?1701009824"></script>
+    <script src="/js/clipboard.min.js?1708568886"></script>
+    <script src="/js/perfect-scrollbar.min.js?1708568886"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1708568886"></script>
+    <script src="/js/jquery.sticky.js?1708568886"></script>
+    <script src="/js/featherlight.min.js?1708568886"></script>
+    <script src="/js/highlight.pack.js?1708568886"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701009824"></script>
-    <script src="/js/learn.js?1701009824"></script>
-    <script src="/js/hugo-learn.js?1701009824"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1708568886"></script>
+    <script src="/js/learn.js?1708568886"></script>
+    <script src="/js/hugo-learn.js?1708568886"></script>
 
-    <link href="/mermaid/mermaid.css?1701009824" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701009824"></script>
+    <link href="/mermaid/mermaid.css?1708568886" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1708568886"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

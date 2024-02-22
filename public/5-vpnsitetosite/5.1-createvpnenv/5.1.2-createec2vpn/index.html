@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create EC2 as a Customer Gateway :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1701009824" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701009824" rel="stylesheet">
-    <link href="/css/hybrid.css?1701009824" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701009824" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701009824" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701009824" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701009824" rel="stylesheet">
-    <link href="/css/theme.css?1701009824" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701009824" rel="stylesheet">
+    <link href="/css/nucleus.css?1708568886" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1708568886" rel="stylesheet">
+    <link href="/css/hybrid.css?1708568886" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1708568886" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1708568886" rel="stylesheet">
+    <link href="/css/auto-complete.css?1708568886" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1708568886" rel="stylesheet">
+    <link href="/css/theme.css?1708568886" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1708568886" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701009824" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1708568886" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701009824"></script>
+    <script src="/js/jquery-3.3.1.min.js?1708568886"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701009824"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701009824"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1708568886"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1708568886"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701009824"></script>
+<script type="text/javascript" src="/js/search.js?1708568886"></script>
 
     
   </div>
@@ -1081,7 +1081,7 @@
                   
                     
                     
-                      <option id="en" value="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" selected>English</option>
+                      <option id="en" value="//localhost:1313/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" selected>English</option>
                     
                   
               
@@ -1095,7 +1095,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">Tiếng Việt</option>
                     
                   
               
@@ -1238,7 +1238,7 @@
 <li>Select <strong>Security Group</strong></li>
 <li>Select <strong>Create security group</strong></li>
 </ul>
-<p><img src="/images/10/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0001.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p><strong>In the Create security group interface</strong></p>
@@ -1247,7 +1247,7 @@
 <li><strong>Description</strong>: Allow IPSec, SSH, and Ping for servers in the public subnet.</li>
 <li><strong>VPC</strong>: Select <strong>ASG VPN</strong> VPC</li>
 </ul>
-<p><img src="/images/10/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0002.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p><strong>Configure Inbound rules</strong></p>
@@ -1261,15 +1261,15 @@
 <li>Click <strong>Add rule</strong> to add a new rule.</li>
 <li><strong>Type</strong>: <strong>Custom TCP</strong>, <strong>Port: 500</strong>, <strong>Source</strong>: <strong>Anywhere</strong>.</li>
 </ul>
-<p><img src="/images/10/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0003.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Check <strong>Outbound rules</strong> and select <strong>Create security group</strong></p>
-<p><img src="/images/10/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0004.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Complete the creation of <strong>VPN Public - SG</strong>. A Security Group has been created. Next, we will proceed to create an EC2 server that plays the Customer Gateway role.</p>
-<p><img src="/images/10/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0005.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p><strong>Access to EC2</strong></p>
@@ -1277,14 +1277,14 @@
 <li>Select <strong>Instances</strong></li>
 <li>Select <strong>Launch instances</strong></li>
 </ul>
-<p><img src="/images/10/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0006.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Launch instances</strong> interface</p>
 <ul>
 <li><strong>Name</strong>: Enter <strong><code>Customer Gateway instance</code></strong></li>
 </ul>
-<p><img src="/images/10/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0007.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Executing <strong>AMI</strong> Selection</p>
@@ -1293,11 +1293,11 @@
 <li>Select <strong>Amazon Linux</strong></li>
 <li>Select <strong>AMI</strong></li>
 </ul>
-<p><img src="/images/10/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0008.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Select <strong>Instance type</strong> and select <strong>Key pair</strong>: <strong>aws-keypair</strong> (keypair created with instances)</p>
-<p><img src="/images/10/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/0009.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Configure <strong>Network</strong></p>
@@ -1309,20 +1309,20 @@
 <li>Select <strong>VPN Public - SG</strong></li>
 <li>Check again and select <strong>Launch instance</strong></li>
 </ul>
-<p><img src="/images/10/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/00010.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Finish creating the <strong>EC2 instance</strong></p>
 <ul>
 <li>Select <strong>View all instances</strong></li>
 </ul>
-<p><img src="/images/10/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/00011.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>View details of the <strong>Customer Gateway instance</strong></p>
 </li>
 </ol>
-<p><img src="/images/10/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/10/00012.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1918,19 +1918,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701009824"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701009824"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701009824"></script>
-    <script src="/js/jquery.sticky.js?1701009824"></script>
-    <script src="/js/featherlight.min.js?1701009824"></script>
-    <script src="/js/highlight.pack.js?1701009824"></script>
+    <script src="/js/clipboard.min.js?1708568886"></script>
+    <script src="/js/perfect-scrollbar.min.js?1708568886"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1708568886"></script>
+    <script src="/js/jquery.sticky.js?1708568886"></script>
+    <script src="/js/featherlight.min.js?1708568886"></script>
+    <script src="/js/highlight.pack.js?1708568886"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701009824"></script>
-    <script src="/js/learn.js?1701009824"></script>
-    <script src="/js/hugo-learn.js?1701009824"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1708568886"></script>
+    <script src="/js/learn.js?1708568886"></script>
+    <script src="/js/hugo-learn.js?1708568886"></script>
 
-    <link href="/mermaid/mermaid.css?1701009824" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701009824"></script>
+    <link href="/mermaid/mermaid.css?1708568886" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1708568886"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

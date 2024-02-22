@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.120.4">
+    <meta name="generator" content="Hugo 0.123.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo EC2 Instance Connect Endpoint (Optional) :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1701009824" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701009824" rel="stylesheet">
-    <link href="/css/hybrid.css?1701009824" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701009824" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701009824" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701009824" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701009824" rel="stylesheet">
-    <link href="/css/theme.css?1701009824" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701009824" rel="stylesheet">
+    <link href="/css/nucleus.css?1708568886" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1708568886" rel="stylesheet">
+    <link href="/css/hybrid.css?1708568886" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1708568886" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1708568886" rel="stylesheet">
+    <link href="/css/auto-complete.css?1708568886" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1708568886" rel="stylesheet">
+    <link href="/css/theme.css?1708568886" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1708568886" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701009824" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1708568886" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701009824"></script>
+    <script src="/js/jquery-3.3.1.min.js?1708568886"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701009824"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701009824"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1708568886"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1708568886"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701009824"></script>
+<script type="text/javascript" src="/js/search.js?1708568886"></script>
 
     
   </div>
@@ -1081,7 +1081,7 @@
                   
                     
                     
-                      <option id="en" value="/4-createec2server/4.5-eicendpoint/">English</option>
+                      <option id="en" value="//localhost:1313/4-createec2server/4.5-eicendpoint/">English</option>
                     
                   
               
@@ -1095,7 +1095,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/4-createec2server/4.5-eicendpoint/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-createec2server/4.5-eicendpoint/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1240,18 +1240,18 @@
 <p>Vào 13/06/2023, AWS ra mắt chức năng <strong>EC2 Instance Connect Endpoint (EIC Endpoint)</strong> đế giúp cho khách hàng truy cập vào EC2 instance mà không cần đến <strong>public IP addresses</strong>, thông qua giao thức <strong>SSH</strong> và <strong>RDP</strong>.</p>
 <p><strong>EIC Endpoint</strong> thay thế <strong>Bastion Host</strong>, đồng nghĩa loại bỏ khối lượng công việc: patching, managing, auditting và chi phí <strong>Bastion Host</strong> instance trước đây. Không có chi phí bổ sung dối với <strong>EIC Endpoint</strong>, tuy nhiên <a href="https://000034.awsstudygroup.com/vi/8-data-transfer-overview/">chi phí data transfer</a> sẽ được áp dụng</p>
 <h4 id="kiến-trúc-mô-tả-eic-endpoint">Kiến trúc mô tả <strong>EIC Endpoint</strong></h4>
-<p><img src="/images/4-CreateEc2Server/4.5-eic/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0001.png?featherlight=false&width=90pc"></p>
 <ol>
 <li>
 <p>Tạo Security Group cho <strong>EIC Endpoint</strong></p>
 <ul>
 <li>
 <p>Tại khung search, nhập: <strong>security groups</strong>, trong mục features chọn <strong>Security groups</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0002.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0002.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Chọn <strong>Create security group</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0003.png?featherlight=false&width=90pc"></p>
 </li>
 </ul>
 </li>
@@ -1268,7 +1268,7 @@
 </li>
 <li>
 <p>Chọn <strong>Add rule</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0004.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại mục <strong>Type</strong>, chọn protocol <strong>SSH</strong></p>
@@ -1281,7 +1281,7 @@
 </li>
 <li>
 <p>Chọn  <strong>Create security group</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0005.png?featherlight=false&width=90pc"></p>
 </li>
 </ul>
 <ol start="2">
@@ -1290,11 +1290,11 @@
 <ul>
 <li>
 <p>Tại khung search, nhập: <code>endpoint services</code> , trong mục features chọn <strong>endpoint services</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0006.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Chọn <strong>Create endpoint</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0007.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại mục <strong>Name tag</strong>, nhập: <code>EC2 private endpoint</code></p>
@@ -1304,7 +1304,7 @@
 </li>
 <li>
 <p>Tại mục <strong>VPC</strong>, chọn <strong>ASG-VPC</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0008.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại mục <strong>Security groups</strong>, chọn: <strong>EIC Endpoint</strong> đã tạo ở bước 1</p>
@@ -1314,11 +1314,11 @@
 </li>
 <li>
 <p>Chọn <strong>Create endpoint</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/0009.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Đợi Status chuyển thành <strong>Available</strong> và qua bước tiếp theo
-<img src="/images/4-CreateEc2Server/4.5-eic/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/00010.png?featherlight=false&width=90pc"></p>
 </li>
 </ul>
 </li>
@@ -1335,7 +1335,7 @@
 </li>
 <li>
 <p>Chọn <strong>Connect</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/00011.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại mục <strong>Connection Type</strong> chọn <strong>Connect using EC2 Instance Connect Endpoint</strong></p>
@@ -1345,11 +1345,11 @@
 </li>
 <li>
 <p>Chọn <strong>Connect</strong>
-<img src="/images/4-CreateEc2Server/4.5-eic/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/00012.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Chúc mừng bạn đã truy cập thành công EC2 Private thông qua <strong>EC2 Instance Connect Endpoint</strong> chỉ duy nhất từ địa chỉ IP của bạn
-<img src="/images/4-CreateEc2Server/4.5-eic/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<img alt="Create VPC" src="/images/4-CreateEc2Server/4.5-eic/00013.png?featherlight=false&width=90pc"></p>
 </li>
 </ul>
 <p>Lưu ý:</p>
@@ -1950,19 +1950,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701009824"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701009824"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701009824"></script>
-    <script src="/js/jquery.sticky.js?1701009824"></script>
-    <script src="/js/featherlight.min.js?1701009824"></script>
-    <script src="/js/highlight.pack.js?1701009824"></script>
+    <script src="/js/clipboard.min.js?1708568886"></script>
+    <script src="/js/perfect-scrollbar.min.js?1708568886"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1708568886"></script>
+    <script src="/js/jquery.sticky.js?1708568886"></script>
+    <script src="/js/featherlight.min.js?1708568886"></script>
+    <script src="/js/highlight.pack.js?1708568886"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701009824"></script>
-    <script src="/js/learn.js?1701009824"></script>
-    <script src="/js/hugo-learn.js?1701009824"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1708568886"></script>
+    <script src="/js/learn.js?1708568886"></script>
+    <script src="/js/hugo-learn.js?1708568886"></script>
 
-    <link href="/mermaid/mermaid.css?1701009824" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701009824"></script>
+    <link href="/mermaid/mermaid.css?1708568886" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1708568886"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
