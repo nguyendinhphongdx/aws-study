@@ -10,7 +10,7 @@ pre : " <b> 4. </b> "
 
 In this step, we will create 2 EC2 servers (EC2 instances) following the architecture shown below:
 
-![Create EC2](/images/4-CreateEc2Server/lab-3.4.png?featherlight=false&width=60pc)
+![Create EC2](/.images/4-CreateEc2Server/lab-3.4.png?featherlight=false&width=60pc)
 
 ### Content
 

@@ -14,7 +14,7 @@ pre : " <b> 5.2.4 </b> "
    - Chọn **VPN Connection** đã tạo 
    - Chọn **Download Configuration**
 
-![Create VPC](/images/13/0001.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0001.png?featherlight=false&width=90pc)
 
 2. Trong hộp thoại **Download Configuration**, lựa chọn **appliance** phù hợp với bạn: Trong bài thực hành này, chúng ta sẽ sử dụng **OpenSwan**.
 
@@ -24,17 +24,17 @@ pre : " <b> 5.2.4 </b> "
    - **IKE version**: Chọn **ikev1**
    - Chọn **Download**.
 
-![Create VPC](/images/13/0002.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0002.png?featherlight=false&width=90pc)
 
 3. Lưu thông tin file câu hình vào thư mục chúng ta sử dụng lưu trữ key pair và công cụ cho bài lab.
 
    - Sau đó dựa vào cấu hình được cung cấp, bạn thay đổi các thông tin phù hợp và cấu hình cho thiết bị của mình.
 
-![Create VPC](/images/13/0003.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0003.png?featherlight=false&width=90pc)
 
    - Kết nối ssh vào **EC2 Customer Gateway**.
   
-![Create VPC](/images/13/0004.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0004.png?featherlight=false&width=90pc)
 
 
 4. Cài đặt **OpenSwan**
@@ -43,7 +43,7 @@ pre : " <b> 5.2.4 </b> "
 sudo su
 yum install openswan -y
 ```
-![Create VPC](/images/13/0005.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0005.png?featherlight=false&width=90pc)
 
 
 5. Kiểm tra cấu hình file **/etc/ipsec.conf**
@@ -53,7 +53,7 @@ vi /etc/ipsec.conf
 ```
 - Kiểm tra cấu hình đang như hình dưới.
 
-![Create VPC](/images/13/0006.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0006.png?featherlight=false&width=90pc)
 
 - Ấn phím **ESC** và tổ hợp **:q!** để thoát khỏi trình chỉnh sửa **vi**.
 
@@ -63,7 +63,7 @@ vi /etc/ipsec.conf
 vi /etc/sysctl.conf
 ```
 
-![Create VPC](/images/13/0007.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0007.png?featherlight=false&width=90pc)
 
 - Chuyển xuống vị trí cuối cùng trong file cấu hình. Ấn phím **i** để tiến hành chỉnh sửa file.
 - Thêm cấu đoạn sau vào cuối tập tin cấu hình.
@@ -76,7 +76,7 @@ net.ipv4.conf.all.send_redirects = 0
 
 - Ấn phím **ESC** và tổ hợp **:wq!** để lưu file cấu hình.
 
-![Create VPC](/images/13/0008.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0008.png?featherlight=false&width=90pc)
 
 7. Sau đó để áp dụng cấu hình này, chạy lệnh:
 
@@ -84,7 +84,7 @@ net.ipv4.conf.all.send_redirects = 0
 sysctl -p
 ```
 
-![Create VPC](/images/13/0009.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/0009.png?featherlight=false&width=90pc)
 
 8. Tiếp theo chúng ta sẽ cấu hình file **/etc/ipsec.d/aws.conf**
 
@@ -145,13 +145,13 @@ conn Tunnel2
  	overlapip=yes
 ```
 
-![Create VPC](/images/13/00010.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00010.png?featherlight=false&width=90pc)
 
    - Ấn phím **ESC** và tổ hợp **:wq!** để lưu file cấu hình.
 
 9. Kiểm tra bước tiếp theo trong file cấu hình chúng ta đã tải xuống.
 
-![Create VPC](/images/13/00011.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00011.png?featherlight=false&width=90pc)
 
 10. Tạo mới và cấu hình file **etc/ipsec.d/aws.secrets** Tạo tập tin mới với cấu hình sau để thiết lập chứng thực cho 2 Tunnel.
 
@@ -160,7 +160,7 @@ conn Tunnel2
 ```
 touch /etc/ipsec.d/aws.secrets
 ```
-![Create VPC](/images/13/00012.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00012.png?featherlight=false&width=90pc)
 
     - Chạy lệnh **vi /etc/ipsec.d/aws.secrets**
 
@@ -177,12 +177,12 @@ vi /etc/ipsec.d/aws.secrets
 13.229.235.99 54.179.66.207: PSK "c0WdOkBj4gtJ2jaGrmeA2bZ_4ZaN50o3"
 ```
 
-![Create VPC](/images/13/00013.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00013.png?featherlight=false&width=90pc)
 
     - Ấn phím **ESC** và tổ hợp **:wq!** để lưu file cấu hình.
     - Chạy lệnh **cat /etc/ipsec.d/aws.secrets** để kiểm tra nội dung file cấu hình
 
-![Create VPC](/images/13/00014.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00014.png?featherlight=false&width=90pc)
 
 12.  Khởi động lại **Network service & IPSEC service**
 
@@ -193,7 +193,7 @@ service ipsec start
 service ipsec status
 ```
 
-![Create VPC](/images/13/00015.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00015.png?featherlight=false&width=90pc)
 
 
 - Nếu status tunnel vẫn chưa chạy đúng, sau khi kiểm tra và cập nhật cấu hình bạn sẽ cần chạy lệnh để **restart** lại **service network và IPsec** :
@@ -203,7 +203,7 @@ sudo service network restart
 sudo service ipsec restart
 ```
 
-![Create VPC](/images/13/00016.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00016.png?featherlight=false&width=90pc)
 
 
 13. Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ **Customer Gateway** tới máy chủ **EC2 Private**. Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.
@@ -212,9 +212,9 @@ sudo service ipsec restart
 ping <EC2 Private IP> -c5
 ```
 
-![Create VPC](/images/13/00017.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00017.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/13/00018.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00018.png?featherlight=false&width=90pc)
 
 
 14.  Sau khi hoàn tất cấu hình.Hãy thử thực hiện lệnh ping từ phía máy chủ **EC2 Private** tới máy chủ **Customer Gateway** . Nếu cấu hình VPN thành công bạn sẽ được kết quả như dưới đây.
@@ -223,6 +223,6 @@ ping <EC2 Private IP> -c5
 ping <Customer gateway instance IP> -c5
 ```
 
-![Create VPC](/images/13/00019.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00019.png?featherlight=false&width=90pc)
 
-![Create VPC](/images/13/00020.png?featherlight=false&width=90pc)
+![Create VPC](/.images/13/00020.png?featherlight=false&width=90pc)

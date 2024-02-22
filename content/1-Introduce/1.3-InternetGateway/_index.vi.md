@@ -15,4 +15,4 @@ pre : " <b> 1.3 </b> "
 
 - Khi EC2 nhận được lưu lượng truy cập từ bên ngoài Internet, IGW sẽ thực hiện dịch địa chỉ Target (địa chỉ Public IP) thành địa chỉ Private IP của EC2 Instance và chuyển tiếp lưu lượng truy cập đến Amazon VPC.
 
-![Internet Gateway](/images/1-Introduce/igw.png?featherlight=false&width=60pc)
+![Internet Gateway](/.images/1-Introduce/igw.png?featherlight=false&width=60pc)

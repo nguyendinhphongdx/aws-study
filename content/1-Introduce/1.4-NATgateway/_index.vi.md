@@ -16,7 +16,7 @@ Nắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép 
 - Trường hợp ta muốn migrate từ NAT instance sang NAT gateway, ta có thể sử dụng lại địa chỉ Elastic IP của NAT instance. Nhưng trước hết ta cần phải tách địa chỉ IP ra khỏi NAT Instance. 
 
 
-![NAT Gateway](/images/1-Introduce/natgw.png?featherlight=false&width=70pc)
+![NAT Gateway](/.images/1-Introduce/natgw.png?featherlight=false&width=70pc)
 
 {{%notice tip%}}
 NAT Gateway và NAT instance đều không hỗ trợ traffic chiều vào trực tiếp từ internet.

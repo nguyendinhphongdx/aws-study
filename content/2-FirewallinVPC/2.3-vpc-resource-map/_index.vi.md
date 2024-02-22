@@ -22,4 +22,4 @@ Bản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năn
 
 Bạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.
 
-![Create VPC](/images/17/0006.jpg?featherlight=false&width=90pc)
+![Create VPC](/.images/17/0006.jpg?featherlight=false&width=90pc)
