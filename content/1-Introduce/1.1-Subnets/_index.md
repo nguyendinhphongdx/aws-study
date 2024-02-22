@@ -19,4 +19,4 @@ Subnets are categorized as:
 
 Regardless of the subnet type, the subnet's internal IP address range is always private. This means that it is not possible to directly connect to addresses within this range from outside the Internet.
 
-![Subnets](/images/1-Introduce/subnet.png?featherlight=false&width=50pc)
+![Subnets](images/1-Introduce/subnet.png?featherlight=false&width=50pc)
