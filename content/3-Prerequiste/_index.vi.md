@@ -10,7 +10,7 @@ pre : " <b> 3. </b> "
 
 Trong bài thực hành này, chúng ta sẽ xây dựng một mô hình theo sơ đồ bên dưới:
 
-![NAT Gateway](/.images/3-Prerequiste/vpc.png?featherlight=false&width=90pc)
+![NAT Gateway](/images/3-Prerequiste/vpc.png?featherlight=false&width=90pc)
 
 #### Nội dung
 

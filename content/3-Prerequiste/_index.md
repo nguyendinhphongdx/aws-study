@@ -10,7 +10,7 @@ pre : " <b> 3. </b> "
 
 In this exercise, we will be constructing a model based on the following diagram:
 
-![NAT Gateway](/.images/3-Prerequisite/vpc.png?featherlight=false&width=90pc)
+![NAT Gateway](/images/3-Prerequisite/vpc.png?featherlight=false&width=90pc)
 
 ## Content
 

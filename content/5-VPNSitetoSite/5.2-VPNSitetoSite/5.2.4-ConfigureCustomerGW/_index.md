@@ -13,7 +13,7 @@ pre : " <b> 5.2.4 </b> "
 - Select **VPN Connection** created
 - Select **Download Configuration**
 
-![Create VPC](/.images/13/0001.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0001.png?featherlight=false&width=90pc)
 
 2. Download Configuration
 In the **Download Configuration** dialog, choose the appropriate **appliance**, e.g., **OpenSwan**.
@@ -24,15 +24,15 @@ In the **Download Configuration** dialog, choose the appropriate **appliance**, 
 - **IKE version**: Select **ikev1**
 - Select **Download**.
 
-![Create VPC](/.images/13/0002.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0002.png?featherlight=false&width=90pc)
 
 3. Save the image file information to the folder used for storing the key pair and lab tools. Modify the configuration based on your device.
 
-![Create VPC](/.images/13/0003.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0003.png?featherlight=false&width=90pc)
 
 Connect SSH to **EC2 Customer Gateway**.
 
-![Create VPC](/.images/13/0004.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0004.png?featherlight=false&width=90pc)
 
 4. Install **OpenSwan**
 
@@ -40,7 +40,7 @@ Connect SSH to **EC2 Customer Gateway**.
 sudo su
 yum install openswan -y
 ```
-![Create VPC](/.images/13/0005.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0005.png?featherlight=false&width=90pc)
 
 
 5. Check the configuration file **/etc/ipsec.conf**
@@ -50,7 +50,7 @@ vi /etc/ipsec.conf
 ```
 - Check the configuration is as shown below.
 
-![Create VPC](/.images/13/0006.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0006.png?featherlight=false&width=90pc)
 
 - Press the **ESC** key and the combination **:q!** to exit the **vi** editor.
 
@@ -60,7 +60,7 @@ vi /etc/ipsec.conf
 vi /etc/sysctl.conf
 ```
 
-![Create VPC](/.images/13/0007.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0007.png?featherlight=false&width=90pc)
 
 - Move down to the last position in the configuration file. Press the **i** key to proceed with editing the file.
 - Add the following configuration at the end of the configuration file.
@@ -72,7 +72,7 @@ net.ipv4.conf.all.send_redirects = 0
 ```
 - Press the **ESC** key and the combination **:wq!** to save the configuration file.
 
-![Create VPC](/.images/13/0008.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0008.png?featherlight=false&width=90pc)
 
 7. Then to apply this configuration, run the command:
 
@@ -80,7 +80,7 @@ net.ipv4.conf.all.send_redirects = 0
 sysctl -p
 ```
 
-![Create VPC](/.images/13/0009.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/0009.png?featherlight=false&width=90pc)
 
 8. Next we will configure the file **/etc/ipsec.d/aws.conf**
 
@@ -142,13 +142,13 @@ conn Tunnel2
  	overlapip=yes
 ```
 
-![Create VPC](/.images/13/00010.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00010.png?featherlight=false&width=90pc)
 
 - Press the **ESC** key and the combination **:wq!** to save the configuration file.
 
 9. Check the next step in the configuration file we downloaded.
 
-![Create VPC](/.images/13/00011.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00011.png?featherlight=false&width=90pc)
 
 10. Create and configure the file **etc/ipsec.d/aws.secrets** Create a new file with the following configuration to set up authentication for the 2 Tunnels.
 
@@ -157,7 +157,7 @@ conn Tunnel2
 ```
 touch /etc/ipsec.d/aws.secrets
 ```
-![Create VPC](/.images/13/00012.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00012.png?featherlight=false&width=90pc)
 
     - Run the command **vi /etc/ipsec.d/aws.secrets**
 
@@ -174,12 +174,12 @@ vi /etc/ipsec.d/aws.secrets
 13,229,235.99 54,179,66,207: PSK "c0WdOkBj4gtJ2jaGrmeA2bZ_4ZaN50o3"
 ```
 
-![Create VPC](/.images/13/00013.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00013.png?featherlight=false&width=90pc)
 
     - Press the **ESC** key and the combination **:wq!** to save the configuration file.
     - Run the command **cat /etc/ipsec.d/aws.secrets** to check the content of the configuration file
 
-![Create VPC](/.images/13/00014.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00014.png?featherlight=false&width=90pc)
 
 12. Restart **Network service & IPSEC service**
 
@@ -190,7 +190,7 @@ service ipsec start
 service ipsec status
 ```
 
-![Create VPC](/.images/13/00015.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00015.png?featherlight=false&width=90pc)
 
 
 - If the status tunnel is still not running correctly, after checking and updating the configuration you will need to run the command to **restart** **service network and IPsec** :
@@ -200,7 +200,7 @@ sudo service network restart
 sudo service ipsec restart
 ```
 
-![Create VPC](/.images/13/00016.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00016.png?featherlight=false&width=90pc)
 
 
 13. After completing the configuration.Try to ping from the **Customer Gateway** server side to the **EC2 Private** server. If the VPN configuration is successful you will get the result as below.
@@ -209,9 +209,9 @@ sudo service ipsec restart
 ping <EC2 Private IP> -c5
 ```
 
-![Create VPC](/.images/13/00017.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00017.png?featherlight=false&width=90pc)
 
-![Create VPC](/.images/13/00018.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00018.png?featherlight=false&width=90pc)
 
 
 14. After completing the configuration.Try to ping from the **EC2 Private** server side to the **Customer Gateway** server. If the VPN configuration is successful you will get the result as below.
@@ -220,6 +220,6 @@ ping <EC2 Private IP> -c5
 ping <Customer gateway instance IP> -c5
 ```
 
-![Create VPC](/.images/13/00019.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00019.png?featherlight=false&width=90pc)
 
-![Create VPC](/.images/13/00020.png?featherlight=false&width=90pc)
+![Create VPC](/images/13/00020.png?featherlight=false&width=90pc)

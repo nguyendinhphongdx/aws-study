@@ -28,7 +28,7 @@ Bên dưới là những đặc điểm quan trọng mà ta cần nắm về **V
 Bài lab giúp chúng ta học được cách thiết lập một kết nối Site to Site VPN trong AWS. Trong thực tế, giải pháp này khá được ưa chuộng do ưu điểm giá thành rẻ, đồng thời rất dễ cấu hình do AWS cung cấp hướng dẫn cho từng loại thiết bị phía đầu Customer. Việc Customer bận tâm duy nhất đó là chuẩn bị đường internet để từ đó tạo đường hầm an toàn bí mật (sử dụng IPSec) kết nối tới AWS thông qua AWS VPN tunnel.  
 Trong phạm vi bài lab, giả lập rằng chúng ta có Main office ( VPC **ASG** ) và Branch office ( VPC **ASG VPN** ) đặt tại 2 VPC thuộc 2 AZ khác nhau để có sự khác biệt về mặt network. Trên mỗi VPC thực hiện tạo EC2 cho phép SSH từ bên ngoài, nhưng không có khả năng kết nối và ping lẫn nhau sử dụng địa chỉ Private IP của mỗi EC2. Việc ta cần làm là cấu hình VPN để các địa chỉ Private IP có thể ping được lẫn nhau sử dụng VPN Site-to-Site.
 
-![VPN](/.images/6-VPNSitetoSite/vpn.png?featherlight=false&width=90pc)
+![VPN](/images/6-VPNSitetoSite/vpn.png?featherlight=false&width=90pc)
 
 
 **Nội dung:**

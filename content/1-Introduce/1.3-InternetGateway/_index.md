@@ -14,4 +14,4 @@ More precisely, the EC2 instances located within the VPC are only aware of their
 
 Conversely, when the EC2 instances receive incoming traffic from the Internet, the IGW undertakes the task of translating the target address (Public IP address) into the corresponding Private IP address of the EC2 instance. Subsequently, the IGW forwards this traffic into the Amazon VPC.
 
-![Internet Gateway](/.images/1-Introduce/igw.png?featherlight=false&width=60pc)
+![Internet Gateway](/images/1-Introduce/igw.png?featherlight=false&width=60pc)

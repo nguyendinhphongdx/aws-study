@@ -20,4 +20,4 @@ Các subnet được chia thành các loại như **Public**, **Private**, hoặ
 Bất kể loại mạng con nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).
 
 
-![Subnets](/.images/1-Introduce/subnet.png?featherlight=false&width=50pc)
+![Subnets](/images/1-Introduce/subnet.png?featherlight=false&width=50pc)

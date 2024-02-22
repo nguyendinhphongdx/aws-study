@@ -42,7 +42,7 @@ The lab provides hands-on experience in setting up a Site-to-Site VPN connection
 
 In the lab scope, there are two VPCs: the Main office (VPC **ASG**) and the Branch office (VPC **ASG VPN**), located in different Availability Zones (AZs) to ensure network diversity. While EC2 instances can be created in each VPC with external SSH access, they cannot communicate or ping each other using private IP addresses. The goal is to configure the VPN to enable private IP addresses to communicate over the Site-to-Site VPN.
 
-![VPN](/.images/6-VPNSitetoSite/vpn.png?featherlight=false&width=90pc)
+![VPN](/images/6-VPNSitetoSite/vpn.png?featherlight=false&width=90pc)
 
 ## Content:
 

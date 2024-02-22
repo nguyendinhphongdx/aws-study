@@ -13,4 +13,4 @@ Ví dụ khi bạn tạo VPC với lớp mạng 10.10.0.0/16, cùng 2 subnet 10.
 Bên trong route table sẽ có route entry **destination**:10.10.0.0/16 **target**:local. Route entry này thể hiện các tài nguyên tạo ra trong cùng 1 VPC có thể kết nối với nhau.
 
 
-![Route Tables](/.images/1-Introduce/routetable.png?featherlight=false&width=50pc)
+![Route Tables](/images/1-Introduce/routetable.png?featherlight=false&width=50pc)

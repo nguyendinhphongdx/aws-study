@@ -16,6 +16,6 @@ pre : " <b> 1.4 </b> "
   
 - In situations where transitioning from a NAT instance to a NAT gateway is desired, it is possible to reuse the Elastic IP address assigned to the NAT instance. However, prior to doing so, it is essential to disassociate the IP address from the NAT Instance.
 
-![NAT Gateway](/.images/1-Introduce/natgw.png?featherlight=false&width=70pc)
+![NAT Gateway](/images/1-Introduce/natgw.png?featherlight=false&width=70pc)
 
 > **Tip:** Neither the NAT Gateway nor the NAT instance supports direct inbound traffic from the internet.

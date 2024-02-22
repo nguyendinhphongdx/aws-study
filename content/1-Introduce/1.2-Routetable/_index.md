@@ -18,4 +18,4 @@ Inside the route table, there will exist a route entry with the following detail
 
 This particular route entry signifies that resources created within the same VPC can communicate with each other.
 
-![Route Tables](/.images/1-Introduce/routetable.png?featherlight=false&width=50pc)
+![Route Tables](/images/1-Introduce/routetable.png?featherlight=false&width=50pc)

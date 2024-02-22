@@ -10,7 +10,7 @@ pre : " <b> 5.2 </b> "
 
 Ở bước này chúng ta sẽ tiến hành tạo Virtual Private Gateway , Customer Gateway và kết nối VPN Site to Site.
 
-![VPN](/.images/6-VPNSitetoSite/vpnconfigure.png?featherlight=false&width=90pc)
+![VPN](/images/6-VPNSitetoSite/vpnconfigure.png?featherlight=false&width=90pc)
 
 #### Nội dung:
 

@@ -10,7 +10,7 @@ pre : " <b> 5.1 </b> "
 
 Trước khi khởi tạo và cấu hình kết nối VPN Site to Site, chúng ta cần tạo môi trường giả lập chi nhánh (ASG VPN) như kiến trúc bên dưới.
 
-![VPN](/.images/5-CreateVPNenv/vpn.png?featherlight=false&width=90pc)
+![VPN](/images/5-CreateVPNenv/vpn.png?featherlight=false&width=90pc)
 
 #### Nội dung
 

@@ -10,7 +10,7 @@ pre : " <b> 5.2 </b> "
 
 In this step, we will proceed to set up a Virtual Private Gateway, Customer Gateway, and VPN Site-to-Site connection.
 
-![VPN Configuration](/.images/6-VPNSitetoSite/vpnconfigure.png?featherlight=false&width=90pc)
+![VPN Configuration](/images/6-VPNSitetoSite/vpnconfigure.png?featherlight=false&width=90pc)
 
 ### Content:
 
